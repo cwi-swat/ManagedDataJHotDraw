@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -21,6 +21,8 @@ import CH.ifa.draw.contrib.html.HTMLTextAreaFigure;
 import CH.ifa.draw.contrib.html.HTMLTextAreaTool;
 import CH.ifa.draw.contrib.zoom.ZoomDrawingView;
 import CH.ifa.draw.contrib.zoom.ZoomTool;
+import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
+import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.*;
 import java.awt.*;
@@ -255,5 +257,5 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	public static void main(String[] args) {
 		JavaDrawApp window = new JavaDrawApp();
 		window.open();
-	}
+    }
 }
