@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -42,9 +42,16 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 
 	public void execute() {
 		super.execute();
+
+		// @MDHD TODO: Remove From Here
 		setUndoActivity(createUndoActivity());
 		getUndoActivity().setAffectedFigures(view().selection());
 		FigureEnumeration fe = getUndoActivity().getAffectedFigures();
+		// @MDHD TODO: Remove To Here
+
+		// @MDHD TODO: Add this instead
+//		FigureEnumeration fe = view().selection();
+
 		while (fe.hasNextFigure()) {
 			fe.nextFigure().setAttribute(fAttribute, fValue);
 		}
@@ -55,6 +62,7 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 		return view().selectionCount() > 0;
 	}
 
+	// @MDHD TODO: Remove These bellow, should not scatter in this class (like AJHotDraw did).
 	/**
 	 * Factory method for undo activity
 	 */

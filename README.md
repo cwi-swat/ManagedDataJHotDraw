@@ -1,8 +1,8 @@
 # ManagedDataJHotDraw
 Aspect refactoring of JHotDraw with ManagedData.
 
-Original JHotDraw version 54b1
+Original JHotDraw *v.5.4b1*
 
 Aspects inventory:
-- Undo Concern
-- Observer Pattern
+- Commands
+  - Undo Concern
