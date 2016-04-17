@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bfbbfb49-ea0c-4d72-b322-adc603cd8cf8" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SVGStorageFormat.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SVGStorageFormat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" />
@@ -1059,12 +1060,12 @@
       <created>1460887137949</created>
       <option name="number" value="Default" />
       <updated>1460887137949</updated>
-      <workItem from="1460887139372" duration="16250000" />
+      <workItem from="1460887139372" duration="16291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16250000" />
+    <option name="totallyTimeSpent" value="16291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
