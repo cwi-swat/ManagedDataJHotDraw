@@ -4,13 +4,14 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.application;
 
+import CH.ifa.draw.contrib.Desktop;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
@@ -59,7 +60,7 @@ public	class DrawApplication
 	/**
 	 * This component acts as a desktop for the content.
 	 */
-	private Desktop              fDesktop;
+	private Desktop fDesktop;
 
 	// the image resource path
 	private static final String		fgDrawPath = "/CH/ifa/draw/";

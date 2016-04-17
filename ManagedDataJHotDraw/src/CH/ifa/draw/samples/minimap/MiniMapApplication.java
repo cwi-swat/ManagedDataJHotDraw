@@ -1,6 +1,7 @@
 package CH.ifa.draw.samples.minimap;
 
 import CH.ifa.draw.contrib.*;
+import CH.ifa.draw.contrib.Desktop;
 import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.figures.ImageFigure;
 import CH.ifa.draw.util.Iconkit;
