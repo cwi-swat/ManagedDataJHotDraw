@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfbbfb49-ea0c-4d72-b322-adc603cd8cf8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
     </list>
     <ignored path="ManagedDataJHotDraw.iws" />
@@ -1212,12 +1213,12 @@
       <created>1460887137949</created>
       <option name="number" value="Default" />
       <updated>1460887137949</updated>
-      <workItem from="1460887139372" duration="37536000" />
+      <workItem from="1460887139372" duration="37556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37536000" />
+    <option name="totallyTimeSpent" value="37556000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
