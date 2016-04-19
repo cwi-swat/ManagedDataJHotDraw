@@ -579,8 +579,6 @@ public	class DrawApplication
 		Dimension d = getDrawingViewSize();
 		DrawingView newDrawingView = new StandardDrawingView(this, d.width, d.height);
 		newDrawingView.setDrawing(newDrawing);
-		// notify listeners about created view when the view is added to the desktop
-		//fireViewCreatedEvent(newDrawingView);
 		return newDrawingView;
 	}
 
