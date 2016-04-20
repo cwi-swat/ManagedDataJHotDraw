@@ -39,6 +39,59 @@ public interface MDRectangle extends M {
         reshape(tx1, ty1, (int) tx2, (int) ty2);
     }
 
+    default void grow(int h, int v) {
+        long x0 = x();
+        long y0 = y();
+        long x1 = width();
+        long y1 = height();
+        x1 += x0;
+        y1 += y0;
+
+        x0 -= h;
+        y0 -= v;
+        x1 += h;
+        y1 += v;
+
+        if (x1 < x0) {
+            // Non-existant in X direction
+            // Final width must remain negative so subtract x0 before
+            // it is clipped so that we avoid the risk that the clipping
+            // of x0 will reverse the ordering of x0 and x1.
+            x1 -= x0;
+            if (x1 < Integer.MIN_VALUE) x1 = Integer.MIN_VALUE;
+            if (x0 < Integer.MIN_VALUE) x0 = Integer.MIN_VALUE;
+            else if (x0 > Integer.MAX_VALUE) x0 = Integer.MAX_VALUE;
+        } else { // (x1 >= x0)
+            // Clip x0 before we subtract it from x1 in case the clipping
+            // affects the representable area of the rectangle.
+            if (x0 < Integer.MIN_VALUE) x0 = Integer.MIN_VALUE;
+            else if (x0 > Integer.MAX_VALUE) x0 = Integer.MAX_VALUE;
+            x1 -= x0;
+            // The only way x1 can be negative now is if we clipped
+            // x0 against MIN and x1 is less than MIN - in which case
+            // we want to leave the width negative since the result
+            // did not intersect the representable area.
+            if (x1 < Integer.MIN_VALUE) x1 = Integer.MIN_VALUE;
+            else if (x1 > Integer.MAX_VALUE) x1 = Integer.MAX_VALUE;
+        }
+
+        if (y1 < y0) {
+            // Non-existant in Y direction
+            y1 -= y0;
+            if (y1 < Integer.MIN_VALUE) y1 = Integer.MIN_VALUE;
+            if (y0 < Integer.MIN_VALUE) y0 = Integer.MIN_VALUE;
+            else if (y0 > Integer.MAX_VALUE) y0 = Integer.MAX_VALUE;
+        } else { // (y1 >= y0)
+            if (y0 < Integer.MIN_VALUE) y0 = Integer.MIN_VALUE;
+            else if (y0 > Integer.MAX_VALUE) y0 = Integer.MAX_VALUE;
+            y1 -= y0;
+            if (y1 < Integer.MIN_VALUE) y1 = Integer.MIN_VALUE;
+            else if (y1 > Integer.MAX_VALUE) y1 = Integer.MAX_VALUE;
+        }
+
+        reshape((int) x0, (int) y0, (int) x1, (int) y1);
+    }
+
     default boolean contains(int x, int y) {
         return inside(x, y);
     }
