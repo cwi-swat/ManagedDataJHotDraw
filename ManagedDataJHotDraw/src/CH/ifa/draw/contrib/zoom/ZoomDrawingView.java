@@ -18,15 +18,9 @@ import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.standard.StandardDrawing;
 import CH.ifa.draw.standard.StandardDrawingView;
 import CH.ifa.draw.util.Geom;
-import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
-import ccconcerns.managed_data.schemas.geometry.MDDimension;
-import ccconcerns.managed_data.schemas.geometry.MDPoint;
+import ccconcerns.managed_data.helpers.MDRectangleFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
-import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
-import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
-import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
-import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
-import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
+import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
 
 import javax.swing.JViewport;
 import java.awt.*;
@@ -85,8 +79,14 @@ public class ZoomDrawingView extends StandardDrawingView {
 	}
 
 	private void forceRedraw() {
-		drawingInvalidated(new DrawingChangeEvent
-				(drawing(), new Rectangle(getSize())));
+//		drawingInvalidated(new DrawingChangeEvent
+//				(drawing(), new Rectangle(getSize())));
+
+		MDRectangle mdRectangle = MDRectangleFactory.newObservableRectangle(0, 0, getSize().width, getSize().height);
+		((nl.cwi.managed_data_4j.ccconcerns.patterns.observer.Observable) mdRectangle).observe(UpdateLogger::log);
+
+		drawingInvalidated(new DrawingChangeEvent(drawing(), mdRectangle));
+
 		repairDamage();
 	}
 
@@ -412,31 +412,13 @@ public class ZoomDrawingView extends StandardDrawingView {
 //			setDamage(damagedArea);
 //		}
 
-		// ======
-		final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
-		final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
-		final Schema geometrySchema = SchemaLoader.load(
-				schemaFactory, schemaSchema,
-				MDPoint.class, MDRectangle.class, MDDimension.class);
-		final BasicDataManager basicFactoryForGeometry =
-				new BasicDataManager(GeometrySchemaFactory.class, geometrySchema);
-		final GeometrySchemaFactory geometrySchemaFactory = basicFactoryForGeometry.make();
-		// ======
-
-		MDRectangle mdRectangle = geometrySchemaFactory.Rectangle();
-		Rectangle r = e.getInvalidatedRectangle();
-
-		mdRectangle.x(r.x);
-		mdRectangle.y(r.y);
-		mdRectangle.width(r.width);
-		mdRectangle.height(r.height);
-
+		MDRectangle r = e.getInvalidatedMDRectangle();
 		if (getMDDamage() == null) {
-			setMDDamage(mdRectangle);
+			setMDDamage(r);
 		}
 		else {
 			MDRectangle damagedArea = getMDDamage();
-			damagedArea.add(mdRectangle);
+			damagedArea.add(r);
 			// the returned rectange may be a clone so we better set it again
 			setMDDamage(damagedArea);
 		}

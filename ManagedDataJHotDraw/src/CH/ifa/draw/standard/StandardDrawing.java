@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,9 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.managed_data.helpers.MDRectangleFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
 
 import java.awt.*;
 import java.util.*;
@@ -29,7 +32,7 @@ import java.io.*;
 
 public class StandardDrawing extends CompositeFigure implements Drawing {
 
-
+	// TODO: @MDHD Remove this
 	/**
 	 * the registered listeners
 	 */
@@ -59,6 +62,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		init(new Rectangle(-500, -500, 2000, 2000));
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Adds a listener for this drawing.
 	 */
@@ -69,6 +73,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		fListeners.add(listener);
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Removes a listener from this drawing.
 	 */
@@ -76,6 +81,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		fListeners.remove(listener);
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Gets an enumeration with all listener for this drawing.
 	 */
@@ -110,20 +116,35 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		return addedFigure;
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Invalidates a rectangle and merges it with the
 	 * existing damaged area.
 	 * @see FigureChangeListener
 	 */
 	public void figureInvalidated(FigureChangeEvent e) {
+//		if (fListeners != null) {
+//			for (int i = 0; i < fListeners.size(); i++) {
+//				DrawingChangeListener l = (DrawingChangeListener)fListeners.get(i);
+//				l.drawingInvalidated(new DrawingChangeEvent(this, e.getInvalidatedRectangle()));
+//			}
+//		}
+
 		if (fListeners != null) {
 			for (int i = 0; i < fListeners.size(); i++) {
 				DrawingChangeListener l = (DrawingChangeListener)fListeners.get(i);
-				l.drawingInvalidated(new DrawingChangeEvent(this, e.getInvalidatedRectangle()));
+
+				Rectangle r = e.getInvalidatedRectangle();
+
+				MDRectangle mdRectangle = MDRectangleFactory.newObservableRectangle(r.x, r.y, r.width, r.height);
+				((nl.cwi.managed_data_4j.ccconcerns.patterns.observer.Observable) mdRectangle).observe(UpdateLogger::log);
+
+				l.drawingInvalidated(new DrawingChangeEvent(this, mdRectangle));
 			}
 		}
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Forces an update of the drawing change listeners.
 	 */
@@ -136,6 +157,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		}
 	}
 
+	// TODO: @MDHD Remove this
 	/**
 	 * Forces an update of the drawing change listeners.
 	 */

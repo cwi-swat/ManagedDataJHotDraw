@@ -18,17 +18,8 @@ import CH.ifa.draw.contrib.dnd.DNDInterface;
 import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
-import ccconcerns.managed_data.schemas.geometry.MDDimension;
-import ccconcerns.managed_data.schemas.geometry.MDPoint;
+
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
-import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
-import nl.cwi.managed_data_4j.ccconcerns.patterns.observer.*;
-import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
-import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
-import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
-import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
-import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.*;
 import java.awt.*;
@@ -216,12 +207,12 @@ public class StandardDrawingView
 	public void setDrawing(Drawing d) {
 		if (drawing() != null) {
 			clearSelection();
-			drawing().removeDrawingChangeListener(this);
+			drawing().removeDrawingChangeListener(this); // TODO: @MDHD Remove this
 		}
 
 		fDrawing = d;
 		if (drawing() != null) {
-			drawing().addDrawingChangeListener(this);
+			drawing().addDrawingChangeListener(this); // TODO: @MDHD Remove this
 		}
 
 		checkMinimumSize();
@@ -662,7 +653,7 @@ public class StandardDrawingView
 		}
 	}
 
-	public void drawingInvalidated(DrawingChangeEvent e) {
+	public void drawingInvalidated(DrawingChangeEvent e) { // TODO: @MDHD Remove this
 
 //		Rectangle r = e.getInvalidatedRectangle();
 //		if (getDamage() == null) {
@@ -676,35 +667,7 @@ public class StandardDrawingView
 //			setDamage(damagedR);
 //		}
 
-		// ======
-		final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
-		final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
-		final Schema geometrySchema = SchemaLoader.load(
-				schemaFactory, schemaSchema,
-				MDPoint.class, MDRectangle.class, MDDimension.class);
-
-		final BasicDataManager basicFactoryForGeometry =
-				new BasicDataManager(GeometrySchemaFactory.class, geometrySchema);
-
-		final ObservableDataManager observableFactory =
-				new ObservableDataManager(GeometrySchemaFactory.class, geometrySchema);
-		final GeometrySchemaFactory geometrySchemaFactory = basicFactoryForGeometry.make();
-		final GeometrySchemaFactory observableForGeometry = observableFactory.make();
-		// ======
-
-//		MDRectangle mdRectangle = geometrySchemaFactory.Rectangle();
-
-		// observable rectangle
-		MDRectangle mdRectangle = observableForGeometry.Rectangle();
-		((nl.cwi.managed_data_4j.ccconcerns.patterns.observer.Observable) mdRectangle).observe(UpdateLogger::log);
-
-		Rectangle r = e.getInvalidatedRectangle();
-
-		mdRectangle.x(r.x);
-		mdRectangle.y(r.y);
-		mdRectangle.width(r.width);
-		mdRectangle.height(r.height);
-
+		MDRectangle mdRectangle = e.getInvalidatedMDRectangle();
 		if (getMDDamage() == null) {
 			setMDDamage(mdRectangle);
 		}
@@ -718,11 +681,11 @@ public class StandardDrawingView
 		}
 	}
 
-	public void drawingRequestUpdate(DrawingChangeEvent e) {
+	public void drawingRequestUpdate(DrawingChangeEvent e) { // TODO: @MDHD Remove this
 		repairDamage();
 	}
 
-	public void drawingTitleChanged(DrawingChangeEvent e){
+	public void drawingTitleChanged(DrawingChangeEvent e){ // TODO: @MDHD Remove this
 	}
 
 	/**
