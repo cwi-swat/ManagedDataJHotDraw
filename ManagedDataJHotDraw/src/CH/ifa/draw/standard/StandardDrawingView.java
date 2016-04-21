@@ -18,6 +18,18 @@ import CH.ifa.draw.contrib.dnd.DNDInterface;
 import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
+import ccconcerns.managed_data.schemas.geometry.MDPoint;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
+import nl.cwi.managed_data_4j.ccconcerns.patterns.observer.*;
+import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
+import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
+import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
+import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
+import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -58,7 +70,8 @@ public class StandardDrawingView
 	/**
 	 * the accumulated damaged area
 	 */
-	private transient Rectangle fDamage;
+//	private transient Rectangle fDamage;
+	private transient MDRectangle fMDDamage;
 
 	/**
 	 * The list of currently selected figures.
@@ -558,13 +571,21 @@ public class StandardDrawingView
 		}
 	}
 
-    protected Rectangle getDamage() {
-        return fDamage; // clone?
-    }
+//    protected Rectangle getDamage() {
+//        return fDamage; // clone?
+//    }
 
-    protected void setDamage(Rectangle r) {
-        fDamage = r;
-    }
+	protected MDRectangle getMDDamage() {
+		return fMDDamage;
+	}
+
+	protected void setMDDamage(MDRectangle r) {
+		fMDDamage = r;
+	}
+
+//    protected void setDamage(Rectangle r) {
+//        fDamage = r;
+//    }
 
 	/**
 	 * Gets the position of the last click inside the view.
@@ -630,23 +651,70 @@ public class StandardDrawingView
 	}
 
 	public void repairDamage() {
-		if (getDamage() != null) {
-			repaint(getDamage().x, getDamage().y, getDamage().width, getDamage().height);
-			setDamage(null);
+//		if (getDamage() != null) {
+//			repaint(getDamage().x, getDamage().y, getDamage().width, getDamage().height);
+//			setDamage(null);
+//		}
+
+		if (getMDDamage() != null) {
+			repaint(getMDDamage().x(), getMDDamage().y(), getMDDamage().width(), getMDDamage().height());
+			setMDDamage(null);
 		}
 	}
 
 	public void drawingInvalidated(DrawingChangeEvent e) {
+
+//		Rectangle r = e.getInvalidatedRectangle();
+//		if (getDamage() == null) {
+//			setDamage(r);
+//		}
+//		else {
+//			// don't manipulate rectangle returned by getDamage() directly
+//			// because it could be a cloned rectangle.
+//			Rectangle damagedR = getDamage();
+//			damagedR.add(r);
+//			setDamage(damagedR);
+//		}
+
+		// ======
+		final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
+		final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
+		final Schema geometrySchema = SchemaLoader.load(
+				schemaFactory, schemaSchema,
+				MDPoint.class, MDRectangle.class, MDDimension.class);
+
+		final BasicDataManager basicFactoryForGeometry =
+				new BasicDataManager(GeometrySchemaFactory.class, geometrySchema);
+
+		final ObservableDataManager observableFactory =
+				new ObservableDataManager(GeometrySchemaFactory.class, geometrySchema);
+		final GeometrySchemaFactory geometrySchemaFactory = basicFactoryForGeometry.make();
+		final GeometrySchemaFactory observableForGeometry = observableFactory.make();
+		// ======
+
+//		MDRectangle mdRectangle = geometrySchemaFactory.Rectangle();
+
+		// observable rectangle
+		MDRectangle mdRectangle = observableForGeometry.Rectangle();
+		((nl.cwi.managed_data_4j.ccconcerns.patterns.observer.Observable) mdRectangle).observe(UpdateLogger::log);
+
 		Rectangle r = e.getInvalidatedRectangle();
-		if (getDamage() == null) {
-			setDamage(r);
+
+		mdRectangle.x(r.x);
+		mdRectangle.y(r.y);
+		mdRectangle.width(r.width);
+		mdRectangle.height(r.height);
+
+		if (getMDDamage() == null) {
+			setMDDamage(mdRectangle);
 		}
 		else {
 			// don't manipulate rectangle returned by getDamage() directly
 			// because it could be a cloned rectangle.
-			Rectangle damagedR = getDamage();
-			damagedR.add(r);
-			setDamage(damagedR);
+			MDRectangle damagedMDR = getMDDamage();
+
+			damagedMDR.add(mdRectangle);
+			setMDDamage(damagedMDR);
 		}
 	}
 

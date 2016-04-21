@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -18,6 +18,15 @@ import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.standard.StandardDrawing;
 import CH.ifa.draw.standard.StandardDrawingView;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
+import ccconcerns.managed_data.schemas.geometry.MDPoint;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
+import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
+import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
+import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
+import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.JViewport;
 import java.awt.*;
@@ -369,13 +378,22 @@ public class ZoomDrawingView extends StandardDrawingView {
 	 * Overridden to scale damage to screen coordinates.
 	 */
 	public void repairDamage() {
-		Rectangle damagedArea = getDamage();
+//		Rectangle damagedArea = getDamage();
+//		if (damagedArea != null) {
+//			repaint((int) (damagedArea.x * getScale()),
+//					(int) (damagedArea.y * getScale()),
+//					(int) (damagedArea.width * getScale()),
+//					(int) (damagedArea.height * getScale()));
+//			setDamage(null);
+//		}
+
+		MDRectangle damagedArea = getMDDamage();
 		if (damagedArea != null) {
-			repaint((int) (damagedArea.x * getScale()),
-					(int) (damagedArea.y * getScale()),
-					(int) (damagedArea.width * getScale()),
-					(int) (damagedArea.height * getScale()));
-			setDamage(null);
+			repaint((int) (damagedArea.x() * getScale()),
+					(int) (damagedArea.y() * getScale()),
+					(int) (damagedArea.width() * getScale()),
+					(int) (damagedArea.height() * getScale()));
+			setMDDamage(null);
 		}
 	}
 
@@ -383,15 +401,44 @@ public class ZoomDrawingView extends StandardDrawingView {
 	 * Overridden to accumulate damage in an instance variable of this class.
 	 */
 	public void drawingInvalidated(DrawingChangeEvent e) {
+//		Rectangle r = e.getInvalidatedRectangle();
+//		if (getDamage() == null) {
+//			setDamage(r);
+//		}
+//		else {
+//			Rectangle damagedArea = getDamage();
+//			damagedArea.add(r);
+//			// the returned rectange may be a clone so we better set it again
+//			setDamage(damagedArea);
+//		}
+
+		// ======
+		final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
+		final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
+		final Schema geometrySchema = SchemaLoader.load(
+				schemaFactory, schemaSchema,
+				MDPoint.class, MDRectangle.class, MDDimension.class);
+		final BasicDataManager basicFactoryForGeometry =
+				new BasicDataManager(GeometrySchemaFactory.class, geometrySchema);
+		final GeometrySchemaFactory geometrySchemaFactory = basicFactoryForGeometry.make();
+		// ======
+
+		MDRectangle mdRectangle = geometrySchemaFactory.Rectangle();
 		Rectangle r = e.getInvalidatedRectangle();
-		if (getDamage() == null) {
-			setDamage(r);
+
+		mdRectangle.x(r.x);
+		mdRectangle.y(r.y);
+		mdRectangle.width(r.width);
+		mdRectangle.height(r.height);
+
+		if (getMDDamage() == null) {
+			setMDDamage(mdRectangle);
 		}
 		else {
-			Rectangle damagedArea = getDamage();
-			damagedArea.add(r);
+			MDRectangle damagedArea = getMDDamage();
+			damagedArea.add(mdRectangle);
 			// the returned rectange may be a clone so we better set it again
-			setDamage(damagedArea);
+			setMDDamage(damagedArea);
 		}
 	}
 
