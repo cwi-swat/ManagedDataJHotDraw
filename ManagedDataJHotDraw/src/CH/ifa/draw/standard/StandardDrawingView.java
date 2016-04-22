@@ -885,30 +885,30 @@ public class StandardDrawingView
 		return java.awt.dnd.DnDConstants.ACTION_COPY_OR_MOVE;
 	}
 
-
-	/***** Autoscroll support *****/
-	private ASH ash = new ASH(10);
-
-	public void autoscroll(java.awt.Point p) {
-		ash.autoscroll(p);
-	}
-	public Insets getAutoscrollInsets() {
-		return ash.getAutoscrollInsets();
-	}
-	class ASH extends AutoscrollHelper {
-		public ASH(int margin) {
-			super(margin);
-		}
-		public Dimension getSize() {
-			return StandardDrawingView.this.getSize();
-		}
-		public Rectangle getVisibleRect() {
-			return StandardDrawingView.this.getVisibleRect();
-		}
-		public void scrollRectToVisible(Rectangle aRect) {
-			StandardDrawingView.this.scrollRectToVisible(aRect);
-		}
-	}
+	// @MDHD
+//	/***** Autoscroll support *****/
+//	private ASH ash = new ASH(10);
+//
+//	public void autoscroll(java.awt.Point p) {
+//		ash.autoscroll(p);
+//	}
+//	public Insets getAutoscrollInsets() {
+//		return ash.getAutoscrollInsets();
+//	}
+//	class ASH extends AutoscrollHelper {
+//		public ASH(int margin) {
+//			super(margin);
+//		}
+//		public Dimension getSize() {
+//			return StandardDrawingView.this.getSize();
+//		}
+//		public Rectangle getVisibleRect() {
+//			return StandardDrawingView.this.getVisibleRect();
+//		}
+//		public void scrollRectToVisible(Rectangle aRect) {
+//			StandardDrawingView.this.scrollRectToVisible(aRect);
+//		}
+//	}
 
 	public String toString() {
 		return "DrawingView Nr: " + myCounter;
