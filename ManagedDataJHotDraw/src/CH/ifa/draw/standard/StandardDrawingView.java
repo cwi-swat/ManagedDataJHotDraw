@@ -66,8 +66,7 @@ public class StandardDrawingView
 	/**
 	 * the accumulated damaged area
 	 */
-//	private transient Rectangle fDamage; // @MDHD
-	private transient MDRectangle fMDDamage;
+	private transient Rectangle fDamage;
 
 	/**
 	 * The list of currently selected figures.
@@ -143,6 +142,7 @@ public class StandardDrawingView
 		this(editor, MINIMUM_WIDTH, MINIMUM_HEIGHT);
 	}
 
+	// @MDHD: That goes on the managed data factory as initialization
 	public StandardDrawingView(DrawingEditor editor, int width, int height) {
 		setAutoscrolls(true);
 		counter++;
@@ -567,21 +567,13 @@ public class StandardDrawingView
 		}
 	}
 
-//    protected Rectangle getDamage() {
-//        return fDamage; // clone?
-//    }
+    protected Rectangle getDamage() {
+        return fDamage; // clone?
+    }
 
-	protected MDRectangle getMDDamage() {
-		return fMDDamage;
-	}
-
-	protected void setMDDamage(MDRectangle r) {
-		fMDDamage = r;
-	}
-
-//    protected void setDamage(Rectangle r) {
-//        fDamage = r;
-//    }
+    protected void setDamage(Rectangle r) {
+        fDamage = r;
+    }
 
 	/**
 	 * Gets the position of the last click inside the view.
@@ -647,42 +639,25 @@ public class StandardDrawingView
 	}
 
 	public void repairDamage() {
-//		if (getDamage() != null) {
-//			repaint(getDamage().x, getDamage().y, getDamage().width, getDamage().height);
-//			setDamage(null);
-//		}
-
-		if (getMDDamage() != null) {
-			repaint(getMDDamage().x(), getMDDamage().y(), getMDDamage().width(), getMDDamage().height());
-			setMDDamage(null);
+		if (getDamage() != null) {
+			repaint(getDamage().x, getDamage().y, getDamage().width, getDamage().height);
+			setDamage(null);
 		}
 	}
 
 	public void drawingInvalidated(DrawingChangeEvent e) {
 
-//		Rectangle r = e.getInvalidatedRectangle();
-//		if (getDamage() == null) {
-//			setDamage(r);
-//		}
-//		else {
-//			// don't manipulate rectangle returned by getDamage() directly
-//			// because it could be a cloned rectangle.
-//			Rectangle damagedR = getDamage();
-//			damagedR.add(r);
-//			setDamage(damagedR);
-//		}
-
-		MDRectangle mdRectangle = e.getInvalidatedMDRectangle();
-		if (getMDDamage() == null) {
-			setMDDamage(mdRectangle);
+		// @HDMD refactored
+		Rectangle r = e.getInvalidatedRectangle();
+		if (getDamage() == null) {
+			setDamage(r);
 		}
 		else {
 			// don't manipulate rectangle returned by getDamage() directly
 			// because it could be a cloned rectangle.
-			MDRectangle damagedMDR = getMDDamage();
-
-			damagedMDR.add(mdRectangle);
-			setMDDamage(damagedMDR);
+			Rectangle damagedR = getDamage();
+			damagedR.add(r);
+			setDamage(damagedR);
 		}
 	}
 

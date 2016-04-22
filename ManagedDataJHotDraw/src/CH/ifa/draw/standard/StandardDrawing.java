@@ -122,22 +122,10 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 	 * @see FigureChangeListener
 	 */
 	public void figureInvalidated(FigureChangeEvent e) {
-//		if (fListeners != null) {
-//			for (int i = 0; i < fListeners.size(); i++) {
-//				DrawingChangeListener l = (DrawingChangeListener)fListeners.get(i);
-//				l.drawingInvalidated(new DrawingChangeEvent(this, e.getInvalidatedRectangle()));
-//			}
-//		}
-
 		if (fListeners != null) {
 			for (int i = 0; i < fListeners.size(); i++) {
 				DrawingChangeListener l = (DrawingChangeListener)fListeners.get(i);
-
-				Rectangle r = e.getInvalidatedRectangle();
-
-				MDRectangle mdRectangle = MDRectangleFactory.newRectangle(r.x, r.y, r.width, r.height);
-
-				l.drawingInvalidated(new DrawingChangeEvent(this, mdRectangle));
+				l.drawingInvalidated(new DrawingChangeEvent(this, e.getInvalidatedRectangle()));
 			}
 		}
 	}

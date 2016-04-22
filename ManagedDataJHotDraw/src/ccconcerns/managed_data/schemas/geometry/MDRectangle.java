@@ -113,6 +113,29 @@ public interface MDRectangle extends M {
                 (h < y || h > Y));
     }
 
+    default boolean intersects(MDRectangle r) {
+        int tw = width();
+        int th = height();
+        int rw = r.width();
+        int rh = r.height();
+        if (rw <= 0 || rh <= 0 || tw <= 0 || th <= 0) {
+            return false;
+        }
+        int tx = x();
+        int ty = y();
+        int rx = r.x();
+        int ry = r.y();
+        rw += rx;
+        rh += ry;
+        tw += tx;
+        th += ty;
+        //      overflow || intersect
+        return ((rw < rx || rw > tx) &&
+                (rh < ry || rh > ty) &&
+                (tw < tx || tw > rx) &&
+                (th < ty || th > ry));
+    }
+
     default void reshape(int _x, int _y, int _width, int _height) {
         x(_x);
         y(_y);
