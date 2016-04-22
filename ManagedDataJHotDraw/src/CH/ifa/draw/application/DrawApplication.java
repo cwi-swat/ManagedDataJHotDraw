@@ -760,7 +760,7 @@ public	class DrawApplication
 	 * will update their own states.
 	 * @see DrawingEditor
 	 */
-	public void figureSelectionChanged(DrawingView view) {
+	public void figureSelectionChanged(DrawingView view) { // @HDMD TODO: Should Call this
 		checkCommandMenus();
 	}
 

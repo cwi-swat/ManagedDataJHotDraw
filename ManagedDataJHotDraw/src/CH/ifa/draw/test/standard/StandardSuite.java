@@ -44,7 +44,6 @@ public class StandardSuite
     suite.addTestSuite(CH.ifa.draw.test.standard.FigureAndEnumeratorTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.HandleEnumeratorTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.StandardFigureSelectionTest.class);
-    suite.addTestSuite(CH.ifa.draw.test.standard.FastBufferedUpdateStrategyTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.ToolButtonTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.ToggleGridCommandTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.StandardDrawingViewTest.class);

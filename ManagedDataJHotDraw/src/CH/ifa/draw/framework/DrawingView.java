@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -39,7 +39,10 @@ import java.util.*;
  *
  * @version <$CURRENT_VERSION$>
  */
-public interface DrawingView extends ImageObserver, DrawingChangeListener {
+public interface DrawingView extends
+		ImageObserver,
+		DrawingChangeListener
+{
 
 	/**
 	 * Sets the view's editor.
@@ -286,13 +289,13 @@ public interface DrawingView extends ImageObserver, DrawingChangeListener {
 	 * Add a listener for selection changes in this DrawingView.
 	 * @param fsl jhotdraw.framework.FigureSelectionListener
 	 */
-	public void addFigureSelectionListener(FigureSelectionListener fsl);
+	public void addFigureSelectionListener(FigureSelectionListener fsl); // @MDHD TODO: Remove this
 
 	/**
 	 * Remove a listener for selection changes in this DrawingView.
 	 * @param fsl jhotdraw.framework.FigureSelectionListener
 	 */
-	public void removeFigureSelectionListener(FigureSelectionListener fsl);
+	public void removeFigureSelectionListener(FigureSelectionListener fsl); // @MDHD TODO: Remove this
 
 	/**
 	 * Returns a FigureEnumeration of connection figures

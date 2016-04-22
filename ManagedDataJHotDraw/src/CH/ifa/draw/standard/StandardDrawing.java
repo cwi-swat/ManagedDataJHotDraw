@@ -15,7 +15,6 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import ccconcerns.managed_data.helpers.MDRectangleFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
-import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
 
 import java.awt.*;
 import java.util.*;
@@ -136,8 +135,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 
 				Rectangle r = e.getInvalidatedRectangle();
 
-				MDRectangle mdRectangle = MDRectangleFactory.newObservableRectangle(r.x, r.y, r.width, r.height);
-				((nl.cwi.managed_data_4j.ccconcerns.patterns.observer.Observable) mdRectangle).observe(UpdateLogger::log);
+				MDRectangle mdRectangle = MDRectangleFactory.newRectangle(r.x, r.y, r.width, r.height);
 
 				l.drawingInvalidated(new DrawingChangeEvent(this, mdRectangle));
 			}

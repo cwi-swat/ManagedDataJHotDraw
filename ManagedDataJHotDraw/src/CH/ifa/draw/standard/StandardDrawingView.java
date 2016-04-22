@@ -38,9 +38,14 @@ import java.io.*;
  * @version <$CURRENT_VERSION$>
  */
 public class StandardDrawingView
-		extends JPanel
-		implements DrawingView,
-		DNDInterface, java.awt.dnd.Autoscroll {
+		extends
+			JPanel
+
+		implements
+			DrawingView
+//			DNDInterface, @HDMD
+//			java.awt.dnd.Autoscroll @HDMD
+{
 
 	/**
 	 * The DrawingEditor of the view.
@@ -51,7 +56,7 @@ public class StandardDrawingView
 	/**
 	 * the registered listeners for selection changes
 	 */
-	private transient List fSelectionListeners;
+	private transient List fSelectionListeners; // @MDHD TODO: Remove this
 
 	/**
 	 * The shown drawing.
@@ -61,7 +66,7 @@ public class StandardDrawingView
 	/**
 	 * the accumulated damaged area
 	 */
-//	private transient Rectangle fDamage;
+//	private transient Rectangle fDamage; // @MDHD
 	private transient MDRectangle fMDDamage;
 
 	/**
@@ -144,7 +149,7 @@ public class StandardDrawingView
 		fEditor = editor;
 		fViewSize = new Dimension(width,height);
 		setSize(width, height);
-		fSelectionListeners = CollectionsFactory.current().createList();
+		fSelectionListeners = CollectionsFactory.current().createList(); // @MDHD TODO: Remove this
 		addFigureSelectionListener(editor());
 		setLastClick(new Point(0, 0));
 		fConstrainer = null;
@@ -440,7 +445,7 @@ public class StandardDrawingView
 			fSelection.add(figure);
 			fSelectionHandles = null;
 			figure.invalidate();
-			fireSelectionChanged();
+			fireSelectionChanged(); // @MDHD TODO: Remove this
 		}
 	}
 
@@ -468,7 +473,7 @@ public class StandardDrawingView
 			fSelection.remove(figure);
 			fSelectionHandles = null;
 			figure.invalidate();
-			fireSelectionChanged();
+			fireSelectionChanged(); // @MDHD TODO: Remove this
 		}
 	}
 
@@ -483,7 +488,7 @@ public class StandardDrawingView
 		else {
 			addToSelection(figure);
 		}
-		fireSelectionChanged();
+		fireSelectionChanged(); // @MDHD TODO: Remove this
 	}
 
 	/**
@@ -502,7 +507,7 @@ public class StandardDrawingView
 		}
 		fSelection = CollectionsFactory.current().createList();
 		fSelectionHandles = null;
-		fireSelectionChanged();
+		fireSelectionChanged(); // @MDHD TODO: Remove this
 	}
 
 	/**
@@ -553,7 +558,7 @@ public class StandardDrawingView
 	 * By default this event is forwarded to the
 	 * drawing editor.
 	 */
-	protected void fireSelectionChanged() {
+	protected void fireSelectionChanged() { // @MDHD TODO: Remove this
 		if (fSelectionListeners != null) {
 			for (int i = 0; i < fSelectionListeners.size(); i++) {
 				FigureSelectionListener l = (FigureSelectionListener)fSelectionListeners.get(i);
@@ -653,7 +658,7 @@ public class StandardDrawingView
 		}
 	}
 
-	public void drawingInvalidated(DrawingChangeEvent e) { // TODO: @MDHD Remove this
+	public void drawingInvalidated(DrawingChangeEvent e) {
 
 //		Rectangle r = e.getInvalidatedRectangle();
 //		if (getDamage() == null) {
@@ -685,7 +690,7 @@ public class StandardDrawingView
 		repairDamage();
 	}
 
-	public void drawingTitleChanged(DrawingChangeEvent e){ // TODO: @MDHD Remove this
+	public void drawingTitleChanged(DrawingChangeEvent e){
 	}
 
 	/**
@@ -846,7 +851,7 @@ public class StandardDrawingView
 		if (drawing() != null) {
 			drawing().addDrawingChangeListener(this);
 		}
-		fSelectionListeners= CollectionsFactory.current().createList();
+		fSelectionListeners= CollectionsFactory.current().createList(); // @MDHD TODO: Remove this
 	}
 
     protected void checkMinimumSize() {
@@ -889,7 +894,7 @@ public class StandardDrawingView
 	 * Add a listener for selection changes.
 	 * @param fsl jhotdraw.framework.FigureSelectionListener
 	 */
-	public void addFigureSelectionListener(FigureSelectionListener fsl) {
+	public void addFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
 		fSelectionListeners.add(fsl);
 	}
 
@@ -897,7 +902,7 @@ public class StandardDrawingView
 	 * Remove a listener for selection changes.
 	 * @param fsl jhotdraw.framework.FigureSelectionListener
 	 */
-	public void removeFigureSelectionListener(FigureSelectionListener fsl) {
+	public void removeFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
 		fSelectionListeners.remove(fsl);
 	}
 

@@ -19,10 +19,6 @@ import CH.ifa.draw.application.*;
 import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.html.HTMLTextAreaFigure;
 import CH.ifa.draw.contrib.html.HTMLTextAreaTool;
-import CH.ifa.draw.contrib.zoom.ZoomDrawingView;
-import CH.ifa.draw.contrib.zoom.ZoomTool;
-import nl.cwi.managed_data_4j.language.schema.load.SchemaLoader;
-import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.*;
 import java.awt.*;
@@ -62,7 +58,7 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	}
 
 	protected DrawingView createDrawingView() {
-		return new ZoomDrawingView(this);
+		return new StandardDrawingView(this);
 	}
 
 	//-- application life cycle --------------------------------------------
@@ -77,10 +73,7 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	protected void createTools(JToolBar palette) {
 		super.createTools(palette);
 
-		Tool tool = new ZoomTool(this);
-		palette.add(createToolButton(IMAGES + "ZOOM", "Zoom Tool", tool));
-
-		tool = new UndoableTool(new TextTool(this, new TextFigure()));
+		Tool tool = new UndoableTool(new TextTool(this, new TextFigure()));
 		palette.add(createToolButton(IMAGES + "TEXT", "Text Tool", tool));
 
 		tool = new UndoableTool(new ConnectedTextTool(this, new TextFigure()));
@@ -217,10 +210,12 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	}
 
 	protected Drawing createDrawing() {
-		Drawing dwg = new BouncingDrawing();
-        dwg.setTitle(getDefaultDrawingTitle());
-		return dwg;
-		//return new StandardDrawing();
+		// @MDHD: Make it simpler, remove BouncingDrawing
+//		Drawing dwg = new BouncingDrawing();
+//        dwg.setTitle(getDefaultDrawingTitle());
+//		return dwg;
+
+		return new StandardDrawing();
 	}
 
 	//---- animation support --------------------------------------------
