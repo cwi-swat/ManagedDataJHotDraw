@@ -638,7 +638,10 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     default void keyTyped(KeyEvent e) {}
     default void keyReleased(KeyEvent e) {}
 
-    // ======= TODO: Remove using data manager
+    // ===========================================================================================
+    // ===========================================================================================
+    // ===========================================================================================
+    // ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
     default void fireSelectionChanged() {
         if (fSelectionListeners() != null) {
             for (int i = 0; i < fSelectionListeners().size(); i++) {
@@ -649,7 +652,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         }
     }
 
-    default void addFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
+    default void addFigureSelectionListener(FigureSelectionListener fsl) {
         List<FigureSelectionListener> prev = fSelectionListeners();
         prev.add(fsl);
         FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);
@@ -658,7 +661,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         System.out.println(" && FigureSelectionListener ADDED: " + fsl.toString() + " size: " + fSelectionListeners().size());
     }
 
-    default void removeFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
+    default void removeFigureSelectionListener(FigureSelectionListener fsl) {
         List<FigureSelectionListener> prev = fSelectionListeners();
         prev.remove(fsl);
         FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);

@@ -866,22 +866,6 @@ public	class DrawApplication
 		}
 	}
 
-	/**
-	 * Fired by a view when the figure selection changes.  Since Commands and
-	 * Tools may depend on the figure selection they are registered to be notified
-	 * about these events.
-	 * Any selection sensitive GUI component should update its
-	 * own state if the selection has changed, e.g. selection sensitive menuitems
-	 * will update their own states.
-	 * @see DrawingEditor
-	 */
-//	public void figureSelectionChanged(DrawingView view) { // @HDMD TODO: Should Call this
-//		checkCommandMenus();
-//	}
-	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Should Call this
-		checkCommandMenus();
-	}
-
 	protected void checkCommandMenus() {
 		JMenuBar mb = getJMenuBar();
 
@@ -1298,5 +1282,26 @@ public	class DrawApplication
 
 	protected Iconkit getIconkit() {
 		return fIconkit;
+	}
+
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+	// ===========================================================================================
+	// ===========================================================================================
+	// ===========================================================================================
+	/**
+	 * Fired by a view when the figure selection changes.  Since Commands and
+	 * Tools may depend on the figure selection they are registered to be notified
+	 * about these events.
+	 * Any selection sensitive GUI component should update its
+	 * own state if the selection has changed, e.g. selection sensitive menuitems
+	 * will update their own states.
+	 * @see DrawingEditor
+	 */
+//	public void figureSelectionChanged(DrawingView view) {
+//		checkCommandMenus();
+//	}
+	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Should Call this
+		System.out.println("DrawApplication: figureSelectionChanged");
+		checkCommandMenus();
 	}
 }

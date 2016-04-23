@@ -3,6 +3,7 @@ package ccconcerns.managed_data.helpers;
 import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.standard.*;
 import ccconcerns.MyJPanel;
+import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.primitives.java_awt.*;
 import ccconcerns.managed_data.primitives.java_swing.JPanelPrimitive;
@@ -23,11 +24,11 @@ public class MDDrawingViewFactory {
     private static final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
     private static final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
 
-    public static MDStandardDrawingView newDrawingView(DrawingEditor editor) {
-        return newDrawingView(editor, MDStandardDrawingView.MINIMUM_WIDTH, MDStandardDrawingView.MINIMUM_HEIGHT);
+    public static MDStandardDrawingView newSubjectRoleDrawingView(DrawingEditor editor) {
+        return newSubjectRoleDrawingView(editor, MDStandardDrawingView.MINIMUM_WIDTH, MDStandardDrawingView.MINIMUM_HEIGHT);
     }
 
-    public static MDStandardDrawingView newDrawingView(DrawingEditor editor, int width, int heigth) {
+    public static MDStandardDrawingView newSubjectRoleDrawingView(DrawingEditor editor, int width, int height) {
 
         SchemaLoader.addPrimitive(new DimensionPrimitive());
         SchemaLoader.addPrimitive(new RectanglePrimitive());
@@ -46,16 +47,15 @@ public class MDDrawingViewFactory {
         SchemaLoader.addPrimitive(new HandlePrimitive());
         SchemaLoader.addPrimitive(new FigureSelectionListenerPrimitive());
 
-        // ======
+        // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
                 schemaFactory, schemaSchema,
                 MDStandardDrawingView.class);
 
-        final BasicDataManager basicFactory =
-                new BasicDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
-        final DrawingViewSchemaFactory drawingViewSchemaFactory = basicFactory.make();
-        // ================================================
-        // ================================================
+        final SubjectRoleDataManager subjectRoleFactory =
+                new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+
+        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
         // ================================================
 
         final MDStandardDrawingView drawingView = drawingViewSchemaFactory.DrawingView();
@@ -63,7 +63,7 @@ public class MDDrawingViewFactory {
         // JPanel setup
         MyJPanel jPanel = new MyJPanel();
         jPanel.setAutoscrolls(true);
-        jPanel.setSize(width, heigth);
+        jPanel.setSize(width, height);
         jPanel.setBackground(Color.lightGray);
         drawingView.panel(jPanel);
         jPanel.setDrawingView(drawingView);
@@ -72,16 +72,17 @@ public class MDDrawingViewFactory {
         drawingView.editor(editor);
 
         // Size
-        drawingView.size(new Dimension(width, heigth));
-        jPanel.setSize(width, heigth);
+        drawingView.size(new Dimension(width, height));
+        jPanel.setSize(width, height);
 
         // Last click
         drawingView.lastClick(new Point(0, 0));
 
         // Constrainer
-        // drawingView.constrainer(null);
+        drawingView.constrainer(null);
 
         // Selection listeners
+        // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
         drawingView.addFigureSelectionListener(editor);
 
         // Display update
@@ -169,7 +170,154 @@ public class MDDrawingViewFactory {
 //
 //            }
 //        });
+        return drawingView;
+    }
 
+    public static MDStandardDrawingView newDrawingView(DrawingEditor editor) {
+        return newDrawingView(editor, MDStandardDrawingView.MINIMUM_WIDTH, MDStandardDrawingView.MINIMUM_HEIGHT);
+    }
+
+    public static MDStandardDrawingView newDrawingView(DrawingEditor editor, int width, int height) {
+
+        SchemaLoader.addPrimitive(new DimensionPrimitive());
+        SchemaLoader.addPrimitive(new RectanglePrimitive());
+        SchemaLoader.addPrimitive(new PointPrimitive());
+        SchemaLoader.addPrimitive(new ColorPrimitive());
+        SchemaLoader.addPrimitive(new CursorPrimitive());
+
+        SchemaLoader.addPrimitive(new JPanelPrimitive());
+
+        SchemaLoader.addPrimitive(new DrawingEditorPrimitive());
+        SchemaLoader.addPrimitive(new DrawingPrimitive());
+        SchemaLoader.addPrimitive(new ToolPrimitive());
+        SchemaLoader.addPrimitive(new FigurePrimitive());
+        SchemaLoader.addPrimitive(new PointConstrainerPrimitive());
+        SchemaLoader.addPrimitive(new PainterPrimitive());
+        SchemaLoader.addPrimitive(new HandlePrimitive());
+        SchemaLoader.addPrimitive(new FigureSelectionListenerPrimitive());
+
+        // ================================================
+        final Schema drawingViewSchema = SchemaLoader.load(
+                schemaFactory, schemaSchema,
+                MDStandardDrawingView.class);
+
+        final BasicDataManager basicFactory =
+                new BasicDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+        final DrawingViewSchemaFactory drawingViewSchemaFactory = basicFactory.make();
+        // ================================================
+
+        final MDStandardDrawingView drawingView = drawingViewSchemaFactory.DrawingView();
+
+        // JPanel setup
+        MyJPanel jPanel = new MyJPanel();
+        jPanel.setAutoscrolls(true);
+        jPanel.setSize(width, height);
+        jPanel.setBackground(Color.lightGray);
+        drawingView.panel(jPanel);
+        jPanel.setDrawingView(drawingView);
+
+        // editor
+        drawingView.editor(editor);
+
+        // Size
+        drawingView.size(new Dimension(width, height));
+        jPanel.setSize(width, height);
+
+        // Last click
+        drawingView.lastClick(new Point(0, 0));
+
+        // Constrainer
+        drawingView.constrainer(null);
+
+        // Selection listeners
+        // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+        drawingView.addFigureSelectionListener(editor);
+
+        // Display update
+        drawingView.setDisplayUpdate(new SimpleUpdateStrategy());
+
+        // Background
+        drawingView.setBackground(Color.lightGray);
+
+        // Drawing
+        drawingView.drawing(new StandardDrawing());
+
+        // Panel events
+        jPanel.addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                try {
+                    jPanel.requestFocus(); // JDK1.1
+                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+                    drawingView.setLastClick(new Point(e.getX(), e.getY()));
+
+                    e.setSource(drawingView);
+                    drawingView.tool().mouseDown(e, p.x, p.y);
+                    drawingView.checkDamage();
+                }
+                catch (Throwable t) {
+                    handleMouseEventException(jPanel, t);
+                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                try {
+                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+
+                    e.setSource(drawingView);
+                    drawingView.tool().mouseUp(e, p.x, p.y);
+                    drawingView.checkDamage();
+                }
+                catch (Throwable t) {
+                    handleMouseEventException(jPanel, t);
+                }
+            }
+        });
+
+        jPanel.addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                try {
+                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+
+                    e.setSource(drawingView);
+                    drawingView.tool().mouseDrag(e, p.x, p.y);
+                    drawingView.checkDamage();
+                }
+                catch (Throwable t) {
+                    handleMouseEventException(jPanel, t);
+                }
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                try {
+                    drawingView.tool().mouseMove(e, e.getX(), e.getY());
+                }
+                catch (Throwable t) {
+                    handleMouseEventException(jPanel, t);
+                }
+            }
+        });
+
+//        jPanel.addKeyListener(new KeyListener() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void keyPressed(KeyEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void keyReleased(KeyEvent e) {
+//
+//            }
+//        });
         return drawingView;
     }
 
