@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,7 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.util.*;
 import java.util.List;
@@ -46,7 +47,8 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	 * independingly of the currently active drawing view.
 	 * For example, if a tool can be used
 	 */
-	private DrawingView     myDrawingView;
+//	private DrawingView     myDrawingView;
+	private MDStandardDrawingView     myDrawingView;
 
 	private Undoable myUndoActivity;
 	private AbstractTool.EventDispatcher myEventDispatcher;
@@ -96,18 +98,27 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	public void deactivate() {
 		if (isActive()) {
 			if (getActiveView() != null) {
-				getActiveView().setCursor(Cursor.getDefaultCursor());
+//				getActiveView().setCursor(Cursor.getDefaultCursor());
+				getActiveView().cursor(Cursor.getDefaultCursor());
 			}
 			getEventDispatcher().fireToolDeactivatedEvent();
 		}
 	}
 
-	/**
-	 * Fired when the selected view changes.
-	 * Subclasses should always call super.  ViewSelectionChanged() this allows
-	 * the tools state to be updated and referenced to the new view.
-	 */
-	public void viewSelectionChanged(DrawingView oldView, DrawingView newView) {
+//	/**
+//	 * Fired when the selected view changes.
+//	 * Subclasses should always call super.  ViewSelectionChanged() this allows
+//	 * the tools state to be updated and referenced to the new view.
+//	 */
+//	public void viewSelectionChanged(DrawingView oldView, DrawingView newView) {
+//		if (isActive()) {
+//			deactivate();
+//			activate();
+//		}
+//
+//		checkUsable();
+//	}
+	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		if (isActive()) {
 			deactivate();
 			activate();
@@ -116,16 +127,22 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 		checkUsable();
 	}
 
-	/**
-	 * Sent when a new view is created
-	 */
-	public void viewCreated(DrawingView view) {
+//	/**
+//	 * Sent when a new view is created
+//	 */
+//	public void viewCreated(DrawingView view) {
+//	}
+
+ 	public void viewCreated(MDStandardDrawingView view) {
 	}
 
-	/**
-	 * Send when an existing view is about to be destroyed.
-	 */
-	public void viewDestroying(DrawingView view) {
+//	/**
+//	 * Send when an existing view is about to be destroyed.
+//	 */
+//	public void viewDestroying(DrawingView view) {
+//	}
+
+	public void viewDestroying(MDStandardDrawingView view) {
 	}
 
 	/**
@@ -134,7 +151,8 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	public void mouseDown(MouseEvent e, int x, int y) {
         setAnchorX(x);
         setAnchorY(y);
-		setView((DrawingView)e.getSource());
+//		setView((DrawingView)e.getSource());
+		setView((MDStandardDrawingView)e.getSource());
 	}
 
 	/**
@@ -187,24 +205,36 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 		myDrawingEditor = newDrawingEditor;
 	}
 
-	/**
-	 * Gets the tool's view (convienence method).
-	 */
-	public DrawingView view() {
+//	/**
+//	 * Gets the tool's view (convienence method).
+//	 */
+//	public DrawingView view() {
+//		return myDrawingView;
+//	}
+
+	public MDStandardDrawingView view() {
 		return myDrawingView;
 	}
 
-	protected void setView(DrawingView newDrawingView) {
+//	protected void setView(DrawingView newDrawingView) {
+//		myDrawingView = newDrawingView;
+//	}
+
+	protected void setView(MDStandardDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 
-	public DrawingView getActiveView() {
+//	public DrawingView getActiveView() {
+//		return editor().view();
+//	}
+
+	public MDStandardDrawingView getActiveView() {
 		return editor().view();
 	}
 
-	/**
-	 * Tests if the tool can be used or "executed."
-	 */
+		/**
+         * Tests if the tool can be used or "executed."
+         */
 	public boolean isUsable() {
 		return isEnabled() && myIsUsable;
 	}

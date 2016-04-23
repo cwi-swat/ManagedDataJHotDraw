@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,7 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.framework.DrawingView;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * @author  Wolfram Kaiser <mrfloppy@sourceforge.net>
@@ -44,8 +45,9 @@ public interface Undoable {
 	 */
 	public void release();
 
-	public DrawingView getDrawingView();
-	
+//	public DrawingView getDrawingView();
+	public MDStandardDrawingView getDrawingView();
+
 	public void setAffectedFigures(FigureEnumeration newAffectedFigures);
 	
 	public FigureEnumeration getAffectedFigures();

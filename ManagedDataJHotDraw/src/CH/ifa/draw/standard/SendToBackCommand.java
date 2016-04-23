@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.util.*;
 
 /**
@@ -54,13 +56,19 @@ public class SendToBackCommand extends AbstractCommand {
 	public static class UndoActivity extends UndoableAdapter {
 		private Hashtable myOriginalLayers;
 		
-		public UndoActivity(DrawingView newDrawingView) {
+//		public UndoActivity(DrawingView newDrawingView) {
+//			super(newDrawingView);
+//			myOriginalLayers = new Hashtable();
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newDrawingView) {
 			super(newDrawingView);
 			myOriginalLayers = new Hashtable();
 			setUndoable(true);
 			setRedoable(true);
 		}
-		
+
 		public boolean undo() {
 			if (!super.undo()) {
 				return false;

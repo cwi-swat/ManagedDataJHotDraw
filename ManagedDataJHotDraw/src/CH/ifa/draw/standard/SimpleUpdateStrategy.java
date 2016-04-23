@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,7 @@ package CH.ifa.draw.standard;
 
 import java.awt.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * The SimpleUpdateStrategy implements an update
@@ -34,7 +35,10 @@ public  class SimpleUpdateStrategy implements Painter {
 	/**
 	* Draws the view contents.
 	*/
-	public void draw(Graphics g, DrawingView view) {
+//	public void draw(Graphics g, DrawingView view) {
+//		view.drawAll(g);
+//	}
+	public void draw(Graphics g, MDStandardDrawingView view) {
 		view.drawAll(g);
 	}
 }

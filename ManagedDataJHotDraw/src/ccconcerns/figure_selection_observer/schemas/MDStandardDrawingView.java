@@ -40,43 +40,142 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     Painter displayUpdate(Painter... displayUpdate);
 
+    default void setDisplayUpdate(Painter _displayUpdate) {
+        displayUpdate(_displayUpdate);
+    }
+
+    default Painter getDisplayUpdate() {
+        return displayUpdate();
+    }
+
     PointConstrainer constrainer(PointConstrainer... constrainer);
+
+    default PointConstrainer getConstrainer() {
+        return constrainer();
+    }
+
+    default void setConstrainer(PointConstrainer _constrainer) {
+        constrainer(_constrainer);
+    }
 
     Color background(Color... background);
 
+    default Color getBackground() {
+        return panel().getBackground();
+    }
+
+    default void setBackground(Color bg) {
+        panel().setBackground(bg);
+    }
+
     Cursor cursor(Cursor... cursor);
+
+    default Cursor getCursor() {
+        return cursor();
+    }
+
+    default void setCursor(Cursor cur) {
+        cursor(cur);
+    }
 
     Rectangle damage(Rectangle... damage);
 
+    default Rectangle getDamage() {
+        return damage();
+    }
+
+    default void setDamage(Rectangle r) {
+        damage(r);
+    }
+
     Point lastClick(Point... lastClick);
 
-    List fSelection = null;
-    List fSelectionHandles = null;
-    List fBackgrounds = null;
-    List fForegrounds = null;
+    default Point getLastClick() {
+        return lastClick();
+    }
 
-//    List<Handle> selectionHandles(Handle... selectionHandles);
-//    List<Figure> selection(Figure... selection);
-//    List<Handle> backgrounds(Painter... backgrounds);
-//    List<Painter> foregrounds(Painter... foregrounds);
+    default void setLastClick(Point lc) {
+        lastClick(lc);
+    }
+
+    List<FigureSelectionListener> fSelectionListeners(FigureSelectionListener... listeners);
+    List<Handle> fSelectionHandles(Handle... selectionHandles);
+    List<Figure> fSelection(Figure... selection);
+    List<Handle> fBackgrounds(Painter... backgrounds);
+    List<Painter> fForegrounds(Painter... foregrounds);
+
+    List<Figure> fFigures(Figure... figures);
+
+    default void addFigure(Figure figure) {
+        List<Figure> prev = fFigures();
+        prev.add(figure);
+
+        Figure[] newfsl =  prev.toArray(new Figure[prev.size()]);
+        fFigures(newfsl);
+    }
+
+    default void removeFigure(Figure figure) {
+        List<Figure> prev = fFigures();
+        prev.remove(figure);
+
+        Figure[] newfsl = prev.toArray(new Figure[prev.size()]);
+        fFigures(newfsl);
+    }
+
+    default void addSelection(Figure figure) {
+        List<Figure> prev = fSelection();
+        prev.add(figure);
+
+        Figure[] newfsl =  prev.toArray(new Figure[prev.size()]);
+        fSelection(newfsl);
+    }
+
+    default void removeSelection(Figure figure) {
+        List<Figure> prev = fSelection();
+        prev.remove(figure);
+
+        Figure[] newfsl =  prev.toArray(new Figure[prev.size()]);
+        fSelection(newfsl);
+    }
+
+    default void addSelectionHandle(Handle handle) {
+        List<Handle> prev = fSelectionHandles();
+        prev.add(handle);
+
+        Handle[] newfsl =  prev.toArray(new Handle[prev.size()]);
+        fSelectionHandles(newfsl);
+    }
+
+    default void removeSelectionHandle(Handle handle) {
+        List<Handle> prev = fSelectionHandles();
+        prev.remove(handle);
+
+        Handle[] newfsl =  prev.toArray(new Handle[prev.size()]);
+        fSelectionHandles(newfsl);
+    }
 
     default Tool tool() {
         return editor().tool();
     }
 
     default void setDrawing(Drawing d) {
+        Drawing drawing = drawing();
         if (drawing() != null) {
             clearSelection();
 
-            // @MDHD: it is at the data managed
-            // drawing().removeDrawingChangeListener(this);
+            // TODO: Remove using data manager
+            drawing.removeDrawingChangeListener(this);
+            drawing(drawing);
         }
 
         drawing(d);
-        // @MDHD: it is at the data managed
-        // if (drawing() != null) {
-        //     drawing().addDrawingChangeListener(this);
-        // }
+
+        // TODO: Remove using data manager
+         if (drawing() != null) {
+             Drawing drawing2 = drawing();
+             drawing2.addDrawingChangeListener(this);
+             drawing(drawing2);
+         }
 
         checkMinimumSize();
 
@@ -86,11 +185,17 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default Figure add(Figure figure) {
-        return drawing().add(figure);
+        Drawing drawing = drawing();
+        drawing.add(figure);
+        drawing(drawing);
+        return figure;
     }
 
     default Figure remove(Figure figure) {
-        return drawing().remove(figure);
+        Drawing drawing = drawing();
+        drawing.remove(figure);
+        drawing(drawing);
+        return figure;
     }
 
     default void addAll(Collection figures) {
@@ -188,19 +293,26 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default int selectionCount() {
-        return fSelection.size();
+        return fSelection().size();
     }
 
     default boolean isFigureSelected(Figure checkFigure) {
-        return fSelection.contains(checkFigure);
+        List<Figure> sel = fSelection();
+
+        for (Figure figure : sel) {
+            if (figure.equals(checkFigure))
+                return true;
+        }
+
+        return false;
     }
 
     default void addToSelection(Figure figure) {
         if (!isFigureSelected(figure) && drawing().includes(figure)) {
-            fSelection.add(figure);
-//            fSelectionHandles = null; TODO
+            addSelection(figure);
+            fSelectionHandles(null);
             figure.invalidate();
-//            fireSelectionChanged(); TODO
+            fireSelectionChanged();
         }
     }
 
@@ -216,10 +328,11 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default void removeFromSelection(Figure figure) {
         if (isFigureSelected(figure)) {
-            fSelection.remove(figure);
-//            fSelectionHandles = null; TODO
+            removeSelection(figure);
+            fSelectionHandles(null);
+
             figure.invalidate();
-//            fireSelectionChanged(); TODO
+            fireSelectionChanged(); // TODO remove
         }
     }
 
@@ -230,7 +343,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         else {
             addToSelection(figure);
         }
-        // fireSelectionChanged(); TODO
+         fireSelectionChanged();  // TODO remove
     }
 
     default void clearSelection() {
@@ -244,24 +357,29 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         while (fe.hasNextFigure()) {
             fe.nextFigure().invalidate();
         }
-        // fSelection = CollectionsFactory.current().createList(); TODO
-        //fSelectionHandles = null; TODO
-        //fireSelectionChanged(); TODO
+
+        fSelection(null);
+        fSelectionHandles(null);
+
+        fireSelectionChanged();  // TODO remove
     }
 
     default HandleEnumeration selectionHandles() {
-        if (fSelectionHandles == null) {
-//            fSelectionHandles = CollectionsFactory.current().createList(); // todo
+        if (fSelectionHandles().size() == 0) {
+            fSelectionHandles(null);
+
             FigureEnumeration fe = selection();
+            List<Handle> handles = new LinkedList<>();
             while (fe.hasNextFigure()) {
                 Figure figure = fe.nextFigure();
                 HandleEnumeration kk = figure.handles();
                 while (kk.hasNextHandle()) {
-                    fSelectionHandles.add(kk.nextHandle());
+                    handles.add(kk.nextHandle());
                 }
             }
+            fSelectionHandles(handles.toArray(new Handle[handles.size()]));
         }
-        return new HandleEnumerator(fSelectionHandles);
+        return new HandleEnumerator(fSelectionHandles());
     }
 
     default FigureSelection getFigureSelection() {
@@ -296,28 +414,28 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default void repairDamage() {
-        if (damage() != null) {
-            // MDHD
-			// repaint(damage().x, damage().y, damage().width, damage().height);
+        if (getDamage() != null) {
             panel().repaint(damage().x, damage().y, damage().width, damage().height);
-            damage(null);
+            setDamage(null);
 		}
     }
-
 
     default void drawingInvalidated(DrawingChangeEvent e) {
 
 		Rectangle r = e.getInvalidatedRectangle();
-		if (damage() == null) {
-            damage(r);
+		if (getDamage() == null) {
+            setDamage(r);
 		}
 		else {
 			// don't manipulate rectangle returned by getDamage() directly
 			// because it could be a cloned rectangle.
-			Rectangle damagedR = damage();
+			Rectangle damagedR = getDamage();
 			damagedR.add(r);
-            damage(damagedR);
+            setDamage(damagedR);
 		}
+
+        // TODO: not sure
+        repairDamage();
     }
 
     default void drawingRequestUpdate(DrawingChangeEvent e) {
@@ -328,13 +446,8 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default void paintComponent(Graphics g) {
-        // displayUpdate().draw(g, this); TODO
-         displayUpdate().draw(g, (DrawingView)this);
-    }
-
-
-    default void paint(Graphics g) {
-
+        Painter displayStrategy = getDisplayUpdate();
+        displayStrategy.draw(g, this);
     }
 
     default Image createImage(int width, int height) {
@@ -348,12 +461,12 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     default void drawAll(Graphics g) {
         Boolean isPrinting = g instanceof PrintGraphics;
         drawBackground(g);
-        if ((fBackgrounds != null) && !isPrinting) {
-            drawPainters(g, fBackgrounds);
+        if ((fBackgrounds() != null) && !isPrinting) {
+            drawPainters(g, fBackgrounds());
         }
         drawDrawing(g);
-        if ((fForegrounds != null) && !isPrinting) {
-            drawPainters(g, fForegrounds);
+        if ((fForegrounds() != null) && !isPrinting) {
+            drawPainters(g, fForegrounds());
         }
         if (!isPrinting) {
             drawHandles(g);
@@ -362,21 +475,19 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default void drawPainters(Graphics g, List v) {
         for (int i = 0; i < v.size(); i++) {
-//            ((Painter)v.get(i)).draw(g, this); TODO
-            ((Painter)v.get(i)).draw(g, (DrawingView)this);
+            ((Painter)v.get(i)).draw(g, this);
         }
     }
 
 
     default void draw(Graphics g, FigureEnumeration fe) {
         Boolean isPrinting = g instanceof PrintGraphics;
-        //drawBackground(g);
-        if ((fBackgrounds != null) && !isPrinting) {
-            drawPainters(g, fBackgrounds);
+        if ((fBackgrounds() != null) && !isPrinting) {
+            drawPainters(g, fBackgrounds());
         }
         drawing().draw(g, fe);
-        if ((fForegrounds != null) && !isPrinting) {
-            drawPainters(g, fForegrounds);
+        if ((fForegrounds() != null) && !isPrinting) {
+            drawPainters(g, fForegrounds());
         }
         if (!isPrinting) {
             drawHandles(g);
@@ -442,12 +553,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     default void unfreezeView() {
         drawing().unlock();
     }
-
-    // @MDHD refactored
-    // public void addFigureSelectionListener(FigureSelectionListener fsl);
-
-    // @MDHD refactored
-    // public void removeFigureSelectionListener(FigureSelectionListener fsl);
 
     default FigureEnumeration getConnectionFigures(Figure inFigure) {
         // If no figure or figure is non connectable, just return null
@@ -532,4 +637,33 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default void keyTyped(KeyEvent e) {}
     default void keyReleased(KeyEvent e) {}
+
+    // ======= TODO: Remove using data manager
+    default void fireSelectionChanged() {
+        if (fSelectionListeners() != null) {
+            for (int i = 0; i < fSelectionListeners().size(); i++) {
+                List<FigureSelectionListener> listeners = fSelectionListeners();
+                FigureSelectionListener l = listeners.get(i);
+				l.figureSelectionChanged(this);
+            }
+        }
+    }
+
+    default void addFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
+        List<FigureSelectionListener> prev = fSelectionListeners();
+        prev.add(fsl);
+        FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);
+        fSelectionListeners(newfsl);
+
+        System.out.println(" && FigureSelectionListener ADDED: " + fsl.toString() + " size: " + fSelectionListeners().size());
+    }
+
+    default void removeFigureSelectionListener(FigureSelectionListener fsl) { // @MDHD TODO: Remove this
+        List<FigureSelectionListener> prev = fSelectionListeners();
+        prev.remove(fsl);
+        FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);
+        fSelectionListeners(newfsl);
+
+        System.out.println(" && FigureSelectionListener REMOVED: " + fsl.toString() + " size: " + fSelectionListeners().size());
+    }
 }

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.FloatingTextField;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -53,7 +55,7 @@ public class TextTool extends CreationTool {
 	 */
 	public void mouseDown(MouseEvent e, int x, int y)
 	{
-		setView((DrawingView)e.getSource());
+		setView((MDStandardDrawingView)e.getSource());
 
 		if (getTypingTarget() != null) {
 			editor().toolDone();
@@ -232,7 +234,14 @@ public class TextTool extends CreationTool {
 		private String myOriginalText;
 		private String myBackupText;
 
-		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//			super(newDrawingView);
+//			setOriginalText(newOriginalText);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+
+		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView);
 			setOriginalText(newOriginalText);
 			setUndoable(true);

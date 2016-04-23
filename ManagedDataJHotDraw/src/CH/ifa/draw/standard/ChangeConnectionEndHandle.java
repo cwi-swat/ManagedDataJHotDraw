@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,8 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.Point;
 
 /**
@@ -68,12 +70,19 @@ public class ChangeConnectionEndHandle extends ChangeConnectionHandle {
 	/**
 	 * Factory method for undo activity
 	 */
-	protected Undoable createUndoActivity(DrawingView newView) {
+//	protected Undoable createUndoActivity(DrawingView newView) {
+//		return new ChangeConnectionEndHandle.UndoActivity(newView);
+//	}
+
+	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
 		return new ChangeConnectionEndHandle.UndoActivity(newView);
 	}
 
 	public static class UndoActivity extends ChangeConnectionHandle.UndoActivity {
-		public UndoActivity(DrawingView newView) {
+//		public UndoActivity(DrawingView newView) {
+//			super(newView);
+//		}
+		public UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 		}
 

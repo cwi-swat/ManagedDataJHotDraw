@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,8 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -57,7 +59,8 @@ public interface Handle {
 	 * @param y the y position where the interaction started
 	 * @param view the handles container
 	 */
-	public void invokeStart(int  x, int  y, DrawingView view);
+//	public void invokeStart(int  x, int  y, DrawingView view);
+	public void invokeStart(int  x, int  y, MDStandardDrawingView view);
 
 	/**
 	 * @deprecated As of version 4.1,
@@ -76,7 +79,8 @@ public interface Handle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view);
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view);
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view);
 
 	/**
 	 * Tracks the end of the interaction.
@@ -85,7 +89,8 @@ public interface Handle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view);
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view);
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view);
 
 	/**
 	 * @deprecated As of version 4.1,

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.UndoableTool;
 import CH.ifa.draw.util.UndoableHandle;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.event.MouseEvent;
 
 /**
@@ -114,7 +116,10 @@ public class SelectionTool extends AbstractTool {
 	/**
 	 * Factory method to create a Handle tracker. It is used to track a handle.
 	 */
-	protected Tool createHandleTracker(DrawingView view, Handle handle) {
+//	protected Tool createHandleTracker(DrawingView view, Handle handle) {
+//		return new HandleTracker(editor(), new UndoableHandle(handle, view));
+//	}
+	protected Tool createHandleTracker(MDStandardDrawingView view, Handle handle) {
 		return new HandleTracker(editor(), new UndoableHandle(handle, view));
 	}
 

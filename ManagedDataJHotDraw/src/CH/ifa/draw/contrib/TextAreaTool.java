@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -19,6 +19,7 @@ import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.standard.TextHolder;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -67,7 +68,7 @@ public class TextAreaTool extends CreationTool {
 	 * @param y  Description of the Parameter
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((DrawingView)e.getSource());
+		setView((MDStandardDrawingView)e.getSource());
 		Figure pressedFigure = drawing().findFigureInside(x, y);
 		TextHolder textHolder = null;
 		if (pressedFigure != null) {
@@ -303,7 +304,13 @@ public class TextAreaTool extends CreationTool {
 		 * @param newDrawingView   Description of the Parameter
 		 * @param newOriginalText  Description of the Parameter
 		 */
-		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//			super(newDrawingView);
+//			setOriginalText(newOriginalText);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView);
 			setOriginalText(newOriginalText);
 			setUndoable(true);

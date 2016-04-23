@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -28,12 +30,23 @@ public class FontSizeHandle extends LocatorHandle {
 		super(owner, l);
 	}
 
-	public void invokeStart(int  x, int  y, DrawingView view) {
+//	public void invokeStart(int  x, int  y, DrawingView view) {
+//		setUndoActivity(createUndoActivity(view));
+//		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
+//	}
+	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 	}
 
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		TextFigure textOwner = (TextFigure) owner();
+//
+//		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
+//		int newSize = activity.getFont().getSize() + y-anchorY;
+//		textOwner.setFont(new Font(activity.getFont().getName(), activity.getFont().getStyle(), newSize));
+//	}
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		TextFigure textOwner = (TextFigure) owner();
 
 		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
@@ -41,7 +54,18 @@ public class FontSizeHandle extends LocatorHandle {
 		textOwner.setFont(new Font(activity.getFont().getName(), activity.getFont().getStyle(), newSize));
 	}
 
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		TextFigure textOwner = (TextFigure) owner();
+//		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
+//		// there has been no change so there is nothing to undo
+//		if (textOwner.getFont().getSize() == activity.getOldFontSize()) {
+//			setUndoActivity(null);
+//		}
+//		else {
+//			activity.setFont(textOwner.getFont());
+//		}
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		TextFigure textOwner = (TextFigure) owner();
 		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
 		// there has been no change so there is nothing to undo
@@ -66,7 +90,11 @@ public class FontSizeHandle extends LocatorHandle {
 	/**
 	 * Factory method for undo activity
 	 */
-	protected Undoable createUndoActivity(DrawingView newView) {
+//	protected Undoable createUndoActivity(DrawingView newView) {
+//		TextFigure textOwner = (TextFigure)owner();
+//		return new FontSizeHandle.UndoActivity(newView, textOwner.getFont());
+//	}
+	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
 		TextFigure textOwner = (TextFigure)owner();
 		return new FontSizeHandle.UndoActivity(newView, textOwner.getFont());
 	}
@@ -75,7 +103,14 @@ public class FontSizeHandle extends LocatorHandle {
 		private Font myFont;
 		private int  myOldFontSize;
 		
-		public UndoActivity(DrawingView newView, Font newFont) {
+//		public UndoActivity(DrawingView newView, Font newFont) {
+//			super(newView);
+//			setFont(newFont);
+//			setOldFontSize(getFont().getSize());
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newView, Font newFont) {
 			super(newView);
 			setFont(newFont);
 			setOldFontSize(getFont().getSize());

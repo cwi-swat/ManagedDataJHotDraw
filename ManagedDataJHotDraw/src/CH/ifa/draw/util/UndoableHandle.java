@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,8 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -21,13 +23,19 @@ import java.awt.*;
 public class UndoableHandle implements Handle {
 
 	private Handle myWrappedHandle;
-	private DrawingView myDrawingView;
-	
-	public UndoableHandle(Handle newWrappedHandle, DrawingView newDrawingView) {
+	//	private DrawingView myDrawingView;
+	private MDStandardDrawingView myDrawingView;
+
+//	public UndoableHandle(Handle newWrappedHandle, DrawingView newDrawingView) {
+//		setWrappedHandle(newWrappedHandle);
+//		setDrawingView(newDrawingView);
+//		setDrawingView(newDrawingView);
+//	}
+	public UndoableHandle(Handle newWrappedHandle, MDStandardDrawingView newDrawingView) {
 		setWrappedHandle(newWrappedHandle);
 		setDrawingView(newDrawingView);
 	}
-	
+
 	/**
 	 * Locates the handle on the figure. The handle is drawn
 	 * centered around the returned point.
@@ -57,7 +65,10 @@ public class UndoableHandle implements Handle {
 	 * @param y the y position where the interaction started
 	 * @param view the handles container
 	 */
-	public void invokeStart(int x, int y, DrawingView view) {
+//	public void invokeStart(int x, int y, DrawingView view) {
+//		getWrappedHandle().invokeStart(x, y, view);
+//	}
+	public void invokeStart(int x, int y, MDStandardDrawingView view) {
 		getWrappedHandle().invokeStart(x, y, view);
 	}
 
@@ -80,7 +91,10 @@ public class UndoableHandle implements Handle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeStep(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		getWrappedHandle().invokeStep(x, y, anchorX, anchorY, view);
+//	}
+	public void invokeStep(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		getWrappedHandle().invokeStep(x, y, anchorX, anchorY, view);
 	}
 
@@ -91,7 +105,16 @@ public class UndoableHandle implements Handle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		getWrappedHandle().invokeEnd(x, y, anchorX, anchorY, view);
+//
+//		Undoable undoableActivity = getWrappedHandle().getUndoActivity();
+//		if ((undoableActivity != null) && (undoableActivity.isUndoable())) {
+//			getDrawingView().editor().getUndoManager().pushUndo(undoableActivity);
+//			getDrawingView().editor().getUndoManager().clearRedos();
+//		}
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		getWrappedHandle().invokeEnd(x, y, anchorX, anchorY, view);
 
 		Undoable undoableActivity = getWrappedHandle().getUndoActivity();
@@ -147,11 +170,17 @@ public class UndoableHandle implements Handle {
 		return myWrappedHandle;
 	}
 
-	public DrawingView getDrawingView() {
+	public MDStandardDrawingView getDrawingView() {
 		return myDrawingView;
 	}
-	
-	protected void setDrawingView(DrawingView newDrawingView) {
+//	public DrawingView getDrawingView() {
+//		return myDrawingView;
+//	}
+
+//	protected void setDrawingView(DrawingView newDrawingView) {
+//		myDrawingView = newDrawingView;
+//	}
+	protected void setDrawingView(MDStandardDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 

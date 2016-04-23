@@ -19,6 +19,8 @@ import CH.ifa.draw.application.*;
 import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.html.HTMLTextAreaFigure;
 import CH.ifa.draw.contrib.html.HTMLTextAreaTool;
+import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,7 +37,9 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	private static String       fgSampleImagesResourcePath = fgSampleImagesPath + "/";
 
 	JavaDrawApp() {
-		super("JHotDraw");
+		// MDHD
+//		super("JHotDraw");
+		super("Managed Data JHotDraw");
 	}
 
 	/**
@@ -57,15 +61,19 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 		return new JavaDrawApp();
 	}
 
-	protected DrawingView createDrawingView() {
-		return new StandardDrawingView(this);
+//	protected DrawingView createDrawingView() {
+//		return new StandardDrawingView(this);
+//	}
+
+	protected MDStandardDrawingView createDrawingView() {
+		return MDDrawingViewFactory.newDrawingView(this);
 	}
 
 	//-- application life cycle --------------------------------------------
 
 	public void destroy() {
 		super.destroy();
-		endAnimation();
+//		endAnimation();
 	}
 
 	//-- DrawApplication overrides -----------------------------------------
@@ -145,28 +153,28 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 
 	protected void createMenus(JMenuBar mb) {
 		super.createMenus(mb);
-		addMenuIfPossible(mb, createAnimationMenu());
+//		addMenuIfPossible(mb, createAnimationMenu());
 		addMenuIfPossible(mb, createImagesMenu());
 		addMenuIfPossible(mb, createWindowMenu());
 	}
 
-	protected JMenu createAnimationMenu() {
-		CommandMenu menu = new CommandMenu("Animation");
-		Command cmd = new AbstractCommand("Start Animation", this) {
-			public void execute() {
-				startAnimation();
-			}
-		};
-		menu.add(cmd);
-
-		cmd = new AbstractCommand("Stop Animation", this) {
-			public void execute() {
-				endAnimation();
-			}
-		};
-		menu.add(cmd);
-		return menu;
-	}
+//	protected JMenu createAnimationMenu() {
+//		CommandMenu menu = new CommandMenu("Animation");
+//		Command cmd = new AbstractCommand("Start Animation", this) {
+//			public void execute() {
+//				startAnimation();
+//			}
+//		};
+//		menu.add(cmd);
+//
+//		cmd = new AbstractCommand("Stop Animation", this) {
+//			public void execute() {
+//				endAnimation();
+//			}
+//		};
+//		menu.add(cmd);
+//		return menu;
+//	}
 
 	protected JMenu createWindowMenu() {
 		CommandMenu menu = new CommandMenu("Window");
@@ -218,21 +226,21 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 		return new StandardDrawing();
 	}
 
-	//---- animation support --------------------------------------------
-
-	public void startAnimation() {
-		if (view().drawing() instanceof Animatable && fAnimator == null) {
-			fAnimator = new Animator((Animatable)view().drawing(), view());
-			fAnimator.start();
-		}
-	}
-
-	public void endAnimation() {
-		if (fAnimator != null) {
-			fAnimator.end();
-			fAnimator = null;
-		}
-	}
+//	//---- animation support --------------------------------------------
+//
+//	public void startAnimation() {
+//		if (view().drawing() instanceof Animatable && fAnimator == null) {
+//			fAnimator = new Animator((Animatable)view().drawing(), view());
+//			fAnimator.start();
+//		}
+//	}
+//
+//	public void endAnimation() {
+//		if (fAnimator != null) {
+//			fAnimator.end();
+//			fAnimator = null;
+//		}
+//	}
 
 	protected JMenu createDebugMenu() {
 		CommandMenu menu = (CommandMenu)super.createDebugMenu();

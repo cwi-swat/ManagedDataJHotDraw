@@ -14,6 +14,8 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.util.Hashtable;
 
 /**
@@ -75,7 +77,15 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 		private Hashtable	            myOriginalValues;
 		private Object                  myUndoValue;
 
-		public UndoActivity(DrawingView newDrawingView, FigureAttributeConstant newUndoAttribute, Object newUndoValue) {
+//		public UndoActivity(DrawingView newDrawingView, FigureAttributeConstant newUndoAttribute, Object newUndoValue) {
+//			super(newDrawingView);
+//			myOriginalValues = new Hashtable();
+//			setAttribute(newUndoAttribute);
+//			setBackupValue(newUndoValue);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newDrawingView, FigureAttributeConstant newUndoAttribute, Object newUndoValue) {
 			super(newDrawingView);
 			myOriginalValues = new Hashtable();
 			setAttribute(newUndoAttribute);

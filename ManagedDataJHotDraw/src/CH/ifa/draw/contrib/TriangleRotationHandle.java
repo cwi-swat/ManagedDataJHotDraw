@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.standard.*;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 
 /**
@@ -37,7 +38,16 @@ class TriangleRotationHandle extends AbstractHandle {
 	 * @param y the y position where the interaction started
 	 * @param view the handles container
 	 */
-	public void invokeStart(int x, int  y, DrawingView view) {
+//	public void invokeStart(int x, int  y, DrawingView view) {
+//		fOrigin = getOrigin();
+//		TriangleRotationHandle.UndoActivity activity =
+//			(TriangleRotationHandle.UndoActivity)createUndoActivity(view);
+//		setUndoActivity(activity);
+//		activity.setAffectedFigures(new SingleFigureEnumerator(owner()));
+//		double rotation = ((TriangleFigure)(owner())).getRotationAngle();
+//		activity.setRotationAngle(rotation);
+//	}
+	public void invokeStart(int x, int  y, MDStandardDrawingView view) {
 		fOrigin = getOrigin();
 		TriangleRotationHandle.UndoActivity activity =
 			(TriangleRotationHandle.UndoActivity)createUndoActivity(view);
@@ -54,7 +64,13 @@ class TriangleRotationHandle extends AbstractHandle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		Point fCenter = owner().center();
+//		double angle = Math.atan2(fOrigin.y + y - anchorY - fCenter.y,
+//  								  fOrigin.x + x - anchorX - fCenter.x);
+//		((TriangleFigure)(owner())).rotate(angle);
+//	}
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		Point fCenter = owner().center();
 		double angle = Math.atan2(fOrigin.y + y - anchorY - fCenter.y,
   								  fOrigin.x + x - anchorX - fCenter.x);
@@ -68,7 +84,10 @@ class TriangleRotationHandle extends AbstractHandle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		fOrigin = null;
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		fOrigin = null;
 	}
 
@@ -110,14 +129,22 @@ class TriangleRotationHandle extends AbstractHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-	protected Undoable createUndoActivity(DrawingView newView) {
+//	protected Undoable createUndoActivity(DrawingView newView) {
+//		return new TriangleRotationHandle.UndoActivity(newView);
+//	}
+	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
 		return new TriangleRotationHandle.UndoActivity(newView);
 	}
 
 	public static class UndoActivity extends UndoableAdapter {
 		private double myRotationAngle;
 
-		public UndoActivity(DrawingView newView) {
+//		public UndoActivity(DrawingView newView) {
+//			super(newView);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

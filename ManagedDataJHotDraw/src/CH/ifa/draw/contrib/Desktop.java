@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,7 @@
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.DrawingView;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * @author  C.L.Gilbert <dnoyeb@users.sourceforge.net>
@@ -26,11 +27,18 @@ public interface Desktop {
 	 * For those absent minded components that were not paying attention to the
 	 * listener events.
 	 */
-	public DrawingView getActiveDrawingView();
-	public void addToDesktop(DrawingView dv, int location);
-	public void removeFromDesktop(DrawingView dv, int location);
+	public MDStandardDrawingView getActiveDrawingView();
+
+	// @MDHD
+//	public void addToDesktop(DrawingView dv, int location);
+	public void addToDesktop(MDStandardDrawingView dv, int location);
+
+	// @MDHD
+//	public void removeFromDesktop(DrawingView dv, int location);
+	public void removeFromDesktop(MDStandardDrawingView dv, int location);
+
 	public void removeAllFromDesktop(int location);
-	public DrawingView[] getAllFromDesktop(int location);
+	public MDStandardDrawingView[] getAllFromDesktop(int location);
 
 	public void updateTitle(String newDrawingTitle);
 

@@ -37,7 +37,6 @@ public class UtilSuite
     suite.addTestSuite(CH.ifa.draw.test.util.ReverseListEnumeratorTest.class);
     suite.addTestSuite(CH.ifa.draw.test.util.StandardVersionControlStrategyTest.class);
     suite.addTestSuite(CH.ifa.draw.test.util.VersionManagementTest.class);
-    suite.addTestSuite(CH.ifa.draw.test.util.UndoableHandleTest.class);
     suite.addTestSuite(CH.ifa.draw.test.util.UndoRedoActivityTest.class);
     suite.addTestSuite(CH.ifa.draw.test.util.UndoableAdapterTest.class);
     suite.addTestSuite(CH.ifa.draw.test.util.UndoableToolTest.class);

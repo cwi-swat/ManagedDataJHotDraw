@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.*;
@@ -380,7 +382,16 @@ public  class ConnectionTool extends AbstractTool {
 		private Connector   myStartConnector;
 		private Connector   myEndConnector;
 
-		public UndoActivity(DrawingView newDrawingView, ConnectionFigure newConnection) {
+//		public UndoActivity(DrawingView newDrawingView, ConnectionFigure newConnection) {
+//			super(newDrawingView);
+//			setConnection(newConnection);
+//			myStartConnector = getConnection().getStartConnector();
+//			myEndConnector = getConnection().getEndConnector();
+//	        setUndoable(true);
+//			setRedoable(true);
+//		}
+
+		public UndoActivity(MDStandardDrawingView newDrawingView, ConnectionFigure newConnection) {
 			super(newDrawingView);
 			setConnection(newConnection);
 			myStartConnector = getConnection().getStartConnector();

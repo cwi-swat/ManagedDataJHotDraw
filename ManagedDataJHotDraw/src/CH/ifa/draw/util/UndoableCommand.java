@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,8 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractCommand;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.util.EventObject;
 
 /**
@@ -37,8 +39,7 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 	public void execute() {
 		hasSelectionChanged = false;
 		// listen for selection change events during executing the wrapped command
-		view().addFigureSelectionListener(this);
-
+		view().addFigureSelectionListener(this); // TODO
 		getWrappedCommand().execute();
 
 		Undoable undoableCommand = getWrappedCommand().getUndoActivity();
@@ -55,7 +56,7 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 
 		// remove because not all commands are listeners that have to be notified
 		// all the time (bug-id 595461)
-		view().removeFigureSelectionListener(this);
+		view().removeFigureSelectionListener(this); // TODO
 	}
 
 	/**
@@ -84,11 +85,18 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		return getWrappedCommand().getDrawingEditor();
 	}
 
-	public DrawingView view() {
+//	public DrawingView view() {
+//		return getDrawingEditor().view();
+//	}
+
+	public MDStandardDrawingView view() {
 		return getDrawingEditor().view();
 	}
 
-	public void figureSelectionChanged(DrawingView view) {
+//	public void figureSelectionChanged(DrawingView view) {
+//		hasSelectionChanged = true;
+//	}
+	public void figureSelectionChanged(MDStandardDrawingView view) {
 		hasSelectionChanged = true;
 	}
 

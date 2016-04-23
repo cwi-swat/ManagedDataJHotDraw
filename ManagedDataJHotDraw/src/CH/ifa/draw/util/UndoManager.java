@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,7 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.DrawingView;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.util.List;
 import java.util.Iterator;
@@ -203,10 +204,39 @@ public class UndoManager {
 	}
 
 	/**
+	 * Removes all undo activities that operate on the given DrawingView.
+	 * @param checkDV DrawingView which is compared undo's DrawingView
+	 */
+	public void clearUndos(MDStandardDrawingView checkDV) {
+		Iterator iter = undoStack.iterator();
+		while (iter.hasNext()) {
+			Undoable currentUndo = (Undoable)iter.next();
+			if (currentUndo.getDrawingView() == checkDV) {
+				iter.remove();
+			}
+		}
+	}
+
+//	/**
+//	 * Removes all redo activities that operate on the given DrawingView.
+//	 * @param checkDV DrawingView which is compared redo's DrawingView
+//	 */
+//	public void clearRedos(DrawingView checkDV) {
+//		Iterator iter = redoStack.iterator();
+//		while (iter.hasNext()) {
+//			Undoable currentRedo = (Undoable)iter.next();
+//			if (currentRedo.getDrawingView() == checkDV) {
+//				iter.remove();
+//			}
+//		}
+//	}
+
+
+	/**
 	 * Removes all redo activities that operate on the given DrawingView.
 	 * @param checkDV DrawingView which is compared redo's DrawingView
 	 */
-	public void clearRedos(DrawingView checkDV) {
+	public void clearRedos(MDStandardDrawingView checkDV) {
 		Iterator iter = redoStack.iterator();
 		while (iter.hasNext()) {
 			Undoable currentRedo = (Undoable)iter.next();

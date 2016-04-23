@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -20,6 +20,7 @@ import java.util.Iterator;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * This is a tool which handles drag and drop between Components in
@@ -66,7 +67,16 @@ public class DragNDropTool extends AbstractTool {
 	/**
 	 * Sent when a new view is created
 	 */
-	public void viewCreated(DrawingView view) {
+//	public void viewCreated(DrawingView view) {
+//		super.viewCreated(view);
+//		if (DNDInterface.class.isInstance(view)) {
+//			DNDInterface dndi = (DNDInterface)view;
+//			dndi.setDropTargetActive(true);
+//			dndi.setDragSourceActive(false);
+//			comps.add(dndi);
+//		}
+//	}
+	public void viewCreated(MDStandardDrawingView view) {
 		super.viewCreated(view);
 		if (DNDInterface.class.isInstance(view)) {
 			DNDInterface dndi = (DNDInterface)view;
@@ -79,7 +89,16 @@ public class DragNDropTool extends AbstractTool {
 	/**
 	 * Send when an existing view is about to be destroyed.
 	 */
-	public void viewDestroying(DrawingView view) {
+//	public void viewDestroying(DrawingView view) {
+//		if (DNDInterface.class.isInstance(view)) {
+//			DNDInterface dndi = (DNDInterface)view;
+//			dndi.setDropTargetActive(false);
+//			dndi.setDragSourceActive(false);
+//			comps.remove(dndi);
+//		}
+//		super.viewDestroying(view);
+//	}
+	public void viewDestroying(MDStandardDrawingView view) {
 		if (DNDInterface.class.isInstance(view)) {
 			DNDInterface dndi = (DNDInterface)view;
 			dndi.setDropTargetActive(false);
@@ -118,7 +137,54 @@ public class DragNDropTool extends AbstractTool {
 	 * Sets the type of cursor based on what is under the coordinates in the
 	 * active view.
 	 */
-	public static void setCursor(int x, int y, DrawingView view) {
+//	public static void setCursor(int x, int y, DrawingView view) {
+//		if (view == null) {   //shouldnt need this
+//			return;
+//		}
+//		Handle handle = view.findHandle(x, y);
+//		Figure figure = view.drawing().findFigure(x, y);
+//
+//		if (handle != null) {
+//			if (LocatorHandle.class.isInstance(handle)) {
+//				LocatorHandle lh = (LocatorHandle)handle;
+//				Locator loc = lh.getLocator();
+//				if (RelativeLocator.class.isInstance(loc)) {
+//					RelativeLocator rl = (RelativeLocator) loc;
+//					if (rl.equals( RelativeLocator.north())) {
+//						view.setCursor(new Cursor(Cursor.N_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.northEast())) {
+//						view.setCursor(new Cursor(Cursor.NE_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.east())) {
+//						view.setCursor(new Cursor(Cursor.E_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.southEast())) {
+//						view.setCursor(new Cursor(Cursor.SE_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.south())) {
+//						view.setCursor(new Cursor(Cursor.S_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.southWest())) {
+//						view.setCursor(new Cursor(Cursor.SW_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.west())) {
+//						view.setCursor(new Cursor(Cursor.W_RESIZE_CURSOR));
+//					}
+//					else if (rl.equals(RelativeLocator.northWest())) {
+//						view.setCursor(new Cursor(Cursor.NW_RESIZE_CURSOR));
+//					}
+//				}
+//			}
+//		}
+//		else if (figure != null) {
+//			view.setCursor(new Cursor(Cursor.MOVE_CURSOR));
+//		}
+//		else {
+//			view.setCursor(Cursor.getDefaultCursor());
+//		}
+//	}
+	public static void setCursor(int x, int y, MDStandardDrawingView view) {
 		if (view == null) {   //shouldnt need this
 			return;
 		}

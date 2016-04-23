@@ -56,7 +56,7 @@ public class StandardDrawingView
 	/**
 	 * the registered listeners for selection changes
 	 */
-	private transient List fSelectionListeners; // @MDHD TODO: Remove this
+	private transient List fSelectionListeners;
 
 	/**
 	 * The shown drawing.
@@ -149,7 +149,7 @@ public class StandardDrawingView
 		fEditor = editor;
 		fViewSize = new Dimension(width,height);
 		setSize(width, height);
-		fSelectionListeners = CollectionsFactory.current().createList(); // @MDHD TODO: Remove this
+		fSelectionListeners = CollectionsFactory.current().createList();
 		addFigureSelectionListener(editor());
 		setLastClick(new Point(0, 0));
 		fConstrainer = null;
@@ -212,12 +212,12 @@ public class StandardDrawingView
 	public void setDrawing(Drawing d) {
 		if (drawing() != null) {
 			clearSelection();
-			drawing().removeDrawingChangeListener(this); // TODO: @MDHD Remove this
+			drawing().removeDrawingChangeListener(this);
 		}
 
 		fDrawing = d;
 		if (drawing() != null) {
-			drawing().addDrawingChangeListener(this); // TODO: @MDHD Remove this
+			drawing().addDrawingChangeListener(this);
 		}
 
 		checkMinimumSize();
@@ -562,7 +562,7 @@ public class StandardDrawingView
 		if (fSelectionListeners != null) {
 			for (int i = 0; i < fSelectionListeners.size(); i++) {
 				FigureSelectionListener l = (FigureSelectionListener)fSelectionListeners.get(i);
-				l.figureSelectionChanged(this);
+//				l.figureSelectionChanged(this); TODO
 			}
 		}
 	}
@@ -674,7 +674,7 @@ public class StandardDrawingView
 	 * @see Painter
 	 */
 	protected void paintComponent(Graphics g) {
-		getDisplayUpdate().draw(g, this);
+//		getDisplayUpdate().draw(g, this); TODO
 	}
 
 	/**
@@ -747,7 +747,7 @@ public class StandardDrawingView
 
 	protected void drawPainters(Graphics g, List v) {
 		for (int i = 0; i < v.size(); i++) {
-			((Painter)v.get(i)).draw(g, this);
+//			((Painter)v.get(i)).draw(g, this); todo
 		}
 	}
 

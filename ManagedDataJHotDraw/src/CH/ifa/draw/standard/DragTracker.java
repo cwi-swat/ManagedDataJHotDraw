@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -93,7 +95,13 @@ public class DragTracker extends AbstractTool {
 		private Point myOriginalPoint;
 		private Point myBackupPoint;
 
-		public UndoActivity(DrawingView newDrawingView, Point newOriginalPoint) {
+//		public UndoActivity(DrawingView newDrawingView, Point newOriginalPoint) {
+//			super(newDrawingView);
+//			setOriginalPoint(newOriginalPoint);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newDrawingView, Point newOriginalPoint) {
 			super(newDrawingView);
 			setOriginalPoint(newOriginalPoint);
 			setUndoable(true);

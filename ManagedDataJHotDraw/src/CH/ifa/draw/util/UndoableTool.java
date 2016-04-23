@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,8 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractTool;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
 import java.util.EventObject;
@@ -54,7 +56,7 @@ public class UndoableTool implements Tool, ToolListener {
 			editor().getUndoManager().pushUndo(undoActivity);
 			editor().getUndoManager().clearRedos();
 			// update menus
-			editor().figureSelectionChanged(getActiveView());
+			editor().figureSelectionChanged(getActiveView()); // TODO
 		}
 	}
 
@@ -130,7 +132,10 @@ public class UndoableTool implements Tool, ToolListener {
 		return getWrappedTool().editor();
 	}
 
-	public DrawingView view() {
+//	public DrawingView view() {
+//		return editor().view();
+//	}
+	public MDStandardDrawingView view() {
 		return editor().view();
 	}
 
@@ -186,7 +191,10 @@ public class UndoableTool implements Tool, ToolListener {
 		return new AbstractTool.EventDispatcher(this);
 	}
 
-	public DrawingView getActiveView() {
+//	public DrawingView getActiveView() {
+//		return editor().view();
+//	}
+	public MDStandardDrawingView getActiveView() {
 		return editor().view();
 	}
 }

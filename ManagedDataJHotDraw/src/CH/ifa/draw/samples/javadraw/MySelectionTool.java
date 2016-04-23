@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,7 @@ package CH.ifa.draw.samples.javadraw;
 import java.awt.event.MouseEvent;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * A SelectionTool that interprets double clicks to inspect the clicked figure
@@ -30,7 +31,7 @@ public  class MySelectionTool extends SelectionTool {
 	 * Handles mouse down events and starts the corresponding tracker.
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((DrawingView)e.getSource());
+		setView((MDStandardDrawingView) e.getSource());
 		if (e.getClickCount() == 2) {
 			Figure figure = drawing().findFigure(e.getX(), e.getY());
 			if (figure != null) {

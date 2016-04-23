@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -76,7 +78,16 @@ public abstract class ChangeConnectionHandle extends AbstractHandle {
 	/**
 	 * Disconnects the connection.
 	 */
-	public void invokeStart(int  x, int  y, DrawingView view) {
+//	public void invokeStart(int  x, int  y, DrawingView view) {
+//		fOriginalTarget = target();
+//		fStart = new Point(x, y);
+//
+//		setUndoActivity(createUndoActivity(view));
+//		((ChangeConnectionHandle.UndoActivity)getUndoActivity()).setOldConnector(target());
+//
+//		disconnect();
+//	}
+	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
 		fOriginalTarget = target();
 		fStart = new Point(x, y);
 
@@ -89,7 +100,27 @@ public abstract class ChangeConnectionHandle extends AbstractHandle {
 	/**
 	 * Finds a new target of the connection.
 	 */
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		Point p = new Point(x, y);
+//		Figure f = findConnectableFigure(x, y, view.drawing());
+//		// track the figure containing the mouse
+//		if (f != getTargetFigure()) {
+//			if (getTargetFigure() != null) {
+//				getTargetFigure().connectorVisibility(false, null);
+//			}
+//			setTargetFigure(f);
+//			if (getTargetFigure() != null) {
+//				getTargetFigure().connectorVisibility(true, getConnection());
+//			}
+//		}
+//
+//		Connector target = findConnectionTarget(p.x, p.y, view.drawing());
+//		if (target != null) {
+//			p = Geom.center(target.displayBox());
+//		}
+//		setPoint(p.x, p.y);
+//	}
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		Point p = new Point(x, y);
 		Figure f = findConnectableFigure(x, y, view.drawing());
 		// track the figure containing the mouse
@@ -114,7 +145,34 @@ public abstract class ChangeConnectionHandle extends AbstractHandle {
 	 * Connects the figure to the new target. If there is no
 	 * new target the connection reverts to its original one.
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		Connector target = findConnectionTarget(x, y, view.drawing());
+//		if (target == null) {
+//			target = fOriginalTarget;
+//		}
+//
+//		setPoint(x, y);
+//		connect(target);
+//		getConnection().updateConnection();
+//
+//		Connector oldConnector = ((ChangeConnectionHandle.UndoActivity)
+//			getUndoActivity()).getOldConnector();
+//		// there has been no change so there is nothing to undo
+//		if ((oldConnector == null)
+//				|| (target() == null)
+//				|| (oldConnector.owner() == target().owner())) {
+//			setUndoActivity(null);
+//		}
+//		else {
+//			getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(getConnection()));
+//		}
+//
+//		if (getTargetFigure() != null) {
+//			getTargetFigure().connectorVisibility(false, null);
+//			setTargetFigure(null);
+//		}
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		Connector target = findConnectionTarget(x, y, view.drawing());
 		if (target == null) {
 			target = fOriginalTarget;
@@ -203,12 +261,19 @@ public abstract class ChangeConnectionHandle extends AbstractHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-	protected abstract Undoable createUndoActivity(DrawingView newView);
-	
+//	protected abstract Undoable createUndoActivity(DrawingView newView);
+	protected abstract Undoable createUndoActivity(MDStandardDrawingView newView);
+
 	public static abstract class UndoActivity extends UndoableAdapter {
 		private Connector myOldConnector;
 		
-		public UndoActivity(DrawingView newView) {
+//		public UndoActivity(DrawingView newView) {
+//			super(newView);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+
+		UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

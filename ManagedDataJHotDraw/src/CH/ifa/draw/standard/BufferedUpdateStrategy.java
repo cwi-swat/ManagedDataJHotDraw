@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,7 @@ package CH.ifa.draw.standard;
 
 import java.awt.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 /**
  * The BufferedUpdateStrategy implements an update
@@ -38,12 +39,29 @@ public class BufferedUpdateStrategy implements Painter {
 	private static final long serialVersionUID = 6489532222954612824L;
 	private int bufferedUpdateSerializedDataVersion = 1;
 
-	/**
-	* Draws the view contents.
-	*/
-	public void draw(Graphics g, DrawingView view) {
+//	/**
+//	* Draws the view contents.
+//	*/
+//	public void draw(Graphics g, DrawingView view) {
+//		// create the buffer if necessary
+//		Dimension d = view.getSize();
+//		if ((fOffscreen == null) || (d.width != fImagewidth)
+//			|| (d.height != fImageheight)) {
+//			fOffscreen = view.createImage(d.width, d.height);
+//			fImagewidth = d.width;
+//			fImageheight = d.height;
+//		}
+//
+//		// let the view draw on offscreen buffer
+//		Graphics g2 = fOffscreen.getGraphics();
+//		view.drawAll(g2);
+//
+//		g.drawImage(fOffscreen, 0, 0, view);
+//	}
+
+	public void draw(Graphics g, MDStandardDrawingView view) {
 		// create the buffer if necessary
-		Dimension d = view.getSize();
+		Dimension d = view.size();
 		if ((fOffscreen == null) || (d.width != fImagewidth)
 			|| (d.height != fImageheight)) {
 			fOffscreen = view.createImage(d.width, d.height);

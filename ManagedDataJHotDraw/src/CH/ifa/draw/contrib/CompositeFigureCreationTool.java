@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,7 @@ import CH.ifa.draw.standard.CompositeFigure;
 import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.framework.DrawingView;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.awt.event.MouseEvent;
 import java.awt.*;
@@ -32,7 +33,7 @@ public class CompositeFigureCreationTool extends CreationTool {
 	}
 
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((DrawingView)e.getSource());
+		setView((MDStandardDrawingView)e.getSource());
 		Figure figure = drawing().findFigure(e.getX(), e.getY());
 		if (figure != null) {
 			figure = figure.getDecoratedFigure();

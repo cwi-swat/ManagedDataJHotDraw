@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -31,14 +33,30 @@ class RadiusHandle extends AbstractHandle {
 		super(owner);
 	}
 
-	public void invokeStart(int  x, int  y, DrawingView view) {
+//	public void invokeStart(int  x, int  y, DrawingView view) {
+//		setUndoActivity(createUndoActivity(view));
+//		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
+//		((RadiusHandle.UndoActivity)getUndoActivity()).
+//			setOldRadius(((RoundRectangleFigure)owner()).getArc());
+//	}
+	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((RadiusHandle.UndoActivity)getUndoActivity()).
 			setOldRadius(((RoundRectangleFigure)owner()).getArc());
 	}
 
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		int dx = x-anchorX;
+//		int dy = y-anchorY;
+//		RoundRectangleFigure owner = (RoundRectangleFigure)owner();
+//		Rectangle r = owner.displayBox();
+//		Point originalRadius = ((RadiusHandle.UndoActivity)getUndoActivity()).getOldRadius();
+//		int rx = Geom.range(0, r.width, 2*(originalRadius.x/2 + dx));
+//		int ry = Geom.range(0, r.height, 2*(originalRadius.y/2 + dy));
+//		owner.setArc(rx, ry);
+//	}
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		int dx = x-anchorX;
 		int dy = y-anchorY;
 		RoundRectangleFigure owner = (RoundRectangleFigure)owner();
@@ -49,7 +67,15 @@ class RadiusHandle extends AbstractHandle {
 		owner.setArc(rx, ry);
 	}
 
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		Point currentRadius = ((RoundRectangleFigure)owner()).getArc();
+//		Point originalRadius = ((RadiusHandle.UndoActivity)getUndoActivity()).getOldRadius();
+//		// there has been no change so there is nothing to undo
+//		if ((currentRadius.x == originalRadius.x) && (currentRadius.y == originalRadius.y)) {
+//			setUndoActivity(null);
+//		}
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		Point currentRadius = ((RoundRectangleFigure)owner()).getArc();
 		Point originalRadius = ((RadiusHandle.UndoActivity)getUndoActivity()).getOldRadius();
 		// there has been no change so there is nothing to undo
@@ -78,19 +104,27 @@ class RadiusHandle extends AbstractHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-	protected Undoable createUndoActivity(DrawingView newView) {
+//	protected Undoable createUndoActivity(DrawingView newView) {
+//		return new RadiusHandle.UndoActivity(newView);
+//	}
+	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
 		return new RadiusHandle.UndoActivity(newView);
 	}
-	
+
 	public static class UndoActivity extends UndoableAdapter {
 		private Point myOldRadius;
 		
-		public UndoActivity(DrawingView newView) {
+//		public UndoActivity(DrawingView newView) {
+//			super(newView);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);
 		}
-		
+
 		public boolean undo() {
 			if (!super.undo()) {
 				return false;

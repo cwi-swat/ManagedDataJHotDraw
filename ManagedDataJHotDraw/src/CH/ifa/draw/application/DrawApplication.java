@@ -17,6 +17,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
+import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
@@ -46,7 +48,11 @@ public	class DrawApplication
 	private Iconkit					fIconkit;
 
 	private JTextField				fStatusLine;
-	private DrawingView				fView;
+
+	// @MDHD
+//	private DrawingView				fView;
+	private MDStandardDrawingView   fView;
+
 	private ToolButton				fDefaultToolButton;
 	private ToolButton				fSelectedToolButton;
 
@@ -88,9 +94,7 @@ public	class DrawApplication
 	 * Constructs a drawing window with a default title.
 	 */
 	public DrawApplication() {
-//		@MDHD
-//		this("JHotDraw");
-		this("JavaMDHotDraw");
+		this("JHotDraw");
 	}
 
 	/**
@@ -151,13 +155,90 @@ public	class DrawApplication
 	 * Opens a new window
 	 */
 	public void open() {
-		open(createInitialDrawingView());
+		open(this.createInitialDrawingView());
 	}
+
+	// @MDHD
+//	/**
+//	 * Opens a new window with a drawing view.
+//	 */
+//	protected void open(final DrawingView newDrawingView) {
+//		getVersionControlStrategy().assertCompatibleVersion();
+//		setUndoManager(new UndoManager());
+//		setIconkit(createIconkit());
+//		getContentPane().setLayout(new BorderLayout());
+//
+//		// status line must be created before a tool is set
+//		setStatusLine(createStatusLine());
+//		getContentPane().add(getStatusLine(), BorderLayout.SOUTH);
+//
+//		// create dummy tool until the default tool is activated during toolDone()
+//		setTool(new NullTool(this), "");
+//		setView(newDrawingView);
+//
+//		JToolBar tools = createToolPalette();
+//		createTools(tools);
+//
+//		JPanel activePanel = new JPanel();
+//		activePanel.setAlignmentX(LEFT_ALIGNMENT);
+//		activePanel.setAlignmentY(TOP_ALIGNMENT);
+//		activePanel.setLayout(new BorderLayout());
+//		activePanel.add(tools, BorderLayout.NORTH);
+//		setDesktopListener(createDesktopListener());
+//		setDesktop(createDesktop());
+//		activePanel.add((Component)getDesktop(), BorderLayout.CENTER);
+//		getContentPane().add(activePanel, BorderLayout.CENTER);
+//
+//		JMenuBar mb = new JMenuBar();
+//		createMenus(mb);
+//		setJMenuBar(mb);
+//
+//		Dimension d = defaultSize();
+//		if (d.width > mb.getPreferredSize().width) {
+//			setSize(d.width, d.height);
+//		}
+//		else {
+//			setSize(mb.getPreferredSize().width, d.height);
+//		}
+//		addListeners();
+//		setStorageFormatManager(createStorageFormatManager());
+//
+//		//no work allowed to be done on GUI outside of AWT thread once
+//		//setVisible(true) called.
+//		Runnable r = new Runnable() {
+//			public void run() {
+//				if (newDrawingView.isInteractive()) {
+//					getDesktop().addToDesktop(newDrawingView , Desktop.PRIMARY);
+//				}
+//				toolDone();
+//			}
+//		};
+//
+//		if (java.awt.EventQueue.isDispatchThread() == false) {
+//			try {
+//				java.awt.EventQueue.invokeAndWait(r);
+//			}
+//			catch(java.lang.InterruptedException ie) {
+//				System.err.println(ie.getMessage());
+//				exit();
+//			}
+//			catch(java.lang.reflect.InvocationTargetException ite) {
+//				System.err.println(ite.getMessage());
+//				exit();
+//			}
+//		}
+//		else {
+//			r.run();
+//		}
+//
+//		setVisible(true);
+//		toolDone();
+//	}
 
 	/**
 	 * Opens a new window with a drawing view.
 	 */
-	protected void open(final DrawingView newDrawingView) {
+	protected void open(final MDStandardDrawingView newDrawingView) {
 		getVersionControlStrategy().assertCompatibleVersion();
 		setUndoManager(new UndoManager());
 		setIconkit(createIconkit());
@@ -215,10 +296,12 @@ public	class DrawApplication
 			}
 			catch(java.lang.InterruptedException ie) {
 				System.err.println(ie.getMessage());
+				ie.printStackTrace();
 				exit();
 			}
 			catch(java.lang.reflect.InvocationTargetException ite) {
 				System.err.println(ite.getMessage());
+				ite.printStackTrace();
 				exit();
 			}
 		}
@@ -571,19 +654,35 @@ public	class DrawApplication
 	 * subclass in your application. By default a standard
 	 * DrawingView is returned.
 	 */
-	protected DrawingView createDrawingView() {
-		DrawingView createdDrawingView = createDrawingView(createDrawing());
+	// @MDHD
+//	protected DrawingView createDrawingView() {
+//		DrawingView createdDrawingView = createDrawingView(createDrawing());
+//		createdDrawingView.drawing().setTitle(getDefaultDrawingTitle());
+//		return createdDrawingView;
+//	}
+
+	protected MDStandardDrawingView createDrawingView() {
+		MDStandardDrawingView createdDrawingView = createDrawingView(createDrawing());
 		createdDrawingView.drawing().setTitle(getDefaultDrawingTitle());
 		return createdDrawingView;
 	}
 
-	protected DrawingView createDrawingView(Drawing newDrawing) {
+	// @MDHD
+//	protected DrawingView createDrawingView(Drawing newDrawing) {
+//		Dimension d = getDrawingViewSize();
+//		DrawingView newDrawingView = new StandardDrawingView(this, d.width, d.height);
+//		newDrawingView.setDrawing(newDrawing);
+//		return newDrawingView;
+//	}
+
+	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
 		Dimension d = getDrawingViewSize();
-		DrawingView newDrawingView = new StandardDrawingView(this, d.width, d.height);
+		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newDrawingView(this, d.width, d.height);
 		newDrawingView.setDrawing(newDrawing);
 		return newDrawingView;
 	}
 
+	// @MDHD
 	/**
 	 * Create the DrawingView that is active when the application is started.
 	 * This initial DrawingView might be different from DrawingView created
@@ -593,8 +692,12 @@ public	class DrawApplication
 	 * (MDI) application.
 	 *
 	 * @return drawing view that is active at application startup time
-	 */
-	protected DrawingView createInitialDrawingView() {
+//	 */
+//	protected DrawingView createInitialDrawingView() {
+//		return createDrawingView();
+//	}
+
+	protected MDStandardDrawingView createInitialDrawingView() {
 		return createDrawingView();
 	}
 
@@ -720,23 +823,35 @@ public	class DrawApplication
 		return fTool;
 	}
 
-	/**
-	 * Retrieve the active view from the window
-	 * Gets the current drawing view.
-	 * @see DrawingEditor
-	 */
-	public DrawingView view() {
+	// @MDHD
+//	/**
+//	 * Retrieve the active view from the window
+//	 * Gets the current drawing view.
+//	 * @see DrawingEditor
+//	 */
+//	public DrawingView view() {
+//		return fView;
+//	}
+
+	public MDStandardDrawingView view() {
 		return fView;
 	}
 
-	protected void setView(DrawingView newView) {
-		DrawingView oldView = fView;
+	// @MDHD
+//	protected void setView(DrawingView newView) {
+//		DrawingView oldView = fView;
+//		fView = newView;
+//		fireViewSelectionChangedEvent(oldView, view());
+//	}
+
+	protected void setView(MDStandardDrawingView newView) {
+		MDStandardDrawingView oldView = fView;
 		fView = newView;
 		fireViewSelectionChangedEvent(oldView, view());
 	}
 
-	public DrawingView[] views() {
-		return new DrawingView[] { view() };
+	public MDStandardDrawingView[] views() {
+		return new MDStandardDrawingView[] { view() };
 	}
 
 	/**
@@ -760,7 +875,10 @@ public	class DrawApplication
 	 * will update their own states.
 	 * @see DrawingEditor
 	 */
-	public void figureSelectionChanged(DrawingView view) { // @HDMD TODO: Should Call this
+//	public void figureSelectionChanged(DrawingView view) { // @HDMD TODO: Should Call this
+//		checkCommandMenus();
+//	}
+	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Should Call this
 		checkCommandMenus();
 	}
 
@@ -800,13 +918,24 @@ public	class DrawApplication
 		listenerList.remove(ViewChangeListener.class, vsl);
 	}
 
-	/**
-	 * An appropriate event is triggered and all registered observers
-	 * are notified if the drawing view has been changed, e.g. by
-	 * switching between several internal frames.  This method is
-	 * usually not needed in SDI environments.
-	 */
-	protected void fireViewSelectionChangedEvent(DrawingView oldView, DrawingView newView) {
+//	/**
+//	 * An appropriate event is triggered and all registered observers
+//	 * are notified if the drawing view has been changed, e.g. by
+//	 * switching between several internal frames.  This method is
+//	 * usually not needed in SDI environments.
+//	 */
+//	protected void fireViewSelectionChangedEvent(DrawingView oldView, DrawingView newView) {
+//		final Object[] listeners = listenerList.getListenerList();
+//		ViewChangeListener vsl = null;
+//		for (int i = listeners.length-2; i>=0 ; i-=2) {
+//			if (listeners[i] == ViewChangeListener.class) {
+//				vsl = (ViewChangeListener)listeners[i+1];
+//				vsl.viewSelectionChanged(oldView, newView);
+//			}
+//		}
+//	}
+
+	protected void fireViewSelectionChangedEvent(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -817,7 +946,18 @@ public	class DrawApplication
 		}
 	}
 
-	protected void fireViewCreatedEvent(DrawingView view) {
+//	protected void fireViewCreatedEvent(DrawingView view) {
+//		final Object[] listeners = listenerList.getListenerList();
+//		ViewChangeListener vsl = null;
+//		for (int i = listeners.length-2; i>=0 ; i-=2) {
+//			if (listeners[i] == ViewChangeListener.class) {
+//				vsl = (ViewChangeListener)listeners[i+1];
+//				vsl.viewCreated(view);
+//			}
+//		}
+//	}
+
+	protected void fireViewCreatedEvent(MDStandardDrawingView view) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -828,7 +968,18 @@ public	class DrawApplication
 		}
 	}
 
-	protected void fireViewDestroyingEvent(DrawingView view) {
+//	protected void fireViewDestroyingEvent(DrawingView view) {
+//		final Object[] listeners = listenerList.getListenerList();
+//		ViewChangeListener vsl = null;
+//		for (int i = listeners.length-2; i>=0 ; i-=2) {
+//			if (listeners[i] == ViewChangeListener.class) {
+//				vsl = (ViewChangeListener)listeners[i+1];
+//				vsl.viewDestroying( view );
+//			}
+//		}
+//	}
+
+	protected void fireViewDestroyingEvent(MDStandardDrawingView view) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -1111,20 +1262,23 @@ public	class DrawApplication
 	protected DesktopListener createDesktopListener() {
 	    return new DesktopListener() {
 			public void drawingViewAdded(DesktopEvent dpe) {
-				DrawingView dv = dpe.getDrawingView();
+//				DrawingView dv = dpe.getDrawingView();
+				MDStandardDrawingView dv = dpe.getDrawingView();
 				fireViewCreatedEvent(dv);
 			}
 			public void drawingViewRemoved(DesktopEvent dpe) {
-				DrawingView dv = dpe.getDrawingView();
-				// remove undo/redo activities which operate on this DrawingView
+//				DrawingView dv = dpe.getDrawingView();
+				MDStandardDrawingView dv = dpe.getDrawingView();
+
 				getUndoManager().clearUndos(dv);
 				getUndoManager().clearRedos(dv);
 				fireViewDestroyingEvent(dv);
 				checkCommandMenus();
 			}
 			public void drawingViewSelected(DesktopEvent dpe) {
-				DrawingView dv = dpe.getDrawingView();
-				//get the current selection and freeze it.
+//				DrawingView dv = dpe.getDrawingView();
+				MDStandardDrawingView dv = dpe.getDrawingView();
+
 				if (dv != null) {
 					if (dv.drawing() != null)
 						dv.unfreezeView();

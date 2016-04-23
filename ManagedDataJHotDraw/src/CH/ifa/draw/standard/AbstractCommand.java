@@ -16,6 +16,7 @@ import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.util.*;
 
@@ -53,12 +54,33 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 		setEventDispatcher(createEventDispatcher());
 	}
 
-	public void viewSelectionChanged(DrawingView oldView, DrawingView newView) {
+//	public void viewSelectionChanged(DrawingView oldView, DrawingView newView) {
+//		if (oldView != null) {
+//			oldView.removeFigureSelectionListener(this);
+//		}
+//		if (newView != null) {
+//			newView.addFigureSelectionListener(this);
+//		}
+//		if (isViewRequired()) {
+//			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
+//			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
+//			// old view was not interactive aware while new view is now interactive aware
+//			if (!isOldViewInteractive && isNewViewInteractive) {
+//				getEventDispatcher().fireCommandExecutableEvent();
+//			}
+//			// old view was interactive aware while new view is not
+//			else if (isOldViewInteractive && !isNewViewInteractive) {
+//				getEventDispatcher().fireCommandNotExecutableEvent();
+//			}
+//		}
+//	}
+
+	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		if (oldView != null) {
-			oldView.removeFigureSelectionListener(this);
+			oldView.removeFigureSelectionListener(this); // TODO
 		}
 		if (newView != null) {
-			newView.addFigureSelectionListener(this);
+			newView.addFigureSelectionListener(this); // TODO
 		}
 		if (isViewRequired()) {
 			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
@@ -74,22 +96,31 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 		}
 	}
 
-	/**
-	 * Sent when a new view is created
-	 */
-	public void viewCreated(DrawingView view) {
+//	/**
+//	 * Sent when a new view is created
+//	 */
+//	public void viewCreated(DrawingView view) {
+//	}
+
+	public void viewCreated(MDStandardDrawingView view) {
 	}
 
-	/**
-	 * Send when an existing view is about to be destroyed.
-	 */
-	public void viewDestroying(DrawingView view) {
+//	/**
+//	 * Send when an existing view is about to be destroyed.
+//	 */
+//	public void viewDestroying(DrawingView view) {
+//	}
+
+	public void viewDestroying(MDStandardDrawingView view) {
 	}
 
-	/**
-	 * @param view a DrawingView
-	 */
-	public void figureSelectionChanged(DrawingView view) {
+//	/**
+//	 * @param view a DrawingView
+//	 */
+//	public void figureSelectionChanged(DrawingView view) {
+//	}
+
+	public void figureSelectionChanged(MDStandardDrawingView view) {
 	}
 
 	/**
@@ -108,7 +139,7 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	 *
 	 * @return DrawingView currently active in the editor
 	 */
-	public DrawingView view() {
+	public MDStandardDrawingView view() {
 		return getDrawingEditor().view();
 	}
 
@@ -128,7 +159,7 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	 */
 	public void dispose() {
 		if (view() != null) {
-			view().removeFigureSelectionListener(this);
+			view().removeFigureSelectionListener(this); // TODO
 		}
 	}
 

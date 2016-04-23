@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.samples.javadraw;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import javax.swing.JApplet;
 import java.awt.*;
@@ -27,14 +29,17 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 
 	private Drawing         fDrawing;
 	private Tool            fTool;
-	private StandardDrawingView fView;
+//	private StandardDrawingView fView;
+	private MDStandardDrawingView fView;
 	private transient 		UndoManager myUndoManager;
 
 	public void init() {
 		setUndoManager(new UndoManager());
 		getContentPane().setLayout(new BorderLayout());
-		fView = new StandardDrawingView(this, 400, 370);
-		getContentPane().add("Center", fView);
+//		fView = new StandardDrawingView(this, 400, 370);
+		fView = MDDrawingViewFactory.newDrawingView(this, 400, 370);
+
+		getContentPane().add("Center", fView.panel());
 		setTool(new FollowURLTool(this, this));
 
 		String filename = getParameter("Drawing");
@@ -74,12 +79,18 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	/**
 	 * Gets the editor's drawing view.
 	 */
-	public DrawingView view() {
+//	public DrawingView view() {
+//		return fView;
+//	}
+	public MDStandardDrawingView view() {
 		return fView;
 	}
 
-	public DrawingView[] views() {
-		return new DrawingView[] { view() };
+//	public DrawingView[] views() {
+//		return new DrawingView[] { view() };
+//	}
+	public MDStandardDrawingView[] views() {
+		return new MDStandardDrawingView[] { view() };
 	}
 
 	/**
@@ -111,7 +122,8 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	/**
 	 * Ignore selection changes, we don't show any selection
 	 */
-	public void figureSelectionChanged(DrawingView view) {}
+//	public void figureSelectionChanged(DrawingView view) {}
+	public void figureSelectionChanged(MDStandardDrawingView view) {}
 
 	protected void setUndoManager(UndoManager newUndoManager) {
 		myUndoManager = newUndoManager;

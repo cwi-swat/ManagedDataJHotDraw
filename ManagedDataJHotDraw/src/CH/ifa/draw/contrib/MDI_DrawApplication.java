@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.application.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
+import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 
@@ -79,7 +81,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	 * to create a new internal drawing view should call this method.
 	 */
 	public void newWindow(Drawing newDrawing) {
-		DrawingView newView = createDrawingView(newDrawing);
+		MDStandardDrawingView newView = createDrawingView(newDrawing);
 		getDesktop().addToDesktop(newView, Desktop.PRIMARY);
 		toolDone();
 	}
@@ -94,8 +96,12 @@ public class MDI_DrawApplication extends DrawApplication {
 	 *
 	 * @return drawing view that is active at application startup time
 	 */
-	protected DrawingView createInitialDrawingView() {
-		return NullDrawingView.getManagedDrawingView(this);
+//	protected DrawingView createInitialDrawingView() {
+//		return NullDrawingView.getManagedDrawingView(this);
+//	}
+
+	protected MDStandardDrawingView createInitialDrawingView() {
+		return MDDrawingViewFactory.newDrawingView(this);
 	}
 
 	/**
@@ -129,7 +135,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	/**
 	 * Returns all the views in the application
 	 */
-	public DrawingView[] views() {
+	public MDStandardDrawingView[] views() {
 		return getDesktop().getAllFromDesktop(Desktop.PRIMARY);
 	}
 

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.figures;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.event.MouseEvent;
 
 /**
@@ -91,7 +93,10 @@ public  class ConnectedTextTool extends TextTool {
 	public static class UndoActivity extends TextTool.UndoActivity {
 		private Figure myConnectedFigure;
 
-		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
+//			super(newDrawingView, newOriginalText);
+//		}
+		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView, newOriginalText);
 		}
 

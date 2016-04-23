@@ -39,7 +39,6 @@ public class JavadrawSuite
     suite.addTestSuite(CH.ifa.draw.test.samples.javadraw.JavaDrawViewerTest.class);
     suite.addTestSuite(CH.ifa.draw.test.samples.javadraw.JavaDrawAppletTest.class);
     suite.addTestSuite(CH.ifa.draw.test.samples.javadraw.JavaDrawAppTest.class);
-    suite.addTestSuite(CH.ifa.draw.test.samples.javadraw.AnimatorTest.class);
     suite.addTestSuite(CH.ifa.draw.test.samples.javadraw.AnimationDecoratorTest.class);
     
     // JUnitDoclet begin method suite()

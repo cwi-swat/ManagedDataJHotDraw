@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,7 @@ package CH.ifa.draw.util;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.FigureEnumerator;
 import CH.ifa.draw.standard.StandardFigureSelection;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
 
 import java.util.List;
 
@@ -29,12 +30,17 @@ public class UndoableAdapter implements Undoable {
 	private List   myAffectedFigures;
 	private boolean myIsUndoable;
 	private boolean myIsRedoable;
-	private DrawingView myDrawingView;
+//	private DrawingView myDrawingView;
+	private MDStandardDrawingView myDrawingView;
 
-	public UndoableAdapter(DrawingView newDrawingView) {
+//	public UndoableAdapter(DrawingView newDrawingView) {
+//		setDrawingView(newDrawingView);
+//	}
+
+	public UndoableAdapter(MDStandardDrawingView newDrawingView) {
 		setDrawingView(newDrawingView);
 	}
-	
+
 	/**
 	 * Undo the activity
 	 * @return true if the activity could be undone, false otherwise
@@ -111,11 +117,19 @@ public class UndoableAdapter implements Undoable {
 			getAffectedFigures(), getAffectedFiguresCount()));
 	}
 	
-	public DrawingView getDrawingView() {
+//	public DrawingView getDrawingView() {
+//		return myDrawingView;
+//	}
+
+	public MDStandardDrawingView getDrawingView() {
 		return myDrawingView;
 	}
-	
-	protected void setDrawingView(DrawingView newDrawingView) {
+
+//	protected void setDrawingView(DrawingView newDrawingView) {
+//		myDrawingView = newDrawingView;
+//	}
+
+	protected void setDrawingView(MDStandardDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 }

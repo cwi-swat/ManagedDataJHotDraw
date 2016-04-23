@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,8 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.UndoManager;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -33,12 +35,18 @@ import java.awt.*;
  */
 public interface DrawingEditor extends FigureSelectionListener {
 
-	/**
-	 * Gets the editor's drawing view.
-	 */
-	public DrawingView view();
+	// @MDHD
+//	/**
+//	 * Gets the editor's drawing view.
+//	 */
+//	public DrawingView view();
 
-	public DrawingView[] views();
+	public MDStandardDrawingView view();
+
+	// @MDHD
+//	public DrawingView[] views();
+
+	public MDStandardDrawingView[] views();
 	/**
 	 * Gets the editor's drawing.
 	 */
@@ -59,7 +67,8 @@ public interface DrawingEditor extends FigureSelectionListener {
 	 * Informs that the current figure selection has changed.
 	 * Override this method to handle selection changes.
 	 */
-	public void figureSelectionChanged(DrawingView view);
+//	public void figureSelectionChanged(DrawingView view);
+	public void figureSelectionChanged(MDStandardDrawingView view);
 
 	public void addViewChangeListener(ViewChangeListener vsl);
 	public void removeViewChangeListener(ViewChangeListener vsl);

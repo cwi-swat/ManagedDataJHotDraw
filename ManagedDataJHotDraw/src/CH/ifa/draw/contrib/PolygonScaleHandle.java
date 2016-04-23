@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
+import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+
 import java.awt.*;
 
 /**
@@ -38,7 +40,14 @@ class PolygonScaleHandle extends AbstractHandle {
 	 * @param y the y position where the interaction started
 	 * @param view the handles container
 	 */
-	public void invokeStart(int x, int  y, DrawingView view) {
+//	public void invokeStart(int x, int  y, DrawingView view) {
+//		fCurrent = new Point(x, y);
+//		PolygonScaleHandle.UndoActivity activity = (PolygonScaleHandle.UndoActivity)createUndoActivity(view);
+//		setUndoActivity(activity);
+//		activity.setAffectedFigures(new SingleFigureEnumerator(owner()));
+//		activity.setPolygon(((PolygonFigure)(owner())).getPolygon());
+//	}
+	public void invokeStart(int x, int  y, MDStandardDrawingView view) {
 		fCurrent = new Point(x, y);
 		PolygonScaleHandle.UndoActivity activity = (PolygonScaleHandle.UndoActivity)createUndoActivity(view);
 		setUndoActivity(activity);
@@ -53,7 +62,12 @@ class PolygonScaleHandle extends AbstractHandle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		fCurrent = new Point(x, y);
+//		Polygon polygon = ((PolygonScaleHandle.UndoActivity)getUndoActivity()).getPolygon();
+//		((PolygonFigure)(owner())).scaleRotate(new Point(anchorX, anchorY), polygon, fCurrent);
+//	}
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		fCurrent = new Point(x, y);
 		Polygon polygon = ((PolygonScaleHandle.UndoActivity)getUndoActivity()).getPolygon();
 		((PolygonFigure)(owner())).scaleRotate(new Point(anchorX, anchorY), polygon, fCurrent);
@@ -66,7 +80,15 @@ class PolygonScaleHandle extends AbstractHandle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
+//		((PolygonFigure)(owner())).smoothPoints();
+//		if ((fCurrent.x == anchorX) && (fCurrent.y == anchorY)) {
+//			// there is nothing to undo
+//			setUndoActivity(null);
+//		}
+//		fCurrent = null;
+//	}
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
 		((PolygonFigure)(owner())).smoothPoints();
 		if ((fCurrent.x == anchorX) && (fCurrent.y == anchorY)) {
 			// there is nothing to undo
@@ -74,7 +96,7 @@ class PolygonScaleHandle extends AbstractHandle {
 		}
 		fCurrent = null;
 	}
-	
+
 	public Point locate() {
 		if (fCurrent == null) {
 			return getOrigin();
@@ -131,19 +153,27 @@ class PolygonScaleHandle extends AbstractHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-	protected Undoable createUndoActivity(DrawingView newView) {
+//	protected Undoable createUndoActivity(DrawingView newView) {
+//		return new PolygonScaleHandle.UndoActivity(newView);
+//	}
+	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
 		return new PolygonScaleHandle.UndoActivity(newView);
 	}
-	
+
 	public static class UndoActivity extends UndoableAdapter {
 		private Polygon myPolygon;
 		
-		public UndoActivity(DrawingView newView) {
+//		public UndoActivity(DrawingView newView) {
+//			super(newView);
+//			setUndoable(true);
+//			setRedoable(true);
+//		}
+		public UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);
 		}
-		
+
 		public boolean undo() {
 			if (!super.undo()) {
 				return false;

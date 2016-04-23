@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -75,7 +75,8 @@ public class CreationTool extends AbstractTool {
 	public void activate() {
 		super.activate();
 		if (isUsable()) {
-			getActiveView().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+//			getActiveView().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+			getActiveView().cursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 		}
 	}
 
@@ -104,7 +105,8 @@ public class CreationTool extends AbstractTool {
 	 */
 	public void mouseDrag(MouseEvent e, int x, int y) {
 		if (getAddedFigure() != null) {
-			getAddedFigure().displayBox(new Point(getAnchorX(), getAnchorY()), new Point(x, y));
+			Figure addedFigure = getAddedFigure();
+			addedFigure.displayBox(new Point(getAnchorX(), getAnchorY()), new Point(x, y));
 		}
 	}
 
