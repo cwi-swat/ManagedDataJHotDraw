@@ -1,4 +1,4 @@
-package ccconcerns.figure_selection_observer.primitives.java_awt;
+package ccconcerns.managed_data.primitives.java_awt;
 
 import nl.cwi.managed_data_4j.language.primitives.AbstractPrimitive;
 

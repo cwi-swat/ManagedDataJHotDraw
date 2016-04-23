@@ -13,7 +13,7 @@ package CH.ifa.draw.standard;
 
 import java.awt.*;
 import CH.ifa.draw.framework.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * The SimpleUpdateStrategy implements an update

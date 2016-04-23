@@ -15,8 +15,7 @@ import CH.ifa.draw.standard.CreationTool;
 import CH.ifa.draw.standard.CompositeFigure;
 import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.framework.DrawingEditor;
-import CH.ifa.draw.framework.DrawingView;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.event.MouseEvent;
 import java.awt.*;

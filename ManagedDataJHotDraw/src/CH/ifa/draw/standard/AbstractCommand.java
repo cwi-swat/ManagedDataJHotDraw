@@ -16,7 +16,7 @@ import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.util.*;
 

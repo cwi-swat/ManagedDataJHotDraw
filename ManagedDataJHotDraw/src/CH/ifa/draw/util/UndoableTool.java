@@ -13,7 +13,7 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractTool;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;

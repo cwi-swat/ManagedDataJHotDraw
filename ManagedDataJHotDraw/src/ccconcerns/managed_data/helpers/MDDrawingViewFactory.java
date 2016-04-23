@@ -1,16 +1,13 @@
-package ccconcerns.figure_selection_observer.helpers;
+package ccconcerns.managed_data.helpers;
 
 import CH.ifa.draw.framework.DrawingEditor;
-import CH.ifa.draw.framework.FigureEnumeration;
-import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.figure_selection_observer.MyJPanel;
-import ccconcerns.figure_selection_observer.factories.DrawingViewSchemaFactory;
-import ccconcerns.figure_selection_observer.primitives.java_awt.*;
-import ccconcerns.figure_selection_observer.primitives.java_swing.JPanelPrimitive;
-import ccconcerns.figure_selection_observer.primitives.jhodraw.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.MyJPanel;
+import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
+import ccconcerns.managed_data.primitives.java_awt.*;
+import ccconcerns.managed_data.primitives.java_swing.JPanelPrimitive;
+import ccconcerns.managed_data.primitives.jhodraw.*;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
@@ -20,7 +17,6 @@ import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
 
 public class MDDrawingViewFactory {
 

@@ -1,4 +1,4 @@
-package ccconcerns.figure_selection_observer.schemas;
+package ccconcerns.managed_data.schemas;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.framework.Painter;

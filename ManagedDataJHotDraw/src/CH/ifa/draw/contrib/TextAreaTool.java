@@ -11,7 +11,6 @@
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.DrawingEditor;
-import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.standard.CreationTool;
@@ -19,7 +18,7 @@ import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.standard.TextHolder;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.Container;
 import java.awt.Font;

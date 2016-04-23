@@ -12,9 +12,7 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.UndoManager;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
-
-import java.awt.*;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * DrawingEditor defines the interface for coordinating

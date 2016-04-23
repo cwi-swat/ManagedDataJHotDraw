@@ -15,7 +15,7 @@ import CH.ifa.draw.standard.ConnectionTool;
 import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.figures.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.event.MouseEvent;
 import java.awt.*;

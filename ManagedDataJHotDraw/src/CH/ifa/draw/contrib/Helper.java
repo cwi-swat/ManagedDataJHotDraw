@@ -11,9 +11,8 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.DrawingView;
-import ccconcerns.figure_selection_observer.MyJPanel;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.MyJPanel;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.*;
 

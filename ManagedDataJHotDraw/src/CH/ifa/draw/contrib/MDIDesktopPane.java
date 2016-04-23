@@ -11,9 +11,8 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.application.DrawApplication;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 import javax.swing.event.InternalFrameListener;

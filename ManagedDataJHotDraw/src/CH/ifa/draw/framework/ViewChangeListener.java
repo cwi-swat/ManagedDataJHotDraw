@@ -1,6 +1,5 @@
 package CH.ifa.draw.framework;
-import CH.ifa.draw.framework.DrawingView;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.util.EventListener;
 

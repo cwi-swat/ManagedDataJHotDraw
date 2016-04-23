@@ -1,6 +1,6 @@
-package ccconcerns.figure_selection_observer;
+package ccconcerns;
 
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 import java.awt.*;

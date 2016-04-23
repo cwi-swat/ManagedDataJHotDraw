@@ -12,7 +12,7 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * An UndoRedoActivity can be used to turn a UndoActivity into a RedoActivity.

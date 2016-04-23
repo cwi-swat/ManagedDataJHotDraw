@@ -13,7 +13,7 @@ package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.JPopupMenu;
 import java.awt.*;

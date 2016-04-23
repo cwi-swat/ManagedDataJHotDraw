@@ -15,7 +15,7 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.UndoableTool;
 import CH.ifa.draw.util.UndoableHandle;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.awt.event.MouseEvent;
 

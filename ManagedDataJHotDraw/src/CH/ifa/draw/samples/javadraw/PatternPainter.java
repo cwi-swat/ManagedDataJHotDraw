@@ -13,7 +13,7 @@ package CH.ifa.draw.samples.javadraw;
 
 import java.awt.*;
 import CH.ifa.draw.framework.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * PatternDrawer a background that can be added to a drawing.

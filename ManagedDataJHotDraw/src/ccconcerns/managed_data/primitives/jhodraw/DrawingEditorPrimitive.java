@@ -1,4 +1,4 @@
-package ccconcerns.figure_selection_observer.primitives.jhodraw;
+package ccconcerns.managed_data.primitives.jhodraw;
 
 import CH.ifa.draw.framework.DrawingEditor;
 import nl.cwi.managed_data_4j.language.primitives.AbstractPrimitive;

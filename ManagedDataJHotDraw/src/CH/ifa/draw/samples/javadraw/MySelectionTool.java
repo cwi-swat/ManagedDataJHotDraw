@@ -14,7 +14,7 @@ package CH.ifa.draw.samples.javadraw;
 import java.awt.event.MouseEvent;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * A SelectionTool that interprets double clicks to inspect the clicked figure

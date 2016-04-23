@@ -14,8 +14,8 @@ package CH.ifa.draw.samples.javadraw;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
-import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.JApplet;
 import java.awt.*;

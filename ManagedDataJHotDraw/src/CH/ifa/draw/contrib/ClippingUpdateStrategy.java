@@ -1,13 +1,12 @@
 package CH.ifa.draw.contrib;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Vector;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.FigureEnumerator;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 /**
  * The ClippingUpdateStrategy will only draw those Figures in the DrawingView

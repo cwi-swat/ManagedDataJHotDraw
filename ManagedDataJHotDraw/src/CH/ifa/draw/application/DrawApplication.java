@@ -17,8 +17,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
-import ccconcerns.figure_selection_observer.helpers.MDDrawingViewFactory;
-import ccconcerns.figure_selection_observer.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
+import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
