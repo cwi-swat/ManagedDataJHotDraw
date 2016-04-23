@@ -1,8 +1,12 @@
 # ManagedDataJHotDraw
-Aspect refactoring of JHotDraw with ManagedData.
+Aspect refactoring of JHotDraw with Managed Data.
 
-Original JHotDraw *v.5.4b1*
+This is a showcase aspect refactoring using the managed data implementation for Java, (JavaMD)[https://github.com/TheolZacharopoulos/JavaMD].
+
+The refactoring performed on the original JHotDraw *v.5.4b1*.
 
 Aspects inventory:
-- Commands
-  - Undo Concern
+- Design Pattern
+  - Observer
+    - FigureSelectionListener
+- Undo Concern

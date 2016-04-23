@@ -35,101 +35,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfbbfb49-ea0c-4d72-b322-adc603cd8cf8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ManagedDataJHotDraw/CH/ifa/draw/samples/pert/PertAppletHelp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ManagedDataJHotDraw/CH/ifa/draw/samples/pert/images/PERT1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ManagedDataJHotDraw/CH/ifa/draw/samples/pert/images/PERT2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ManagedDataJHotDraw/CH/ifa/draw/samples/pert/images/PERT3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/applet/DrawApplet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/JPanelDesktop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/JScrollPaneDesktop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SVGDrawApp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SplitPaneDesktop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawApplet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/minimap/MiniMapApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/minimap/MiniMapDesktop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/nothing/NothingApp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/nothing/NothingApplet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertApplet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertAppletHelp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertDependency.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertFigure.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/PertFigureCreationTool.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/images/PERT1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/images/PERT2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/pert/images/PERT3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/test/contrib/MiniMapViewTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/test/samples/javadraw/AnimatorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/test/util/UndoableHandleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/TestIt.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/ClippingUpdateStrategy.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/ClippingUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/CustomSelectionTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/CustomSelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/Desktop.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/Desktop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/DesktopEvent.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/DesktopEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/DesktopEventService.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/DesktopEventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/Helper.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/Helper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDIDesktopPane.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDIDesktopPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonScaleHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonScaleHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SplitConnectionTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SplitConnectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TextAreaTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TextAreaTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TriangleRotationHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TriangleRotationHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/dnd/DragNDropTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/contrib/dnd/DragNDropTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/BorderTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/BorderTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/ConnectedTextTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/ConnectedTextTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/FontSizeHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/FontSizeHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/GroupCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/GroupCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/InsertImageCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/InsertImageCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/PolyLineHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/PolyLineHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/RadiusHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/RadiusHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/TextTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/TextTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/figures/UngroupCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/figures/UngroupCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/FigureSelectionListener.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/FigureSelectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/Handle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/Handle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/Painter.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/Painter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/ViewChangeListener.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/ViewChangeListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawApp.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/PatternPainter.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/PatternPainter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AlignCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AlignCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BoxHandleKit.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BoxHandleKit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BringToFrontCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BringToFrontCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BufferedUpdateStrategy.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/BufferedUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionEndHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionEndHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ConnectionTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/ConnectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/CreationTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/CreationTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/DragTracker.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/DragTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/NullDrawingView.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/NullDrawingView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/PasteCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/PasteCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SelectAllCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SelectAllCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SelectionTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SendToBackCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SendToBackCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SimpleUpdateStrategy.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/SimpleUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/test/samples/javadraw/JavadrawSuite.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/test/samples/javadraw/JavadrawSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/test/util/UtilSuite.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/test/util/UtilSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/CommandMenu.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/CommandMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoManager.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoRedoActivity.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoRedoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/Undoable.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/Undoable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableAdapter.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableHandle.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/helpers/MDDrawingViewFactory.java" afterPath="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/helpers/MDDrawingViewFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java" afterPath="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java" />
     </list>
     <ignored path="ManagedDataJHotDraw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -169,8 +75,8 @@
       <file leaf-file-name="MDStandardDrawingView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6794055">
-              <caret line="424" column="22" selection-start-line="424" selection-start-column="22" selection-end-line="424" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7133758">
+              <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2053#2054#0" expanded="true" />
@@ -190,94 +96,6 @@
                 <element signature="e#15514#15558#0" expanded="false" />
                 <element signature="e#17200#17247#0" expanded="false" />
                 <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreationTool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/CreationTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractFigure.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractFigure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding>
-                <element signature="docComment;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;field#fListener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;field#myDependendFigures#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#moveBy#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#moveBy#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#basicMoveBy#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#displayBox#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#basicDisplayBox#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#displayBox#1;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#handles#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#figures#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#size#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#isEmpty#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#findFigureInside#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#findFigureInside#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#containsPoint#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#displayBox#2;class#AbstractFigure#0" expanded="false" />
-                <element signature="e#4096#4097#0" expanded="true" />
-                <element signature="e#4172#4173#0" expanded="true" />
-                <element signature="docComment;method#includes#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#decompose#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#decompose#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#addToContainer#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#addToContainer#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#removeFromContainer#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#removeFromContainer#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#addFigureChangeListener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#addFigureChangeListener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#removeFigureChangeListener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#removeFigureChangeListener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#listener#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#release#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#release#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#invalidate#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#invalidateRectangle#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#willChange#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#changed#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#canConnect#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#connectionInsets#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#connectorAt#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#connectorVisibility#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#connectedTextLocator#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#getAttribute#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#getAttribute#1;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#setAttribute#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#setAttribute#1;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#clone#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#clone#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#write#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#read#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#getZValue#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="docComment;method#setZValue#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="method#visit#0;class#AbstractFigure#0" expanded="false" />
-                <element signature="e#10620#10692#0" expanded="false" />
-                <element signature="method#removeDependendFigure#0;class#AbstractFigure#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RectangleFigure.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/figures/RectangleFigure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#2237#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1291,12 +1109,12 @@
       <workItem from="1461175134064" duration="26226000" />
       <workItem from="1461267825288" duration="53673000" />
       <workItem from="1461414576785" duration="8600000" />
-      <workItem from="1461423362333" duration="7207000" />
+      <workItem from="1461423362333" duration="9271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142227000" />
+    <option name="totallyTimeSpent" value="144291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1315,11 +1133,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30294532" sideWeight="0.52575105" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30014026" sideWeight="0.5286123" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197425" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30014026" sideWeight="0.47424892" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30014026" sideWeight="0.47138768" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14878398" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
@@ -1358,15 +1176,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java</url>
-          <line>133</line>
-          <properties />
-          <option name="timeStamp" value="186" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="189" />
+      <option name="time" value="192" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1994,14 +1804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../ManagedData4J/target/ManagedData4J-jar-with-dependencies.jar!/nl/cwi/managed_data_4j/language/managed_object/MObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3316583">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/MyJPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2108,10 +1910,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../ManagedData4J/target/ManagedData4J-jar-with-dependencies.jar!/nl/cwi/managed_data_4j/language/managed_object/MObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.222222">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6794055">
-          <caret line="424" column="22" selection-start-line="424" selection-start-column="22" selection-end-line="424" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7133758">
+          <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2053#2054#0" expanded="true" />
