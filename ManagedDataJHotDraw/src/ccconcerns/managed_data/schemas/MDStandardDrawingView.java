@@ -653,6 +653,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         }
     }
 
+    // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
     default void addFigureSelectionListener(FigureSelectionListener fsl) {
         List<FigureSelectionListener> prev = fSelectionListeners();
         prev.add(fsl);
@@ -660,6 +661,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         fSelectionListeners(newfsl);
     }
 
+    // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
     default void removeFigureSelectionListener(FigureSelectionListener fsl) {
         List<FigureSelectionListener> prev = fSelectionListeners();
         prev.remove(fsl);

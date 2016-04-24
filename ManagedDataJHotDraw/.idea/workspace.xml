@@ -19,30 +19,29 @@
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="454" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="600" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="DrawingView newDrawingView = new StandardDrawingVi..." line="674" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public Undoable getUndoActivity() {" line="200" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public void setUndoActivity(Undoable newUndoableAc..." line="205" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public Undoable getUndoActivity() {" line="170" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public void setUndoActivity(Undoable newUndoableAc..." line="175" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="private Undoable myUndoableActivity; // @MDHD TODO..." line="30" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="public static class UndoActivity extends UndoableA..." line="74" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="protected Undoable createUndoActivity() {" line="70" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="super.execute();" line="45" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="private Command myWrappedCommand;" line="25" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="getDrawingEditor().getUndoManager().pushUndo(undoa..." line="46" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" description="for (int i = 0; i &lt; fSelectionListeners.size(); i+..." line="564" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" description="fireSelectionChanged(); //" line="449" />
     <bookmark url="file://$PROJECT_DIR$/../../JHotDraw54b1_mini/src/CH/ifa/draw/contrib/MDIDesktopPane.java" description="DrawingView dv = Helper.getDrawingView(e.getIntern..." line="62" />
     <bookmark url="file://$PROJECT_DIR$/../../JHotDraw54b1_mini/src/CH/ifa/draw/contrib/Helper.java" description="DrawingView oldDrawingView = null;" line="23" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/contrib/Helper.java" description="for (int i = 0; i &lt; components.length; i++) {" line="44" />
     <bookmark url="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" description="l.figureSelectionChanged(this);" line="650" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="view().removeFigureSelectionListener(this); // TOD..." line="137" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="view().addFigureSelectionListener(this); // TODO: ..." line="120" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="oldView.removeFigureSelectionListener(this); // TO..." line="249" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="newView.addFigureSelectionListener(this); // TODO:..." line="252" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfbbfb49-ea0c-4d72-b322-adc603cd8cf8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/FigureSelection.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/ConsistentBehavior.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/Listener.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRole.java" afterPath="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java" afterPath="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" afterPath="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
     </list>
     <ignored path="ManagedDataJHotDraw.iws" />
@@ -70,11 +69,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DrawApplication.java" pinned="true" current-in-tab="true">
+      <file leaf-file-name="MDStandardDrawingView.java" pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="593" column="29" selection-start-line="593" selection-start-column="29" selection-end-line="593" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#figureExists#0;class#MDStandardDrawingView#0" expanded="false" />
+                <element signature="e#7610#7611#0" expanded="true" />
+                <element signature="e#7652#7653#0" expanded="true" />
+                <element signature="method#addToSelectionAll#1;class#MDStandardDrawingView#0" expanded="false" />
+                <element signature="method#checkDamage#0;class#MDStandardDrawingView#0" expanded="false" />
+                <element signature="e#10541#10603#0" expanded="false" />
+                <element signature="method#drawingTitleChanged#0;class#MDStandardDrawingView#0" expanded="false" />
+                <element signature="method#drawBackground#0;class#MDStandardDrawingView#0" expanded="false" />
+                <element signature="e#12606#12644#0" expanded="false" />
+                <element signature="e#12845#12897#0" expanded="false" />
+                <element signature="e#14198#14242#0" expanded="false" />
+                <element signature="e#15884#15931#0" expanded="false" />
+                <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawApplication.java" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39278132">
-              <caret line="1273" column="0" selection-start-line="1273" selection-start-column="0" selection-end-line="1273" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="844" column="0" selection-start-line="844" selection-start-column="0" selection-end-line="844" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#DrawApplication#0" expanded="false" />
@@ -197,41 +221,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MDStandardDrawingView.java" pinned="true" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
+      <file leaf-file-name="AbstractCommand.java" pinned="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="658" column="31" selection-start-line="658" selection-start-column="31" selection-end-line="658" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#figureExists#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="e#7610#7611#0" expanded="true" />
-                <element signature="e#7652#7653#0" expanded="true" />
-                <element signature="method#addToSelectionAll#1;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="method#checkDamage#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="e#10541#10603#0" expanded="false" />
-                <element signature="method#drawingTitleChanged#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="method#drawBackground#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="e#12606#12644#0" expanded="false" />
-                <element signature="e#12845#12897#0" expanded="false" />
-                <element signature="e#14198#14242#0" expanded="false" />
-                <element signature="e#15884#15931#0" expanded="false" />
-                <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.7810219">
+              <caret line="268" column="1" selection-start-line="268" selection-start-column="1" selection-end-line="268" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubjectRoleMObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java">
+      <file leaf-file-name="UndoableCommand.java" pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-              </folding>
+              <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -287,8 +292,6 @@
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonHandle.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/primitives/jhodraw/FigureSelectionListenerPrimitive.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/CommandMenu.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawApp.java" />
@@ -312,9 +315,11 @@
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/ConsistentBehavior.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/FigureSelectionConsistentBehaviorPredicate.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java" />
-        <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/FigureSelection.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
+        <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
       </list>
     </option>
   </component>
@@ -1156,12 +1161,12 @@
       <workItem from="1461414576785" duration="8600000" />
       <workItem from="1461423362333" duration="9740000" />
       <workItem from="1461440394300" duration="6709000" />
-      <workItem from="1461490959573" duration="8618000" />
+      <workItem from="1461490959573" duration="10170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160087000" />
+    <option name="totallyTimeSpent" value="161639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1184,12 +1189,13 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197425" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30014026" sideWeight="0.47138768" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30014026" sideWeight="0.47138768" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17238913" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.49713877" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51332396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1207,7 +1213,6 @@
       <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51332396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1223,7 +1228,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="203" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java</url>
+          <line>657</line>
+          <properties />
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java</url>
+          <line>665</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="208" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1256,14 +1275,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06396589">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1982942">
-          <caret line="118" column="79" selection-start-line="118" selection-start-column="79" selection-end-line="118" selection-end-column="79" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,6 +1285,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326226">
           <caret line="633" column="50" selection-start-line="633" selection-start-column="41" selection-end-line="633" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,24 +1611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3014862">
-          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/FigureSelectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#794#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDI_DrawApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1626,17 +1623,6 @@
         <state vertical-scroll-proportion="0.44585988">
           <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.388535">
-          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-          <folding>
-            <element signature="class#3841:4976" expanded="false" />
-            <element signature="class#5022:5859" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1698,6 +1684,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/FigureSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22292994">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AlignCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10828026">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#AlignCommand#0" expanded="false" />
+            <element signature="class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="docComment;field#LEFTS#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#848:996" expanded="false" />
+            <element signature="method#moveBy#0;class#848:996" expanded="false" />
+            <element signature="docComment;field#CENTERS#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#1091:1273" expanded="false" />
+            <element signature="method#moveBy#0;class#1091:1273" expanded="false" />
+            <element signature="docComment;field#RIGHTS#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#1356:1533" expanded="false" />
+            <element signature="method#moveBy#0;class#1356:1533" expanded="false" />
+            <element signature="docComment;field#TOPS#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#1607:1754" expanded="false" />
+            <element signature="method#moveBy#0;class#1607:1754" expanded="false" />
+            <element signature="docComment;field#MIDDLES#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#1847:2031" expanded="false" />
+            <element signature="method#moveBy#0;class#1847:2031" expanded="false" />
+            <element signature="docComment;field#BOTTOMS#0;class#Alignment#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#2111:2291" expanded="false" />
+            <element signature="method#moveBy#0;class#2111:2291" expanded="false" />
+            <element signature="docComment;method#AlignCommand#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#AlignCommand#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#execute#0;class#AlignCommand#0" expanded="false" />
+            <element signature="docComment;method#createUndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#UndoActivity#0;class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#undo#0;class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#redo#0;class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#alignAffectedFigures#0;class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+            <element signature="method#setAffectedFigures#0;class#UndoActivity#0;class#AlignCommand#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1710,41 +1743,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/FigureSelectionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="658" column="31" selection-start-line="658" selection-start-column="31" selection-end-line="658" selection-end-column="31" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#figureExists#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="e#7610#7611#0" expanded="true" />
-            <element signature="e#7652#7653#0" expanded="true" />
-            <element signature="method#addToSelectionAll#1;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="method#checkDamage#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="e#10541#10603#0" expanded="false" />
-            <element signature="method#drawingTitleChanged#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="method#drawBackground#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="e#12606#12644#0" expanded="false" />
-            <element signature="e#12845#12897#0" expanded="false" />
-            <element signature="e#14198#14242#0" expanded="false" />
-            <element signature="e#15884#15931#0" expanded="false" />
-            <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="e#0#794#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/FigureSelection.java">
+    <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22292994">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding>
+            <element signature="class#3841:4976" expanded="false" />
+            <element signature="class#5022:5859" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39278132">
-          <caret line="1273" column="0" selection-start-line="1273" selection-start-column="0" selection-end-line="1273" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="844" column="0" selection-start-line="844" selection-start-column="0" selection-end-line="844" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#DrawApplication#0" expanded="false" />
@@ -1863,6 +1886,45 @@
             <element signature="e#35195#35196#0" expanded="true" />
             <element signature="e#35217#35218#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="593" column="29" selection-start-line="593" selection-start-column="29" selection-end-line="593" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#figureExists#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="e#7610#7611#0" expanded="true" />
+            <element signature="e#7652#7653#0" expanded="true" />
+            <element signature="method#addToSelectionAll#1;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="method#checkDamage#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="e#10541#10603#0" expanded="false" />
+            <element signature="method#drawingTitleChanged#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="method#drawBackground#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="e#12606#12644#0" expanded="false" />
+            <element signature="e#12845#12897#0" expanded="false" />
+            <element signature="e#14198#14242#0" expanded="false" />
+            <element signature="e#15884#15931#0" expanded="false" />
+            <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7810219">
+          <caret line="268" column="1" selection-start-line="268" selection-start-column="1" selection-end-line="268" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -75,27 +75,6 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 //		}
 //	}
 
-	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
-		if (oldView != null) {
-			oldView.removeFigureSelectionListener(this); // TODO
-		}
-		if (newView != null) {
-			newView.addFigureSelectionListener(this); // TODO
-		}
-		if (isViewRequired()) {
-			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
-			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
-			// old view was not interactive aware while new view is now interactive aware
-			if (!isOldViewInteractive && isNewViewInteractive) {
-				getEventDispatcher().fireCommandExecutableEvent();
-			}
-			// old view was interactive aware while new view is not
-			else if (isOldViewInteractive && !isNewViewInteractive) {
-				getEventDispatcher().fireCommandNotExecutableEvent();
-			}
-		}
-	}
-
 //	/**
 //	 * Sent when a new view is created
 //	 */
@@ -112,15 +91,6 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 //	}
 
 	public void viewDestroying(MDStandardDrawingView view) {
-	}
-
-//	/**
-//	 * @param view a DrawingView
-//	 */
-//	public void figureSelectionChanged(DrawingView view) {
-//	}
-
-	public void figureSelectionChanged(MDStandardDrawingView view) {
 	}
 
 	/**
@@ -268,5 +238,40 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 				myRegisteredListeners.remove(oldCommandListener);
 			}
 		}
+	}
+
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+	// ===========================================================================================
+	// ===========================================================================================
+	// ===========================================================================================
+	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
+		if (oldView != null) {
+			oldView.removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		}
+		if (newView != null) {
+			newView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		}
+		if (isViewRequired()) {
+			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
+			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
+			// old view was not interactive aware while new view is now interactive aware
+			if (!isOldViewInteractive && isNewViewInteractive) {
+				getEventDispatcher().fireCommandExecutableEvent();
+			}
+			// old view was interactive aware while new view is not
+			else if (isOldViewInteractive && !isNewViewInteractive) {
+				getEventDispatcher().fireCommandNotExecutableEvent();
+			}
+		}
+	}
+
+//	/**
+//	 * @param view a DrawingView
+//	 */
+//	public void figureSelectionChanged(DrawingView view) {
+//	}
+
+	public void figureSelectionChanged(MDStandardDrawingView view) {
 	}
 }
