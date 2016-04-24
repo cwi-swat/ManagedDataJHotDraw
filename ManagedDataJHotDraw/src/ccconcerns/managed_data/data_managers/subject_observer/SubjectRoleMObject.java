@@ -8,7 +8,16 @@ import java.util.Map;
 
 public class SubjectRoleMObject extends MObject implements SubjectRole {
 
-    private Map<SubjectPredicate, Action> listeners;
+    private class Tuple<X, Y> {
+        public final X _1;
+        public final Y _2;
+        public Tuple(X _1, Y _2) {
+            this._1 = _1;
+            this._2 = _2;
+        }
+    }
+
+    private Map<Object, Tuple<SubjectPredicate, Action>> listeners;
 
     public SubjectRoleMObject(Klass schemaKlass, Object... initializers) {
         super(schemaKlass, initializers);
@@ -16,8 +25,13 @@ public class SubjectRoleMObject extends MObject implements SubjectRole {
     }
 
     @Override
-    public void add(SubjectPredicate predicate, Action action) {
-        listeners.put(predicate, action);
+    public void add(Object listener, SubjectPredicate predicate, Action action) {
+        listeners.put(listener, new Tuple<>(predicate, action));
+    }
+
+    @Override
+    public void remove(Object listener) {
+        listeners.remove(listener);
     }
 
     @Override
@@ -25,12 +39,14 @@ public class SubjectRoleMObject extends MObject implements SubjectRole {
 
         // check if the predicate of the action holds for the specific method,
         // in case it holds execute the action.
-        listeners.keySet().forEach(subjectPredicate -> {
-            if (subjectPredicate.test(this.getProxy(), methodName, args)) {
+        listeners.keySet().forEach(listener -> {
+            final SubjectPredicate predicate = listeners.get(listener)._1;
+            final Action action = listeners.get(listener)._2;
+
+            if (predicate.test(this.getProxy(), methodName, args)) {
 
                 System.out.println(" ** @MDHD ** " + methodName + " called, execute action!");
 
-                final Action action = listeners.get(subjectPredicate);
                 action.execute();
             }
         });

@@ -1272,7 +1272,7 @@ public	class DrawApplication
 
 		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
 
-		((SubjectRole) newDrawingView).add(FigureSelection::consistentBehaviorPredicate, this::checkCommandMenus);
+		((SubjectRole) newDrawingView).add(this, FigureSelection::consistentBehaviorPredicate, this::checkCommandMenus);
 
 		return newDrawingView;
 	}
