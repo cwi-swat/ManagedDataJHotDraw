@@ -17,6 +17,8 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
+import ccconcerns.figure_selection_listener.ConsistentBehavior;
+import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
@@ -675,13 +677,6 @@ public	class DrawApplication
 //		return newDrawingView;
 //	}
 
-	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
-		Dimension d = getDrawingViewSize();
-		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newDrawingView(this, d.width, d.height);
-		newDrawingView.setDrawing(newDrawing);
-		return newDrawingView;
-	}
-
 	// @MDHD
 	/**
 	 * Create the DrawingView that is active when the application is started.
@@ -1288,6 +1283,21 @@ public	class DrawApplication
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===========================================================================================
+	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
+		Dimension d = getDrawingViewSize();
+
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
+		newDrawingView.setDrawing(newDrawing);
+
+		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
+
+		((SubjectRole) newDrawingView).addListener(ConsistentBehavior::figureSelectionConsistentBehavior);
+
+		return newDrawingView;
+	}
+
 	/**
 	 * Fired by a view when the figure selection changes.  Since Commands and
 	 * Tools may depend on the figure selection they are registered to be notified

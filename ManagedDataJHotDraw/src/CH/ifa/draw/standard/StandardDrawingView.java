@@ -37,6 +37,8 @@ import java.io.*;
  *
  * @version <$CURRENT_VERSION$>
  */
+// @MDHD
+@Deprecated
 public class StandardDrawingView
 		extends
 			JPanel

@@ -81,10 +81,6 @@ public class MDDrawingViewFactory {
         // Constrainer
         drawingView.constrainer(null);
 
-        // Selection listeners
-        // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
-        drawingView.addFigureSelectionListener(editor);
-
         // Display update
         drawingView.setDisplayUpdate(new SimpleUpdateStrategy());
 
@@ -153,23 +149,6 @@ public class MDDrawingViewFactory {
                 }
             }
         });
-
-//        jPanel.addKeyListener(new KeyListener() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//
-//            }
-//
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//
-//            }
-//
-//            @Override
-//            public void keyReleased(KeyEvent e) {
-//
-//            }
-//        });
         return drawingView;
     }
 

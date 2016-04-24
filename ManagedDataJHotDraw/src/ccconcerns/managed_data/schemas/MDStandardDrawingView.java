@@ -307,15 +307,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         return false;
     }
 
-    default void addToSelection(Figure figure) {
-        if (!isFigureSelected(figure) && drawing().includes(figure)) {
-            addSelection(figure);
-            fSelectionHandles(null);
-            figure.invalidate();
-            fireSelectionChanged();
-        }
-    }
-
     default void addToSelectionAll(Collection figures) {
         addToSelectionAll(new FigureEnumerator(figures));
     }
@@ -324,44 +315,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         while (fe.hasNextFigure()) {
             addToSelection(fe.nextFigure());
         }
-    }
-
-    default void removeFromSelection(Figure figure) {
-        if (isFigureSelected(figure)) {
-            removeSelection(figure);
-            fSelectionHandles(null);
-
-            figure.invalidate();
-            fireSelectionChanged(); // TODO remove
-        }
-    }
-
-    default void toggleSelection(Figure figure) {
-        if (isFigureSelected(figure)) {
-            removeFromSelection(figure);
-        }
-        else {
-            addToSelection(figure);
-        }
-         fireSelectionChanged();  // TODO remove
-    }
-
-    default void clearSelection() {
-        // there is nothing selected - bug fix ID 628818
-        if (selectionCount() == 0) {
-            // avoid unnecessary selection changed event when nothing has to be cleared
-            return;
-        }
-
-        FigureEnumeration fe = selection();
-        while (fe.hasNextFigure()) {
-            fe.nextFigure().invalidate();
-        }
-
-        fSelection(null);
-        fSelectionHandles(null);
-
-        fireSelectionChanged();  // TODO remove
     }
 
     default HandleEnumeration selectionHandles() {
@@ -638,10 +591,58 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     default void keyTyped(KeyEvent e) {}
     default void keyReleased(KeyEvent e) {}
 
+    // @MDHD: FigureSelectionListener (FSL) Refactoring
     // ===========================================================================================
     // ===========================================================================================
     // ===========================================================================================
     // ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+    default void addToSelection(Figure figure) {
+        if (!isFigureSelected(figure) && drawing().includes(figure)) {
+            addSelection(figure);
+            fSelectionHandles(null);
+            figure.invalidate();
+            fireSelectionChanged(); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+        }
+    }
+
+    default void removeFromSelection(Figure figure) {
+        if (isFigureSelected(figure)) {
+            removeSelection(figure);
+            fSelectionHandles(null);
+
+            figure.invalidate();
+            fireSelectionChanged(); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+        }
+    }
+
+    default void toggleSelection(Figure figure) {
+        if (isFigureSelected(figure)) {
+            removeFromSelection(figure);
+        }
+        else {
+            addToSelection(figure);
+        }
+        fireSelectionChanged();  // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+    }
+
+    default void clearSelection() {
+        // there is nothing selected - bug fix ID 628818
+        if (selectionCount() == 0) {
+            // avoid unnecessary selection changed event when nothing has to be cleared
+            return;
+        }
+
+        FigureEnumeration fe = selection();
+        while (fe.hasNextFigure()) {
+            fe.nextFigure().invalidate();
+        }
+
+        fSelection(null);
+        fSelectionHandles(null);
+
+        fireSelectionChanged();  // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+    }
+
     default void fireSelectionChanged() {
         if (fSelectionListeners() != null) {
             for (int i = 0; i < fSelectionListeners().size(); i++) {
