@@ -237,7 +237,6 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===========================================================================================
-	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 
 	/**
 	 * Releases resources associated with this command
@@ -248,7 +247,8 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 			((SubjectRole) view()).remove(this);
 
-//			view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+//			view().removeFigureSelectionListener(this);
 		}
 	}
 
@@ -259,14 +259,16 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 			((SubjectRole) oldView).remove(this);
 
-//			oldView.removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+//			oldView.removeFigureSelectionListener(this);
 		}
 		if (newView != null) {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
-//			newView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+//			newView.addFigureSelectionListener(this);
 
 		}
 		if (isViewRequired()) {

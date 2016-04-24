@@ -100,6 +100,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     // @MDHD: FigureSelectionListener (FSL) Refactoring
 //    List<FigureSelectionListener> fSelectionListeners(FigureSelectionListener... listeners);
+
     List<Handle> fSelectionHandles(Handle... selectionHandles);
     List<Figure> fSelection(Figure... selection);
     List<Handle> fBackgrounds(Painter... backgrounds);
@@ -594,13 +595,14 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     // ===========================================================================================
     // ===========================================================================================
     // ===========================================================================================
-    // ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
     default void addToSelection(Figure figure) {
         if (!isFigureSelected(figure) && drawing().includes(figure)) {
             addSelection(figure);
             fSelectionHandles(null);
             figure.invalidate();
-//            fireSelectionChanged(); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
+            // @MDHD: FigureSelectionListener (FSL) Refactoring
+            //  fireSelectionChanged();
         }
     }
 
@@ -610,7 +612,9 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
             fSelectionHandles(null);
 
             figure.invalidate();
-//            fireSelectionChanged(); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
+            // @MDHD: FigureSelectionListener (FSL) Refactoring
+            //  fireSelectionChanged();
         }
     }
 
@@ -621,7 +625,9 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         else {
             addToSelection(figure);
         }
-//        fireSelectionChanged();  // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
+        // @MDHD: FigureSelectionListener (FSL) Refactoring
+        //  fireSelectionChanged();
     }
 
     default void clearSelection() {
@@ -639,10 +645,11 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         fSelection(null);
         fSelectionHandles(null);
 
-//        fireSelectionChanged();  // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+        // @MDHD: FigureSelectionListener (FSL) Refactoring
+        //  fireSelectionChanged();
     }
 
-    // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+    // @MDHD: FigureSelectionListener (FSL) Refactoring
 //    default void fireSelectionChanged() {
 //        if (fSelectionListeners() != null) {
 //            for (int i = 0; i < fSelectionListeners().size(); i++) {
@@ -653,7 +660,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 //        }
 //    }
 
-//    // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+    // @MDHD: FigureSelectionListener (FSL) Refactoring
 //    default void addFigureSelectionListener(FigureSelectionListener fsl) {
 //        List<FigureSelectionListener> prev = fSelectionListeners();
 //        prev.add(fsl);
@@ -661,7 +668,8 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 //        fSelectionListeners(newfsl);
 //    }
 //
-//    // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
+    // @MDHD: FigureSelectionListener (FSL) Refactoring
 //    default void removeFigureSelectionListener(FigureSelectionListener fsl) {
 //        List<FigureSelectionListener> prev = fSelectionListeners();
 //        prev.remove(fsl);

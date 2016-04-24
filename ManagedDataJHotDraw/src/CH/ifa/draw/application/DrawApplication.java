@@ -1283,7 +1283,6 @@ public	class DrawApplication
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===========================================================================================
-	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
 		Dimension d = getDrawingViewSize();
 
@@ -1291,7 +1290,8 @@ public	class DrawApplication
 		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
 		newDrawingView.setDrawing(newDrawing);
 
-//		newDrawingView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+//		newDrawingView.addFigureSelectionListener(this);
 
 		((SubjectRole) newDrawingView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
@@ -1307,12 +1307,8 @@ public	class DrawApplication
 	 * will update their own states.
 	 * @see DrawingEditor
 	 */
-//	public void figureSelectionChanged(DrawingView view) {
-//		checkCommandMenus();
-//	}
-	// @HDMD
-	public void figureSelectionChanged(MDStandardDrawingView view) { // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
-		System.out.println("OLD FIGURE SELECTION LISTENER DrawApplication: figureSelectionChanged");
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+	public void figureSelectionChanged(MDStandardDrawingView view) {
 		checkCommandMenus();
 	}
 

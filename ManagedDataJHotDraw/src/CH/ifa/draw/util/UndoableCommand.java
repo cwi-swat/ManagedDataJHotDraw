@@ -113,7 +113,6 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===========================================================================================
-	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 	/**
 	 * Executes the command.
 	 */
@@ -124,7 +123,8 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
-//		view().addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+//		view().addFigureSelectionListener(this);
 
 		getWrappedCommand().execute();
 
@@ -146,12 +146,10 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 		((SubjectRole) view()).remove(this);
 
-//		view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+//		view().removeFigureSelectionListener(this);
 	}
 
-//	public void figureSelectionChanged(DrawingView view) {
-//		hasSelectionChanged = true;
-//	}
 	public void figureSelectionChanged(MDStandardDrawingView view) {
 		hasSelectionChanged = true;
 	}

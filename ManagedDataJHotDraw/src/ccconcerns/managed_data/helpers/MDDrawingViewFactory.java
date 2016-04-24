@@ -209,8 +209,8 @@ public class MDDrawingViewFactory {
         drawingView.constrainer(null);
 
         // Selection listeners
-        // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
-//        drawingView.addFigureSelectionListener(editor);
+        // @MDHD: FigureSelectionListener (FSL) Refactoring
+        //  drawingView.addFigureSelectionListener(editor);
 
         // Display update
         drawingView.setDisplayUpdate(new SimpleUpdateStrategy());
