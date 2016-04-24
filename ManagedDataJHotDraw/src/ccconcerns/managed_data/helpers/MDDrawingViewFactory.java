@@ -30,23 +30,6 @@ public class MDDrawingViewFactory {
 
     public static MDStandardDrawingView newSubjectRoleDrawingView(DrawingEditor editor, int width, int height) {
 
-        SchemaLoader.addPrimitive(new DimensionPrimitive());
-        SchemaLoader.addPrimitive(new RectanglePrimitive());
-        SchemaLoader.addPrimitive(new PointPrimitive());
-        SchemaLoader.addPrimitive(new ColorPrimitive());
-        SchemaLoader.addPrimitive(new CursorPrimitive());
-
-        SchemaLoader.addPrimitive(new JPanelPrimitive());
-
-        SchemaLoader.addPrimitive(new DrawingEditorPrimitive());
-        SchemaLoader.addPrimitive(new DrawingPrimitive());
-        SchemaLoader.addPrimitive(new ToolPrimitive());
-        SchemaLoader.addPrimitive(new FigurePrimitive());
-        SchemaLoader.addPrimitive(new PointConstrainerPrimitive());
-        SchemaLoader.addPrimitive(new PainterPrimitive());
-        SchemaLoader.addPrimitive(new HandlePrimitive());
-        SchemaLoader.addPrimitive(new FigureSelectionListenerPrimitive());
-
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
                 schemaFactory, schemaSchema,
@@ -157,23 +140,6 @@ public class MDDrawingViewFactory {
     }
 
     public static MDStandardDrawingView newDrawingView(DrawingEditor editor, int width, int height) {
-
-        SchemaLoader.addPrimitive(new DimensionPrimitive());
-        SchemaLoader.addPrimitive(new RectanglePrimitive());
-        SchemaLoader.addPrimitive(new PointPrimitive());
-        SchemaLoader.addPrimitive(new ColorPrimitive());
-        SchemaLoader.addPrimitive(new CursorPrimitive());
-
-        SchemaLoader.addPrimitive(new JPanelPrimitive());
-
-        SchemaLoader.addPrimitive(new DrawingEditorPrimitive());
-        SchemaLoader.addPrimitive(new DrawingPrimitive());
-        SchemaLoader.addPrimitive(new ToolPrimitive());
-        SchemaLoader.addPrimitive(new FigurePrimitive());
-        SchemaLoader.addPrimitive(new PointConstrainerPrimitive());
-        SchemaLoader.addPrimitive(new PainterPrimitive());
-        SchemaLoader.addPrimitive(new HandlePrimitive());
-        SchemaLoader.addPrimitive(new FigureSelectionListenerPrimitive());
 
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(

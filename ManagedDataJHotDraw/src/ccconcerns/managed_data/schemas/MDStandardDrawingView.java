@@ -6,6 +6,7 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.util.Geom;
 import nl.cwi.managed_data_4j.language.schema.models.definition.M;
+import nl.cwi.managed_data_4j.language.schema.models.definition.annotations.NotManagedData;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,8 +23,10 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     // Composition over inheritance,
     // the original inherits the JPanel
+    @NotManagedData
     JPanel panel(JPanel... panel);
 
+    @NotManagedData
     DrawingEditor editor(DrawingEditor... editor);
 
     default DrawingEditor getEditor() {
@@ -34,10 +37,13 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         editor(editor);
     }
 
+    @NotManagedData
     Drawing drawing(Drawing... drawing);
 
+    @NotManagedData
     Dimension size(Dimension... size);
 
+    @NotManagedData
     Painter displayUpdate(Painter... displayUpdate);
 
     default void setDisplayUpdate(Painter _displayUpdate) {
@@ -48,6 +54,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         return displayUpdate();
     }
 
+    @NotManagedData
     PointConstrainer constrainer(PointConstrainer... constrainer);
 
     default PointConstrainer getConstrainer() {
@@ -58,6 +65,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         constrainer(_constrainer);
     }
 
+    @NotManagedData
     Color background(Color... background);
 
     default Color getBackground() {
@@ -68,6 +76,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         panel().setBackground(bg);
     }
 
+    @NotManagedData
     Cursor cursor(Cursor... cursor);
 
     default Cursor getCursor() {
@@ -78,6 +87,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         cursor(cur);
     }
 
+    @NotManagedData
     Rectangle damage(Rectangle... damage);
 
     default Rectangle getDamage() {
@@ -88,6 +98,7 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         damage(r);
     }
 
+    @NotManagedData
     Point lastClick(Point... lastClick);
 
     default Point getLastClick() {
@@ -101,11 +112,16 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     // @MDHD: FigureSelectionListener (FSL) Refactoring
 //    List<FigureSelectionListener> fSelectionListeners(FigureSelectionListener... listeners);
 
+    @NotManagedData
     List<Handle> fSelectionHandles(Handle... selectionHandles);
+    @NotManagedData
     List<Figure> fSelection(Figure... selection);
+    @NotManagedData
     List<Handle> fBackgrounds(Painter... backgrounds);
+    @NotManagedData
     List<Painter> fForegrounds(Painter... foregrounds);
 
+    @NotManagedData
     List<Figure> fFigures(Figure... figures);
 
     default void addFigure(Figure figure) {
