@@ -66,7 +66,7 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 //	}
 
 	protected MDStandardDrawingView createDrawingView() {
-		return MDDrawingViewFactory.newDrawingView(this);
+		return MDDrawingViewFactory.newSubjectRoleDrawingView(this);
 	}
 
 	//-- application life cycle --------------------------------------------

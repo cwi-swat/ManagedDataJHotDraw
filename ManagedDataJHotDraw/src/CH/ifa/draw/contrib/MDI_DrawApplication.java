@@ -101,7 +101,7 @@ public class MDI_DrawApplication extends DrawApplication {
 //	}
 
 	protected MDStandardDrawingView createInitialDrawingView() {
-		return MDDrawingViewFactory.newDrawingView(this);
+		return MDDrawingViewFactory.newSubjectRoleDrawingView(this);
 	}
 
 	/**

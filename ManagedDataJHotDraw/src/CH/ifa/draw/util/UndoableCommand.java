@@ -13,6 +13,8 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractCommand;
+import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
+import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.util.EventObject;
@@ -118,6 +120,9 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 	public void execute() {
 		hasSelectionChanged = false;
 		// listen for selection change events during executing the wrapped command
+
+		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+
 		view().addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 		getWrappedCommand().execute();
 
@@ -135,6 +140,9 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 
 		// remove because not all commands are listeners that have to be notified
 		// all the time (bug-id 595461)
+
+		((SubjectRole) view()).remove(this);
+
 		view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 	}
 
@@ -145,4 +153,8 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		hasSelectionChanged = true;
 	}
 
+	// @MDHD: similar of the above
+	public void figureSelectionChanged() {
+		hasSelectionChanged = true;
+	}
 }

@@ -17,7 +17,7 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
-import ccconcerns.figure_selection_listener.FigureSelection;
+import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
@@ -1258,43 +1258,6 @@ public	class DrawApplication
 		return fIconkit;
 	}
 
-	// @MDHD: FigureSelectionListener (FSL) Refactoring
-	// ===========================================================================================
-	// ===========================================================================================
-	// ===========================================================================================
-	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
-	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
-		Dimension d = getDrawingViewSize();
-
-		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
-		newDrawingView.setDrawing(newDrawing);
-
-		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
-
-		((SubjectRole) newDrawingView).add(this, FigureSelection::consistentBehaviorPredicate, this::checkCommandMenus);
-
-		return newDrawingView;
-	}
-
-	/**
-	 * Fired by a view when the figure selection changes.  Since Commands and
-	 * Tools may depend on the figure selection they are registered to be notified
-	 * about these events.
-	 * Any selection sensitive GUI component should update its
-	 * own state if the selection has changed, e.g. selection sensitive menuitems
-	 * will update their own states.
-	 * @see DrawingEditor
-	 */
-//	public void figureSelectionChanged(DrawingView view) {
-//		checkCommandMenus();
-//	}
-	// @HDMD
-	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Should Call this
-		System.out.println("DrawApplication: figureSelectionChanged");
-		checkCommandMenus();
-	}
-
 	protected void checkCommandMenus() {
 		JMenuBar mb = getJMenuBar();
 
@@ -1314,5 +1277,48 @@ public	class DrawApplication
 				checkCommandMenu((CommandMenu)jmi);
 			}
 		}
+	}
+
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+	// ===========================================================================================
+	// ===========================================================================================
+	// ===========================================================================================
+	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
+		Dimension d = getDrawingViewSize();
+
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
+		newDrawingView.setDrawing(newDrawing);
+
+		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
+
+		((SubjectRole) newDrawingView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+
+		return newDrawingView;
+	}
+
+	/**
+	 * Fired by a view when the figure selection changes.  Since Commands and
+	 * Tools may depend on the figure selection they are registered to be notified
+	 * about these events.
+	 * Any selection sensitive GUI component should update its
+	 * own state if the selection has changed, e.g. selection sensitive menuitems
+	 * will update their own states.
+	 * @see DrawingEditor
+	 */
+//	public void figureSelectionChanged(DrawingView view) {
+//		checkCommandMenus();
+//	}
+	// @HDMD
+	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Remove this
+		System.out.println("OLD FIGURE SELECTION LISTENER DrawApplication: figureSelectionChanged");
+		checkCommandMenus();
+	}
+
+	// @MDHD: similar of the above
+	public void figureSelectionChanged() {
+		System.out.println(" !!! MANAGED DATA FIGURE SELECTION LISTENER DrawApplication: figureSelectionChanged !!!");
+		checkCommandMenus();
 	}
 }

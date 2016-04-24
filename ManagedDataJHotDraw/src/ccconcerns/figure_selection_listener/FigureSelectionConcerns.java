@@ -2,7 +2,7 @@ package ccconcerns.figure_selection_listener;
 
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
-public class FigureSelection {
+public class FigureSelectionConcerns {
 
     public static boolean consistentBehaviorPredicate(Object subjectObject, String methodName, Object[] args) {
         return

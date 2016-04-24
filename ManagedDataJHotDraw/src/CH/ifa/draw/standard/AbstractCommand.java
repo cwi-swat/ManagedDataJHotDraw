@@ -16,6 +16,8 @@ import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.figure_selection_listener.*;
+import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import java.util.*;
@@ -247,9 +249,15 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		if (oldView != null) {
+
+			((SubjectRole) oldView).remove(this);
+
 			oldView.removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 		}
 		if (newView != null) {
+
+			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+
 			newView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 		}
 		if (isViewRequired()) {
@@ -273,5 +281,9 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 //	}
 
 	public void figureSelectionChanged(MDStandardDrawingView view) {
+	}
+
+	// @MDHD: similar of the above
+	public void figureSelectionChanged() {
 	}
 }

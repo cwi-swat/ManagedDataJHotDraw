@@ -432,7 +432,7 @@ public class NullDrawingView extends JPanel implements DrawingView {
 			return (MDStandardDrawingView)drawingViewManager.get(editor);
 		}
 		else {
-			MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newDrawingView(editor);
+			MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(editor);
 			drawingViewManager.put(editor, newDrawingView);
 			return newDrawingView;
 		}
