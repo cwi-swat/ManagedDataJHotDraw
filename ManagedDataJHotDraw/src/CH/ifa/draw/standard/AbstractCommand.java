@@ -127,15 +127,6 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	}
 
 	/**
-	 * Releases resources associated with this command
-	 */
-	public void dispose() {
-		if (view() != null) {
-			view().removeFigureSelectionListener(this); // TODO
-		}
-	}
-
-	/**
 	 * Executes the command.
 	 */
 	public void execute() {
@@ -247,18 +238,36 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===================== TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
+	/**
+	 * Releases resources associated with this command
+	 */
+	public void dispose() {
+		if (view() != null) {
+
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+			((SubjectRole) view()).remove(this);
+
+//			view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+		}
+	}
+
+
 	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		if (oldView != null) {
 
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
 			((SubjectRole) oldView).remove(this);
 
-			oldView.removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+//			oldView.removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 		}
 		if (newView != null) {
 
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
 			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
-			newView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+//			newView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
 		}
 		if (isViewRequired()) {
 			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
@@ -283,7 +292,7 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 	public void figureSelectionChanged(MDStandardDrawingView view) {
 	}
 
-	// @MDHD: similar of the above
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
 	public void figureSelectionChanged() {
 	}
 }

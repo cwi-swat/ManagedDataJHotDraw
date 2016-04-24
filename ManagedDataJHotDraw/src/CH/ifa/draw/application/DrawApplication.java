@@ -1291,7 +1291,7 @@ public	class DrawApplication
 		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
 		newDrawingView.setDrawing(newDrawing);
 
-		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
+//		newDrawingView.addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 
 		((SubjectRole) newDrawingView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
@@ -1311,12 +1311,12 @@ public	class DrawApplication
 //		checkCommandMenus();
 //	}
 	// @HDMD
-	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Remove this
+	public void figureSelectionChanged(MDStandardDrawingView view) { // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 		System.out.println("OLD FIGURE SELECTION LISTENER DrawApplication: figureSelectionChanged");
 		checkCommandMenus();
 	}
 
-	// @MDHD: similar of the above
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
 	public void figureSelectionChanged() {
 		System.out.println(" !!! MANAGED DATA FIGURE SELECTION LISTENER DrawApplication: figureSelectionChanged !!!");
 		checkCommandMenus();

@@ -121,9 +121,11 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		hasSelectionChanged = false;
 		// listen for selection change events during executing the wrapped command
 
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
 		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
-		view().addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+//		view().addFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+
 		getWrappedCommand().execute();
 
 		Undoable undoableCommand = getWrappedCommand().getUndoActivity();
@@ -141,9 +143,10 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		// remove because not all commands are listeners that have to be notified
 		// all the time (bug-id 595461)
 
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
 		((SubjectRole) view()).remove(this);
 
-		view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
+//		view().removeFigureSelectionListener(this); // TODO: @MDHD: FigureSelectionListener (FSL) Refactoring
 	}
 
 //	public void figureSelectionChanged(DrawingView view) {
@@ -153,7 +156,7 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		hasSelectionChanged = true;
 	}
 
-	// @MDHD: similar of the above
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
 	public void figureSelectionChanged() {
 		hasSelectionChanged = true;
 	}
