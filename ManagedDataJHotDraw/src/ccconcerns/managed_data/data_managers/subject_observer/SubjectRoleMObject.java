@@ -9,11 +9,11 @@ import java.util.Map;
 public class SubjectRoleMObject extends MObject implements SubjectRole {
 
     private class Tuple<X, Y> {
-        public final X _1;
-        public final Y _2;
-        public Tuple(X _1, Y _2) {
-            this._1 = _1;
-            this._2 = _2;
+        public final X fst;
+        public final Y snd;
+        public Tuple(X fst, Y snd) {
+            this.fst = fst;
+            this.snd = snd;
         }
     }
 
@@ -40,8 +40,8 @@ public class SubjectRoleMObject extends MObject implements SubjectRole {
         // check if the predicate of the action holds for the specific method,
         // in case it holds execute the action.
         listeners.keySet().forEach(listener -> {
-            final SubjectPredicate predicate = listeners.get(listener)._1;
-            final Action action = listeners.get(listener)._2;
+            final SubjectPredicate predicate = listeners.get(listener).fst;
+            final Action action = listeners.get(listener).snd;
 
             if (predicate.test(this.getProxy(), methodName, args)) {
 
