@@ -17,7 +17,7 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
-import ccconcerns.figure_selection_listener.ConsistentBehavior;
+import ccconcerns.figure_selection_listener.FigureSelection;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
@@ -861,27 +861,6 @@ public	class DrawApplication
 		}
 	}
 
-	protected void checkCommandMenus() {
-		JMenuBar mb = getJMenuBar();
-
-		for (int x = 0; x < mb.getMenuCount(); x++) {
-		    JMenu jm = mb.getMenu(x);
-			if (CommandMenu.class.isInstance(jm)) {
-				checkCommandMenu((CommandMenu)jm);
-			}
-		}
-	}
-
-	protected void checkCommandMenu(CommandMenu cm) {
-		cm.checkEnabled();
-		for (int y = 0; y < cm.getItemCount();y++) {
-			JMenuItem jmi = cm.getItem(y);
-			if (CommandMenu.class.isInstance(jmi)) {
-				checkCommandMenu((CommandMenu)jmi);
-			}
-		}
-	}
-
 	/**
 	 * Register to hear when the active view is changed.  For Single document
 	 * interface, this will happen when a new drawing is created.
@@ -1293,7 +1272,7 @@ public	class DrawApplication
 
 		newDrawingView.addFigureSelectionListener(this); // TODO: remove that, soon...
 
-		((SubjectRole) newDrawingView).addListener(ConsistentBehavior::figureSelectionConsistentBehavior);
+		((SubjectRole) newDrawingView).add(FigureSelection::consistentBehaviorPredicate, this::checkCommandMenus);
 
 		return newDrawingView;
 	}
@@ -1310,8 +1289,30 @@ public	class DrawApplication
 //	public void figureSelectionChanged(DrawingView view) {
 //		checkCommandMenus();
 //	}
+	// @HDMD
 	public void figureSelectionChanged(MDStandardDrawingView view) { // @HDMD TODO: Should Call this
 		System.out.println("DrawApplication: figureSelectionChanged");
 		checkCommandMenus();
+	}
+
+	protected void checkCommandMenus() {
+		JMenuBar mb = getJMenuBar();
+
+		for (int x = 0; x < mb.getMenuCount(); x++) {
+			JMenu jm = mb.getMenu(x);
+			if (CommandMenu.class.isInstance(jm)) {
+				checkCommandMenu((CommandMenu)jm);
+			}
+		}
+	}
+
+	protected void checkCommandMenu(CommandMenu cm) {
+		cm.checkEnabled();
+		for (int y = 0; y < cm.getItemCount();y++) {
+			JMenuItem jmi = cm.getItem(y);
+			if (CommandMenu.class.isInstance(jmi)) {
+				checkCommandMenu((CommandMenu)jmi);
+			}
+		}
 	}
 }

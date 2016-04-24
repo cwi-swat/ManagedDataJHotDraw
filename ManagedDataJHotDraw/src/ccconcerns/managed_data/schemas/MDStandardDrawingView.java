@@ -658,8 +658,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         prev.add(fsl);
         FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);
         fSelectionListeners(newfsl);
-
-        System.out.println(" && FigureSelectionListener ADDED: " + fsl.toString() + " size: " + fSelectionListeners().size());
     }
 
     default void removeFigureSelectionListener(FigureSelectionListener fsl) {
@@ -667,7 +665,5 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         prev.remove(fsl);
         FigureSelectionListener[] newfsl =  prev.toArray(new FigureSelectionListener[prev.size()]);
         fSelectionListeners(newfsl);
-
-        System.out.println(" && FigureSelectionListener REMOVED: " + fsl.toString() + " size: " + fSelectionListeners().size());
     }
 }
