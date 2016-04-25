@@ -19,7 +19,7 @@ import CH.ifa.draw.application.*;
 import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.html.HTMLTextAreaFigure;
 import CH.ifa.draw.contrib.html.HTMLTextAreaTool;
-import ccconcerns.managed_data.helpers.MDDrawingViewFactory;
+import ccconcerns.managed_data.factories.MDDrawingViewFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 
 import javax.swing.*;

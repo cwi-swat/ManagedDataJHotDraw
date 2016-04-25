@@ -1,10 +1,9 @@
-package ccconcerns.managed_data.helpers;
+package ccconcerns.managed_data.factories;
 
 import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDPoint;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
-import nl.cwi.managed_data_4j.ccconcerns.aspects.UpdateLogger;
 import nl.cwi.managed_data_4j.ccconcerns.patterns.observer.ObservableDataManager;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;

@@ -1,13 +1,10 @@
-package ccconcerns.managed_data.helpers;
+package ccconcerns.managed_data.factories;
 
 import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.standard.*;
 import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
-import ccconcerns.managed_data.primitives.java_awt.*;
-import ccconcerns.managed_data.primitives.java_swing.JPanelPrimitive;
-import ccconcerns.managed_data.primitives.jhodraw.*;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
