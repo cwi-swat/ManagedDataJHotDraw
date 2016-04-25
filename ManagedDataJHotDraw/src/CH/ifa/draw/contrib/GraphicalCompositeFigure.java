@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.figures.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.io.*;
 import java.util.List;
@@ -110,7 +112,7 @@ public class GraphicalCompositeFigure extends CompositeFigure implements Layouta
 	/**
 	 * Return the display area. This method is delegated to the encapsulated presentation figure.
 	 */
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		return getPresentationFigure().displayBox();
 	}
 
@@ -118,7 +120,7 @@ public class GraphicalCompositeFigure extends CompositeFigure implements Layouta
 	 * Standard presentation method which is delegated to the encapsulated presentation figure.
 	 */
 	public void basicDisplayBox(Point origin, Point corner) {
-		Rectangle r = getLayouter().layout(origin, corner);
+		MDRectangle r = getLayouter().layout(origin, corner);
 		 // Fix for bug request IDs 548000 and 548032
 		 // Previously was
 		 //     getPresentationFigure().basicDisplayBox(r.getLocation(), new Point(r.width, r.height));
@@ -272,8 +274,8 @@ public class GraphicalCompositeFigure extends CompositeFigure implements Layouta
 	 */
 	public void layout() {
 		if (getLayouter() != null) {
-			Rectangle r = getLayouter().calculateLayout(displayBox().getLocation(), displayBox().getLocation());
-			displayBox(r.getLocation(), new Point(r.x + r.width, r.y + r.height));
+			MDRectangle r = getLayouter().calculateLayout(displayBox().getLocation(), displayBox().getLocation());
+			displayBox(r.getLocation(), new Point(r.x() + r.width(), r.y() + r.height()));
 		}
 	}
 
@@ -320,7 +322,7 @@ public class GraphicalCompositeFigure extends CompositeFigure implements Layouta
 	public void figureRequestRemove(FigureChangeEvent e) {
 		if (listener() != null) {
 			if (includes(e.getFigure())) {
-				Rectangle r = invalidateRectangle(displayBox());
+				MDRectangle r = invalidateRectangle(displayBox());
 				listener().figureRequestRemove(new FigureChangeEvent(this, r, e));
 			}
 			else {

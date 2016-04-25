@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.io.IOException;
@@ -91,20 +93,24 @@ public class SimpleLayouter implements Layouter {
 		return newLayouter;
 	}
 
-	public Rectangle calculateLayout(Point origin, Point corner) {
-		Rectangle maxRect = new Rectangle(origin);
-		maxRect.add(corner);
+	public MDRectangle calculateLayout(Point origin, Point corner) {
+		MDRectangle maxRect = MDGeometryFactory.newRectangle(origin.x, origin.y, 0, 0);
+		maxRect.add(corner.x, corner.y);
 		FigureEnumeration fe = getLayoutable().figures();
 		while (fe.hasNextFigure()) {
 			Figure currentFigure = fe.nextFigure();
 			maxRect.union(currentFigure.displayBox());
 		}
-		maxRect.width += getInsets().left + getInsets().right;
-		maxRect.height += getInsets().top + getInsets().bottom;
+		Integer oldW = maxRect.width();
+		Integer oldH = maxRect.height();
+		oldW += getInsets().left + getInsets().right;
+		oldH += getInsets().top + getInsets().bottom;
+		maxRect.width(oldW);
+		maxRect.height(oldH);
 		return maxRect;
 	}
 
-	public Rectangle layout(Point origin, Point corner) {
+	public MDRectangle layout(Point origin, Point corner) {
 		return calculateLayout(origin, corner);
 	}
 

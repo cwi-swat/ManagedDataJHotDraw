@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -43,6 +43,8 @@ import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Storable;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * An HTMLTextAreaFigure contains HTML formatted text.<br>
@@ -378,7 +380,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @param displayBox  the display box  within which the text should be formatted and drawn
 	 * @return            Description of the Return Value
 	 */
-	protected float drawText(Graphics g, Rectangle displayBox) {
+	protected float drawText(Graphics g, MDRectangle displayBox) {
 		Graphics2D g2 = null;
 		Shape savedClip = null;
 
@@ -387,11 +389,11 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 			savedClip = g2.getClip();
 		}
 
-		Rectangle drawingBox = makeDrawingBox(displayBox);
+		MDRectangle drawingBox = makeDrawingBox(displayBox);
 
 		// drawing an empty displayBox is not possible
 		if (drawingBox.isEmpty()) {
-			return drawingBox.height;
+			return drawingBox.height();
 		}
 
 		if (g != null) {
@@ -409,7 +411,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 			}
 
 			if (g2 != null) {
-				g2.drawImage(getImage(), drawingBox.x, drawingBox.y, null);
+				g2.drawImage(getImage(), drawingBox.x(), drawingBox.y(), null);
 			}
 			fImageHolder.unlock();
 		}
@@ -419,7 +421,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 
 		// redraw the border to prevent smearing
 		drawFrame(g);
-		return displayBox.height;
+		return displayBox.height();
 	}
 
 
@@ -428,13 +430,12 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 *
 	 * @param drawingBox  Description of the Parameter
 	 */
-	protected void generateImage(Rectangle drawingBox) {
+	protected void generateImage(MDRectangle drawingBox) {
 		// create the image and get its Graphics
-		createImage(drawingBox.width, drawingBox.height);
+		createImage(drawingBox.width(), drawingBox.height());
 		Graphics2D g2 = (Graphics2D)getImage().getGraphics();
 
-		Rectangle finalBox = new Rectangle(drawingBox);
-		finalBox.setLocation(0, 0);
+		MDRectangle finalBox = MDGeometryFactory.newRectangle(0, 0, drawingBox.width(), drawingBox.height());
 		renderText(g2, finalBox);
 		g2.dispose();
 	}
@@ -446,7 +447,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @param g2          Description of the Parameter
 	 * @param drawingBox  Description of the Parameter
 	 */
-	protected void drawTextDirect(Graphics2D g2, Rectangle drawingBox) {
+	protected void drawTextDirect(Graphics2D g2, MDRectangle drawingBox) {
 		Shape savedClipArea = null;
 		Color savedFontColor = null;
 		Font savedFont = null;
@@ -458,10 +459,10 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 			savedClipArea = g2.getClip();
 			savedFont = g2.getFont();
 			savedFontColor = g2.getColor();
-			g2.clip(drawingBox);
+			g2.clip(new Rectangle(drawingBox.x(), drawingBox.y(), drawingBox.width(), drawingBox.height()));
 		}
 
-		float finalHeight = renderText(g2, drawingBox);
+//		float finalHeight = renderText(g2, drawingBox);
 
 		// restore saved graphic attributes
 		if (g2 != null) {
@@ -483,7 +484,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @todo              look for other HTML display providers as JLabel is kind of
 	 * lousy at it
 	 */
-	protected float renderText(Graphics2D g2, Rectangle drawingBox) {
+	protected float renderText(Graphics2D g2, MDRectangle drawingBox) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		g2.setRenderingHint(RenderingHints.KEY_RENDERING,
@@ -492,8 +493,8 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 		// fill with background color
 		g2.setBackground(getFillColor());
 		g2.setColor(getFillColor());
-		g2.clearRect(drawingBox.x, drawingBox.y, drawingBox.width, drawingBox.height);
-		g2.fillRect(drawingBox.x, drawingBox.y, drawingBox.width, drawingBox.height);
+		g2.clearRect(drawingBox.x(), drawingBox.y(), drawingBox.width(), drawingBox.height());
+		g2.fillRect(drawingBox.x(), drawingBox.y(), drawingBox.width(), drawingBox.height());
 
 		// get the text. Either in raw format or prepared for HTML display
 		String text;
@@ -518,7 +519,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 
 		// ensure the label covers the whole area
 		displayDelegate.setLocation(0, 0);
-		displayDelegate.setSize(drawingBox.width, drawingBox.height);
+		displayDelegate.setSize(drawingBox.width(), drawingBox.height());
 		displayDelegate.setHorizontalAlignment(((Integer)getAttribute("XAlignment")).intValue());
 		displayDelegate.setVerticalAlignment(((Integer)getAttribute("YAlignment")).intValue());
 
@@ -527,12 +528,12 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 				g2,
 				displayDelegate,
 				getContainerPanel(displayDelegate, drawingBox),
-				drawingBox.x,
-				drawingBox.y,
-				drawingBox.width,
-				drawingBox.height);
+				drawingBox.x(),
+				drawingBox.y(),
+				drawingBox.width(),
+				drawingBox.height());
 
-		return drawingBox.height;
+		return drawingBox.height();
 	}
 
 
@@ -542,7 +543,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @param displayBox  Description of the Parameter
 	 * @return            The drawing box
 	 */
-	protected Rectangle makeDrawingBox(Rectangle displayBox) {
+	protected MDRectangle makeDrawingBox(MDRectangle displayBox) {
 		// get alignment information
 		float leftMargin = ((Float)getAttribute("LeftMargin")).floatValue();
 		float rightMargin = ((Float)getAttribute("RightMargin")).floatValue();
@@ -551,13 +552,25 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 
 		// inset the drawing box by 1 on every side so as not to overwrite
 		// the border
-		Rectangle drawingBox = new Rectangle(displayBox);
+		MDRectangle drawingBox = MDGeometryFactory.newRectangle(displayBox.x(), displayBox.y(), displayBox.width(), displayBox.height());
 		drawingBox.grow(-1, -1);
+
 		// adjust for margins
-		drawingBox.x += leftMargin;
-		drawingBox.width -= (leftMargin + rightMargin);
-		drawingBox.y += topMargin;
-		drawingBox.height -= topMargin + bottomMargin;
+		Integer oldX = drawingBox.x();
+		oldX += (int) leftMargin;
+		drawingBox.x(oldX);
+
+		Integer oldW = drawingBox.width();
+		oldW -= (int)(leftMargin + rightMargin);
+		drawingBox.width(oldW);
+
+		Integer oldY = drawingBox.y();
+		oldY += (int) topMargin;
+		drawingBox.y(oldY);
+
+		Integer oldH = drawingBox.height();
+		oldH -= (int)(topMargin + bottomMargin);
+		drawingBox.height(oldH);
 
 		return drawingBox;
 	}
@@ -605,7 +618,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @param displayBox       The bounding box
 	 * @return                 The container
 	 */
-	protected JPanel getContainerPanel(Component drawingDelegate, Rectangle displayBox) {
+	protected JPanel getContainerPanel(Component drawingDelegate, MDRectangle displayBox) {
 		JPanel panel = new JPanel();
 		return panel;
 	}
@@ -625,7 +638,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	 * @return            The final HTML encoded text
 	 */
 	protected String getHTMLText(String text, Font font, String textColor,
-			String backColor, Rectangle displayBox) {
+			String backColor, MDRectangle displayBox) {
 		StringBuffer htmlText = new StringBuffer();
 		// add an <HTML>
 		htmlText.append("<html>");
@@ -634,8 +647,8 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 		// a single cell
 		htmlText.append(
 				"<table border='0' width='" +
-				displayBox.width +
-				"' height='" + displayBox.height +
+				displayBox.width() +
+				"' height='" + displayBox.height() +
 				"' cellpadding='0' cellspacing='0'" +
 				"bgcolor='&FillColor;'>");
 		htmlText.append("<tr><td width='100%'>");
@@ -1146,7 +1159,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 		if (frame instanceof GeometricFigure) {
 			return ((GeometricFigure)frame).getShape();
 		}
-		return frame.displayBox();
+		return new Rectangle(frame.displayBox().x(), frame.displayBox().y(), frame.displayBox().width(), frame.displayBox().height());
 	}
 
 

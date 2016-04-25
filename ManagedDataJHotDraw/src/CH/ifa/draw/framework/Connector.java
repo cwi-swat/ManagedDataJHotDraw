@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 import java.io.Serializable;
 
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * Connectors know how to locate a connection point on a figure.
@@ -58,7 +59,7 @@ public interface Connector extends Serializable, Storable {
 	/**
 	 * Gets the display box of the connector.
 	 */
-	public abstract Rectangle displayBox();
+	public abstract MDRectangle displayBox();
 
 	/**
 	 * Tests if a point is contained in the connector.

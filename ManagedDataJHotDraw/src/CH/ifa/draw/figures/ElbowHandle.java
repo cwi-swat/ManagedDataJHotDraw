@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.figures;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 
 /**
@@ -87,17 +89,17 @@ public class ElbowHandle extends AbstractHandle {
 		LineConnection line = ownerConnection();
 		Figure startFigure = line.getStartConnector().owner();
 		Figure endFigure = line.getEndConnector().owner();
-		Rectangle start = startFigure.displayBox();
-		Rectangle end = endFigure.displayBox();
+		MDRectangle start = startFigure.displayBox();
+		MDRectangle end = endFigure.displayBox();
 		Insets i1 = startFigure.connectionInsets();
 		Insets i2 = endFigure.connectionInsets();
 
 		int r1x, r1width, r2x, r2width;
-		r1x = start.x + i1.left;
-		r1width = start.width - i1.left - i1.right-1;
+		r1x = start.x() + i1.left;
+		r1width = start.width() - i1.left - i1.right-1;
 
-		r2x = end.x + i2.left;
-		r2width = end.width - i2.left - i2.right-1;
+		r2x = end.x() + i2.left;
+		r2width = end.width() - i2.left - i2.right-1;
 
 		if (fSegment == 0) {
 			x = Geom.range(r1x, r1x + r1width, x);
@@ -112,16 +114,16 @@ public class ElbowHandle extends AbstractHandle {
 		LineConnection line = ownerConnection();
 		Figure startFigure = line.getStartConnector().owner();
 		Figure endFigure = line.getEndConnector().owner();
-		Rectangle start = startFigure.displayBox();
-		Rectangle end = endFigure.displayBox();
+		MDRectangle start = startFigure.displayBox();
+		MDRectangle end = endFigure.displayBox();
 		Insets i1 = startFigure.connectionInsets();
 		Insets i2 = endFigure.connectionInsets();
 
 		int r1y, r1height, r2y, r2height;
-		r1y = start.y + i1.top;
-		r1height = start.height - i1.top - i1.bottom-1;
-		r2y = end.y + i2.top;
-		r2height = end.height - i2.top - i2.bottom-1;
+		r1y = start.y() + i1.top;
+		r1height = start.height( )- i1.top - i1.bottom-1;
+		r2y = end.y() + i2.top;
+		r2height = end.height() - i2.top - i2.bottom-1;
 
 		if (fSegment == 0) {
 			y = Geom.range(r1y, r1y + r1height, y);

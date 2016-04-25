@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,8 @@ package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.figures.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 
 /**
@@ -35,12 +37,12 @@ public  class DiamondFigure extends RectangleFigure {
 	 * @return the polygon describing the diamond
 	 **/
 	protected Polygon getPolygon() {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		Polygon p = new Polygon();
-		p.addPoint(r.x, r.y+r.height/2);
-		p.addPoint(r.x+r.width/2, r.y);
-		p.addPoint(r.x+r.width, r.y+r.height/2);
-		p.addPoint(r.x+r.width/2, r.y+r.height);
+		p.addPoint(r.x(), r.y()+r.height()/2);
+		p.addPoint(r.x()+r.width()/2, r.y());
+		p.addPoint(r.x()+r.width(), r.y()+r.height()/2);
+		p.addPoint(r.x()+r.width()/2, r.y()+r.height());
 		return p;
 	}
 
@@ -53,8 +55,8 @@ public  class DiamondFigure extends RectangleFigure {
 	}
 
 	public Insets connectionInsets() {
-		Rectangle r = displayBox();
-		return new Insets(r.height/2, r.width/2, r.height/2, r.width/2);
+		MDRectangle r = displayBox();
+		return new Insets(r.height()/2, r.width()/2, r.height()/2, r.width()/2);
 	}
 
 	public boolean containsPoint(int x, int y) {

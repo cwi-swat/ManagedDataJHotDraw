@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -19,6 +19,7 @@ import CH.ifa.draw.contrib.Layoutable;
 import CH.ifa.draw.contrib.Layouter;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * HTMLLayouter implements the logic for laying out figures based on an
@@ -54,7 +55,7 @@ public class HTMLLayouter implements Layouter {
 	 * @param corner  Description of the Parameter
 	 * @return        Description of the Return Value
 	 */
-	public Rectangle calculateLayout(Point origin, Point corner) {
+	public MDRectangle calculateLayout(Point origin, Point corner) {
 		/**
 		 * @todo:   Implement this CH.ifa.draw.contrib.Layouter method
 		 */
@@ -69,7 +70,7 @@ public class HTMLLayouter implements Layouter {
 	 * @param corner  Description of the Parameter
 	 * @return        Description of the Return Value
 	 */
-	public Rectangle layout(Point origin, Point corner) {
+	public MDRectangle layout(Point origin, Point corner) {
 		/**
 		 * @todo:   Implement this CH.ifa.draw.contrib.Layouter method
 		 */

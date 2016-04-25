@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,7 @@ package CH.ifa.draw.standard;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * SelectAreaTracker implements a rubberband selection of an area.
@@ -89,8 +90,8 @@ public class SelectAreaTracker extends AbstractTool {
 		FigureEnumeration fe = drawing().figuresReverse();
 		while (fe.hasNextFigure()) {
 			Figure figure = fe.nextFigure();
-			Rectangle r2 = figure.displayBox();
-			if (fSelectGroup.contains(r2.x, r2.y) && fSelectGroup.contains(r2.x+r2.width, r2.y+r2.height)) {
+			MDRectangle r2 = figure.displayBox();
+			if (fSelectGroup.contains(r2.x(), r2.y()) && fSelectGroup.contains(r2.x()+r2.width(), r2.y()+r2.height())) {
 				if (toggle) {
 					view().toggleSelection(figure);
 				}

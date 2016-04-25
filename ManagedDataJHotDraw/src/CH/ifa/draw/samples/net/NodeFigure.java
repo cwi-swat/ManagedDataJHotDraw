@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.util.*;
 import java.util.List;
@@ -33,8 +34,8 @@ public class NodeFigure extends TextFigure {
 		fConnectors = null;
 	}
 
-	public Rectangle displayBox() {
-		Rectangle box = super.displayBox();
+	public MDRectangle displayBox() {
+		MDRectangle box = super.displayBox();
 		int d = BORDER;
 		box.grow(d, d);
 		return box;
@@ -43,7 +44,7 @@ public class NodeFigure extends TextFigure {
 	public boolean containsPoint(int x, int y) {
 		// add slop for connectors
 		if (fConnectorsVisible) {
-			Rectangle r = displayBox();
+			MDRectangle r = displayBox();
 			int d = LocatorConnector.SIZE/2;
 			r.grow(d, d);
 			return r.contains(x, y);
@@ -52,9 +53,9 @@ public class NodeFigure extends TextFigure {
 	}
 
 	private void drawBorder(Graphics g) {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		g.setColor(getFrameColor());
-		g.drawRect(r.x, r.y, r.width-1, r.height-1);
+		g.drawRect(r.x(), r.y(), r.width()-1, r.height()-1);
 	}
 
 	public void draw(Graphics g) {

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.ChopBoxConnector;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * A ChopDiamondConnector locates connection points by choping the
@@ -45,15 +46,15 @@ public class ChopDiamondConnector extends ChopBoxConnector {
 	 * Return an appropriate connection point on the edge of a diamond figure
 	 */
 	protected Point chop(Figure target, Point from) {
-		Rectangle r = target.displayBox();
+		MDRectangle r = target.displayBox();
 		// Center point
-		Point c1 = new Point(r.x + r.width/2, r.y + (r.height/2));
-		Point p2 = new Point(r.x + r.width/2, r.y + r.height);
-		Point p4 = new Point(r.x + r.width/2, r.y);
+		Point c1 = new Point(r.x() + r.width()/2, r.y() + (r.height()/2));
+		Point p2 = new Point(r.x() + r.width()/2, r.y() + r.height());
+		Point p4 = new Point(r.x() + r.width()/2, r.y());
 
 		// If overlapping, just return the opposite corners
-		if (r.contains(from)) {
-			if (from.y > r.y && from.y < (r.y +r.height/2)) {
+		if (r.contains(from.x, from.y)) {
+			if (from.y > r.y() && from.y < (r.y() +r.height()/2)) {
 				return p2;
 			}
 			else {
@@ -65,8 +66,8 @@ public class ChopDiamondConnector extends ChopBoxConnector {
 		double ang = Geom.pointToAngle(r, from);
 
 		// Dermine line points
-		Point p1 = new Point(r.x + r.width  , r.y + (r.height/2));
-		Point p3 = new Point(r.x            , r.y + (r.height/2));
+		Point p1 = new Point(r.x() + r.width()  , r.y() + (r.height()/2));
+		Point p3 = new Point(r.x()            , r.y() + (r.height()/2));
 		Point rp = null; // This will be returned
 
 		// Get the intersection with edges

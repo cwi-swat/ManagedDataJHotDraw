@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,8 @@ package CH.ifa.draw.figures;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 
 /**
@@ -54,8 +56,8 @@ public class ShortestDistanceConnector extends AbstractConnector {
 		Figure startFigure = connection.getStartConnector().owner();
 		Figure endFigure = connection.getEndConnector().owner();
 
-		Rectangle r1 = startFigure.displayBox();
-		Rectangle r2 = endFigure.displayBox();
+		MDRectangle r1 = startFigure.displayBox();
+		MDRectangle r2 = endFigure.displayBox();
 
 		Insets i1 = startFigure.connectionInsets();
 		Insets i2 = endFigure.connectionInsets();
@@ -69,10 +71,10 @@ public class ShortestDistanceConnector extends AbstractConnector {
 		// X-dimension
 		// constrain width connection insets
 		int r1x, r1width, r2x, r2width, r1y, r1height, r2y, r2height;
-		r1x = r1.x + i1.left;
-		r1width = r1.width - i1.left - i1.right-1;
-		r2x = r2.x + i2.left;
-		r2width = r2.width - i2.left - i2.right-1;
+		r1x = r1.x() + i1.left;
+		r1width = r1.width() - i1.left - i1.right-1;
+		r2x = r2.x() + i2.left;
+		r2width = r2.width() - i2.left - i2.right-1;
 
 		// find x connection point
 		if (r1x + r1width < r2x) {
@@ -91,10 +93,10 @@ public class ShortestDistanceConnector extends AbstractConnector {
 
 		// Y-Dimension
 		// constrain with connection insets
-		r1y = r1.y + i1.top;
-		r1height = r1.height - i1.top - i1.bottom-1;
-		r2y = r2.y + i2.top;
-		r2height = r2.height - i2.top - i2.bottom-1;
+		r1y = r1.y() + i1.top;
+		r1height = r1.height() - i1.top - i1.bottom-1;
+		r2y = r2.y() + i2.top;
+		r2height = r2.height() - i2.top - i2.bottom-1;
 
 		// y connection point
 		if (r1y + r1height < r2y) {

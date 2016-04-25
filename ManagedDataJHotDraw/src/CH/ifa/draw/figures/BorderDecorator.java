@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * BorderDecorator decorates an arbitrary Figure with
@@ -66,21 +67,21 @@ public  class BorderDecorator extends DecoratorFigure {
 	 * Draws a the figure and decorates it with a border.
 	 */
 	public void draw(Graphics g) {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		super.draw(g);
 		g.setColor(Color.white);
-		g.drawLine(r.x, r.y, r.x, r.y + r.height);
-		g.drawLine(r.x, r.y, r.x + r.width, r.y);
+		g.drawLine(r.x(), r.y(), r.x(), r.y() + r.height());
+		g.drawLine(r.x(), r.y(), r.x() + r.width(), r.y());
 		g.setColor(Color.gray);
-		g.drawLine(r.x + r.width, r.y, r.x + r.width, r.y + r.height);
-		g.drawLine(r.x , r.y + r.height, r.x + r.width, r.y + r.height);
+		g.drawLine(r.x() + r.width(), r.y(), r.x() + r.width(), r.y() + r.height());
+		g.drawLine(r.x() , r.y() + r.height(), r.x() + r.width(), r.y() + r.height());
 	}
 
 	/**
 	 * Gets the displaybox including the border.
 	 */
-	public Rectangle displayBox() {
-		Rectangle r = getDecoratedFigure().displayBox();
+	public MDRectangle displayBox() {
+		MDRectangle r = getDecoratedFigure().displayBox();
 		r.grow(getBorderOffset().x, getBorderOffset().y);
 		return r;
 	}
@@ -89,7 +90,7 @@ public  class BorderDecorator extends DecoratorFigure {
 	 * Invalidates the figure extended by its border.
 	 */
 	public void figureInvalidated(FigureChangeEvent e) {
-		Rectangle rect = e.getInvalidatedRectangle();
+		MDRectangle rect = e.getInvalidatedRectangle();
 		rect.grow(getBorderOffset().x, getBorderOffset().y);
 		super.figureInvalidated(new FigureChangeEvent(this, rect, e));
 	}

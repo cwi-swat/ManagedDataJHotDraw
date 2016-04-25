@@ -13,6 +13,7 @@ package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.standard.TextHolder;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.io.Serializable;
@@ -87,7 +88,7 @@ public interface Figure
 	 * Gets the display box of a figure
 	 * @see #basicDisplayBox
 	 */
-	public Rectangle displayBox();
+	public MDRectangle displayBox();
 
 	/**
 	 * Draws the figure.
@@ -146,7 +147,7 @@ public interface Figure
 	 * have to override basicDisplayBox
 	 * @see #displayBox
 	 */
-	public void displayBox(Rectangle r);
+	public void displayBox(MDRectangle r);
 
 	/**
 	 * Checks whether the given figure is contained in this figure.

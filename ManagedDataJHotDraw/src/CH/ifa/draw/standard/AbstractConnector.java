@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 import java.io.IOException;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * AbstractConnector provides default implementation for
@@ -82,7 +83,7 @@ public abstract class AbstractConnector implements Connector {
 	/**
 	 * Gets the display box of the connector.
 	 */
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		return owner().displayBox();
 	}
 

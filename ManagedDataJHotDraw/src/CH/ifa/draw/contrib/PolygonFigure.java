@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,9 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -56,7 +59,7 @@ public  class PolygonFigure extends AttributeFigure {
 		setInternalPolygon(new Polygon(p.xpoints, p.ypoints, p.npoints));
 	}
 
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		return bounds(getInternalPolygon());
 	}
 
@@ -77,12 +80,12 @@ public  class PolygonFigure extends AttributeFigure {
 
 
 	public void basicDisplayBox(Point origin, Point corner) {
-		Rectangle r = displayBox();
-		int dx = origin.x - r.x;
-		int dy = origin.y - r.y;
+		MDRectangle r = displayBox();
+		int dx = origin.x - r.x();
+		int dy = origin.y - r.y();
 		getInternalPolygon().translate(dx, dy);
 		r = displayBox();
-		Point oldCorner = new Point(r.x + r.width, r.y + r.height);
+		Point oldCorner = new Point(r.x() + r.width(), r.y() + r.height());
 		scaleRotate(oldCorner, getInternalPolygon(), corner);
 	}
 
@@ -380,7 +383,7 @@ public  class PolygonFigure extends AttributeFigure {
 	/**
 	 * replacement for builtin Polygon.getBounds that doesn't always update?
 	 */
-	public static Rectangle bounds(Polygon p) {
+	public static MDRectangle bounds(Polygon p) {
 		int minx = Integer.MAX_VALUE;
 		int miny = Integer.MAX_VALUE;
 		int maxx = Integer.MIN_VALUE;
@@ -403,7 +406,7 @@ public  class PolygonFigure extends AttributeFigure {
 			}
 		}
 
-		return new Rectangle(minx, miny, maxx - minx, maxy - miny);
+		return MDGeometryFactory.newRectangle(minx, miny, maxx - minx, maxy - miny);
 	}
 
 	public static Point center(Polygon p) {

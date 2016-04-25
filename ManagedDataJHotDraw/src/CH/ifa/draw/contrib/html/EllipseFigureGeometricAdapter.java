@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -25,6 +25,7 @@ import CH.ifa.draw.framework.FigureChangeListener;
 import CH.ifa.draw.framework.Locator;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * Geometric adapter for the EllipseFigure
@@ -60,8 +61,8 @@ public class EllipseFigureGeometricAdapter extends EllipseFigure
 	 * @return   The shape value
 	 */
 	public Shape getShape() {
-		Rectangle rect = displayBox();
-		Ellipse2D.Float ellipse = new Ellipse2D.Float(rect.x, rect.y, rect.width, rect.height);
+		MDRectangle rect = displayBox();
+		Ellipse2D.Float ellipse = new Ellipse2D.Float(rect.x(), rect.y(), rect.width(), rect.height());
 		return ellipse;
 	}
 }

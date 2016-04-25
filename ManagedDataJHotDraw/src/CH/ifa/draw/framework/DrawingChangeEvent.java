@@ -11,6 +11,8 @@
 
 package CH.ifa.draw.framework;
 
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.util.EventObject;
 
@@ -21,12 +23,12 @@ import java.util.EventObject;
  */
 public class DrawingChangeEvent extends EventObject {
 
-	private Rectangle fRectangle;
+	private MDRectangle fRectangle;
 
 	/**
 	 *  Constructs a drawing change event.
 	 */
-	public DrawingChangeEvent(Drawing source, Rectangle r) {
+	public DrawingChangeEvent(Drawing source, MDRectangle r) {
 		super(source);
 		fRectangle = r;
 	}
@@ -41,7 +43,7 @@ public class DrawingChangeEvent extends EventObject {
 	/**
 	 *  Gets the changed rectangle
 	 */
-	public Rectangle getInvalidatedRectangle() {
+	public MDRectangle getInvalidatedRectangle() {
 		return fRectangle;
 	}
 }

@@ -4,11 +4,13 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 package CH.ifa.draw.contrib;
+
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.Color;
 
@@ -86,9 +88,9 @@ public class FloatingTextArea {
 	 * @param r the bounding rectangle for the overlay
 	 * @param text the text to edit
 	 */
-	public void setBounds(Rectangle r, String text) {
+	public void setBounds(MDRectangle r, String text) {
 		fEditWidget.setText(text);
-		fEditScrollContainer.setBounds(r.x, r.y, r.width, r.height);
+		fEditScrollContainer.setBounds(r.x(), r.y(), r.width(), r.height());
 		fEditScrollContainer.setVisible(true);
 		fEditWidget.setCaretPosition(0);
 		fEditWidget.requestFocus();

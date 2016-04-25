@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -30,6 +30,8 @@ import CH.ifa.draw.framework.FigureChangeListener;
 import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * A TextAreaFigure contains formatted text.<br>
@@ -144,7 +146,7 @@ public class TextAreaFigure extends AttributeFigure
 	 *
 	 * @return   Description of the Return Value
 	 */
-	public Rectangle textDisplayBox() {
+	public MDRectangle textDisplayBox() {
 		return displayBox();
 	}
 
@@ -303,8 +305,8 @@ public class TextAreaFigure extends AttributeFigure
 	 *
 	 * @return   Description of the Return Value
 	 */
-	public Rectangle displayBox() {
-		return new Rectangle(
+	public MDRectangle displayBox() {
+		return MDGeometryFactory.newRectangle(
 				fDisplayBox.x,
 				fDisplayBox.y,
 				fDisplayBox.width,
@@ -344,8 +346,8 @@ public class TextAreaFigure extends AttributeFigure
 	 * @param g  The graphics to use for the drawing
 	 */
 	public void drawBackground(Graphics g) {
-		Rectangle r = displayBox();
-		g.fillRect(r.x, r.y, r.width, r.height);
+		MDRectangle r = displayBox();
+		g.fillRect(r.x(), r.y(), r.width(), r.height());
 	}
 
 	/**
@@ -365,9 +367,9 @@ public class TextAreaFigure extends AttributeFigure
 	 * @param g  The graphics to use for the drawing
 	 */
 	public void drawFrame(Graphics g) {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		g.setColor((Color)getAttribute("FrameColor"));
-		g.drawRect(r.x, r.y, r.width, r.height);
+		g.drawRect(r.x(), r.y(), r.width(), r.height());
 	}
 
 
@@ -379,7 +381,7 @@ public class TextAreaFigure extends AttributeFigure
 	 * @param displayBox  the display box  within which the text should be formatted and drawn
 	 * @return            Description of the Return Value
 	 */
-	protected float drawText(Graphics g, Rectangle displayBox) {
+	protected float drawText(Graphics g, MDRectangle displayBox) {
 		Graphics2D g2 = null;
 		Shape savedClipArea = null;
 		Color savedFontColor = null;
@@ -397,9 +399,10 @@ public class TextAreaFigure extends AttributeFigure
 			savedFontColor = g2.getColor();
 			savedClipArea = g2.getClip();
 			if(savedClipArea != null) {
-			clipRect = displayBox.createIntersection((Rectangle2D)savedClipArea);
+				Rectangle rectangleDisp = new Rectangle(displayBox.x(), displayBox.y(), displayBox.width(), displayBox.height());
+				clipRect = rectangleDisp.createIntersection((Rectangle2D)savedClipArea);
 			} else {
-				clipRect = displayBox;
+				clipRect = new Rectangle(displayBox.x(), displayBox.y(), displayBox.width(), displayBox.height());
 			}
 			g2.setClip(clipRect);
 			Color textColor = getTextColor();
@@ -413,9 +416,9 @@ public class TextAreaFigure extends AttributeFigure
 		// split the text into paragraphs
 		prepareText();
 
-		float leftMargin = displayBox.x + ((Float)getAttribute("LeftMargin")).floatValue();
-		float rightMargin = displayBox.x + displayBox.width - ((Float)getAttribute("RightMargin")).floatValue();
-		float topMargin = displayBox.y + ((Float)getAttribute("TopMargin")).floatValue();
+		float leftMargin = displayBox.x() + ((Float)getAttribute("LeftMargin")).floatValue();
+		float rightMargin = displayBox.x() + displayBox.width() - ((Float)getAttribute("RightMargin")).floatValue();
+		float topMargin = displayBox.y() + ((Float)getAttribute("TopMargin")).floatValue();
 
 		/**
 		 * @todo   we prepare stops for 40 tabs which should be enough to handle

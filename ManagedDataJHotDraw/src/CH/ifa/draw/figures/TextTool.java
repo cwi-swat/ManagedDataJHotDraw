@@ -16,7 +16,9 @@ import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.FloatingTextField;
 import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -179,11 +181,11 @@ public class TextTool extends CreationTool {
 		return getFloatingTextField().getText().length() == 0;
 	}
 
-	private Rectangle fieldBounds(TextHolder figure) {
-		Rectangle box = figure.textDisplayBox();
+	private MDRectangle fieldBounds(TextHolder figure) {
+		MDRectangle box = figure.textDisplayBox();
 		int nChars = figure.overlayColumns();
 		Dimension d = getFloatingTextField().getPreferredSize(nChars);
-		return new Rectangle(box.x, box.y, d.width, d.height);
+		return MDGeometryFactory.newRectangle(box.x(), box.y(), d.width, d.height);
 	}
 
 	protected void setTypingTarget(TextHolder newTypingTarget) {

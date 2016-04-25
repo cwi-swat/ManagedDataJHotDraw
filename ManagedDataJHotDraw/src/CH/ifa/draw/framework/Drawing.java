@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -12,6 +12,8 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -56,7 +58,7 @@ public interface Drawing
 	 * Z-order back to front over the figures
 	 * that lie within the absolute bounds.
 	 */
-	public FigureEnumeration figures(Rectangle viewRectangle);
+	public FigureEnumeration figures(MDRectangle viewRectangle);
 
 	/**
 	 * Returns an enumeration to iterate in
@@ -73,7 +75,7 @@ public interface Drawing
 	/**
 	 * Finds a top level Figure that intersects the given rectangle.
 	 */
-	public Figure findFigure(Rectangle r);
+	public Figure findFigure(MDRectangle r);
 
 	/**
 	 * Finds a top level Figure, but supresses the passed
@@ -92,7 +94,7 @@ public interface Drawing
 	 * in figure. Use this method to ignore a figure
 	 * that is temporarily inserted into the drawing.
 	 */
-	public Figure findFigure(Rectangle r, Figure without);
+	public Figure findFigure(MDRectangle r, Figure without);
 
 	/**
 	 * Finds a figure but descends into a figure's
@@ -310,7 +312,7 @@ public interface Drawing
 	 * If the view rectangle is too small or too large, performance
 	 * may suffer.
 	 */
-	public void init(Rectangle viewRectangle);
+	public void init(MDRectangle viewRectangle);
 
 	public String getTitle();
 	public void setTitle(String name);

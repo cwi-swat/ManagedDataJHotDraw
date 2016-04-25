@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
 import CH.ifa.draw.figures.RoundRectangleFigure;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * Geometric adapter for the RoundRectangleFigure
@@ -51,9 +52,9 @@ public class RoundRectangleGeometricAdapter extends RoundRectangleFigure
 	 */
 	public Shape getShape() {
 		Point arc = getArc();
-		Rectangle dspBox = displayBox();
+		MDRectangle dspBox = displayBox();
 		RoundRectangle2D.Float roundRectangle = new RoundRectangle2D.Float(
-				dspBox.x, dspBox.y, dspBox.width, dspBox.height,
+				dspBox.x(), dspBox.y(), dspBox.width(), dspBox.height(),
 				arc.x, arc.y);
 
 		return roundRectangle;

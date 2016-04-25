@@ -4,12 +4,15 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.framework;
+
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.Rectangle;
 import java.util.EventObject;
@@ -21,16 +24,16 @@ import java.util.EventObject;
  */
 public class FigureChangeEvent extends EventObject {
 
-	private Rectangle fRectangle;
+	private MDRectangle fRectangle;
 	private FigureChangeEvent myNestedEvent;
 
-	private static final Rectangle  fgEmptyRectangle = new Rectangle(0, 0, 0, 0);
+	private static final MDRectangle  fgEmptyRectangle = MDGeometryFactory.newRectangle(0, 0, 0, 0);
 
    /**
 	* Constructs an event for the given source Figure. The rectangle is the
 	* area to be invalvidated.
 	*/
-	public FigureChangeEvent(Figure source, Rectangle r) {
+	public FigureChangeEvent(Figure source, MDRectangle r) {
 		super(source);
 		fRectangle = r;
 	}
@@ -40,7 +43,7 @@ public class FigureChangeEvent extends EventObject {
 		fRectangle = fgEmptyRectangle;
 	}
 
-	public FigureChangeEvent(Figure source, Rectangle r, FigureChangeEvent nestedEvent) {
+	public FigureChangeEvent(Figure source, MDRectangle r, FigureChangeEvent nestedEvent) {
 		this(source, r);
 		myNestedEvent = nestedEvent;
 	}
@@ -55,7 +58,7 @@ public class FigureChangeEvent extends EventObject {
 	/**
 	 *  Gets the changed rectangle
 	 */
-	public Rectangle getInvalidatedRectangle() {
+	public MDRectangle getInvalidatedRectangle() {
 		return fRectangle;
 	}
 

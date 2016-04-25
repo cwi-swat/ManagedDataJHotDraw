@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import CH.ifa.draw.standard.FigureEnumerator;
 import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.standard.AbstractFigure;
 import CH.ifa.draw.standard.HandleEnumerator;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 
@@ -25,7 +27,7 @@ import java.awt.*;
  */
 public class NullFigure extends AbstractFigure {
 
-	private Rectangle myDisplayBox;
+	private MDRectangle myDisplayBox;
 
 	/**
 	 * Moves the figure. This is the
@@ -49,15 +51,15 @@ public class NullFigure extends AbstractFigure {
 	 * @see #displayBox
 	 */
 	public void basicDisplayBox(Point origin, Point corner) {
-		myDisplayBox = new Rectangle(origin);
-		myDisplayBox.add(corner);
+		myDisplayBox = MDGeometryFactory.newRectangle(origin.x, origin.y, 0,0);
+		myDisplayBox.add(MDGeometryFactory.newRectangle(corner.x, corner.y, 0,0));
 	}
 
 	/**
 	 * Gets the display box of a figure
 	 * @see #basicDisplayBox
 	 */
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		return myDisplayBox;
 	}
 

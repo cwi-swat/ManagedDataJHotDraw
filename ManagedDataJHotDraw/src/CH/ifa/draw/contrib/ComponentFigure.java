@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import CH.ifa.draw.standard.BoxHandleKit;
 import CH.ifa.draw.standard.HandleEnumerator;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.Component;
 import java.awt.Rectangle;
@@ -76,8 +78,8 @@ public class ComponentFigure extends AttributeFigure {
 	 * Gets the display box of a figure
 	 * @see #basicDisplayBox
 	 */
-	public Rectangle displayBox() {
-		return new Rectangle(bounds);
+	public MDRectangle displayBox() {
+		return MDGeometryFactory.newRectangle(bounds.x, bounds.y, bounds.width, bounds.height);
 	}
 
 	/**
@@ -117,7 +119,7 @@ public class ComponentFigure extends AttributeFigure {
 	 */
 	public void draw(Graphics g) {
 		// AWT code
-		getComponent().setBounds(displayBox());
+		getComponent().setBounds(new Rectangle(displayBox().x(), displayBox().y(), displayBox().width(), displayBox().height()));
 		//must create a new graphics with a different cordinate
 		Graphics componentG = g.create(bounds.x, bounds.y, bounds.width, bounds.height);
 		getComponent().paint(componentG);

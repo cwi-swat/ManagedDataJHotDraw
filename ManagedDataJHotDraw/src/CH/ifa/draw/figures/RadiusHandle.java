@@ -17,6 +17,7 @@ import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 
@@ -60,10 +61,10 @@ class RadiusHandle extends AbstractHandle {
 		int dx = x-anchorX;
 		int dy = y-anchorY;
 		RoundRectangleFigure owner = (RoundRectangleFigure)owner();
-		Rectangle r = owner.displayBox();
+		MDRectangle r = owner.displayBox();
 		Point originalRadius = ((RadiusHandle.UndoActivity)getUndoActivity()).getOldRadius();
-		int rx = Geom.range(0, r.width, 2*(originalRadius.x/2 + dx));
-		int ry = Geom.range(0, r.height, 2*(originalRadius.y/2 + dy));
+		int rx = Geom.range(0, r.width(), 2*(originalRadius.x/2 + dx));
+		int ry = Geom.range(0, r.height(), 2*(originalRadius.y/2 + dy));
 		owner.setArc(rx, ry);
 	}
 
@@ -87,8 +88,8 @@ class RadiusHandle extends AbstractHandle {
 	public Point locate() {
 		RoundRectangleFigure owner = (RoundRectangleFigure)owner();
 		Point radius = owner.getArc();
-		Rectangle r = owner.displayBox();
-		return new Point(r.x+radius.x/2+OFFSET, r.y+radius.y/2+OFFSET);
+		MDRectangle r = owner.displayBox();
+		return new Point(r.x()+radius.x/2+OFFSET, r.y()+radius.y/2+OFFSET);
 	}
 
 	public void draw(Graphics g) {

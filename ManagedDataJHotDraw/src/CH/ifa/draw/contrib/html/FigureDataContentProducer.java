@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -45,19 +45,19 @@ public class FigureDataContentProducer extends AbstractContentProducer
 	 */
 	public Object getContent(ContentProducerContext context, String ctxAttrName, Object ctxAttrValue) {
 		if (ctxAttrName.compareTo(ContentProducer.ENTITY_FIGURE_WIDTH) == 0) {
-			return Integer.toString(((FigureContentProducerContext)context).displayBox().width);
+			return Integer.toString(((FigureContentProducerContext)context).displayBox().width());
 		}
 
 		if (ctxAttrName.compareTo(ContentProducer.ENTITY_FIGURE_HEIGHT) == 0) {
-			return Integer.toString(((FigureContentProducerContext)context).displayBox().height);
+			return Integer.toString(((FigureContentProducerContext)context).displayBox().height());
 		}
 
 		if (ctxAttrName.compareTo(ContentProducer.ENTITY_FIGURE_POSX) == 0) {
-			return Integer.toString(((FigureContentProducerContext)context).displayBox().x);
+			return Integer.toString(((FigureContentProducerContext)context).displayBox().x());
 		}
 
 		if (ctxAttrName.compareTo(ContentProducer.ENTITY_FIGURE_POSY) == 0) {
-			return Integer.toString(((FigureContentProducerContext)context).displayBox().y);
+			return Integer.toString(((FigureContentProducerContext)context).displayBox().y());
 		}
 
 		return null;

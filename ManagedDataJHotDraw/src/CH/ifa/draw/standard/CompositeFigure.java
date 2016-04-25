@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,9 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -376,7 +379,7 @@ public abstract class CompositeFigure
 	 * Z-order back to front over the figures
 	 * that lie within the given bounds.
 	 */
-	public FigureEnumeration figures(Rectangle viewRectangle) {
+	public FigureEnumeration figures(MDRectangle viewRectangle) {
 		if (_theQuadTree != null) {
 
 			FigureEnumeration fe =
@@ -445,11 +448,11 @@ public abstract class CompositeFigure
 	/**
 	 * Finds a top level Figure that intersects the given rectangle.
 	 */
-	public Figure findFigure(Rectangle r) {
+	public Figure findFigure(MDRectangle r) {
 		FigureEnumeration fe = figuresReverse();
 		while (fe.hasNextFigure()) {
 			Figure figure = fe.nextFigure();
-			Rectangle fr = figure.displayBox();
+			MDRectangle fr = figure.displayBox();
 			if (r.intersects(fr)) {
 				return figure;
 			}
@@ -487,7 +490,7 @@ public abstract class CompositeFigure
 	 * in figure. Use this method to ignore a figure
 	 * that is temporarily inserted into the drawing.
 	 */
-	public Figure findFigure(Rectangle r, Figure without) {
+	public Figure findFigure(MDRectangle r, Figure without) {
 		if (without == null) {
 			return findFigure(r);
 		}
@@ -495,7 +498,7 @@ public abstract class CompositeFigure
 		FigureEnumeration fe = figuresReverse();
 		while (fe.hasNextFigure()) {
 			Figure figure = fe.nextFigure();
-			Rectangle fr = figure.displayBox();
+			MDRectangle fr = figure.displayBox();
 			if (r.intersects(fr) && !figure.includes(without)) {
 				return figure;
 			}
@@ -680,7 +683,7 @@ public abstract class CompositeFigure
 			figure.addToContainer(this);
 		}
 
-		init(new Rectangle(0, 0));
+		init(MDGeometryFactory.newRectangle(0,0,0,0));
 	}
 
 	/**
@@ -694,7 +697,7 @@ public abstract class CompositeFigure
 	 * new CompositeFigure.  If you forget, drawing performance may
 	 * suffer.
 	 */
-	public void init(Rectangle viewRectangle) {
+	public void init(MDRectangle viewRectangle) {
 		_theQuadTree = new QuadTree(new Bounds(viewRectangle).asRectangle2D());
 
 		FigureEnumeration fe = figures();
@@ -708,11 +711,11 @@ public abstract class CompositeFigure
 			// Bugfix: Make sure the rectangle is not zero width or height.
 			// Otherwise, the quadTree search in this.figures(Rectangle)
 			// will be incorrect. [John Yu, 2002/05/23]
-			Rectangle r = f.displayBox();
-			if (r.height == 0) {
+			MDRectangle r = f.displayBox();
+			if (r.height() == 0) {
 				r.grow(0, 1);
 			}
-			if (r.width == 0) {
+			if (r.width() == 0) {
 				r.grow(1, 0);
 			}
 

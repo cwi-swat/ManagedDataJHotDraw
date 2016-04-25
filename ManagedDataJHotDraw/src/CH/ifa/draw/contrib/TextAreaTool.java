@@ -19,6 +19,7 @@ import CH.ifa.draw.standard.TextHolder;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -233,7 +234,7 @@ public class TextAreaTool extends CreationTool {
 	 * @param figure  the edited figure
 	 * @return        Description of the Return Value
 	 */
-	private Rectangle fieldBounds(TextHolder figure) {
+	private MDRectangle fieldBounds(TextHolder figure) {
 		return figure.textDisplayBox();
 	}
 

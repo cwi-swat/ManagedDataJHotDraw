@@ -13,6 +13,8 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.CollectionsFactory;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.util.*;
@@ -56,7 +58,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 	public StandardDrawing() {
 		super();
 		fListeners = CollectionsFactory.current().createList(2);
-		init(new Rectangle(-500, -500, 2000, 2000));
+		init(MDGeometryFactory.newRectangle(-500, -500, 2000, 2000));
 	}
 
 	// TODO: @MDHD Remove this
@@ -97,7 +99,7 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		Figure orphanedFigure = super.orphan(figure);
 		// ensure that we remove the top level figure in a drawing
 		if (orphanedFigure.listener() != null) {
-			Rectangle rect = invalidateRectangle(displayBox());
+			MDRectangle rect = invalidateRectangle(displayBox());
 			orphanedFigure.listener().figureRequestRemove(new FigureChangeEvent(orphanedFigure, rect));
 		}
 		return orphanedFigure;
@@ -106,14 +108,13 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 	public synchronized Figure add(Figure figure) {
 		Figure addedFigure = super.add(figure);
 		if (addedFigure.listener() != null) {
-			Rectangle rect = invalidateRectangle(displayBox());
+			MDRectangle rect = invalidateRectangle(displayBox());
 			addedFigure.listener().figureRequestUpdate(new FigureChangeEvent(figure, rect));
 			return addedFigure;
 		}
 		return addedFigure;
 	}
 
-	// TODO: @MDHD Remove this
 	/**
 	 * Invalidates a rectangle and merges it with the
 	 * existing damaged area.
@@ -128,7 +129,6 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		}
 	}
 
-	// TODO: @MDHD Remove this
 	/**
 	 * Forces an update of the drawing change listeners.
 	 */
@@ -141,7 +141,6 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 		}
 	}
 
-	// TODO: @MDHD Remove this
 	/**
 	 * Forces an update of the drawing change listeners.
 	 */
@@ -170,18 +169,18 @@ public class StandardDrawing extends CompositeFigure implements Drawing {
 	/**
 	 * Gets the display box. This is the union of all figures.
 	 */
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		if (fFigures.size() > 0) {
 			FigureEnumeration fe = figures();
 
-			Rectangle r = fe.nextFigure().displayBox();
+			MDRectangle r = fe.nextFigure().displayBox();
 
 			while (fe.hasNextFigure()) {
 				r.add(fe.nextFigure().displayBox());
 			}
 			return r;
 		}
-		return new Rectangle(0, 0, 0, 0);
+		return MDGeometryFactory.newRectangle(0, 0, 0, 0);
 	}
 
 	public void basicDisplayBox(Point p1, Point p2) {

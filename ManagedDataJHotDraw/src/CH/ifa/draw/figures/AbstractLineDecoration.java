@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,8 @@ import java.awt.*;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * An standard implementation of a line decoration.
@@ -30,7 +32,7 @@ public abstract class AbstractLineDecoration implements LineDecoration {
 
 	private Color   fFillColor;
 	private Color   fBorderColor;
-	private transient Rectangle myBounds;
+	private transient MDRectangle myBounds;
 
 	public AbstractLineDecoration() {
 	}
@@ -42,7 +44,7 @@ public abstract class AbstractLineDecoration implements LineDecoration {
 	public void draw(Graphics g, int x1, int y1, int x2, int y2) {
 		// TBD: reuse the Polygon object
 		Polygon p = outline(x1, y1, x2, y2);
-		myBounds = p.getBounds();
+		myBounds = MDGeometryFactory.newRectangle(p.getBounds().x, p.getBounds().y, p.getBounds().width, p.getBounds().height);
 		if (getFillColor() == null) {
 			g.fillPolygon(p.xpoints, p.ypoints, p.npoints);
 		}
@@ -67,12 +69,12 @@ public abstract class AbstractLineDecoration implements LineDecoration {
 	 * is returned.
 	 * @return the display box of a LineDecoration.
 	 */
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		if (myBounds != null) {
 			return myBounds;
 		}
 		else {
-			return new Rectangle(0, 0);
+			return MDGeometryFactory.newRectangle(0, 0, 0, 0);
 		}
 	}
 

@@ -5,6 +5,7 @@ import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 import nl.cwi.managed_data_4j.language.schema.models.definition.M;
 import nl.cwi.managed_data_4j.language.schema.models.definition.annotations.NotManagedData;
 
@@ -20,6 +21,16 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     public static final int MINIMUM_WIDTH = 400;
     public static final int MINIMUM_HEIGHT = 300;
     public static final int SCROLL_OFFSET = 10;
+
+    MDRectangle damage(MDRectangle... damage);
+
+    default MDRectangle getDamage() {
+        return damage();
+    }
+
+    default void setDamage(MDRectangle r) {
+        damage(r);
+    }
 
     // Composition over inheritance,
     // the original inherits the JPanel
@@ -85,17 +96,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default void setCursor(Cursor cur) {
         cursor(cur);
-    }
-
-    @NotManagedData
-    Rectangle damage(Rectangle... damage);
-
-    default Rectangle getDamage() {
-        return damage();
-    }
-
-    default void setDamage(Rectangle r) {
-        damage(r);
     }
 
     @NotManagedData
@@ -384,21 +384,21 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default void repairDamage() {
         if (getDamage() != null) {
-            panel().repaint(damage().x, damage().y, damage().width, damage().height);
+            panel().repaint(damage().x(), damage().y(), damage().width(), damage().height());
             setDamage(null);
 		}
     }
 
     default void drawingInvalidated(DrawingChangeEvent e) {
 
-		Rectangle r = e.getInvalidatedRectangle();
+        MDRectangle r = e.getInvalidatedRectangle();
 		if (getDamage() == null) {
             setDamage(r);
 		}
 		else {
 			// don't manipulate rectangle returned by getDamage() directly
 			// because it could be a cloned rectangle.
-			Rectangle damagedR = getDamage();
+            MDRectangle damagedR = getDamage();
 			damagedR.add(r);
             setDamage(damagedR);
 		}
@@ -567,9 +567,9 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         FigureEnumeration fe = drawing().figures();
         Dimension d = new Dimension(0, 0);
         while (fe.hasNextFigure()) {
-            Rectangle r = fe.nextFigure().displayBox();
-            d.width = Math.max(d.width, r.x+r.width);
-            d.height = Math.max(d.height, r.y+r.height);
+            MDRectangle r = fe.nextFigure().displayBox();
+            d.width = Math.max(d.width, r.x() + r.width());
+            d.height = Math.max(d.height, r.y() + r.height());
         }
         return d;
     }

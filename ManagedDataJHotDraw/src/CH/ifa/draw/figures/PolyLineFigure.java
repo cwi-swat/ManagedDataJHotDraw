@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,9 @@ package CH.ifa.draw.figures;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
@@ -58,20 +61,22 @@ public  class PolyLineFigure extends AbstractFigure {
 		fPoints.add(new Point(x, y));
 	}
 
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		Iterator iter = points();
 		if (iter.hasNext()) {
 			// avoid starting with origin 0,0 because that would lead to a too large rectangle
-			Rectangle r = new Rectangle((Point)iter.next());
+			Point p = (Point)iter.next();
+			MDRectangle r = MDGeometryFactory.newRectangle(p.x, p.y, 0, 0);
 
 			while (iter.hasNext()) {
-				r.add((Point)iter.next());
+				Point pI = (Point)iter.next();
+				r.add(pI.x, pI.y);
 			}
 
 			return r;
 		}
 		else {
-			return new Rectangle();
+			return MDGeometryFactory.newRectangle(0, 0, 0, 0);
 		}
 	}
 
@@ -220,7 +225,7 @@ public  class PolyLineFigure extends AbstractFigure {
 	}
 
 	public boolean containsPoint(int x, int y) {
-		Rectangle bounds = displayBox();
+		MDRectangle bounds = displayBox();
 		bounds.grow(4,4);
 		if (!bounds.contains(x, y)) {
 			return false;
@@ -389,9 +394,9 @@ public  class PolyLineFigure extends AbstractFigure {
 	/**
 	 * Hook method to change the rectangle that will be invalidated
 	 */
-	protected Rectangle invalidateRectangle(Rectangle r) {
+	protected MDRectangle invalidateRectangle(MDRectangle r) {
 		// SF-bug id: 533953: provide this method to customize invalidated rectangle
-		Rectangle parentR = super.invalidateRectangle(r);
+		MDRectangle parentR = super.invalidateRectangle(r);
 		if (getStartDecoration() != null) {
 			parentR.add(getStartDecoration().displayBox());
 		}

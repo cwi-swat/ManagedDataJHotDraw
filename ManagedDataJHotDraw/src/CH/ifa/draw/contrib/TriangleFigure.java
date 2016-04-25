@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import CH.ifa.draw.util.*;
 import CH.ifa.draw.figures.*;
 import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.HandleEnumerator;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.util.*;
@@ -70,48 +71,48 @@ public  class TriangleFigure extends RectangleFigure {
 
 	/** Return the polygon describing the triangle **/
 	public Polygon getPolygon() {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		Polygon p = new Polygon();
 		switch (fRotation) {
 		case 0:
-			p.addPoint(r.x + r.width/2, r.y);
-			p.addPoint(r.x + r.width, r.y + r.height);
-			p.addPoint(r.x, r.y + r.height);
+			p.addPoint(r.x() + r.width()/2, r.y());
+			p.addPoint(r.x() + r.width(), r.y() + r.height());
+			p.addPoint(r.x(), r.y() + r.height());
 			break;
 		case 1:
-			p.addPoint(r.x + r.width, r.y);
-			p.addPoint(r.x + r.width, r.y + r.height);
-			p.addPoint(r.x, r.y);
+			p.addPoint(r.x() + r.width(), r.y());
+			p.addPoint(r.x() + r.width(), r.y() + r.height());
+			p.addPoint(r.x(), r.y());
 			break;
 		case 2:
-			p.addPoint(r.x + r.width, r.y + r.height/2);
-			p.addPoint(r.x, r.y + r.height);
-			p.addPoint(r.x, r.y);
+			p.addPoint(r.x() + r.width(), r.y() + r.height()/2);
+			p.addPoint(r.x(), r.y() + r.height());
+			p.addPoint(r.x(), r.y());
 			break;
 		case 3:
-			p.addPoint(r.x + r.width, r.y + r.height);
-			p.addPoint(r.x, r.y + r.height);
-			p.addPoint(r.x + r.width, r.y);
+			p.addPoint(r.x() + r.width(), r.y() + r.height());
+			p.addPoint(r.x(), r.y() + r.height());
+			p.addPoint(r.x() + r.width(), r.y());
 			break;
 		case 4:
-			p.addPoint(r.x + r.width/2, r.y + r.height);
-			p.addPoint(r.x, r.y);
-			p.addPoint(r.x + r.width, r.y);
+			p.addPoint(r.x() + r.width()/2, r.y() + r.height());
+			p.addPoint(r.x(), r.y());
+			p.addPoint(r.x() + r.width(), r.y());
 			break;
 		case 5:
-			p.addPoint(r.x, r.y + r.height);
-			p.addPoint(r.x, r.y);
-			p.addPoint(r.x + r.width, r.y + r.height);
+			p.addPoint(r.x(), r.y() + r.height());
+			p.addPoint(r.x(), r.y());
+			p.addPoint(r.x() + r.width(), r.y() + r.height());
 			break;
 		case 6:
-			p.addPoint(r.x, r.y + r.height/2);
-			p.addPoint(r.x + r.width, r.y);
-			p.addPoint(r.x + r.width, r.y + r.height);
+			p.addPoint(r.x(), r.y() + r.height()/2);
+			p.addPoint(r.x() + r.width(), r.y());
+			p.addPoint(r.x() + r.width(), r.y() + r.height());
 			break;
 		case 7:
-			p.addPoint(r.x, r.y);
-			p.addPoint(r.x + r.width, r.y);
-			p.addPoint(r.x, r.y + r.height);
+			p.addPoint(r.x(), r.y());
+			p.addPoint(r.x() + r.width(), r.y());
+			p.addPoint(r.x(), r.y() + r.height());
 			break;
 		}
 		return p;
@@ -127,24 +128,24 @@ public  class TriangleFigure extends RectangleFigure {
 	}
 
 	public Insets connectionInsets() {
-		Rectangle r = displayBox();
+		MDRectangle r = displayBox();
 		switch(fRotation) {
 		case 0:
-			return new Insets(r.height, r.width/2, 0, r.width/2);
+			return new Insets(r.height(), r.width()/2, 0, r.width()/2);
 		case 1:
-			return new Insets(0, r.width, r.height, 0);
+			return new Insets(0, r.width(), r.height(), 0);
 		case 2:
-			return new Insets(r.height/2, 0, r.height/2, r.width);
+			return new Insets(r.height()/2, 0, r.height()/2, r.width());
 		case 3:
-			return new Insets(r.height, r.width, 0, 0);
+			return new Insets(r.height(), r.width(), 0, 0);
 		case 4:
-			return new Insets(0, r.width/2, r.height, r.width/2);
+			return new Insets(0, r.width()/2, r.height(), r.width()/2);
 		case 5:
-			return new Insets(r.height, 0, 0, r.width);
+			return new Insets(r.height(), 0, 0, r.width());
 		case 6:
-			return new Insets(r.height/2, r.width, r.height/2, 0);
+			return new Insets(r.height()/2, r.width(), r.height()/2, 0);
 		case 7:
-			return new Insets(0, 0, r.height, r.width);
+			return new Insets(0, 0, r.height(), r.width());
 		default:
 			return null;
 		}

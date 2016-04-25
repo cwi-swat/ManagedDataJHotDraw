@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -13,6 +13,9 @@ package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.contrib.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 
 /**
@@ -66,7 +69,7 @@ public class StandardLayouter extends SimpleLayouter {
 	 * @param origin start point for the layout
 	 * @param corner minimum corner point for the layout
 	 */
-	public Rectangle calculateLayout(Point origin, Point corner) {
+	public MDRectangle calculateLayout(Point origin, Point corner) {
 		int maxWidth = Math.abs(corner.x - origin.x);
 		int maxHeight = 0;
 
@@ -74,23 +77,23 @@ public class StandardLayouter extends SimpleLayouter {
 		FigureEnumeration fe = getLayoutable().figures();
 		while (fe.hasNextFigure()) {
 			Figure currentFigure = fe.nextFigure();
-			Rectangle r = null;
+			MDRectangle r = null;
 			if (currentFigure instanceof Layoutable) {
 				Layouter layoutStrategy = ((Layoutable)currentFigure).getLayouter();
-				r = layoutStrategy.calculateLayout(
-					new Point(0, 0), new Point(0, 0));
+				r = layoutStrategy.calculateLayout(new Point(0, 0), new Point(0, 0));
+
 				// add insets to calculated rectangle
 				r.grow(layoutStrategy.getInsets().left + layoutStrategy.getInsets().right,
 						layoutStrategy.getInsets().top + layoutStrategy.getInsets().bottom);
 			}
 			else {
-				r = new Rectangle(currentFigure.displayBox().getBounds());
+				r = MDGeometryFactory.newRectangle(currentFigure.displayBox().x(), currentFigure.displayBox().y(), currentFigure.displayBox().width(), currentFigure.displayBox().height());
 			}
-			maxWidth = Math.max(maxWidth, r.width);
-			maxHeight += r.height;
+			maxWidth = Math.max(maxWidth, r.width());
+			maxHeight += r.height();
 		}
 
-		return new Rectangle(origin.x, origin.y, maxWidth, maxHeight);
+		return MDGeometryFactory.newRectangle(origin.x, origin.y, maxWidth, maxHeight);
 	}
 
 	/**
@@ -103,25 +106,25 @@ public class StandardLayouter extends SimpleLayouter {
 	 * @param origin start point for the layout
 	 * @param corner minimum corner point for the layout
 	 */
-	public Rectangle layout(Point origin, Point corner) {
+	public MDRectangle layout(Point origin, Point corner) {
 		// calculate the layout of the figure and its sub-figures first
-		Rectangle r = calculateLayout(origin, corner);
+		MDRectangle r = calculateLayout(origin, corner);
 
 		int maxHeight = getInsets().top;
 		FigureEnumeration fe = getLayoutable().figures();
 		while (fe.hasNextFigure()) {
 			Figure currentFigure = fe.nextFigure();
 
-			Point partOrigin = new Point(r.x + getInsets().left, r.y + maxHeight);
+			Point partOrigin = new Point(r.x() + getInsets().left, r.y() + maxHeight);
 
 			// Fix for bug request ID 548000
 			// Previously was
 			//      Point partCorner = new Point(r.x + getInsets().left + r.width, r.y + currentFigure.displayBox().height);
 			// The right inset wasn't included in the calculation
-			Point partCorner = new Point(r.x + getInsets().left - getInsets().right + r.width, r.y + currentFigure.displayBox().height);
+			Point partCorner = new Point(r.x() + getInsets().left - getInsets().right + r.width(), r.y() + currentFigure.displayBox().height());
 			currentFigure.displayBox(partOrigin, partCorner);
 
-			maxHeight += currentFigure.displayBox().height;
+			maxHeight += currentFigure.displayBox().height();
 		}
 
 		// the maximum width has been already calculated
@@ -129,6 +132,6 @@ public class StandardLayouter extends SimpleLayouter {
 		// Previously was
 		//      Point partCorner = new Point(r.x + getInsets().left + r.width, r.y + currentFigure.displayBox().height);
 		// The right inset wasn't included in the calculation
-		return new Rectangle(r.x, r.y, r.width, maxHeight + getInsets().bottom);
+		return MDGeometryFactory.newRectangle(r.x(), r.y(), r.width(), maxHeight + getInsets().bottom);
 	}
 }

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -15,6 +15,7 @@ import java.awt.*;
 import java.io.IOException;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * A locator that specfies a point that is relative to the bounds
@@ -55,10 +56,10 @@ public class RelativeLocator extends AbstractLocator {
 	}
 
 	public Point locate(Figure owner) {
-		Rectangle r = owner.displayBox();
+		MDRectangle r = owner.displayBox();
 		return new Point(
-			r.x + (int)(r.width * fRelativeX),
-			r.y + (int)(r.height * fRelativeY)
+			r.x() + (int)(r.width() * fRelativeX),
+			r.y() + (int)(r.height() * fRelativeY)
 		);
 	}
 

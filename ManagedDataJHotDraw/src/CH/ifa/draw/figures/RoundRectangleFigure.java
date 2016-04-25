@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -17,6 +17,8 @@ import java.util.List;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 
 /**
@@ -80,8 +82,8 @@ public class RoundRectangleFigure extends AttributeFigure {
 		return new HandleEnumerator(handles);
 	}
 
-	public Rectangle displayBox() {
-		return new Rectangle(
+	public MDRectangle displayBox() {
+		return MDGeometryFactory.newRectangle(
 			fDisplayBox.x,
 			fDisplayBox.y,
 			fDisplayBox.width,
@@ -93,13 +95,13 @@ public class RoundRectangleFigure extends AttributeFigure {
 	}
 
 	public void drawBackground(Graphics g) {
-		Rectangle r = displayBox();
-		g.fillRoundRect(r.x, r.y, r.width-1, r.height-1, fArcWidth, fArcHeight);
+		MDRectangle r = displayBox();
+		g.fillRoundRect(r.x(), r.y(), r.width()-1, r.height()-1, fArcWidth, fArcHeight);
 	}
 
 	public void drawFrame(Graphics g) {
-		Rectangle r = displayBox();
-		g.drawRoundRect(r.x, r.y, r.width-1, r.height-1, fArcWidth, fArcHeight);
+		MDRectangle r = displayBox();
+		g.drawRoundRect(r.x(), r.y(), r.width()-1, r.height()-1, fArcWidth, fArcHeight);
 	}
 
 	public Insets connectionInsets() {

@@ -13,6 +13,7 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.util.List;
@@ -104,7 +105,7 @@ public abstract class AbstractFigure implements Figure {
 	/**
 	 * Gets the display box of a figure.
 	 */
-	public abstract Rectangle displayBox();
+	public abstract MDRectangle displayBox();
 
 	/**
 	 * Returns the handles of a Figure that can be used
@@ -126,7 +127,7 @@ public abstract class AbstractFigure implements Figure {
 	 * Gets the size of the figure. A convenience method.
 	 */
 	public Dimension size() {
-		return new Dimension(displayBox().width, displayBox().height);
+		return new Dimension(displayBox().width(), displayBox().height());
 	}
 
 	/**
@@ -165,8 +166,8 @@ public abstract class AbstractFigure implements Figure {
 	 * have to override basicDisplayBox
 	 * @see #displayBox
 	 */
-	public void displayBox(Rectangle r) {
-		displayBox(new Point(r.x, r.y), new Point(r.x+r.width, r.y+r.height));
+	public void displayBox(MDRectangle r) {
+		displayBox(new Point(r.x(), r.y()), new Point(r.x() + r.width(), r.y() + r.height()));
 	}
 
 	/**
@@ -246,7 +247,7 @@ public abstract class AbstractFigure implements Figure {
 	 */
 	public void invalidate() {
 		if (listener() != null) {
-			Rectangle r = invalidateRectangle(displayBox());
+			MDRectangle r = invalidateRectangle(displayBox());
 			listener().figureInvalidated(new FigureChangeEvent(this, r));
 		}
 	}
@@ -254,7 +255,7 @@ public abstract class AbstractFigure implements Figure {
 	/**
 	 * Hook method to change the rectangle that will be invalidated
 	 */
-	protected Rectangle invalidateRectangle(Rectangle r) {
+	protected MDRectangle invalidateRectangle(MDRectangle r) {
 		r.grow(Handle.HANDLESIZE, Handle.HANDLESIZE);
 		return r;
 	}

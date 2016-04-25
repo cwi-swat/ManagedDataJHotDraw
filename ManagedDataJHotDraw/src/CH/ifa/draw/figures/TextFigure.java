@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -18,6 +18,8 @@ import java.io.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * A text figure.
@@ -83,12 +85,12 @@ public  class TextFigure
 		fOriginY = newOrigin.y;
 	}
 
-	public Rectangle displayBox() {
+	public MDRectangle displayBox() {
 		Dimension extent = textExtent();
-		return new Rectangle(fOriginX, fOriginY, extent.width, extent.height);
+		return MDGeometryFactory.newRectangle(fOriginX, fOriginY, extent.width, extent.height);
 	}
 
-	public Rectangle textDisplayBox() {
+	public MDRectangle textDisplayBox() {
 		return displayBox();
 	}
 
@@ -238,8 +240,8 @@ public  class TextFigure
 	}
 
 	public void drawBackground(Graphics g) {
-		Rectangle r = displayBox();
-		g.fillRect(r.x, r.y, r.width, r.height);
+		MDRectangle r = displayBox();
+		g.fillRect(r.x(), r.y(), r.width(), r.height());
 	}
 
 	public void drawFrame(Graphics g) {
@@ -340,7 +342,7 @@ public  class TextFigure
 
 	public void figureRemoved(FigureChangeEvent e) {
 		if (listener() != null) {
-			Rectangle rect = invalidateRectangle(displayBox());
+			MDRectangle rect = invalidateRectangle(displayBox());
 			listener().figureRemoved(new FigureChangeEvent(this, rect, e));
 		}
 	}

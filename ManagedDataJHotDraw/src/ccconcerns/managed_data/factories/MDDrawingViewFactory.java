@@ -6,6 +6,7 @@ import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
@@ -30,7 +31,7 @@ public class MDDrawingViewFactory {
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
                 schemaFactory, schemaSchema,
-                MDStandardDrawingView.class);
+                MDStandardDrawingView.class, MDRectangle.class);
 
         final SubjectRoleDataManager subjectRoleFactory =
                 new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);

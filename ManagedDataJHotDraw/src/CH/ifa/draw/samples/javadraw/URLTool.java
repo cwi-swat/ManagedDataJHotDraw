@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -14,6 +14,9 @@ package CH.ifa.draw.samples.javadraw;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.FloatingTextField;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -85,13 +88,13 @@ public  class URLTool extends AbstractTool {
 		}
 	}
 
-	private Rectangle fieldBounds(Figure figure) {
-		Rectangle box = figure.displayBox();
+	private MDRectangle fieldBounds(Figure figure) {
+		MDRectangle box = figure.displayBox();
 		int nChars = Math.max(20, getURL(figure).length());
 		Dimension d = fTextField.getPreferredSize(nChars);
-		box.x = Math.max(0, box.x + (box.width - d.width)/2);
-		box.y = Math.max(0, box.y + (box.height - d.height)/2);
-		return new Rectangle(box.x, box.y, d.width, d.height);
+		box.x(Math.max(0, box.x() + (box.width() - d.width)/2));
+		box.y(Math.max(0, box.y() + (box.height() - d.height)/2));
+		return MDGeometryFactory.newRectangle(box.x(), box.y(), d.width, d.height);
 	}
 
 	private String getURL(Figure figure) {

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -16,6 +16,7 @@ import java.io.IOException;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * @version <$CURRENT_VERSION$>
@@ -51,18 +52,18 @@ public class AnimationDecorator extends DecoratorFigure {
 	public void animationStep() {
 		int xSpeed = fXVelocity;
 		int ySpeed = fYVelocity;
-		Rectangle box = displayBox();
+		MDRectangle box = displayBox();
 
-		if ((box.x + box.width > 300) && (xSpeed > 0))
+		if ((box.x() + box.width() > 300) && (xSpeed > 0))
 			xSpeed = -xSpeed;
 
-		if ((box.y + box.height > 300) && (ySpeed > 0))
+		if ((box.y() + box.height() > 300) && (ySpeed > 0))
 			ySpeed = -ySpeed;
 
-		if ((box.x < 0) && (xSpeed < 0))
+		if ((box.x() < 0) && (xSpeed < 0))
 			xSpeed = -xSpeed;
 
-		if ((box.y < 0) && (ySpeed < 0))
+		if ((box.y() < 0) && (ySpeed < 0))
 			ySpeed = -ySpeed;
 
 		velocity(xSpeed, ySpeed);
@@ -79,7 +80,7 @@ public class AnimationDecorator extends DecoratorFigure {
 		super.basicDisplayBox(origin, corner);
 	}
 
-	public synchronized Rectangle displayBox() {
+	public synchronized MDRectangle displayBox() {
 		return super.displayBox();
 	}
 

@@ -4,12 +4,14 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.util;
+
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import javax.swing.*;
 import java.awt.*;
@@ -70,9 +72,9 @@ public  class FloatingTextField {
 	/**
 	 * Positions the overlay.
 	 */
-	public void setBounds(Rectangle r, String text) {
+	public void setBounds(MDRectangle r, String text) {
 		fEditWidget.setText(text);
-		fEditWidget.setBounds(r.x, r.y, r.width, r.height);
+		fEditWidget.setBounds(r.x(), r.y(), r.width(), r.height());
 		fEditWidget.setVisible(true);
 		fEditWidget.selectAll();
 		fEditWidget.requestFocus();

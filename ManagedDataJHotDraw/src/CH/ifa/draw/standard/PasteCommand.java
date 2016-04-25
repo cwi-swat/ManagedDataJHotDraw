@@ -14,6 +14,7 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 
@@ -49,11 +50,11 @@ public class PasteCommand extends FigureTransferCommand {
 				return;
 			}
 
-			Rectangle r = getBounds(getUndoActivity().getAffectedFigures());
+			MDRectangle r = getBounds(getUndoActivity().getAffectedFigures());
 			view().clearSelection();
 
 			// get an enumeration of inserted figures
-			FigureEnumeration fe = insertFigures(getUndoActivity().getAffectedFigures(), lastClick.x-r.x, lastClick.y-r.y);
+			FigureEnumeration fe = insertFigures(getUndoActivity().getAffectedFigures(), lastClick.x-r.x(), lastClick.y-r.y());
 			getUndoActivity().setAffectedFigures(fe);
 
 			view().checkDamage();
@@ -64,8 +65,8 @@ public class PasteCommand extends FigureTransferCommand {
 		return Clipboard.getClipboard().getContents() != null;
 	}
 
-	private Rectangle getBounds(FigureEnumeration fe) {
-		Rectangle r = fe.nextFigure().displayBox();
+	private MDRectangle getBounds(FigureEnumeration fe) {
+		MDRectangle r = fe.nextFigure().displayBox();
 		while (fe.hasNextFigure()) {
 			r.add(fe.nextFigure().displayBox());
 		}

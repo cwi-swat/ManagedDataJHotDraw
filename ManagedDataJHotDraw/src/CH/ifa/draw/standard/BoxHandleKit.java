@@ -15,6 +15,8 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
 import java.util.List;
@@ -93,26 +95,14 @@ class ResizeHandle extends LocatorHandle {
 		super(owner, loc);
 	}
 
-//	public void invokeStart(int  x, int  y, DrawingView view) {
-//		setUndoActivity(createUndoActivity(view));
-//		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
-//		((ResizeHandle.UndoActivity)getUndoActivity()).setOldDisplayBox(owner().displayBox());
-//	}
 	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((ResizeHandle.UndoActivity)getUndoActivity()).setOldDisplayBox(owner().displayBox());
 	}
 
-//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
-//		Rectangle oldDisplayBox = ((ResizeHandle.UndoActivity)getUndoActivity()).getOldDisplayBox();
-//		if (owner().displayBox().equals(oldDisplayBox)) {
-//			// display box hasn't change so there is nothing to undo
-//			setUndoActivity(null);
-//		}
-//	}
 	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
-		Rectangle oldDisplayBox = ((ResizeHandle.UndoActivity)getUndoActivity()).getOldDisplayBox();
+		MDRectangle oldDisplayBox = ((ResizeHandle.UndoActivity)getUndoActivity()).getOldDisplayBox();
 		if (owner().displayBox().equals(oldDisplayBox)) {
 			// display box hasn't change so there is nothing to undo
 			setUndoActivity(null);
@@ -122,21 +112,13 @@ class ResizeHandle extends LocatorHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-//	protected Undoable createUndoActivity(DrawingView view) {
-//		return new ResizeHandle.UndoActivity(view);
-//	}
 	protected Undoable createUndoActivity(MDStandardDrawingView view) {
 		return new ResizeHandle.UndoActivity(view);
 	}
 
 	public static class UndoActivity extends UndoableAdapter {
-		private Rectangle myOldDisplayBox;
+		private MDRectangle myOldDisplayBox;
 
-//		public UndoActivity(DrawingView newView) {
-//			super(newView);
-//			setUndoable(true);
-//			setRedoable(true);
-//		}
 		public UndoActivity(MDStandardDrawingView newView) {
 			super(newView);
 			setUndoable(true);
@@ -167,17 +149,17 @@ class ResizeHandle extends LocatorHandle {
 			}
 			Figure currentFigure = fe.nextFigure();
 
-			Rectangle figureDisplayBox = currentFigure.displayBox();
+			MDRectangle figureDisplayBox = currentFigure.displayBox();
 			currentFigure.displayBox(getOldDisplayBox());
 			setOldDisplayBox(figureDisplayBox);
 			return true;
 		}
 
-		protected void setOldDisplayBox(Rectangle newOldDisplayBox) {
+		protected void setOldDisplayBox(MDRectangle newOldDisplayBox) {
 			myOldDisplayBox = newOldDisplayBox;
 		}
 
-		public Rectangle getOldDisplayBox() {
+		public MDRectangle getOldDisplayBox() {
 			return myOldDisplayBox;
 		}
 	}
@@ -189,10 +171,10 @@ class NorthEastHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(r.x, Math.min(r.y + r.height, y)),
-			new Point(Math.max(r.x, x), r.y + r.height)
+			new Point(r.x(), Math.min(r.y() + r.height(), y)),
+			new Point(Math.max(r.x(), x), r.y() + r.height())
 		);
 	}
 }
@@ -203,9 +185,9 @@ class EastHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(r.x, r.y), new Point(Math.max(r.x, x), r.y + r.height)
+			new Point(r.x(), r.y()), new Point(Math.max(r.x(), x), r.y() + r.height())
 		);
 	}
 }
@@ -216,10 +198,10 @@ class NorthHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(r.x, Math.min(r.y + r.height, y)),
-			new Point(r.x + r.width, r.y + r.height)
+			new Point(r.x(), Math.min(r.y() + r.height(), y)),
+			new Point(r.x() + r.width(), r.y() + r.height())
 		);
 	}
 }
@@ -230,10 +212,10 @@ class NorthWestHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(Math.min(r.x + r.width, x), Math.min(r.y + r.height, y)),
-			new Point(r.x + r.width, r.y + r.height)
+			new Point(Math.min(r.x() + r.width(), x), Math.min(r.y() + r.height(), y)),
+			new Point(r.x() + r.width(), r.y() + r.height())
 		);
 	}
 }
@@ -244,10 +226,10 @@ class SouthEastHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(r.x, r.y),
-			new Point(Math.max(r.x, x), Math.max(r.y, y))
+			new Point(r.x(), r.y()),
+			new Point(Math.max(r.x(), x), Math.max(r.y(), y))
 		);
 	}
 }
@@ -258,10 +240,10 @@ class SouthHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(r.x, r.y),
-			new Point(r.x + r.width, Math.max(r.y, y))
+			new Point(r.x(), r.y()),
+			new Point(r.x() + r.width(), Math.max(r.y(), y))
 		);
 	}
 }
@@ -272,10 +254,10 @@ class SouthWestHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(Math.min(r.x + r.width, x), r.y),
-			new Point(r.x + r.width, Math.max(r.y, y))
+			new Point(Math.min(r.x() + r.width(), x), r.y()),
+			new Point(r.x() + r.width(), Math.max(r.y(), y))
 		);
 	}
 }
@@ -286,10 +268,10 @@ class WestHandle extends ResizeHandle {
 	}
 
 	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Rectangle r = owner().displayBox();
+		MDRectangle r = owner().displayBox();
 		owner().displayBox(
-			new Point(Math.min(r.x + r.width, x), r.y),
-			new Point(r.x + r.width, r.y + r.height)
+			new Point(Math.min(r.x() + r.width(), x), r.y()),
+			new Point(r.x() + r.width(), r.y() + r.height())
 		);
 	}
 }
