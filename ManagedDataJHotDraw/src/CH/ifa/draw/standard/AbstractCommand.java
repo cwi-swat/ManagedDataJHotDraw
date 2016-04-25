@@ -223,23 +223,24 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		if (oldView != null) {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) oldView).remove(this);
+//			oldView.removeFigureSelectionListener(this);
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-//			oldView.removeFigureSelectionListener(this);
+			((SubjectRole) oldView).remove(this);
 		}
 		if (newView != null) {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+//			newView.addFigureSelectionListener(this);
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-//			newView.addFigureSelectionListener(this);
+			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
 		}
 		if (isViewRequired()) {
 			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
 			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
+
 			// old view was not interactive aware while new view is now interactive aware
 			if (!isOldViewInteractive && isNewViewInteractive) {
 				getEventDispatcher().fireCommandExecutableEvent();

@@ -44,11 +44,6 @@ public interface DrawingEditor /* @MDHD extends FigureSelectionListener*/ {
 	public MDStandardDrawingView[] views();
 
 	/**
-	 * Gets the editor's drawing.
-	 */
-//	public Drawing drawing();
-
-	/**
 	 * Gets the editor's current tool.
 	 */
 	public Tool tool();

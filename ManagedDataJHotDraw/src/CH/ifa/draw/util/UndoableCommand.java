@@ -121,10 +121,10 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 		// listen for selection change events during executing the wrapped command
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+//		view().addFigureSelectionListener(this);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-//		view().addFigureSelectionListener(this);
+		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
 
 		getWrappedCommand().execute();
 
@@ -137,16 +137,17 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 		// initiate manual update of undo/redo menu states if it has not
 		// been done automatically during executing the wrapped command
 		if (!hasSelectionChanged || (getDrawingEditor().getUndoManager().getUndoSize() == 1)) {
+
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 //			getDrawingEditor().figureSelectionChanged(view());
 			getDrawingEditor().figureSelectionChanged();
 		}
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		((SubjectRole) view()).remove(this);
+//		view().removeFigureSelectionListener(this);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-//		view().removeFigureSelectionListener(this);
+		((SubjectRole) view()).remove(this);
 	}
 
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
