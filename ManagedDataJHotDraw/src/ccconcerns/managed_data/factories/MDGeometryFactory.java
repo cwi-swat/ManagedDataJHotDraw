@@ -1,6 +1,7 @@
 package ccconcerns.managed_data.factories;
 
 import ccconcerns.managed_data.schema_factories.GeometrySchemaFactory;
+import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDPoint;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
@@ -17,7 +18,7 @@ public class MDGeometryFactory {
 
     private final static Schema geometrySchema = SchemaLoader.load(
             schemaFactory, schemaSchema,
-            MDPoint.class, MDRectangle.class, MDDimension.class);
+            MDPoint.class, MDRectangle.class, MDDimension.class, JHotDrawPrimitives.class);
     private final static BasicDataManager basicFactoryForGeometry = new BasicDataManager(GeometrySchemaFactory.class, geometrySchema);
     private final static GeometrySchemaFactory geometrySchemaFactory = basicFactoryForGeometry.make();
 

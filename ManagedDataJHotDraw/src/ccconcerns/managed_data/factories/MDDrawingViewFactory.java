@@ -5,6 +5,7 @@ import CH.ifa.draw.standard.*;
 import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
+import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
 import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
@@ -32,7 +33,7 @@ public class MDDrawingViewFactory {
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
                 schemaFactory, schemaSchema,
-                MDStandardDrawingView.class, MDRectangle.class, MDDimension.class);
+                JHotDrawPrimitives.class, MDStandardDrawingView.class, MDRectangle.class, MDDimension.class);
 
         final SubjectRoleDataManager subjectRoleFactory =
                 new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
@@ -143,7 +144,7 @@ public class MDDrawingViewFactory {
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
                 schemaFactory, schemaSchema,
-                MDStandardDrawingView.class);
+                MDStandardDrawingView.class, JHotDrawPrimitives.class);
 
         final BasicDataManager basicFactory =
                 new BasicDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);

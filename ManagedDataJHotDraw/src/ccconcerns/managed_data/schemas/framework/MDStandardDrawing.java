@@ -1,7 +1,7 @@
 package ccconcerns.managed_data.schemas.framework;
 
 import CH.ifa.draw.framework.DrawingChangeListener;
-import nl.cwi.managed_data_4j.language.schema.models.definition.M;
+import nl.cwi.managed_data_4j.M;
 import nl.cwi.managed_data_4j.language.schema.models.definition.annotations.Key;
 
 import java.util.Iterator;

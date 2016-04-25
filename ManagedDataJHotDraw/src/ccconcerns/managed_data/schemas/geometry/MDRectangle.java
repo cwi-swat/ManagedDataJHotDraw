@@ -1,7 +1,7 @@
 package ccconcerns.managed_data.schemas.geometry;
 
 import ccconcerns.managed_data.factories.MDGeometryFactory;
-import nl.cwi.managed_data_4j.language.schema.models.definition.M;
+import nl.cwi.managed_data_4j.M;
 
 import java.awt.*;
 
