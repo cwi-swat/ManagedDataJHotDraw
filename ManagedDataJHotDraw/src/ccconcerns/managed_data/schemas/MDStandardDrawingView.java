@@ -5,6 +5,8 @@ import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 import nl.cwi.managed_data_4j.language.schema.models.definition.M;
 import nl.cwi.managed_data_4j.language.schema.models.definition.annotations.NotManagedData;
@@ -23,6 +25,8 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     public static final int SCROLL_OFFSET = 10;
 
     MDRectangle damage(MDRectangle... damage);
+
+    MDDimension size(MDDimension... size);
 
     default MDRectangle getDamage() {
         return damage();
@@ -50,9 +54,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     @NotManagedData
     Drawing drawing(Drawing... drawing);
-
-    @NotManagedData
-    Dimension size(Dimension... size);
 
     @NotManagedData
     Painter displayUpdate(Painter... displayUpdate);
@@ -283,11 +284,11 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         return visitor.getInsertedFigures();
     }
 
-    default Dimension getMinimumSize() {
+    default MDDimension getMinimumSize() {
         return size();
     }
 
-    default Dimension getPreferredSize() {
+    default MDDimension getPreferredSize() {
         return getMinimumSize();
     }
 
@@ -553,23 +554,23 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default void checkMinimumSize() {
-        Dimension d = getDrawingSize();
+        MDDimension d = getDrawingSize();
 
-        if (size().height < d.height || size().width < d.width) {
-            Dimension newSize = new Dimension();
-            newSize.height = d.height + SCROLL_OFFSET;
-            newSize.width = d.width + SCROLL_OFFSET;
+        if (size().height() < d.height()|| size().width() < d.width()) {
+            MDDimension newSize = MDGeometryFactory.newDimension(0, 0);
+            newSize.height(d.height() + SCROLL_OFFSET);
+            newSize.width(d.width() + SCROLL_OFFSET);
             size(newSize);
         }
     }
 
-    default Dimension getDrawingSize() {
+    default MDDimension getDrawingSize() {
         FigureEnumeration fe = drawing().figures();
-        Dimension d = new Dimension(0, 0);
+        MDDimension d = MDGeometryFactory.newDimension(0, 0);
         while (fe.hasNextFigure()) {
             MDRectangle r = fe.nextFigure().displayBox();
-            d.width = Math.max(d.width, r.x() + r.width());
-            d.height = Math.max(d.height, r.y() + r.height());
+            d.width(Math.max(d.width(), r.x() + r.width()));
+            d.height(Math.max(d.height(), r.y() + r.height()));
         }
         return d;
     }
@@ -584,11 +585,11 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
 
     default Point constrainPoint(Point p) {
         // constrain to view size
-        Dimension size = size();
+        MDDimension size = size();
         //p.x = Math.min(size.width, Math.max(1, p.x));
         //p.y = Math.min(size.height, Math.max(1, p.y));
-        p.x = Geom.range(1, size.width, p.x);
-        p.y = Geom.range(1, size.height, p.y);
+        p.x = Geom.range(1, size.width(), p.x);
+        p.y = Geom.range(1, size.height(), p.y);
 
         if (constrainer() != null ) {
             return constrainer().constrainPoint(p);

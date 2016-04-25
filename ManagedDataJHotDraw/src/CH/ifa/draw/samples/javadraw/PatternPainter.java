@@ -14,6 +14,7 @@ package CH.ifa.draw.samples.javadraw;
 import java.awt.*;
 import CH.ifa.draw.framework.*;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
 
 /**
  * PatternDrawer a background that can be added to a drawing.
@@ -63,12 +64,12 @@ public  class PatternPainter
 	private void drawPattern(Graphics g, Image image, MDStandardDrawingView view) {
 		int iwidth = image.getWidth(view);
 		int iheight = image.getHeight(view);
-		Dimension d = view.size();
+		MDDimension d = view.size();
 		int x = 0;
 		int y = 0;
 
-		while (y < d.height) {
-			while (x < d.width) {
+		while (y < d.height()) {
+			while (x < d.width()) {
 				g.drawImage(image, x, y, view);
 				x += iwidth;
 			}

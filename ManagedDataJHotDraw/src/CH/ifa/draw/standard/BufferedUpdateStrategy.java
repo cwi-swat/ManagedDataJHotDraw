@@ -14,6 +14,7 @@ package CH.ifa.draw.standard;
 import java.awt.*;
 import CH.ifa.draw.framework.*;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
 
 /**
  * The BufferedUpdateStrategy implements an update
@@ -61,12 +62,12 @@ public class BufferedUpdateStrategy implements Painter {
 
 	public void draw(Graphics g, MDStandardDrawingView view) {
 		// create the buffer if necessary
-		Dimension d = view.size();
-		if ((fOffscreen == null) || (d.width != fImagewidth)
-			|| (d.height != fImageheight)) {
-			fOffscreen = view.createImage(d.width, d.height);
-			fImagewidth = d.width;
-			fImageheight = d.height;
+		MDDimension d = view.size();
+		if ((fOffscreen == null) || (d.width() != fImagewidth)
+			|| (d.height() != fImageheight)) {
+			fOffscreen = view.createImage(d.width(), d.height());
+			fImagewidth = d.width();
+			fImageheight = d.height();
 		}
 
 		// let the view draw on offscreen buffer
