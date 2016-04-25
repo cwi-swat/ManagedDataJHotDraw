@@ -20,7 +20,9 @@ import CH.ifa.draw.contrib.*;
 import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDDimension;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
@@ -601,8 +603,8 @@ public	class DrawApplication
 	/**
 	 * Override to define the dimensions of the drawing view.
 	 */
-	protected Dimension getDrawingViewSize() {
-		return new Dimension(800, 800);
+	protected MDDimension getDrawingViewSize() {
+		return MDGeometryFactory.newDimension(800, 800);
 	}
 
 	/**
@@ -1185,10 +1187,10 @@ public	class DrawApplication
 	// ===========================================================================================
 	// ===========================================================================================
 	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
-		Dimension d = getDrawingViewSize();
+		MDDimension d = getDrawingViewSize();
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width, d.height);
+		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width(), d.height());
 		newDrawingView.setDrawing(newDrawing);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
