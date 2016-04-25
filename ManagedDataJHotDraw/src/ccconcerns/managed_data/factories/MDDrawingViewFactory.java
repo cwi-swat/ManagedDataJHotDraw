@@ -6,6 +6,7 @@ import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.geometry.MDPoint;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
@@ -56,7 +57,9 @@ public class MDDrawingViewFactory {
         jPanel.setSize(width, height);
 
         // Last click
-        drawingView.lastClick(new Point(0, 0));
+        // Last click
+        MDPoint lastClick = MDGeometryFactory.newPoint(0, 0);
+        drawingView.lastClick(lastClick);
 
         // Constrainer
         drawingView.constrainer(null);
@@ -77,11 +80,16 @@ public class MDDrawingViewFactory {
             public void mousePressed(MouseEvent e) {
                 try {
                     jPanel.requestFocus(); // JDK1.1
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
-                    drawingView.setLastClick(new Point(e.getX(), e.getY()));
+
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
+
+                    // Last click
+                    MDPoint lastClick = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    drawingView.setLastClick(lastClick);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseDown(e, p.x, p.y);
+                    drawingView.tool().mouseDown(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
@@ -92,10 +100,12 @@ public class MDDrawingViewFactory {
             @Override
             public void mouseReleased(MouseEvent e) {
                 try {
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseUp(e, p.x, p.y);
+                    drawingView.tool().mouseUp(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
@@ -108,10 +118,11 @@ public class MDDrawingViewFactory {
             @Override
             public void mouseDragged(MouseEvent e) {
                 try {
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseDrag(e, p.x, p.y);
+                    drawingView.tool().mouseDrag(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
@@ -166,7 +177,8 @@ public class MDDrawingViewFactory {
         jPanel.setSize(width, height);
 
         // Last click
-        drawingView.lastClick(new Point(0, 0));
+        MDPoint lastClick = MDGeometryFactory.newPoint(0, 0);
+        drawingView.lastClick(lastClick);
 
         // Constrainer
         drawingView.constrainer(null);
@@ -191,11 +203,14 @@ public class MDDrawingViewFactory {
             public void mousePressed(MouseEvent e) {
                 try {
                     jPanel.requestFocus(); // JDK1.1
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
-                    drawingView.setLastClick(new Point(e.getX(), e.getY()));
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
+
+                    MDPoint lastClick = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    drawingView.setLastClick(lastClick);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseDown(e, p.x, p.y);
+                    drawingView.tool().mouseDown(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
@@ -206,10 +221,11 @@ public class MDDrawingViewFactory {
             @Override
             public void mouseReleased(MouseEvent e) {
                 try {
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseUp(e, p.x, p.y);
+                    drawingView.tool().mouseUp(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
@@ -222,10 +238,11 @@ public class MDDrawingViewFactory {
             @Override
             public void mouseDragged(MouseEvent e) {
                 try {
-                    Point p = drawingView.constrainPoint(new Point(e.getX(), e.getY()));
+                    MDPoint consPoint = MDGeometryFactory.newPoint(e.getX(), e.getY());
+                    MDPoint p = drawingView.constrainPoint(consPoint);
 
                     e.setSource(drawingView);
-                    drawingView.tool().mouseDrag(e, p.x, p.y);
+                    drawingView.tool().mouseDrag(e, p.x(), p.y());
                     drawingView.checkDamage();
                 }
                 catch (Throwable t) {
