@@ -15,7 +15,7 @@ import java.awt.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.standard.*;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 
 /**

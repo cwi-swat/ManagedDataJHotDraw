@@ -14,7 +14,7 @@ package CH.ifa.draw.contrib;
 import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.standard.NullDrawingView;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import javax.swing.event.EventListenerList;
 import java.util.List;

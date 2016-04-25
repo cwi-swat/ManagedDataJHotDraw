@@ -15,7 +15,7 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.PolyLineHandle;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import java.awt.Point;
 

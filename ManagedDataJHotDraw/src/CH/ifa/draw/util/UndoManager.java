@@ -12,7 +12,7 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.DrawingView;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import java.util.List;
 import java.util.Iterator;

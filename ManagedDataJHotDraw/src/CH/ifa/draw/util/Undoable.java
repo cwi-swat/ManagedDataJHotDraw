@@ -12,7 +12,7 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.FigureEnumeration;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * @author  Wolfram Kaiser <mrfloppy@sourceforge.net>

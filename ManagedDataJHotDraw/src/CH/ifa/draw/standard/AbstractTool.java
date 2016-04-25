@@ -14,7 +14,7 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import java.util.*;
 import java.util.List;

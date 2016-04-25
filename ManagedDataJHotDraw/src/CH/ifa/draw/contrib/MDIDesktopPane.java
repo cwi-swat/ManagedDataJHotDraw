@@ -12,7 +12,7 @@
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.application.DrawApplication;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import javax.swing.*;
 import javax.swing.event.InternalFrameListener;

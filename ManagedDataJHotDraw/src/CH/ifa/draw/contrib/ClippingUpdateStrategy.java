@@ -1,13 +1,12 @@
 package CH.ifa.draw.contrib;
 
 import java.awt.Graphics;
-import java.awt.Rectangle;
 import java.util.Vector;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.FigureEnumerator;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**

@@ -16,7 +16,7 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import javax.swing.*;
 

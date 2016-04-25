@@ -13,7 +13,7 @@ package CH.ifa.draw.samples.javadraw;
 
 import java.awt.*;
 import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 
 /**

@@ -1,4 +1,4 @@
-package ccconcerns.managed_data.schemas;
+package ccconcerns.managed_data.schemas.framework;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.framework.Painter;

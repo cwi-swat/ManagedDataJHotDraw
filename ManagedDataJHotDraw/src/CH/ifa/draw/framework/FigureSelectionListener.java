@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.framework;
 
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * Listener interested in DrawingView selection changes.

@@ -1,6 +1,6 @@
 package ccconcerns;
 
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import javax.swing.*;
 import java.awt.*;

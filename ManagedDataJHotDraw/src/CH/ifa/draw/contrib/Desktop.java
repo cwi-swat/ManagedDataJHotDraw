@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.contrib;
 
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * @author  C.L.Gilbert <dnoyeb@users.sourceforge.net>

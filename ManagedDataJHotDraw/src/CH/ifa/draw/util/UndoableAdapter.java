@@ -14,7 +14,7 @@ package CH.ifa.draw.util;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.FigureEnumerator;
 import CH.ifa.draw.standard.StandardFigureSelection;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import java.util.List;
 

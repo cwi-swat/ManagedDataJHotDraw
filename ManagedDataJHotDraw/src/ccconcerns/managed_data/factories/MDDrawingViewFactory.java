@@ -5,7 +5,7 @@ import CH.ifa.draw.standard.*;
 import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;

@@ -12,7 +12,7 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.UndoManager;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * DrawingEditor defines the interface for coordinating

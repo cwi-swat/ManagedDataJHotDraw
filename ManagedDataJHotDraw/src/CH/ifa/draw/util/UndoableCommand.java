@@ -15,7 +15,7 @@ import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractCommand;
 import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import java.util.EventObject;
 

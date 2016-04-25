@@ -1,6 +1,6 @@
 package ccconcerns.figure_selection_listener;
 
-import ccconcerns.managed_data.schemas.MDStandardDrawingView;
+import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 public class FigureSelectionConcerns {
 
