@@ -31,20 +31,18 @@ import ccconcerns.managed_data.schemas.MDStandardDrawingView;
  *
  * @version <$CURRENT_VERSION$>
  */
-public interface DrawingEditor extends FigureSelectionListener {
+// @MDHD: FigureSelectionListener (FSL) Refactoring
+public interface DrawingEditor /* @MDHD extends FigureSelectionListener*/ {
 
 	// @MDHD
-//	/**
-//	 * Gets the editor's drawing view.
-//	 */
-//	public DrawingView view();
-
+	/**
+	 * Gets the editor's drawing view.
+	 */
 	public MDStandardDrawingView view();
 
 	// @MDHD
-//	public DrawingView[] views();
-
 	public MDStandardDrawingView[] views();
+
 	/**
 	 * Gets the editor's drawing.
 	 */
@@ -65,8 +63,9 @@ public interface DrawingEditor extends FigureSelectionListener {
 	 * Informs that the current figure selection has changed.
 	 * Override this method to handle selection changes.
 	 */
-//	public void figureSelectionChanged(DrawingView view);
-	public void figureSelectionChanged(MDStandardDrawingView view);
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+//	public void figureSelectionChanged(MDStandardDrawingView view);
+	public void figureSelectionChanged();
 
 	public void addViewChangeListener(ViewChangeListener vsl);
 	public void removeViewChangeListener(ViewChangeListener vsl);

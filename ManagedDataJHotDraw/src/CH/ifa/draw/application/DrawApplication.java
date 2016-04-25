@@ -52,7 +52,6 @@ public	class DrawApplication
 	private JTextField				fStatusLine;
 
 	// @MDHD
-//	private DrawingView				fView;
 	private MDStandardDrawingView   fView;
 
 	private ToolButton				fDefaultToolButton;
@@ -159,83 +158,6 @@ public	class DrawApplication
 	public void open() {
 		open(this.createInitialDrawingView());
 	}
-
-	// @MDHD
-//	/**
-//	 * Opens a new window with a drawing view.
-//	 */
-//	protected void open(final DrawingView newDrawingView) {
-//		getVersionControlStrategy().assertCompatibleVersion();
-//		setUndoManager(new UndoManager());
-//		setIconkit(createIconkit());
-//		getContentPane().setLayout(new BorderLayout());
-//
-//		// status line must be created before a tool is set
-//		setStatusLine(createStatusLine());
-//		getContentPane().add(getStatusLine(), BorderLayout.SOUTH);
-//
-//		// create dummy tool until the default tool is activated during toolDone()
-//		setTool(new NullTool(this), "");
-//		setView(newDrawingView);
-//
-//		JToolBar tools = createToolPalette();
-//		createTools(tools);
-//
-//		JPanel activePanel = new JPanel();
-//		activePanel.setAlignmentX(LEFT_ALIGNMENT);
-//		activePanel.setAlignmentY(TOP_ALIGNMENT);
-//		activePanel.setLayout(new BorderLayout());
-//		activePanel.add(tools, BorderLayout.NORTH);
-//		setDesktopListener(createDesktopListener());
-//		setDesktop(createDesktop());
-//		activePanel.add((Component)getDesktop(), BorderLayout.CENTER);
-//		getContentPane().add(activePanel, BorderLayout.CENTER);
-//
-//		JMenuBar mb = new JMenuBar();
-//		createMenus(mb);
-//		setJMenuBar(mb);
-//
-//		Dimension d = defaultSize();
-//		if (d.width > mb.getPreferredSize().width) {
-//			setSize(d.width, d.height);
-//		}
-//		else {
-//			setSize(mb.getPreferredSize().width, d.height);
-//		}
-//		addListeners();
-//		setStorageFormatManager(createStorageFormatManager());
-//
-//		//no work allowed to be done on GUI outside of AWT thread once
-//		//setVisible(true) called.
-//		Runnable r = new Runnable() {
-//			public void run() {
-//				if (newDrawingView.isInteractive()) {
-//					getDesktop().addToDesktop(newDrawingView , Desktop.PRIMARY);
-//				}
-//				toolDone();
-//			}
-//		};
-//
-//		if (java.awt.EventQueue.isDispatchThread() == false) {
-//			try {
-//				java.awt.EventQueue.invokeAndWait(r);
-//			}
-//			catch(java.lang.InterruptedException ie) {
-//				System.err.println(ie.getMessage());
-//				exit();
-//			}
-//			catch(java.lang.reflect.InvocationTargetException ite) {
-//				System.err.println(ite.getMessage());
-//				exit();
-//			}
-//		}
-//		else {
-//			r.run();
-//		}
-//
-//		setVisible(true);
-//		toolDone();
-//	}
 
 	/**
 	 * Opens a new window with a drawing view.
@@ -656,28 +578,12 @@ public	class DrawApplication
 	 * subclass in your application. By default a standard
 	 * DrawingView is returned.
 	 */
-	// @MDHD
-//	protected DrawingView createDrawingView() {
-//		DrawingView createdDrawingView = createDrawingView(createDrawing());
-//		createdDrawingView.drawing().setTitle(getDefaultDrawingTitle());
-//		return createdDrawingView;
-//	}
-
 	protected MDStandardDrawingView createDrawingView() {
 		MDStandardDrawingView createdDrawingView = createDrawingView(createDrawing());
 		createdDrawingView.drawing().setTitle(getDefaultDrawingTitle());
 		return createdDrawingView;
 	}
 
-	// @MDHD
-//	protected DrawingView createDrawingView(Drawing newDrawing) {
-//		Dimension d = getDrawingViewSize();
-//		DrawingView newDrawingView = new StandardDrawingView(this, d.width, d.height);
-//		newDrawingView.setDrawing(newDrawing);
-//		return newDrawingView;
-//	}
-
-	// @MDHD
 	/**
 	 * Create the DrawingView that is active when the application is started.
 	 * This initial DrawingView might be different from DrawingView created
@@ -687,11 +593,7 @@ public	class DrawApplication
 	 * (MDI) application.
 	 *
 	 * @return drawing view that is active at application startup time
-//	 */
-//	protected DrawingView createInitialDrawingView() {
-//		return createDrawingView();
-//	}
-
+	 */
 	protected MDStandardDrawingView createInitialDrawingView() {
 		return createDrawingView();
 	}
@@ -715,7 +617,6 @@ public	class DrawApplication
 
 	protected Desktop createDesktop() {
 		return new JPanelDesktop(this);
-//		return new JScrollPaneDesktop();
 	}
 
 	protected void setDesktop(Desktop newDesktop) {
@@ -1308,9 +1209,9 @@ public	class DrawApplication
 	 * @see DrawingEditor
 	 */
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
-	public void figureSelectionChanged(MDStandardDrawingView view) {
-		checkCommandMenus();
-	}
+//	public void figureSelectionChanged(MDStandardDrawingView view) {
+//		checkCommandMenus();
+//	}
 
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
 	public void figureSelectionChanged() {

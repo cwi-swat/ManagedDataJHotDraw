@@ -56,7 +56,9 @@ public class UndoableTool implements Tool, ToolListener {
 			editor().getUndoManager().pushUndo(undoActivity);
 			editor().getUndoManager().clearRedos();
 			// update menus
-			editor().figureSelectionChanged(getActiveView()); // TODO
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+//			editor().figureSelectionChanged(getActiveView());
+			editor().figureSelectionChanged();
 		}
 	}
 

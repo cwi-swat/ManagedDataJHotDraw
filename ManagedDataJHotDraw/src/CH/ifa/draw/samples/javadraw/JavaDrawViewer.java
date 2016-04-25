@@ -79,16 +79,10 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	/**
 	 * Gets the editor's drawing view.
 	 */
-//	public DrawingView view() {
-//		return fView;
-//	}
 	public MDStandardDrawingView view() {
 		return fView;
 	}
 
-//	public DrawingView[] views() {
-//		return new DrawingView[] { view() };
-//	}
 	public MDStandardDrawingView[] views() {
 		return new MDStandardDrawingView[] { view() };
 	}
@@ -122,8 +116,9 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	/**
 	 * Ignore selection changes, we don't show any selection
 	 */
-//	public void figureSelectionChanged(DrawingView view) {}
-	public void figureSelectionChanged(MDStandardDrawingView view) {}
+	// @MDHD: FigureSelectionListener (FSL) Refactoring
+//	public void figureSelectionChanged(MDStandardDrawingView view) {}
+	public void figureSelectionChanged() {}
 
 	protected void setUndoManager(UndoManager newUndoManager) {
 		myUndoManager = newUndoManager;

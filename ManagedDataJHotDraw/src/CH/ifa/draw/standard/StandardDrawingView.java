@@ -152,7 +152,7 @@ public class StandardDrawingView
 		fViewSize = new Dimension(width,height);
 		setSize(width, height);
 		fSelectionListeners = CollectionsFactory.current().createList();
-		addFigureSelectionListener(editor());
+//		addFigureSelectionListener(editor());
 		setLastClick(new Point(0, 0));
 		fConstrainer = null;
 		fSelection = CollectionsFactory.current().createList();

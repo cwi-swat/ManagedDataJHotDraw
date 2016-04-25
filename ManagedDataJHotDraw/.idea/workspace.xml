@@ -6,42 +6,48 @@
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/PasteCommand.java" description="public class PasteCommand extends FigureTransferCo..." line="26" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/SelectAllCommand.java" description="public class SelectAllCommand extends AbstractComm..." line="23" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="public&#9;class DrawApplication" line="44" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="new UndoableCommand(" line="494" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="new UndoableCommand(" line="416" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/CommandMenu.java" description="cmd.execute();" line="113" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/ccconcerns/figures/figureselectionobserver/FigureSelectionObserverRole.aj" description="public privileged aspect FigureSelectionObserverRo..." line="22" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/ccconcerns/figures/figureselectionobserver/FigureSelectionSubjectRole.aj" description="public privileged aspect FigureSelectionSubjectRol..." line="24" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/ccconcerns/figures/figureselectionobserver/SelectionChangedNotification.aj" description="public aspect SelectionChangedNotification {" line="34" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="public void addViewChangeListener(ViewChangeListen..." line="867" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="public void removeViewChangeListener(ViewChangeLis..." line="874" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="public void addViewChangeListener(ViewChangeListen..." line="768" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="public void removeViewChangeListener(ViewChangeLis..." line="775" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/framework/DrawingView.java" description="AJ" line="284" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="57" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="176" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="454" />
     <bookmark url="file://$PROJECT_DIR$/../../AJHotDraw/src/aspects/org/jhotdraw/standard/StandardDrawingView.java" description="AJ" line="600" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="DrawingView newDrawingView = new StandardDrawingVi..." line="674" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public Undoable getUndoActivity() {" line="163" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public void setUndoActivity(Undoable newUndoableAc..." line="168" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public Undoable getUndoActivity() {" line="130" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="public void setUndoActivity(Undoable newUndoableAc..." line="135" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="private Undoable myUndoableActivity; // @MDHD TODO..." line="32" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="public static class UndoActivity extends UndoableA..." line="74" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="protected Undoable createUndoActivity() {" line="70" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" description="super.execute();" line="45" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="private Command myWrappedCommand;" line="27" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="private Command myWrappedCommand;" line="28" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" description="for (int i = 0; i &lt; fSelectionListeners.size(); i+..." line="564" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" description="fireSelectionChanged(); //" line="449" />
     <bookmark url="file://$PROJECT_DIR$/../../JHotDraw54b1_mini/src/CH/ifa/draw/contrib/MDIDesktopPane.java" description="DrawingView dv = Helper.getDrawingView(e.getIntern..." line="62" />
     <bookmark url="file://$PROJECT_DIR$/../../JHotDraw54b1_mini/src/CH/ifa/draw/contrib/Helper.java" description="DrawingView oldDrawingView = null;" line="23" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/contrib/Helper.java" description="for (int i = 0; i &lt; components.length; i++) {" line="44" />
     <bookmark url="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" description="l.figureSelectionChanged(this);" line="673" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="view().removeFigureSelectionListener(this); // TOD..." line="149" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="view().removeFigureSelectionListener(this); // TOD..." line="148" />
     <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" description="view().addFigureSelectionListener(this); // TODO: ..." line="126" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="oldView.removeFigureSelectionListener(this); // TO..." line="262" />
-    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="newView.addFigureSelectionListener(this); // TODO:..." line="270" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="oldView.removeFigureSelectionListener(this); // TO..." line="228" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" description="newView.addFigureSelectionListener(this); // TODO:..." line="236" />
+    <bookmark url="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" description="DrawingView newDrawingView = new StandardDrawingVi..." line="586" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfbbfb49-ea0c-4d72-b322-adc603cd8cf8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java" afterPath="$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" afterPath="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/RedoCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/RedoCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" afterPath="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" />
     </list>
     <ignored path="ManagedDataJHotDraw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,8 +77,8 @@
       <file leaf-file-name="MDStandardDrawingView.java" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3821656">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.1459854">
+              <caret line="626" column="30" selection-start-line="626" selection-start-column="30" selection-end-line="626" selection-end-column="30" />
               <folding>
                 <element signature="e#2622#2673#0" expanded="false" />
                 <element signature="method#addFigure#0;class#MDStandardDrawingView#0" expanded="false" />
@@ -115,38 +121,7 @@
                 <element signature="e#16245#16292#0" expanded="false" />
                 <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
                 <element signature="e#17474#17525#0" expanded="false" />
-                <element signature="e#17798#17849#0" expanded="false" />
-                <element signature="e#18118#18169#0" expanded="false" />
-                <element signature="e#18664#18715#0" expanded="false" />
                 <element signature="e#18763#18814#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDDrawingViewFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-              <folding>
-                <element signature="method#newSubjectRoleDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
-                <element signature="class#2988:4123" expanded="false" />
-                <element signature="method#mousePressed#0;class#2988:4123" expanded="false" />
-                <element signature="method#mouseReleased#0;class#2988:4123" expanded="false" />
-                <element signature="class#4169:5006" expanded="false" />
-                <element signature="method#mouseDragged#0;class#4169:5006" expanded="false" />
-                <element signature="method#mouseMoved#0;class#4169:5006" expanded="false" />
-                <element signature="method#newDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
-                <element signature="e#6511#6533#0" expanded="false" />
-                <element signature="class#6955:8090" expanded="false" />
-                <element signature="method#mousePressed#0;class#6955:8090" expanded="false" />
-                <element signature="method#mouseReleased#0;class#6955:8090" expanded="false" />
-                <element signature="class#8136:8973" expanded="false" />
-                <element signature="method#mouseDragged#0;class#8136:8973" expanded="false" />
-                <element signature="method#mouseMoved#0;class#8136:8973" expanded="false" />
-                <element signature="e#8977#9028#0" expanded="false" />
-                <element signature="method#handleMouseEventException#0;class#MDDrawingViewFactory#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -156,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1309" column="4" selection-start-line="1309" selection-start-column="4" selection-end-line="1309" selection-end-column="55" />
+              <caret line="1186" column="17" selection-start-line="1186" selection-start-column="17" selection-end-line="1186" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#DrawApplication#0" expanded="false" />
@@ -173,28 +148,28 @@
                 <element signature="docComment;method#newWindow#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#newWindow#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#open#0;class#DrawApplication#0" expanded="false" />
-                <element signature="e#7847#7909#0" expanded="false" />
+                <element signature="e#5574#5636#0" expanded="false" />
                 <element signature="docComment;method#addListeners#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#addListeners#0;class#DrawApplication#0" expanded="false" />
-                <element signature="class#8707:8799" expanded="false" />
+                <element signature="class#6434:6526" expanded="false" />
                 <element signature="docComment;method#createMenus#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createMenus#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#addMenuIfPossible#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
-                <element signature="class#9502:9592" expanded="false" />
-                <element signature="class#9647:9742" expanded="false" />
-                <element signature="class#9797:9896" expanded="false" />
-                <element signature="class#9974:10064" expanded="false" />
-                <element signature="class#10142:10227" expanded="false" />
+                <element signature="class#7229:7319" expanded="false" />
+                <element signature="class#7374:7469" expanded="false" />
+                <element signature="class#7524:7623" expanded="false" />
+                <element signature="class#7701:7791" expanded="false" />
+                <element signature="class#7869:7954" expanded="false" />
                 <element signature="docComment;method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
-                <element signature="class#12603:12741" expanded="false" />
-                <element signature="class#12773:12915" expanded="false" />
+                <element signature="class#10330:10468" expanded="false" />
+                <element signature="class#10500:10642" expanded="false" />
                 <element signature="docComment;method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createColorMenu#0;class#DrawApplication#0" expanded="false" />
@@ -209,10 +184,10 @@
                 <element signature="method#createFontSizeMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
-                <element signature="class#16635:16751" expanded="false" />
+                <element signature="class#14362:14478" expanded="false" />
                 <element signature="docComment;method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
-                <element signature="e#16957#16996#0" expanded="false" />
+                <element signature="e#14684#14723#0" expanded="false" />
                 <element signature="docComment;method#createTools#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createTools#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createSelectionTool#0;class#DrawApplication#0" expanded="false" />
@@ -222,61 +197,71 @@
                 <element signature="method#createToolButton#0;class#DrawApplication#0" expanded="false" />
                 <element signature="docComment;method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
                 <element signature="method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
-                <element signature="e#19904#19905#0" expanded="true" />
-                <element signature="e#19937#19938#0" expanded="true" />
-                <element signature="e#20051#20052#0" expanded="true" />
-                <element signature="e#20088#20089#0" expanded="true" />
-                <element signature="e#20321#20322#0" expanded="true" />
-                <element signature="e#20356#20357#0" expanded="true" />
-                <element signature="e#20751#20752#0" expanded="true" />
-                <element signature="e#20773#20774#0" expanded="true" />
-                <element signature="e#21991#21992#0" expanded="true" />
-                <element signature="e#22026#22027#0" expanded="true" />
-                <element signature="e#22115#22116#0" expanded="true" />
-                <element signature="e#22151#22152#0" expanded="true" />
-                <element signature="e#22426#22427#0" expanded="true" />
-                <element signature="e#22460#22461#0" expanded="true" />
-                <element signature="e#22501#22502#0" expanded="true" />
-                <element signature="e#22526#22527#0" expanded="true" />
-                <element signature="e#23259#23260#0" expanded="true" />
-                <element signature="e#23278#23279#0" expanded="true" />
-                <element signature="e#23506#23507#0" expanded="true" />
-                <element signature="e#23525#23526#0" expanded="true" />
-                <element signature="e#23910#23911#0" expanded="true" />
-                <element signature="e#23962#23963#0" expanded="true" />
-                <element signature="e#24452#24453#0" expanded="true" />
-                <element signature="e#24506#24507#0" expanded="true" />
-                <element signature="e#24601#24602#0" expanded="true" />
-                <element signature="e#24658#24659#0" expanded="true" />
-                <element signature="e#27272#27273#0" expanded="true" />
-                <element signature="e#27310#27311#0" expanded="true" />
-                <element signature="e#32642#32643#0" expanded="true" />
-                <element signature="e#32683#32684#0" expanded="true" />
-                <element signature="e#32825#32826#0" expanded="true" />
-                <element signature="e#32866#32867#0" expanded="true" />
-                <element signature="e#32991#32992#0" expanded="true" />
-                <element signature="e#33021#33022#0" expanded="true" />
-                <element signature="e#33083#33084#0" expanded="true" />
-                <element signature="e#33120#33121#0" expanded="true" />
-                <element signature="e#33160#33161#0" expanded="true" />
-                <element signature="e#33187#33188#0" expanded="true" />
-                <element signature="e#33252#33253#0" expanded="true" />
-                <element signature="e#33306#33307#0" expanded="true" />
-                <element signature="e#33960#33961#0" expanded="true" />
-                <element signature="e#33984#33985#0" expanded="true" />
-                <element signature="e#34035#34036#0" expanded="true" />
-                <element signature="e#34065#34066#0" expanded="true" />
-                <element signature="e#34140#34141#0" expanded="true" />
-                <element signature="e#34185#34186#0" expanded="true" />
-                <element signature="e#35059#35060#0" expanded="true" />
-                <element signature="e#35090#35091#0" expanded="true" />
-                <element signature="e#35140#35141#0" expanded="true" />
-                <element signature="e#35168#35169#0" expanded="true" />
-                <element signature="e#35203#35204#0" expanded="true" />
-                <element signature="e#35225#35226#0" expanded="true" />
-                <element signature="e#37151#37152#0" expanded="true" />
-                <element signature="e#37177#37178#0" expanded="true" />
+                <element signature="e#17017#17018#0" expanded="true" />
+                <element signature="e#17050#17051#0" expanded="true" />
+                <element signature="e#17164#17165#0" expanded="true" />
+                <element signature="e#17201#17202#0" expanded="true" />
+                <element signature="e#17434#17435#0" expanded="true" />
+                <element signature="e#17469#17470#0" expanded="true" />
+                <element signature="e#17507#17508#0" expanded="true" />
+                <element signature="e#17544#17545#0" expanded="true" />
+                <element signature="e#17827#17828#0" expanded="true" />
+                <element signature="e#17849#17850#0" expanded="true" />
+                <element signature="e#19067#19068#0" expanded="true" />
+                <element signature="e#19102#19103#0" expanded="true" />
+                <element signature="e#19191#19192#0" expanded="true" />
+                <element signature="e#19227#19228#0" expanded="true" />
+                <element signature="e#19502#19503#0" expanded="true" />
+                <element signature="e#19536#19537#0" expanded="true" />
+                <element signature="e#19577#19578#0" expanded="true" />
+                <element signature="e#19602#19603#0" expanded="true" />
+                <element signature="e#20335#20336#0" expanded="true" />
+                <element signature="e#20354#20355#0" expanded="true" />
+                <element signature="e#20582#20583#0" expanded="true" />
+                <element signature="e#20601#20602#0" expanded="true" />
+                <element signature="e#20986#20987#0" expanded="true" />
+                <element signature="e#21038#21039#0" expanded="true" />
+                <element signature="e#21528#21529#0" expanded="true" />
+                <element signature="e#21582#21583#0" expanded="true" />
+                <element signature="e#21677#21678#0" expanded="true" />
+                <element signature="e#21734#21735#0" expanded="true" />
+                <element signature="e#24348#24349#0" expanded="true" />
+                <element signature="e#24386#24387#0" expanded="true" />
+                <element signature="e#29718#29719#0" expanded="true" />
+                <element signature="e#29759#29760#0" expanded="true" />
+                <element signature="e#29901#29902#0" expanded="true" />
+                <element signature="e#29942#29943#0" expanded="true" />
+                <element signature="e#30067#30068#0" expanded="true" />
+                <element signature="e#30097#30098#0" expanded="true" />
+                <element signature="e#30159#30160#0" expanded="true" />
+                <element signature="e#30196#30197#0" expanded="true" />
+                <element signature="e#30236#30237#0" expanded="true" />
+                <element signature="e#30263#30264#0" expanded="true" />
+                <element signature="e#30328#30329#0" expanded="true" />
+                <element signature="e#30382#30383#0" expanded="true" />
+                <element signature="e#31036#31037#0" expanded="true" />
+                <element signature="e#31060#31061#0" expanded="true" />
+                <element signature="e#31111#31112#0" expanded="true" />
+                <element signature="e#31141#31142#0" expanded="true" />
+                <element signature="e#31216#31217#0" expanded="true" />
+                <element signature="e#31261#31262#0" expanded="true" />
+                <element signature="e#32135#32136#0" expanded="true" />
+                <element signature="e#32166#32167#0" expanded="true" />
+                <element signature="e#32216#32217#0" expanded="true" />
+                <element signature="e#32244#32245#0" expanded="true" />
+                <element signature="e#32279#32280#0" expanded="true" />
+                <element signature="e#32301#32302#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawingEditor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -285,7 +270,7 @@
         <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="287" column="7" selection-start-line="287" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
+              <caret line="242" column="41" selection-start-line="242" selection-start-column="41" selection-end-line="242" selection-end-column="41" />
               <folding>
                 <element signature="class#EventDispatcher#0;class#AbstractCommand#0" expanded="false" />
               </folding>
@@ -297,10 +282,34 @@
         <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
-                <element signature="e#4905#4906#0" expanded="true" />
-                <element signature="e#4938#4939#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1386#1387#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
+                <element signature="e#1565#1566#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1667#1668#0" expanded="true" />
+                <element signature="e#1711#1712#0" expanded="true" />
+                <element signature="e#1763#1764#0" expanded="true" />
+                <element signature="e#1878#1879#0" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
+                <element signature="e#1955#1956#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+                <element signature="e#2627#2628#0" expanded="true" />
+                <element signature="e#2694#2695#0" expanded="true" />
+                <element signature="e#2749#2750#0" expanded="true" />
+                <element signature="e#2807#2808#0" expanded="true" />
+                <element signature="e#2861#2862#0" expanded="true" />
+                <element signature="e#2921#2922#0" expanded="true" />
+                <element signature="e#2977#2978#0" expanded="true" />
+                <element signature="e#3040#3041#0" expanded="true" />
+                <element signature="e#3099#3100#0" expanded="true" />
+                <element signature="e#4967#4968#0" expanded="true" />
+                <element signature="e#5000#5001#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -334,9 +343,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/DesktopEventService.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonScaleHandle.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/SplitConnectionTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TextAreaTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/TriangleRotationHandle.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/minimap/MiniMapDesktop.java" />
@@ -350,14 +356,12 @@
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/DragTracker.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/BoxHandleKit.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawApplet.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/test/util/UtilSuite.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/PolygonHandle.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/primitives/jhodraw/FigureSelectionListenerPrimitive.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/CommandMenu.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/Helper.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/CreationTool.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractFigure.java" />
@@ -367,7 +371,6 @@
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_observer/schemas/MDStandardDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/figure_selection_listener/schemas/MDStandardDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleDataManager.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/Executor.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/Action.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectPredicate.java" />
@@ -380,11 +383,17 @@
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" />
         <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/NullDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/data_managers/subject_observer/SubjectRoleMObject.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
-        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
-        <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
         <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java" />
+        <option value="$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoCommand.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/RedoCommand.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java" />
+        <option value="$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java" />
       </list>
     </option>
   </component>
@@ -1226,12 +1235,12 @@
       <workItem from="1461414576785" duration="8600000" />
       <workItem from="1461423362333" duration="9740000" />
       <workItem from="1461440394300" duration="6709000" />
-      <workItem from="1461490959573" duration="17716000" />
+      <workItem from="1461490959573" duration="21538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169185000" />
+    <option name="totallyTimeSpent" value="173007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1254,10 +1263,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197425" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30014026" sideWeight="0.47138768" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30014026" sideWeight="0.47138768" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17238913" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1788269" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.49713877" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51332396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1293,7 +1302,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="208" />
+      <option name="time" value="209" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1306,39 +1315,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/CollectionsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328467">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/primitives/jhodraw/FigureSelectionListenerPrimitive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06396589">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$JAVA8_HOME$/src.zip!/javax/swing/JOptionPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326226">
-          <caret line="633" column="50" selection-start-line="633" selection-start-column="41" selection-end-line="633" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/Tool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326226">
-          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1459,73 +1435,6 @@
           <folding>
             <element signature="e#1111#1112#0" expanded="false" />
             <element signature="e#1133#1134#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42765957">
-          <caret line="66" column="61" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5199#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1229#1230#0" expanded="false" />
-            <element signature="e#1940#1941#0" expanded="false" />
-            <element signature="e#1982#1983#0" expanded="false" />
-            <element signature="e#2455#2456#0" expanded="false" />
-            <element signature="e#2495#2496#0" expanded="false" />
-            <element signature="e#2614#2615#0" expanded="false" />
-            <element signature="e#2658#2659#0" expanded="false" />
-            <element signature="e#2764#2765#0" expanded="false" />
-            <element signature="e#2805#2806#0" expanded="false" />
-            <element signature="e#2835#2836#0" expanded="false" />
-            <element signature="e#2876#2877#0" expanded="false" />
-            <element signature="e#3041#3042#0" expanded="false" />
-            <element signature="e#3083#3084#0" expanded="false" />
-            <element signature="e#3130#3131#0" expanded="false" />
-            <element signature="e#3176#3177#0" expanded="false" />
-            <element signature="e#3225#3226#0" expanded="false" />
-            <element signature="e#3273#3274#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3365#3366#0" expanded="false" />
-            <element signature="e#3401#3402#0" expanded="false" />
-            <element signature="e#3428#3429#0" expanded="false" />
-            <element signature="e#3462#3463#0" expanded="false" />
-            <element signature="e#3501#3502#0" expanded="false" />
-            <element signature="e#3605#3606#0" expanded="false" />
-            <element signature="e#3634#3635#0" expanded="false" />
-            <element signature="e#3672#3673#0" expanded="false" />
-            <element signature="e#3713#3714#0" expanded="false" />
-            <element signature="e#3883#3884#0" expanded="false" />
-            <element signature="e#3932#3933#0" expanded="false" />
-            <element signature="e#3984#3985#0" expanded="false" />
-            <element signature="e#4035#4036#0" expanded="false" />
-            <element signature="e#4088#4089#0" expanded="false" />
-            <element signature="e#4140#4141#0" expanded="false" />
-            <element signature="e#4195#4196#0" expanded="false" />
-            <element signature="e#4249#4250#0" expanded="false" />
-            <element signature="e#4300#4301#0" expanded="false" />
-            <element signature="e#4350#4351#0" expanded="false" />
-            <element signature="e#4402#4403#0" expanded="false" />
-            <element signature="e#4453#4454#0" expanded="false" />
-            <element signature="e#4515#4516#0" expanded="false" />
-            <element signature="e#4575#4576#0" expanded="false" />
-            <element signature="e#4897#4898#0" expanded="false" />
-            <element signature="e#4928#4929#0" expanded="false" />
-            <element signature="e#4992#4993#0" expanded="false" />
-            <element signature="e#5044#5045#0" expanded="false" />
-            <element signature="e#5166#5167#0" expanded="false" />
-            <element signature="e#5195#5196#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1655,14 +1564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44585988">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$JAVA8_HOME$/src.zip!/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1760,14 +1661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/RedoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/NullDrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58598727">
@@ -1835,157 +1728,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1309" column="4" selection-start-line="1309" selection-start-column="4" selection-end-line="1309" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;field#fDesktop#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;field#FILE_MENU#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;field#ALIGNMENT_MENU#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;field#ATTRIBUTES_MENU#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#DrawApplication#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#DrawApplication#1;class#DrawApplication#0" expanded="false" />
-            <element signature="method#DrawApplication#1;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createApplication#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#newView#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#newView#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#newWindow#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#newWindow#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#open#0;class#DrawApplication#0" expanded="false" />
-            <element signature="e#7847#7909#0" expanded="false" />
-            <element signature="docComment;method#addListeners#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#addListeners#0;class#DrawApplication#0" expanded="false" />
-            <element signature="class#8707:8799" expanded="false" />
-            <element signature="docComment;method#createMenus#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createMenus#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#addMenuIfPossible#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="class#9502:9592" expanded="false" />
-            <element signature="class#9647:9742" expanded="false" />
-            <element signature="class#9797:9896" expanded="false" />
-            <element signature="class#9974:10064" expanded="false" />
-            <element signature="class#10142:10227" expanded="false" />
-            <element signature="docComment;method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="class#12603:12741" expanded="false" />
-            <element signature="class#12773:12915" expanded="false" />
-            <element signature="docComment;method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createColorMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createColorMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createArrowMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createArrowMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createFontMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createFontMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createFontStyleMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createFontStyleMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createFontSizeMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createFontSizeMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
-            <element signature="class#16635:16751" expanded="false" />
-            <element signature="docComment;method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
-            <element signature="e#16957#16996#0" expanded="false" />
-            <element signature="docComment;method#createTools#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createTools#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createSelectionTool#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#setDefaultTool#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#getDefaultTool#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createToolButton#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createToolButton#0;class#DrawApplication#0" expanded="false" />
-            <element signature="docComment;method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
-            <element signature="method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
-            <element signature="e#19904#19905#0" expanded="true" />
-            <element signature="e#19937#19938#0" expanded="true" />
-            <element signature="e#20051#20052#0" expanded="true" />
-            <element signature="e#20088#20089#0" expanded="true" />
-            <element signature="e#20321#20322#0" expanded="true" />
-            <element signature="e#20356#20357#0" expanded="true" />
-            <element signature="e#20751#20752#0" expanded="true" />
-            <element signature="e#20773#20774#0" expanded="true" />
-            <element signature="e#21991#21992#0" expanded="true" />
-            <element signature="e#22026#22027#0" expanded="true" />
-            <element signature="e#22115#22116#0" expanded="true" />
-            <element signature="e#22151#22152#0" expanded="true" />
-            <element signature="e#22426#22427#0" expanded="true" />
-            <element signature="e#22460#22461#0" expanded="true" />
-            <element signature="e#22501#22502#0" expanded="true" />
-            <element signature="e#22526#22527#0" expanded="true" />
-            <element signature="e#23259#23260#0" expanded="true" />
-            <element signature="e#23278#23279#0" expanded="true" />
-            <element signature="e#23506#23507#0" expanded="true" />
-            <element signature="e#23525#23526#0" expanded="true" />
-            <element signature="e#23910#23911#0" expanded="true" />
-            <element signature="e#23962#23963#0" expanded="true" />
-            <element signature="e#24452#24453#0" expanded="true" />
-            <element signature="e#24506#24507#0" expanded="true" />
-            <element signature="e#24601#24602#0" expanded="true" />
-            <element signature="e#24658#24659#0" expanded="true" />
-            <element signature="e#27272#27273#0" expanded="true" />
-            <element signature="e#27310#27311#0" expanded="true" />
-            <element signature="e#32642#32643#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#32825#32826#0" expanded="true" />
-            <element signature="e#32866#32867#0" expanded="true" />
-            <element signature="e#32991#32992#0" expanded="true" />
-            <element signature="e#33021#33022#0" expanded="true" />
-            <element signature="e#33083#33084#0" expanded="true" />
-            <element signature="e#33120#33121#0" expanded="true" />
-            <element signature="e#33160#33161#0" expanded="true" />
-            <element signature="e#33187#33188#0" expanded="true" />
-            <element signature="e#33252#33253#0" expanded="true" />
-            <element signature="e#33306#33307#0" expanded="true" />
-            <element signature="e#33960#33961#0" expanded="true" />
-            <element signature="e#33984#33985#0" expanded="true" />
-            <element signature="e#34035#34036#0" expanded="true" />
-            <element signature="e#34065#34066#0" expanded="true" />
-            <element signature="e#34140#34141#0" expanded="true" />
-            <element signature="e#34185#34186#0" expanded="true" />
-            <element signature="e#35059#35060#0" expanded="true" />
-            <element signature="e#35090#35091#0" expanded="true" />
-            <element signature="e#35140#35141#0" expanded="true" />
-            <element signature="e#35168#35169#0" expanded="true" />
-            <element signature="e#35203#35204#0" expanded="true" />
-            <element signature="e#35225#35226#0" expanded="true" />
-            <element signature="e#37151#37152#0" expanded="true" />
-            <element signature="e#37177#37178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="287" column="7" selection-start-line="287" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
-          <folding>
-            <element signature="class#EventDispatcher#0;class#AbstractCommand#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-          <folding>
-            <element signature="e#4905#4906#0" expanded="true" />
-            <element signature="e#4938#4939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/helpers/MDDrawingViewFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-1.4525547">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
             <element signature="method#newSubjectRoleDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
@@ -2009,10 +1754,258 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/Tool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9372263">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/ToolListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2189781">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.540146">
+          <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/StandardDrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24087591">
+          <caret line="155" column="38" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/RedoCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49635038">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5912409">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding>
+            <element signature="docComment;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#activate#0;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#deactivate#0;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#mouseDown#0;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#mouseDrag#0;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#mouseUp#0;class#UndoableTool#0" expanded="false" />
+            <element signature="docComment;method#keyDown#0;class#UndoableTool#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6569343">
+          <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+          <folding>
+            <element signature="docComment;class#UndoCommand#0" expanded="false" />
+            <element signature="docComment;method#UndoCommand#0;class#UndoCommand#0" expanded="false" />
+            <element signature="docComment;method#isExecutableWithView#0;class#UndoCommand#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/util/UndoableCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding>
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1667#1668#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1955#1956#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2627#2628#0" expanded="true" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2749#2750#0" expanded="true" />
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2861#2862#0" expanded="true" />
+            <element signature="e#2921#2922#0" expanded="true" />
+            <element signature="e#2977#2978#0" expanded="true" />
+            <element signature="e#3040#3041#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
+            <element signature="e#4967#4968#0" expanded="true" />
+            <element signature="e#5000#5001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/standard/AbstractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="242" column="41" selection-start-line="242" selection-start-column="41" selection-end-line="242" selection-end-column="41" />
+          <folding>
+            <element signature="class#EventDispatcher#0;class#AbstractCommand#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/framework/DrawingEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CH/ifa/draw/application/DrawApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1186" column="17" selection-start-line="1186" selection-start-column="17" selection-end-line="1186" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;field#fDesktop#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;field#FILE_MENU#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;field#ALIGNMENT_MENU#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;field#ATTRIBUTES_MENU#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#DrawApplication#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#DrawApplication#1;class#DrawApplication#0" expanded="false" />
+            <element signature="method#DrawApplication#1;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createApplication#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#newView#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#newView#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#newWindow#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#newWindow#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#open#0;class#DrawApplication#0" expanded="false" />
+            <element signature="e#5574#5636#0" expanded="false" />
+            <element signature="docComment;method#addListeners#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#addListeners#0;class#DrawApplication#0" expanded="false" />
+            <element signature="class#6434:6526" expanded="false" />
+            <element signature="docComment;method#createMenus#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createMenus#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#addMenuIfPossible#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createFileMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="class#7229:7319" expanded="false" />
+            <element signature="class#7374:7469" expanded="false" />
+            <element signature="class#7524:7623" expanded="false" />
+            <element signature="class#7701:7791" expanded="false" />
+            <element signature="class#7869:7954" expanded="false" />
+            <element signature="docComment;method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createEditMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createAlignmentMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createDebugMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="class#10330:10468" expanded="false" />
+            <element signature="class#10500:10642" expanded="false" />
+            <element signature="docComment;method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createAttributesMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createColorMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createColorMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createArrowMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createArrowMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createFontMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createFontMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createFontStyleMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createFontStyleMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createFontSizeMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createFontSizeMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createLookAndFeelMenu#0;class#DrawApplication#0" expanded="false" />
+            <element signature="class#14362:14478" expanded="false" />
+            <element signature="docComment;method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createToolPalette#0;class#DrawApplication#0" expanded="false" />
+            <element signature="e#14684#14723#0" expanded="false" />
+            <element signature="docComment;method#createTools#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createTools#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createSelectionTool#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#setDefaultTool#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#getDefaultTool#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createToolButton#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createToolButton#0;class#DrawApplication#0" expanded="false" />
+            <element signature="docComment;method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
+            <element signature="method#createDrawingView#0;class#DrawApplication#0" expanded="false" />
+            <element signature="e#17017#17018#0" expanded="true" />
+            <element signature="e#17050#17051#0" expanded="true" />
+            <element signature="e#17164#17165#0" expanded="true" />
+            <element signature="e#17201#17202#0" expanded="true" />
+            <element signature="e#17434#17435#0" expanded="true" />
+            <element signature="e#17469#17470#0" expanded="true" />
+            <element signature="e#17507#17508#0" expanded="true" />
+            <element signature="e#17544#17545#0" expanded="true" />
+            <element signature="e#17827#17828#0" expanded="true" />
+            <element signature="e#17849#17850#0" expanded="true" />
+            <element signature="e#19067#19068#0" expanded="true" />
+            <element signature="e#19102#19103#0" expanded="true" />
+            <element signature="e#19191#19192#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19502#19503#0" expanded="true" />
+            <element signature="e#19536#19537#0" expanded="true" />
+            <element signature="e#19577#19578#0" expanded="true" />
+            <element signature="e#19602#19603#0" expanded="true" />
+            <element signature="e#20335#20336#0" expanded="true" />
+            <element signature="e#20354#20355#0" expanded="true" />
+            <element signature="e#20582#20583#0" expanded="true" />
+            <element signature="e#20601#20602#0" expanded="true" />
+            <element signature="e#20986#20987#0" expanded="true" />
+            <element signature="e#21038#21039#0" expanded="true" />
+            <element signature="e#21528#21529#0" expanded="true" />
+            <element signature="e#21582#21583#0" expanded="true" />
+            <element signature="e#21677#21678#0" expanded="true" />
+            <element signature="e#21734#21735#0" expanded="true" />
+            <element signature="e#24348#24349#0" expanded="true" />
+            <element signature="e#24386#24387#0" expanded="true" />
+            <element signature="e#29718#29719#0" expanded="true" />
+            <element signature="e#29759#29760#0" expanded="true" />
+            <element signature="e#29901#29902#0" expanded="true" />
+            <element signature="e#29942#29943#0" expanded="true" />
+            <element signature="e#30067#30068#0" expanded="true" />
+            <element signature="e#30097#30098#0" expanded="true" />
+            <element signature="e#30159#30160#0" expanded="true" />
+            <element signature="e#30196#30197#0" expanded="true" />
+            <element signature="e#30236#30237#0" expanded="true" />
+            <element signature="e#30263#30264#0" expanded="true" />
+            <element signature="e#30328#30329#0" expanded="true" />
+            <element signature="e#30382#30383#0" expanded="true" />
+            <element signature="e#31036#31037#0" expanded="true" />
+            <element signature="e#31060#31061#0" expanded="true" />
+            <element signature="e#31111#31112#0" expanded="true" />
+            <element signature="e#31141#31142#0" expanded="true" />
+            <element signature="e#31216#31217#0" expanded="true" />
+            <element signature="e#31261#31262#0" expanded="true" />
+            <element signature="e#32135#32136#0" expanded="true" />
+            <element signature="e#32166#32167#0" expanded="true" />
+            <element signature="e#32216#32217#0" expanded="true" />
+            <element signature="e#32244#32245#0" expanded="true" />
+            <element signature="e#32279#32280#0" expanded="true" />
+            <element signature="e#32301#32302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ccconcerns/managed_data/schemas/MDStandardDrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3821656">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.1459854">
+          <caret line="626" column="30" selection-start-line="626" selection-start-column="30" selection-end-line="626" selection-end-column="30" />
           <folding>
             <element signature="e#2622#2673#0" expanded="false" />
             <element signature="method#addFigure#0;class#MDStandardDrawingView#0" expanded="false" />
@@ -2055,9 +2048,6 @@
             <element signature="e#16245#16292#0" expanded="false" />
             <element signature="method#moveSelection#0;class#MDStandardDrawingView#0" expanded="false" />
             <element signature="e#17474#17525#0" expanded="false" />
-            <element signature="e#17798#17849#0" expanded="false" />
-            <element signature="e#18118#18169#0" expanded="false" />
-            <element signature="e#18664#18715#0" expanded="false" />
             <element signature="e#18763#18814#0" expanded="false" />
           </folding>
         </state>

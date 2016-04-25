@@ -23,12 +23,12 @@ import java.util.EventObject;
  * @author  Wolfram Kaiser <mrfloppy@sourceforge.net>
  * @version <$CURRENT_VERSION$>
  */
-public class UndoableCommand implements Command, FigureSelectionListener, CommandListener {
+// @MDHD: FigureSelectionListener (FSL) Refactoring
+public class UndoableCommand implements Command, /* @MDHD FigureSelectionListener,*/ CommandListener {
 
 	private Command myWrappedCommand;
 	private boolean hasSelectionChanged;
 	private AbstractCommand.EventDispatcher myEventDispatcher;
-
 	public UndoableCommand(Command newWrappedCommand) {
 		setWrappedCommand(newWrappedCommand);
 		getWrappedCommand().addCommandListener(this);
@@ -137,11 +137,10 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 		// initiate manual update of undo/redo menu states if it has not
 		// been done automatically during executing the wrapped command
 		if (!hasSelectionChanged || (getDrawingEditor().getUndoManager().getUndoSize() == 1)) {
-			getDrawingEditor().figureSelectionChanged(view());
+			// @MDHD: FigureSelectionListener (FSL) Refactoring
+//			getDrawingEditor().figureSelectionChanged(view());
+			getDrawingEditor().figureSelectionChanged();
 		}
-
-		// remove because not all commands are listeners that have to be notified
-		// all the time (bug-id 595461)
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 		((SubjectRole) view()).remove(this);
@@ -150,11 +149,11 @@ public class UndoableCommand implements Command, FigureSelectionListener, Comman
 //		view().removeFigureSelectionListener(this);
 	}
 
-	public void figureSelectionChanged(MDStandardDrawingView view) {
-		hasSelectionChanged = true;
-	}
-
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
+//	public void figureSelectionChanged(MDStandardDrawingView view) {
+//		hasSelectionChanged = true;
+//	}
+
 	public void figureSelectionChanged() {
 		hasSelectionChanged = true;
 	}

@@ -27,7 +27,7 @@ import java.util.*;
  * @author Wolfram Kaiser
  * @version <$CURRENT_VERSION$>
  */
-public abstract class AbstractCommand implements Command, FigureSelectionListener, ViewChangeListener {
+public abstract class AbstractCommand implements Command, /* @MDHD FigureSelectionListener, */ ViewChangeListener {
 
 	private String  myName;
 	private Undoable myUndoableActivity; // @MDHD TODO: Should be removed (scattering)
@@ -56,41 +56,8 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 		setEventDispatcher(createEventDispatcher());
 	}
 
-//	public void viewSelectionChanged(DrawingView oldView, DrawingView newView) {
-//		if (oldView != null) {
-//			oldView.removeFigureSelectionListener(this);
-//		}
-//		if (newView != null) {
-//			newView.addFigureSelectionListener(this);
-//		}
-//		if (isViewRequired()) {
-//			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
-//			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
-//			// old view was not interactive aware while new view is now interactive aware
-//			if (!isOldViewInteractive && isNewViewInteractive) {
-//				getEventDispatcher().fireCommandExecutableEvent();
-//			}
-//			// old view was interactive aware while new view is not
-//			else if (isOldViewInteractive && !isNewViewInteractive) {
-//				getEventDispatcher().fireCommandNotExecutableEvent();
-//			}
-//		}
-//	}
-
-//	/**
-//	 * Sent when a new view is created
-//	 */
-//	public void viewCreated(DrawingView view) {
-//	}
-
 	public void viewCreated(MDStandardDrawingView view) {
 	}
-
-//	/**
-//	 * Send when an existing view is about to be destroyed.
-//	 */
-//	public void viewDestroying(DrawingView view) {
-//	}
 
 	public void viewDestroying(MDStandardDrawingView view) {
 	}
@@ -252,7 +219,6 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 		}
 	}
 
-
 	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
 		if (oldView != null) {
 
@@ -285,16 +251,9 @@ public abstract class AbstractCommand implements Command, FigureSelectionListene
 		}
 	}
 
-//	/**
-//	 * @param view a DrawingView
-//	 */
-//	public void figureSelectionChanged(DrawingView view) {
-//	}
-
-	public void figureSelectionChanged(MDStandardDrawingView view) {
-	}
-
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
+//	public void figureSelectionChanged(MDStandardDrawingView view) {
+//	}
 	public void figureSelectionChanged() {
 	}
 }
