@@ -449,7 +449,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         }
     }
 
-
     default void draw(Graphics g, FigureEnumeration fe) {
         Boolean isPrinting = g instanceof PrintGraphics;
         if ((fBackgrounds() != null) && !isPrinting) {
@@ -476,45 +475,9 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     default void drawBackground(Graphics g) {
-//        g.setColor(getBackground());
-//        g.fillRect(0, 0, getBounds().width, getBounds().height);
         g.setColor(panel().getBackground());
         g.fillRect(0, 0, panel().getBounds().width, panel().getBounds().height);
     }
-
-//    default void addBackground(Painter painter)  {
-//        if (fBackgrounds == null) {
-//            fBackgrounds = CollectionsFactory.current().createList(3);
-//        }
-//        fBackgrounds.add(painter);
-////        repaint();
-//        panel().repaint();
-//    }
-//
-//    default void removeBackground(Painter painter)  {
-//        if (fBackgrounds != null) {
-//            fBackgrounds.remove(painter);
-//        }
-////        repaint();
-//        panel().repaint();
-//    }
-//
-//    default void removeForeground(Painter painter)  {
-//        if (fForegrounds != null) {
-//            fForegrounds.remove(painter);
-//        }
-////        repaint();
-//        panel().repaint();
-//    }
-//
-//    default void addForeground(Painter painter)  {
-//        if (fForegrounds == null) {
-//            fForegrounds = CollectionsFactory.current().createList(3);
-//        }
-//        fForegrounds.add(painter);
-////        repaint();
-//        panel().repaint();
-//    }
 
     default void freezeView() {
         drawing().lock();
@@ -529,9 +492,6 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
         if (inFigure == null || !inFigure.canConnect()) {
             return null;
         }
-
-        // if (inFigure instanceof ConnectionFigure)
-        //  return null;
 
         List result = CollectionsFactory.current().createList(5);
         FigureEnumeration figures = drawing().figures();

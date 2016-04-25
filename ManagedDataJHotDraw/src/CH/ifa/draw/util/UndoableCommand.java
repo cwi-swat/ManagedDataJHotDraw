@@ -61,10 +61,6 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 		return getWrappedCommand().getDrawingEditor();
 	}
 
-//	public DrawingView view() {
-//		return getDrawingEditor().view();
-//	}
-
 	public MDStandardDrawingView view() {
 		return getDrawingEditor().view();
 	}

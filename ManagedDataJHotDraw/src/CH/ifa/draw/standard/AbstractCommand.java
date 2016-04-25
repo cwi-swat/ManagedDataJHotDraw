@@ -127,12 +127,10 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		return true;
 	}
 
-	// @MDHD TODO: Should be removed (scattering)
 	public Undoable getUndoActivity() {
 		return myUndoableActivity;
 	}
 
-	// @MDHD TODO: Should be removed (scattering)
 	public void setUndoActivity(Undoable newUndoableActivity) {
 		myUndoableActivity = newUndoableActivity;
 	}
