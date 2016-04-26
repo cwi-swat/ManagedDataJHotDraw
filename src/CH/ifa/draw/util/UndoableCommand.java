@@ -13,7 +13,7 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractCommand;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer.SubjectRole;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.SubjectRole;
 import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.EventObject;

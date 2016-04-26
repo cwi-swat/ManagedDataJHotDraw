@@ -17,7 +17,7 @@ import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
 import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.Desktop;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer.SubjectRole;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.SubjectRole;
 import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
 

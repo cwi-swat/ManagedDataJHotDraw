@@ -4,7 +4,7 @@ import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.standard.SimpleUpdateStrategy;
 import CH.ifa.draw.standard.StandardDrawing;
 import ccconcerns.MyJPanel;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer.FigureListenerSubjectRoleDataManager;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.FigureListenerSubjectRoleDataManager;
 import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
