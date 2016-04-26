@@ -11,16 +11,16 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.figures.*;
+import CH.ifa.draw.figures.RectangleFigure;
 import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.*;
-import java.util.List;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * A triangle with same dimensions as its enclosing rectangle,

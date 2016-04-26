@@ -13,9 +13,9 @@ package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Geom;
-import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -381,16 +381,7 @@ public  class ConnectionTool extends AbstractTool {
 		private Connector   myStartConnector;
 		private Connector   myEndConnector;
 
-//		public UndoActivity(DrawingView newDrawingView, ConnectionFigure newConnection) {
-//			super(newDrawingView);
-//			setConnection(newConnection);
-//			myStartConnector = getConnection().getStartConnector();
-//			myEndConnector = getConnection().getEndConnector();
-//	        setUndoable(true);
-//			setRedoable(true);
-//		}
-
-		public UndoActivity(MDStandardDrawingView newDrawingView, ConnectionFigure newConnection) {
+		public UndoActivity(MDDrawingView newDrawingView, ConnectionFigure newConnection) {
 			super(newDrawingView);
 			setConnection(newConnection);
 			myStartConnector = getConnection().getStartConnector();
@@ -413,7 +404,7 @@ public  class ConnectionTool extends AbstractTool {
 
 			FigureEnumeration fe = getAffectedFigures();
 			while (fe.hasNextFigure()) {
-				getDrawingView().drawing().orphan(fe.nextFigure());
+				getDrawingView().getDrawing().orphan(fe.nextFigure());
 			}
 
 			getDrawingView().clearSelection();

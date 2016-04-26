@@ -11,10 +11,13 @@
 
 package CH.ifa.draw.standard;
 
-import java.awt.*;
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.util.Geom;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
 
 /**
  * A ChopBoxConnector locates connection points by

@@ -11,14 +11,14 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.standard.CreationTool;
-import CH.ifa.draw.standard.CompositeFigure;
-import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.framework.DrawingEditor;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.standard.CompositeFigure;
+import CH.ifa.draw.standard.CreationTool;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.event.MouseEvent;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
 /**
  * @author	Wolfram Kaiser
@@ -32,7 +32,7 @@ public class CompositeFigureCreationTool extends CreationTool {
 	}
 
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 		Figure figure = drawing().findFigure(e.getX(), e.getY());
 		if (figure != null) {
 			figure = figure.getDecoratedFigure();

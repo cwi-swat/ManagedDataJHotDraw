@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.samples.pert;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.samples.pert.PertDependency;
 // JUnitDoclet end import
 
 /*

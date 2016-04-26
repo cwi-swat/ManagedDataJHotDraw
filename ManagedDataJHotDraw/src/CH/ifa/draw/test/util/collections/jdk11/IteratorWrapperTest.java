@@ -1,11 +1,13 @@
 package CH.ifa.draw.test.util.collections.jdk11;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.figures.RectangleFigure;
 import CH.ifa.draw.figures.PolyLineFigure;
-import java.util.Vector;
+import CH.ifa.draw.figures.RectangleFigure;
+import junit.framework.TestCase;
+
 import java.awt.*;
+import java.util.Vector;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

@@ -11,15 +11,23 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureChangeEvent;
+import CH.ifa.draw.framework.FigureChangeListener;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.util.Bounds;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
-import java.io.*;
 
 /**
  * A Figure that is composed of several figures. A CompositeFigure

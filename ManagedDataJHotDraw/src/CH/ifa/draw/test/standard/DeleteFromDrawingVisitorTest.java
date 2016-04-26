@@ -1,9 +1,8 @@
 package CH.ifa.draw.test.standard;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.standard.DeleteFromDrawingVisitor;
 import CH.ifa.draw.test.JHDTestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*
@@ -48,7 +47,7 @@ extends JHDTestCase
   */
   public CH.ifa.draw.standard.DeleteFromDrawingVisitor createInstance() throws Exception {
     // JUnitDoclet begin method testcase.createInstance
-    return new CH.ifa.draw.standard.DeleteFromDrawingVisitor(getDrawingEditor().view().drawing());
+    return new CH.ifa.draw.standard.DeleteFromDrawingVisitor(getDrawingEditor().view().getDrawing());
     // JUnitDoclet end method testcase.createInstance
   }
   

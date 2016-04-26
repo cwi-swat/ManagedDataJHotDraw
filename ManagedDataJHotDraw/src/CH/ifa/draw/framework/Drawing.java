@@ -11,13 +11,13 @@
 
 package CH.ifa.draw.framework;
 
-import CH.ifa.draw.util.*;
+import CH.ifa.draw.util.Storable;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.*;
-import java.util.List;
 import java.io.Serializable;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Drawing is a container for figures.

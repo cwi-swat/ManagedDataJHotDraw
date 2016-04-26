@@ -1,10 +1,8 @@
 package CH.ifa.draw.test.framework;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.framework.DrawingChangeEvent;
-import CH.ifa.draw.standard.StandardDrawing;
-import java.awt.Rectangle;
 // JUnitDoclet end import
 
 /*

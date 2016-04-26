@@ -1,13 +1,12 @@
 package CH.ifa.draw.test.samples.javadraw;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.samples.javadraw.PatternPainter;
+import CH.ifa.draw.application.DrawApplication;
 import CH.ifa.draw.test.JHDTestCase;
 import CH.ifa.draw.util.Iconkit;
-import CH.ifa.draw.application.DrawApplication;
 
 import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

@@ -4,19 +4,18 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
 package CH.ifa.draw.contrib.html;
 
-import java.awt.Font;
-import javax.swing.JPanel;
 import CH.ifa.draw.contrib.TextAreaTool;
-
 import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.standard.TextHolder;
+
+import java.awt.*;
 
 /**
  * HTMLTextAreaTool creates or edits HTMLTextAreaFigures.<br>

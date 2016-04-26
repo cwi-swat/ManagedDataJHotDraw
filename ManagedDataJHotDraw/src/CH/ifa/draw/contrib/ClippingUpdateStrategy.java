@@ -1,13 +1,15 @@
 package CH.ifa.draw.contrib;
 
-import java.awt.Graphics;
-import java.util.Vector;
-
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.standard.FigureEnumerator;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.util.Vector;
 
 /**
  * The ClippingUpdateStrategy will only draw those Figures in the DrawingView
@@ -21,7 +23,7 @@ public class ClippingUpdateStrategy implements Painter {
 		super();
 	}
 
-	public void draw(Graphics g, MDStandardDrawingView view) {
+	public void draw(Graphics g, MDDrawingView view) {
 		MDRectangle viewClipRectangle = MDGeometryFactory.newRectangle(g.getClipBounds().x, g.getClipBounds().y, g.getClipBounds().width, g.getClipBounds().height);
 
 		if (viewClipRectangle == null) {
@@ -30,7 +32,7 @@ public class ClippingUpdateStrategy implements Painter {
 			return;
 		}
 
-		FigureEnumeration fe = view.drawing().figures();
+		FigureEnumeration fe = view.getDrawing().figures();
 
 		// it's better to start big than to do Log(nFigures) reallocations
 		Vector v = new Vector(1000);

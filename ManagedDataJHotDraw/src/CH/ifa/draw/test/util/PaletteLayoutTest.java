@@ -1,10 +1,10 @@
 package CH.ifa.draw.test.util;
 
 import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.util.PaletteLayout;
 
 import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

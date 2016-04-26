@@ -13,7 +13,6 @@ package CH.ifa.draw.framework;
 
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.*;
 import java.util.EventObject;
 
 /**

@@ -12,7 +12,7 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.FigureEnumeration;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * @author  Wolfram Kaiser <mrfloppy@sourceforge.net>
@@ -45,7 +45,7 @@ public interface Undoable {
 	public void release();
 
 //	public DrawingView getDrawingView();
-	public MDStandardDrawingView getDrawingView();
+	public MDDrawingView getDrawingView();
 
 	public void setAffectedFigures(FigureEnumeration newAffectedFigures);
 	

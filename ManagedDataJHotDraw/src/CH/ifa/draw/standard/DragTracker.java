@@ -11,10 +11,12 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -101,7 +103,7 @@ public class DragTracker extends AbstractTool {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView, Point newOriginalPoint) {
+		public UndoActivity(MDDrawingView newDrawingView, Point newOriginalPoint) {
 			super(newDrawingView);
 			setOriginalPoint(newOriginalPoint);
 			setUndoable(true);

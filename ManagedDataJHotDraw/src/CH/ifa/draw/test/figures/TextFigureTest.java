@@ -1,10 +1,10 @@
 package CH.ifa.draw.test.figures;
 
 import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.figures.TextFigure;
 
 import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*
@@ -218,7 +218,7 @@ extends TestCase
   // JUnitDoclet end javadoc_method setText()
   public void testSetGetText() throws Exception {
     // JUnitDoclet begin method setText getText
-    java.lang.String[] tests = {"", " ", "a", "A", "ä", "ß", "0123456789", "012345678901234567890", "\n", null};
+    java.lang.String[] tests = {"", " ", "a", "A", "ï¿½", "ï¿½", "0123456789", "012345678901234567890", "\n", null};
     
     for (int i = 0; i < tests.length; i++) {
       textfigure.setText(tests[i]);

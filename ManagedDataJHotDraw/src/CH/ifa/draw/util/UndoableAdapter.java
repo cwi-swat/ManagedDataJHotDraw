@@ -11,10 +11,10 @@
 
 package CH.ifa.draw.util;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.standard.FigureEnumerator;
 import CH.ifa.draw.standard.StandardFigureSelection;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.List;
 
@@ -30,14 +30,13 @@ public class UndoableAdapter implements Undoable {
 	private List   myAffectedFigures;
 	private boolean myIsUndoable;
 	private boolean myIsRedoable;
-//	private DrawingView myDrawingView;
-	private MDStandardDrawingView myDrawingView;
+	private MDDrawingView myDrawingView;
 
 //	public UndoableAdapter(DrawingView newDrawingView) {
 //		setDrawingView(newDrawingView);
 //	}
 
-	public UndoableAdapter(MDStandardDrawingView newDrawingView) {
+	public UndoableAdapter(MDDrawingView newDrawingView) {
 		setDrawingView(newDrawingView);
 	}
 
@@ -121,7 +120,7 @@ public class UndoableAdapter implements Undoable {
 //		return myDrawingView;
 //	}
 
-	public MDStandardDrawingView getDrawingView() {
+	public MDDrawingView getDrawingView() {
 		return myDrawingView;
 	}
 
@@ -129,7 +128,7 @@ public class UndoableAdapter implements Undoable {
 //		myDrawingView = newDrawingView;
 //	}
 
-	protected void setDrawingView(MDStandardDrawingView newDrawingView) {
+	protected void setDrawingView(MDDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 }

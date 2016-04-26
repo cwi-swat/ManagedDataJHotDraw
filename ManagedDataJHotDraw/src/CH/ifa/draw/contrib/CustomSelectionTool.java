@@ -11,13 +11,14 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.standard.SelectionTool;
+import ccconcerns.managed_data.MDDrawingView;
 
-import javax.swing.JPopupMenu;
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
 /**
  * A SelectionTool, which recognizes double clicks and popup menu triggers.
@@ -51,7 +52,7 @@ public class CustomSelectionTool extends SelectionTool {
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
 //		setView((DrawingView)e.getSource());
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 		if (e.isPopupTrigger()) {
 			handlePopupMenu(e, x, y);
 		}

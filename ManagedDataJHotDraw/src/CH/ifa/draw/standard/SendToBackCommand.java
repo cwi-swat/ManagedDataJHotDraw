@@ -11,12 +11,14 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.util.*;
+import java.util.Hashtable;
 
 /**
  * A command to send the selection to the back of the drawing.
@@ -40,7 +42,7 @@ public class SendToBackCommand extends AbstractCommand {
 		getUndoActivity().setAffectedFigures(view().selectionZOrdered());
 		FigureEnumeration fe = getUndoActivity().getAffectedFigures();
 		while (fe.hasNextFigure()) {
-			view().drawing().sendToBack(fe.nextFigure());
+			view().getDrawing().sendToBack(fe.nextFigure());
 		}
 		view().checkDamage();
 	}
@@ -62,7 +64,7 @@ public class SendToBackCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			myOriginalLayers = new Hashtable();
 			setUndoable(true);
@@ -78,7 +80,7 @@ public class SendToBackCommand extends AbstractCommand {
 			while (fe.hasNextFigure()) {
 				Figure currentFigure = fe.nextFigure();
 				int currentFigureLayer = getOriginalLayer(currentFigure);
-				getDrawingView().drawing().sendToLayer(currentFigure, currentFigureLayer);
+				getDrawingView().getDrawing().sendToLayer(currentFigure, currentFigureLayer);
 			}
 			
 			return true;
@@ -99,7 +101,7 @@ public class SendToBackCommand extends AbstractCommand {
 		}
 
 		protected void sendToCommand(Figure f) {
-			getDrawingView().drawing().sendToBack(f);
+			getDrawingView().getDrawing().sendToBack(f);
 		}
 		
 		protected void addOriginalLayer(Figure affectedFigure, int newOriginalLayer) {
@@ -117,7 +119,7 @@ public class SendToBackCommand extends AbstractCommand {
 			FigureEnumeration copyFe = getAffectedFigures();
 			while (copyFe.hasNextFigure()) {
 				Figure f = copyFe.nextFigure();
-				int originalLayer = getDrawingView().drawing().getLayer(f);
+				int originalLayer = getDrawingView().getDrawing().getLayer(f);
 				addOriginalLayer(f, originalLayer);
 			}
 		}

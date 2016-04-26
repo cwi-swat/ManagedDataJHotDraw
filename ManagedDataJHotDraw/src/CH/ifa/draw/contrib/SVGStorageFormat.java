@@ -11,18 +11,17 @@
 
 package CH.ifa.draw.contrib;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.util.StandardStorageFormat;
 import org.apache.batik.dom.GenericDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 
-import CH.ifa.draw.framework.Drawing;
-import CH.ifa.draw.util.StandardStorageFormat;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 
 /**

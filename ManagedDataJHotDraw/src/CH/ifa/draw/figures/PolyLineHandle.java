@@ -11,12 +11,13 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.Locator;
 import CH.ifa.draw.standard.LocatorHandle;
 import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -45,7 +46,7 @@ public class PolyLineHandle extends LocatorHandle {
 //		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 //		((PolyLineHandle.UndoActivity)getUndoActivity()).setOldPoint(new Point(x,y));
 //	}
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setUndoActivity(createUndoActivity(view, fIndex));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((PolyLineHandle.UndoActivity)getUndoActivity()).setOldPoint(new Point(x,y));
@@ -55,7 +56,7 @@ public class PolyLineHandle extends LocatorHandle {
 //		int fIndex = ((PolyLineHandle.UndoActivity)getUndoActivity()).getPointIndex();
 //		myOwner().setPointAt(new Point(x, y), fIndex);
 //	}
-	public void invokeStep(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		int fIndex = ((PolyLineHandle.UndoActivity)getUndoActivity()).getPointIndex();
 		myOwner().setPointAt(new Point(x, y), fIndex);
 	}
@@ -65,7 +66,7 @@ public class PolyLineHandle extends LocatorHandle {
 //			setUndoActivity(null);
 //		}
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		if ((x == anchorX) && (y == anchorY)) {
 			setUndoActivity(null);
 		}
@@ -81,7 +82,7 @@ public class PolyLineHandle extends LocatorHandle {
 //	protected Undoable createUndoActivity(DrawingView newView, int newPointIndex) {
 //		return new PolyLineHandle.UndoActivity(newView, newPointIndex);
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView, int newPointIndex) {
+	protected Undoable createUndoActivity(MDDrawingView newView, int newPointIndex) {
 		return new PolyLineHandle.UndoActivity(newView, newPointIndex);
 	}
 
@@ -95,7 +96,7 @@ public class PolyLineHandle extends LocatorHandle {
 //			setRedoable(true);
 //			setPointIndex(newPointIndex);
 //		}
-		public UndoActivity(MDStandardDrawingView newView, int newPointIndex) {
+		public UndoActivity(MDDrawingView newView, int newPointIndex) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

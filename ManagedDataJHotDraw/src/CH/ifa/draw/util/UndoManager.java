@@ -12,10 +12,10 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.DrawingView;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.util.List;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * This class manages all the undoable commands. It keeps track of all
@@ -207,7 +207,7 @@ public class UndoManager {
 	 * Removes all undo activities that operate on the given DrawingView.
 	 * @param checkDV DrawingView which is compared undo's DrawingView
 	 */
-	public void clearUndos(MDStandardDrawingView checkDV) {
+	public void clearUndos(MDDrawingView checkDV) {
 		Iterator iter = undoStack.iterator();
 		while (iter.hasNext()) {
 			Undoable currentUndo = (Undoable)iter.next();
@@ -236,7 +236,7 @@ public class UndoManager {
 	 * Removes all redo activities that operate on the given DrawingView.
 	 * @param checkDV DrawingView which is compared redo's DrawingView
 	 */
-	public void clearRedos(MDStandardDrawingView checkDV) {
+	public void clearRedos(MDDrawingView checkDV) {
 		Iterator iter = redoStack.iterator();
 		while (iter.hasNext()) {
 			Undoable currentRedo = (Undoable)iter.next();

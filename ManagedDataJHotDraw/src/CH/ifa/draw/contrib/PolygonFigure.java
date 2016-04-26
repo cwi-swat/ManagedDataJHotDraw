@@ -11,17 +11,24 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.figures.*;
+import CH.ifa.draw.figures.AttributeFigure;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.HandleEnumeration;
+import CH.ifa.draw.framework.Locator;
+import CH.ifa.draw.standard.AbstractLocator;
+import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.Geom;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.*;
-import java.util.List;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * A scalable, rotatable polygon with an arbitrary number of points

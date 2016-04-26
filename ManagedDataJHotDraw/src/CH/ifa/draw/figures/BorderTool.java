@@ -11,13 +11,19 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.ActionTool;
+import CH.ifa.draw.standard.DecoratorFigure;
+import CH.ifa.draw.standard.FigureEnumerator;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.event.MouseEvent;
 import java.awt.event.InputEvent;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
 /**
@@ -41,7 +47,7 @@ public  class BorderTool extends ActionTool {
 	 * @see #action
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 		// if not CTRLed then proceed normally
 		if ((e.getModifiers() & InputEvent.CTRL_MASK) == 0) {
 			super.mouseDown(e, x, y);
@@ -95,7 +101,7 @@ public  class BorderTool extends ActionTool {
 //			setRedoable(true);
 //		}
 
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			setUndoable(true);
 			setRedoable(true);
@@ -129,7 +135,7 @@ public  class BorderTool extends ActionTool {
 			}
 			Figure replaceFigure = fe.nextFigure();
 			
-			replaceFigure = getDrawingView().drawing().replace(oldFigure, replaceFigure);
+			replaceFigure = getDrawingView().getDrawing().replace(oldFigure, replaceFigure);
 			List l = CollectionsFactory.current().createList();
 			l.add(replaceFigure);
 			l.add(oldFigure);

@@ -11,10 +11,14 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.DeleteCommand;
+import CH.ifa.draw.standard.FigureTransferCommand;
+import CH.ifa.draw.standard.TextHolder;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.event.MouseEvent;
 
@@ -96,7 +100,7 @@ public  class ConnectedTextTool extends TextTool {
 //		public UndoActivity(DrawingView newDrawingView, String newOriginalText) {
 //			super(newDrawingView, newOriginalText);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
+		public UndoActivity(MDDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView, newOriginalText);
 		}
 

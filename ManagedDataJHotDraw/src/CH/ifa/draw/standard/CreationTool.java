@@ -11,8 +11,11 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.JHotDrawRuntimeException;
 import CH.ifa.draw.util.Undoable;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -75,8 +78,7 @@ public class CreationTool extends AbstractTool {
 	public void activate() {
 		super.activate();
 		if (isUsable()) {
-//			getActiveView().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
-			getActiveView().cursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+			getActiveView().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 		}
 	}
 

@@ -1,12 +1,12 @@
 package CH.ifa.draw.test.contrib;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.contrib.GraphicalCompositeFigure;
 import CH.ifa.draw.contrib.SimpleLayouter;
 import CH.ifa.draw.figures.RectangleFigure;
+import junit.framework.TestCase;
 
 import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

@@ -12,9 +12,7 @@ package CH.ifa.draw.contrib.html;
 
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Font;
-
-import java.awt.Rectangle;
+import java.awt.*;
 
 /**
  * FigureContentProducerContext defines the interface required of clients

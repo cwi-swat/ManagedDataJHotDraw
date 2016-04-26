@@ -11,10 +11,12 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.standard.AbstractCommand;
+import CH.ifa.draw.util.Iconkit;
+import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 import java.lang.ref.WeakReference;
@@ -72,7 +74,7 @@ public class InsertImageCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		UndoActivity(MDStandardDrawingView newDrawingView, String newAffectedImageName) {
+		UndoActivity(MDDrawingView newDrawingView, String newAffectedImageName) {
 			super(newDrawingView);
 			myAffectedImageName = newAffectedImageName;
 			setUndoable(true);
@@ -100,7 +102,7 @@ public class InsertImageCommand extends AbstractCommand {
 			if (super.undo()) {
 				getDrawingView().clearSelection();
 	
-				getDrawingView().drawing().orphan(getImageFigure());
+				getDrawingView().getDrawing().orphan(getImageFigure());
 	
 				return true;
 			}

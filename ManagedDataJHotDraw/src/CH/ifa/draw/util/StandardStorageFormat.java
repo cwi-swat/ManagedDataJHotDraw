@@ -4,19 +4,20 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.util;
 
+import CH.ifa.draw.framework.Drawing;
+
 import javax.swing.filechooser.FileFilter;
-import java.io.IOException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.File;
-import CH.ifa.draw.framework.Drawing;
+import java.io.IOException;
 
 /**
  * A StandardStorageFormat is an internal file format to store and restore

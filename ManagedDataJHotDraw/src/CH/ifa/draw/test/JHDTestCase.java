@@ -1,7 +1,7 @@
 package CH.ifa.draw.test;
 
-import CH.ifa.draw.samples.javadraw.JavaDrawApp;
 import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.samples.javadraw.JavaDrawApp;
 import junit.framework.TestCase;
 
 public class JHDTestCase extends TestCase {

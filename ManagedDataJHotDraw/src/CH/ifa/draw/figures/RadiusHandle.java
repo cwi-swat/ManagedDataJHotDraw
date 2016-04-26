@@ -11,12 +11,13 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.AbstractHandle;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
@@ -40,7 +41,7 @@ class RadiusHandle extends AbstractHandle {
 //		((RadiusHandle.UndoActivity)getUndoActivity()).
 //			setOldRadius(((RoundRectangleFigure)owner()).getArc());
 //	}
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((RadiusHandle.UndoActivity)getUndoActivity()).
@@ -57,7 +58,7 @@ class RadiusHandle extends AbstractHandle {
 //		int ry = Geom.range(0, r.height, 2*(originalRadius.y/2 + dy));
 //		owner.setArc(rx, ry);
 //	}
-	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		int dx = x-anchorX;
 		int dy = y-anchorY;
 		RoundRectangleFigure owner = (RoundRectangleFigure)owner();
@@ -76,7 +77,7 @@ class RadiusHandle extends AbstractHandle {
 //			setUndoActivity(null);
 //		}
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		Point currentRadius = ((RoundRectangleFigure)owner()).getArc();
 		Point originalRadius = ((RadiusHandle.UndoActivity)getUndoActivity()).getOldRadius();
 		// there has been no change so there is nothing to undo
@@ -108,7 +109,7 @@ class RadiusHandle extends AbstractHandle {
 //	protected Undoable createUndoActivity(DrawingView newView) {
 //		return new RadiusHandle.UndoActivity(newView);
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
+	protected Undoable createUndoActivity(MDDrawingView newView) {
 		return new RadiusHandle.UndoActivity(newView);
 	}
 
@@ -120,7 +121,7 @@ class RadiusHandle extends AbstractHandle {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newView) {
+		public UndoActivity(MDDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

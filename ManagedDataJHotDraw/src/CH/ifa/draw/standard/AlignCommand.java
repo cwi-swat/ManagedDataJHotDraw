@@ -11,14 +11,16 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.util.*;
 import java.awt.*;
+import java.util.Hashtable;
 
 /**
  * Align a selection of figures relative to each other.
@@ -160,7 +162,7 @@ public class AlignCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newView, Alignment newAlignment) {
+		public UndoActivity(MDDrawingView newView, Alignment newAlignment) {
 			super(newView);
 			myOriginalPoints = new Hashtable();
 			setAppliedAlignment(newAlignment);

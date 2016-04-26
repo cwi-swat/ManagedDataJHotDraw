@@ -11,11 +11,15 @@
 
 package CH.ifa.draw.contrib;
 
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.AbstractHandle;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
+import CH.ifa.draw.util.Geom;
+import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
+
 import java.awt.*;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.standard.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 
 /**
@@ -47,7 +51,7 @@ class TriangleRotationHandle extends AbstractHandle {
 //		double rotation = ((TriangleFigure)(owner())).getRotationAngle();
 //		activity.setRotationAngle(rotation);
 //	}
-	public void invokeStart(int x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int x, int  y, MDDrawingView view) {
 		fOrigin = getOrigin();
 		TriangleRotationHandle.UndoActivity activity =
 			(TriangleRotationHandle.UndoActivity)createUndoActivity(view);
@@ -70,7 +74,7 @@ class TriangleRotationHandle extends AbstractHandle {
 //  								  fOrigin.x + x - anchorX - fCenter.x);
 //		((TriangleFigure)(owner())).rotate(angle);
 //	}
-	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		Point fCenter = owner().center();
 		double angle = Math.atan2(fOrigin.y + y - anchorY - fCenter.y,
   								  fOrigin.x + x - anchorX - fCenter.x);
@@ -87,7 +91,7 @@ class TriangleRotationHandle extends AbstractHandle {
 //	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
 //		fOrigin = null;
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		fOrigin = null;
 	}
 
@@ -132,7 +136,7 @@ class TriangleRotationHandle extends AbstractHandle {
 //	protected Undoable createUndoActivity(DrawingView newView) {
 //		return new TriangleRotationHandle.UndoActivity(newView);
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
+	protected Undoable createUndoActivity(MDDrawingView newView) {
 		return new TriangleRotationHandle.UndoActivity(newView);
 	}
 
@@ -144,7 +148,7 @@ class TriangleRotationHandle extends AbstractHandle {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newView) {
+		public UndoActivity(MDDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

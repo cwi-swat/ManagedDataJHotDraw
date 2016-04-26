@@ -11,20 +11,27 @@
 
 package CH.ifa.draw.samples.javadraw;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.figures.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.application.*;
+import CH.ifa.draw.application.DrawApplication;
 import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.html.HTMLTextAreaFigure;
 import CH.ifa.draw.contrib.html.HTMLTextAreaTool;
+import CH.ifa.draw.figures.*;
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.framework.Tool;
+import CH.ifa.draw.standard.AbstractCommand;
+import CH.ifa.draw.standard.ConnectionTool;
+import CH.ifa.draw.standard.CreationTool;
+import CH.ifa.draw.standard.StandardDrawing;
+import CH.ifa.draw.util.Command;
+import CH.ifa.draw.util.CommandMenu;
+import CH.ifa.draw.util.UndoableCommand;
+import CH.ifa.draw.util.UndoableTool;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
+import java.io.File;
 import java.net.URL;
 
 /**
@@ -65,7 +72,7 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 //		return new StandardDrawingView(this);
 //	}
 
-	protected MDStandardDrawingView createDrawingView() {
+	protected MDDrawingView createDrawingView() {
 		return MDDrawingViewFactory.newSubjectRoleDrawingView(this);
 	}
 

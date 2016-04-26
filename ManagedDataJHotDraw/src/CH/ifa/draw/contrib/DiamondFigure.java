@@ -11,8 +11,8 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.figures.*;
+import CH.ifa.draw.figures.RectangleFigure;
+import CH.ifa.draw.framework.Connector;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;

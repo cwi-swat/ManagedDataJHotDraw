@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.framework;
 
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * Listener interested in DrawingView selection changes.
@@ -24,5 +24,5 @@ public interface FigureSelectionListener {
 	 * @param view DrawingView
 	 */
 //	public void figureSelectionChanged(DrawingView view);
-	public void figureSelectionChanged(MDStandardDrawingView view);
+	public void figureSelectionChanged(MDDrawingView view);
 }

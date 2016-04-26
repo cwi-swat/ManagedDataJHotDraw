@@ -11,9 +11,13 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.FigureSelection;
+import CH.ifa.draw.util.Clipboard;
+import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
@@ -88,7 +92,7 @@ public class PasteCommand extends FigureTransferCommand {
 //			setRedoable(true);
 //		}
 
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			setUndoable(true);
 			setRedoable(true);
@@ -99,7 +103,7 @@ public class PasteCommand extends FigureTransferCommand {
 				return false;
 			}
 
-			DeleteFromDrawingVisitor deleteVisitor = new DeleteFromDrawingVisitor(getDrawingView().drawing());
+			DeleteFromDrawingVisitor deleteVisitor = new DeleteFromDrawingVisitor(getDrawingView().getDrawing());
 			FigureEnumeration fe = getAffectedFigures();
 			while (fe.hasNextFigure()) {
 	    		fe.nextFigure().visit(deleteVisitor);

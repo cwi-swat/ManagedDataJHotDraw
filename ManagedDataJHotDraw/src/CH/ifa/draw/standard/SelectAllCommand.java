@@ -11,10 +11,11 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * Command to select all figures in a view.
@@ -36,7 +37,7 @@ public class SelectAllCommand extends AbstractCommand {
 		super.execute();
 		setUndoActivity(createUndoActivity());
     	getUndoActivity().setAffectedFigures(view().selection());
-		view().addToSelectionAll(view().drawing().figures());
+		view().addToSelectionAll(view().getDrawing().figures());
 		view().checkDamage();
 	}
 
@@ -46,7 +47,7 @@ public class SelectAllCommand extends AbstractCommand {
 	 * in the selected drawing view.
 	 */
 	public boolean isExecutableWithView() {
-		FigureEnumeration fe = view().drawing().figures();
+		FigureEnumeration fe = view().getDrawing().figures();
 		if (fe.hasNextFigure() && (fe.nextFigure() != null)) {
 			return true;
 		}
@@ -67,7 +68,7 @@ public class SelectAllCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			setUndoable(true);
 			setRedoable(true);
@@ -87,7 +88,7 @@ public class SelectAllCommand extends AbstractCommand {
 		public boolean redo() {
 			// do not call execute directly as the selection might has changed
 			if (isRedoable()) {
-				getDrawingView().addToSelectionAll(getDrawingView().drawing().figures());
+				getDrawingView().addToSelectionAll(getDrawingView().getDrawing().figures());
 				return true;
 			}
 

@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.samples.javadraw;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.samples.javadraw.JavaDrawApplet;
 // JUnitDoclet end import
 
 /*

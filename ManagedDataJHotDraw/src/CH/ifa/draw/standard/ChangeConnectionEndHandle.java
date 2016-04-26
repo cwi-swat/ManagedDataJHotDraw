@@ -11,11 +11,13 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.Point;
+import java.awt.*;
 
 /**
  * A handle to reconnect the end point of
@@ -74,7 +76,7 @@ public class ChangeConnectionEndHandle extends ChangeConnectionHandle {
 //		return new ChangeConnectionEndHandle.UndoActivity(newView);
 //	}
 
-	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
+	protected Undoable createUndoActivity(MDDrawingView newView) {
 		return new ChangeConnectionEndHandle.UndoActivity(newView);
 	}
 
@@ -82,7 +84,7 @@ public class ChangeConnectionEndHandle extends ChangeConnectionHandle {
 //		public UndoActivity(DrawingView newView) {
 //			super(newView);
 //		}
-		public UndoActivity(MDStandardDrawingView newView) {
+		public UndoActivity(MDDrawingView newView) {
 			super(newView);
 		}
 

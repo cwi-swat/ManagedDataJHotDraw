@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.standard;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.standard.StandardDrawing;
 // JUnitDoclet end import
 
 /*
@@ -229,7 +229,7 @@ extends TestCase
   // JUnitDoclet end javadoc_method setTitle()
   public void testSetGetTitle() throws Exception {
     // JUnitDoclet begin method setTitle getTitle
-    java.lang.String[] tests = {"", " ", "a", "A", "ä", "ß", "0123456789", "012345678901234567890", "\n", null};
+    java.lang.String[] tests = {"", " ", "a", "A", "ï¿½", "ï¿½", "0123456789", "012345678901234567890", "\n", null};
     
     for (int i = 0; i < tests.length; i++) {
       standarddrawing.setTitle(tests[i]);

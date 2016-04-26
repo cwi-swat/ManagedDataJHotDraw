@@ -11,10 +11,12 @@
 
 package CH.ifa.draw.samples.javadraw;
 
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.standard.SelectionTool;
+ import ccconcerns.managed_data.MDDrawingView;
+
 import java.awt.event.MouseEvent;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * A SelectionTool that interprets double clicks to inspect the clicked figure
@@ -31,7 +33,7 @@ public  class MySelectionTool extends SelectionTool {
 	 * Handles mouse down events and starts the corresponding tracker.
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((MDStandardDrawingView) e.getSource());
+		setView((MDDrawingView) e.getSource());
 		if (e.getClickCount() == 2) {
 			Figure figure = drawing().findFigure(e.getX(), e.getY());
 			if (figure != null) {

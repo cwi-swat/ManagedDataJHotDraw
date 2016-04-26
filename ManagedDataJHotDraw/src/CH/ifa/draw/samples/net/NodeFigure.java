@@ -11,15 +11,20 @@
 
 package CH.ifa.draw.samples.net;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.figures.LineConnection;
+import CH.ifa.draw.figures.TextFigure;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.*;
-import CH.ifa.draw.figures.*;
-import CH.ifa.draw.util.*;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.Geom;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.util.*;
-import java.util.List;
 import java.awt.*;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @version <$CURRENT_VERSION$>

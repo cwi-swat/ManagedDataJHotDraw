@@ -14,7 +14,6 @@ package CH.ifa.draw.framework;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Rectangle;
 import java.util.EventObject;
 
 /**

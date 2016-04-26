@@ -11,8 +11,8 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.factories.MDGeometryFactory;

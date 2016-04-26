@@ -11,15 +11,19 @@
 
 package CH.ifa.draw.figures;
 
-import java.util.*;
-import java.util.List;
-import java.awt.*;
-import java.io.*;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.ColorMap;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.List;
 
 /**
  * A text figure.

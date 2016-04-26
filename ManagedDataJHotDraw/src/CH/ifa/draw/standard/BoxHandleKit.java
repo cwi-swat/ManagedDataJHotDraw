@@ -14,7 +14,7 @@ package CH.ifa.draw.standard;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
@@ -94,13 +94,13 @@ class ResizeHandle extends LocatorHandle {
 		super(owner, loc);
 	}
 
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((ResizeHandle.UndoActivity)getUndoActivity()).setOldDisplayBox(owner().displayBox());
 	}
 
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		MDRectangle oldDisplayBox = ((ResizeHandle.UndoActivity)getUndoActivity()).getOldDisplayBox();
 		if (owner().displayBox().equals(oldDisplayBox)) {
 			// display box hasn't change so there is nothing to undo
@@ -111,14 +111,14 @@ class ResizeHandle extends LocatorHandle {
 	/**
 	 * Factory method for undo activity. To be overriden by subclasses.
 	 */
-	protected Undoable createUndoActivity(MDStandardDrawingView view) {
+	protected Undoable createUndoActivity(MDDrawingView view) {
 		return new ResizeHandle.UndoActivity(view);
 	}
 
 	public static class UndoActivity extends UndoableAdapter {
 		private MDRectangle myOldDisplayBox;
 
-		public UndoActivity(MDStandardDrawingView newView) {
+		public UndoActivity(MDDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

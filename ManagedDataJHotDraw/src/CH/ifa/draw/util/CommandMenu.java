@@ -12,11 +12,13 @@
 package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.JHotDrawRuntimeException;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.*;
+import java.awt.event.ActionListener;
+import java.util.EventObject;
+import java.util.HashMap;
 
 /**
  * A Command enabled menu. Selecting a menu item

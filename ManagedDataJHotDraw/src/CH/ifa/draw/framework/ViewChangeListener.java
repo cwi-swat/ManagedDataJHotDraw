@@ -1,5 +1,5 @@
 package CH.ifa.draw.framework;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.EventListener;
 
@@ -24,7 +24,7 @@ public interface ViewChangeListener extends EventListener {
 	 * @param newView view
 	 */
 //	public void viewSelectionChanged(DrawingView oldView, DrawingView newView);
-	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView);
+	public void viewSelectionChanged(MDDrawingView oldView, MDDrawingView newView);
 
 	/**
 	 * Sent when a new view is created.  This should only be fired after the view
@@ -33,7 +33,7 @@ public interface ViewChangeListener extends EventListener {
 	 * @param view view
 	 */
 //	public void viewCreated(DrawingView view);
-	public void viewCreated(MDStandardDrawingView view);
+	public void viewCreated(MDDrawingView view);
 
 	/**
 	 * Send when an existing view is about to be destroyed.  After processing this
@@ -41,5 +41,5 @@ public interface ViewChangeListener extends EventListener {
 	 * must not use it.
 	 */
 //	public void viewDestroying(DrawingView view);
-	public void viewDestroying(MDStandardDrawingView view);
+	public void viewDestroying(MDDrawingView view);
 }

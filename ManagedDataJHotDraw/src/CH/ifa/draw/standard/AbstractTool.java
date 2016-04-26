@@ -12,15 +12,16 @@
 package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.Undoable;
+import ccconcerns.managed_data.MDDrawingView;
 
-import java.util.*;
-import java.util.List;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.util.EventObject;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Default implementation support for Tools.
@@ -47,8 +48,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	 * independingly of the currently active drawing view.
 	 * For example, if a tool can be used
 	 */
-//	private DrawingView     myDrawingView;
-	private MDStandardDrawingView     myDrawingView;
+	private MDDrawingView myDrawingView;
 
 	private Undoable myUndoActivity;
 	private AbstractTool.EventDispatcher myEventDispatcher;
@@ -98,8 +98,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	public void deactivate() {
 		if (isActive()) {
 			if (getActiveView() != null) {
-//				getActiveView().setCursor(Cursor.getDefaultCursor());
-				getActiveView().cursor(Cursor.getDefaultCursor());
+				getActiveView().setCursor(Cursor.getDefaultCursor());
 			}
 			getEventDispatcher().fireToolDeactivatedEvent();
 		}
@@ -118,7 +117,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //
 //		checkUsable();
 //	}
-	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
+	public void viewSelectionChanged(MDDrawingView oldView, MDDrawingView newView) {
 		if (isActive()) {
 			deactivate();
 			activate();
@@ -133,7 +132,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //	public void viewCreated(DrawingView view) {
 //	}
 
- 	public void viewCreated(MDStandardDrawingView view) {
+ 	public void viewCreated(MDDrawingView view) {
 	}
 
 //	/**
@@ -142,7 +141,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //	public void viewDestroying(DrawingView view) {
 //	}
 
-	public void viewDestroying(MDStandardDrawingView view) {
+	public void viewDestroying(MDDrawingView view) {
 	}
 
 	/**
@@ -152,7 +151,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
         setAnchorX(x);
         setAnchorY(y);
 //		setView((DrawingView)e.getSource());
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 	}
 
 	/**
@@ -187,11 +186,11 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 	 * Gets the tool's drawing.
 	 */
 	public Drawing drawing() {
-		return view().drawing();
+		return view().getDrawing();
 	}
 
 	public Drawing getActiveDrawing() {
-	    return getActiveView().drawing();
+	    return getActiveView().getDrawing();
 	}
 
 	/**
@@ -212,7 +211,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //		return myDrawingView;
 //	}
 
-	public MDStandardDrawingView view() {
+	public MDDrawingView view() {
 		return myDrawingView;
 	}
 
@@ -220,7 +219,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //		myDrawingView = newDrawingView;
 //	}
 
-	protected void setView(MDStandardDrawingView newDrawingView) {
+	protected void setView(MDDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 
@@ -228,7 +227,7 @@ public abstract class AbstractTool implements Tool, ViewChangeListener {
 //		return editor().view();
 //	}
 
-	public MDStandardDrawingView getActiveView() {
+	public MDDrawingView getActiveView() {
 		return editor().view();
 	}
 

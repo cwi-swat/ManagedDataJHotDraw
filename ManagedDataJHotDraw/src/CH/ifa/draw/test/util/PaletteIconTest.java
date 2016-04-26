@@ -1,11 +1,12 @@
 package CH.ifa.draw.test.util;
 
 // JUnitDoclet begin import
-import CH.ifa.draw.util.PaletteIcon;
-import CH.ifa.draw.util.Iconkit;
+
 import CH.ifa.draw.application.DrawApplication;
 import CH.ifa.draw.framework.JHotDrawRuntimeException;
 import CH.ifa.draw.test.JHDTestCase;
+import CH.ifa.draw.util.Iconkit;
+import CH.ifa.draw.util.PaletteIcon;
 
 import java.awt.*;
 // JUnitDoclet end import

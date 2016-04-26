@@ -1,9 +1,10 @@
 package CH.ifa.draw.test.util;
 
 // JUnitDoclet begin import
-import CH.ifa.draw.test.JHDTestCase;
-import CH.ifa.draw.standard.SingleFigureEnumerator;
+
 import CH.ifa.draw.figures.RectangleFigure;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
+import CH.ifa.draw.test.JHDTestCase;
 
 import java.awt.*;
 // JUnitDoclet end import

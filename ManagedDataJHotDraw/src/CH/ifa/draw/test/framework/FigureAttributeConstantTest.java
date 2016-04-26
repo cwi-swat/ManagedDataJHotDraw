@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.framework;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.framework.FigureAttributeConstant;
 // JUnitDoclet end import
 
 /*

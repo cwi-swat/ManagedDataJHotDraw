@@ -12,10 +12,10 @@
 package CH.ifa.draw.figures;
 
 import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.FigureEnumerator;
-import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.standard.AbstractFigure;
+import CH.ifa.draw.standard.FigureEnumerator;
 import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 

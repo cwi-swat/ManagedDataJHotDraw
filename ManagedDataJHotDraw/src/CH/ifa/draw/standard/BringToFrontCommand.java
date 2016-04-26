@@ -11,9 +11,11 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * BringToFrontCommand brings the selected figures in the front of
@@ -39,7 +41,7 @@ public class BringToFrontCommand extends AbstractCommand {
 		getUndoActivity().setAffectedFigures(view().selection());
 		FigureEnumeration fe = getUndoActivity().getAffectedFigures();
 		while (fe.hasNextFigure()) {
-			view().drawing().bringToFront(fe.nextFigure());
+			view().getDrawing().bringToFront(fe.nextFigure());
 		}
 		view().checkDamage();
 	}
@@ -56,12 +58,12 @@ public class BringToFrontCommand extends AbstractCommand {
 //		public UndoActivity(DrawingView newDrawingView) {
 //			super(newDrawingView);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 		}
 
 		protected void sendToCommand(Figure f) {
-			getDrawingView().drawing().bringToFront(f);
+			getDrawingView().getDrawing().bringToFront(f);
 		}
 	}
 }

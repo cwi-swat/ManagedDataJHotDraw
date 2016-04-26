@@ -11,11 +11,14 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.Locator;
+import CH.ifa.draw.standard.LocatorHandle;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -34,7 +37,7 @@ public class FontSizeHandle extends LocatorHandle {
 //		setUndoActivity(createUndoActivity(view));
 //		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 //	}
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setUndoActivity(createUndoActivity(view));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 	}
@@ -46,7 +49,7 @@ public class FontSizeHandle extends LocatorHandle {
 //		int newSize = activity.getFont().getSize() + y-anchorY;
 //		textOwner.setFont(new Font(activity.getFont().getName(), activity.getFont().getStyle(), newSize));
 //	}
-	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		TextFigure textOwner = (TextFigure) owner();
 
 		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
@@ -65,7 +68,7 @@ public class FontSizeHandle extends LocatorHandle {
 //			activity.setFont(textOwner.getFont());
 //		}
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		TextFigure textOwner = (TextFigure) owner();
 		FontSizeHandle.UndoActivity activity = (FontSizeHandle.UndoActivity)getUndoActivity();
 		// there has been no change so there is nothing to undo
@@ -94,7 +97,7 @@ public class FontSizeHandle extends LocatorHandle {
 //		TextFigure textOwner = (TextFigure)owner();
 //		return new FontSizeHandle.UndoActivity(newView, textOwner.getFont());
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
+	protected Undoable createUndoActivity(MDDrawingView newView) {
 		TextFigure textOwner = (TextFigure)owner();
 		return new FontSizeHandle.UndoActivity(newView, textOwner.getFont());
 	}
@@ -110,7 +113,7 @@ public class FontSizeHandle extends LocatorHandle {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newView, Font newFont) {
+		public UndoActivity(MDDrawingView newView, Font newFont) {
 			super(newView);
 			setFont(newFont);
 			setOldFontSize(getFont().getSize());

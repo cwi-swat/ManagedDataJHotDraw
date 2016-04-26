@@ -11,14 +11,18 @@
 
 package CH.ifa.draw.contrib;
 
+import CH.ifa.draw.figures.NullConnector;
+import CH.ifa.draw.figures.NullFigure;
+import CH.ifa.draw.figures.PolyLineFigure;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.standard.ConnectionTool;
 import CH.ifa.draw.standard.SingleFigureEnumerator;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.figures.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.event.MouseEvent;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
 /**
  * @author  Wolfram Kaiser <mrfloppy@sourceforge.net>
@@ -30,7 +34,7 @@ public class SplitConnectionTool extends ConnectionTool {
 	}
 
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 		int ex = e.getX();
 		int ey = e.getY();
 		if (getTargetFigure() == null) {

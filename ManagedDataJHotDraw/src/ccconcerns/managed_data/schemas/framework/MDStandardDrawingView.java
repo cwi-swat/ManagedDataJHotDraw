@@ -5,6 +5,7 @@ import CH.ifa.draw.framework.Painter;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
@@ -14,10 +15,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.ImageObserver;
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeListener {
+public interface MDStandardDrawingView extends M, MDDrawingView {
 
     public static final int MINIMUM_WIDTH = 400;
     public static final int MINIMUM_HEIGHT = 300;
@@ -26,6 +29,14 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     MDRectangle damage(MDRectangle... damage);
 
     MDDimension size(MDDimension... size);
+
+    default MDDimension getSize() {
+        return size();
+    }
+
+    default void setSize(MDDimension _s) {
+        size(_s);
+    }
 
     default MDRectangle getDamage() {
         return damage();
@@ -39,6 +50,14 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     // the original inherits the JPanel
     JPanel panel(JPanel... panel);
 
+    default JPanel getPanel() {
+        return panel();
+    }
+
+    default void setPanel(JPanel _panel) {
+        panel(_panel);
+    }
+
     DrawingEditor editor(DrawingEditor... editor);
 
     default DrawingEditor getEditor() {
@@ -50,6 +69,10 @@ public interface MDStandardDrawingView extends M, ImageObserver, DrawingChangeLi
     }
 
     Drawing drawing(Drawing... drawing);
+
+    default Drawing getDrawing() {
+        return drawing();
+    }
 
     Painter displayUpdate(Painter... displayUpdate);
 

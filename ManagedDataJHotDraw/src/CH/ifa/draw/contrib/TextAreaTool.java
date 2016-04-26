@@ -18,11 +18,10 @@ import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.standard.TextHolder;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Container;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 
 /**
@@ -67,7 +66,7 @@ public class TextAreaTool extends CreationTool {
 	 * @param y  Description of the Parameter
 	 */
 	public void mouseDown(MouseEvent e, int x, int y) {
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 		Figure pressedFigure = drawing().findFigureInside(x, y);
 		TextHolder textHolder = null;
 		if (pressedFigure != null) {
@@ -309,7 +308,7 @@ public class TextAreaTool extends CreationTool {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
+		public UndoActivity(MDDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView);
 			setOriginalText(newOriginalText);
 			setUndoable(true);
@@ -335,7 +334,7 @@ public class TextAreaTool extends CreationTool {
 			if (!isValidText(getOriginalText())) {
 				FigureEnumeration fe = getAffectedFigures();
 				while (fe.hasNextFigure()) {
-					getDrawingView().drawing().orphan(fe.nextFigure());
+					getDrawingView().getDrawing().orphan(fe.nextFigure());
 				}
 			}
 			// add text figure if it has been removed (no backup text)
@@ -373,14 +372,14 @@ public class TextAreaTool extends CreationTool {
 			if (!isValidText(getBackupText())) {
 				FigureEnumeration fe = getAffectedFigures();
 				while (fe.hasNextFigure()) {
-					getDrawingView().drawing().orphan(fe.nextFigure());
+					getDrawingView().getDrawing().orphan(fe.nextFigure());
 				}
 			}
 			// the text figure didn't exist before
 			else if (!isValidText(getOriginalText())) {
 				FigureEnumeration fe = getAffectedFigures();
 				while (fe.hasNextFigure()) {
-					getDrawingView().drawing().add(fe.nextFigure());
+					getDrawingView().getDrawing().add(fe.nextFigure());
 					setText(getBackupText());
 				}
 			}

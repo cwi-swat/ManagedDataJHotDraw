@@ -11,14 +11,18 @@
 
 package CH.ifa.draw.figures;
 
+import CH.ifa.draw.framework.HandleEnumeration;
+import CH.ifa.draw.standard.BoxHandleKit;
+import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.framework.HandleEnumeration;
-import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 
 /**

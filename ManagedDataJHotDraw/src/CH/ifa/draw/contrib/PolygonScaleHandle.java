@@ -11,12 +11,13 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.AbstractHandle;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Geom;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -47,7 +48,7 @@ class PolygonScaleHandle extends AbstractHandle {
 //		activity.setAffectedFigures(new SingleFigureEnumerator(owner()));
 //		activity.setPolygon(((PolygonFigure)(owner())).getPolygon());
 //	}
-	public void invokeStart(int x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int x, int  y, MDDrawingView view) {
 		fCurrent = new Point(x, y);
 		PolygonScaleHandle.UndoActivity activity = (PolygonScaleHandle.UndoActivity)createUndoActivity(view);
 		setUndoActivity(activity);
@@ -67,7 +68,7 @@ class PolygonScaleHandle extends AbstractHandle {
 //		Polygon polygon = ((PolygonScaleHandle.UndoActivity)getUndoActivity()).getPolygon();
 //		((PolygonFigure)(owner())).scaleRotate(new Point(anchorX, anchorY), polygon, fCurrent);
 //	}
-	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		fCurrent = new Point(x, y);
 		Polygon polygon = ((PolygonScaleHandle.UndoActivity)getUndoActivity()).getPolygon();
 		((PolygonFigure)(owner())).scaleRotate(new Point(anchorX, anchorY), polygon, fCurrent);
@@ -88,7 +89,7 @@ class PolygonScaleHandle extends AbstractHandle {
 //		}
 //		fCurrent = null;
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		((PolygonFigure)(owner())).smoothPoints();
 		if ((fCurrent.x == anchorX) && (fCurrent.y == anchorY)) {
 			// there is nothing to undo
@@ -156,7 +157,7 @@ class PolygonScaleHandle extends AbstractHandle {
 //	protected Undoable createUndoActivity(DrawingView newView) {
 //		return new PolygonScaleHandle.UndoActivity(newView);
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView) {
+	protected Undoable createUndoActivity(MDDrawingView newView) {
 		return new PolygonScaleHandle.UndoActivity(newView);
 	}
 
@@ -168,7 +169,7 @@ class PolygonScaleHandle extends AbstractHandle {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newView) {
+		public UndoActivity(MDDrawingView newView) {
 			super(newView);
 			setUndoable(true);
 			setRedoable(true);

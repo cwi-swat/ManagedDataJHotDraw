@@ -11,16 +11,21 @@
 
 package CH.ifa.draw.samples.javadraw;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Tool;
+import CH.ifa.draw.framework.ViewChangeListener;
+import CH.ifa.draw.standard.StandardDrawing;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.UndoManager;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import javax.swing.JApplet;
+import javax.swing.*;
 import java.awt.*;
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 /**
  * @version <$CURRENT_VERSION$>
@@ -30,16 +35,15 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	private Drawing         fDrawing;
 	private Tool            fTool;
 //	private StandardDrawingView fView;
-	private MDStandardDrawingView fView;
+	private MDDrawingView fView;
 	private transient 		UndoManager myUndoManager;
 
 	public void init() {
 		setUndoManager(new UndoManager());
 		getContentPane().setLayout(new BorderLayout());
-//		fView = new StandardDrawingView(this, 400, 370);
 		fView = MDDrawingViewFactory.newDrawingView(this, 400, 370);
 
-		getContentPane().add("Center", fView.panel());
+		getContentPane().add("Center", fView.getPanel());
 		setTool(new FollowURLTool(this, this));
 
 		String filename = getParameter("Drawing");
@@ -79,12 +83,12 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	/**
 	 * Gets the editor's drawing view.
 	 */
-	public MDStandardDrawingView view() {
+	public MDDrawingView view() {
 		return fView;
 	}
 
-	public MDStandardDrawingView[] views() {
-		return new MDStandardDrawingView[] { view() };
+	public MDDrawingView[] views() {
+		return new MDDrawingView[] { view() };
 	}
 
 	/**

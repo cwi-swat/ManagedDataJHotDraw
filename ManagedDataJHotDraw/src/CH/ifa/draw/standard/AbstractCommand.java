@@ -11,16 +11,20 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.JHotDrawRuntimeException;
+import CH.ifa.draw.framework.ViewChangeListener;
+import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
-import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.figure_selection_listener.*;
+import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.util.*;
+import java.util.EventObject;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author Helge Horch
@@ -56,10 +60,10 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		setEventDispatcher(createEventDispatcher());
 	}
 
-	public void viewCreated(MDStandardDrawingView view) {
+	public void viewCreated(MDDrawingView view) {
 	}
 
-	public void viewDestroying(MDStandardDrawingView view) {
+	public void viewDestroying(MDDrawingView view) {
 	}
 
 	/**
@@ -78,7 +82,7 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 	 *
 	 * @return DrawingView currently active in the editor
 	 */
-	public MDStandardDrawingView view() {
+	public MDDrawingView view() {
 		return getDrawingEditor().view();
 	}
 
@@ -217,7 +221,7 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		}
 	}
 
-	public void viewSelectionChanged(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
+	public void viewSelectionChanged(MDDrawingView oldView, MDDrawingView newView) {
 		if (oldView != null) {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring

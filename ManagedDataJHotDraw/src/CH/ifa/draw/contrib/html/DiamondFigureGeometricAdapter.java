@@ -4,17 +4,15 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
 package CH.ifa.draw.contrib.html;
 
-import java.awt.Point;
-import java.awt.Polygon;
-import java.awt.Shape;
-
 import CH.ifa.draw.contrib.DiamondFigure;
+
+import java.awt.*;
 
 /**
  * Geometric adapter for the DiamondFigure

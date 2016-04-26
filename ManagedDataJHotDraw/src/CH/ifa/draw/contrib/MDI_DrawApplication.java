@@ -11,12 +11,13 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.application.*;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.application.DrawApplication;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.framework.Tool;
+import CH.ifa.draw.standard.ToolButton;
+import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 import javax.swing.*;
 
@@ -81,7 +82,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	 * to create a new internal drawing view should call this method.
 	 */
 	public void newWindow(Drawing newDrawing) {
-		MDStandardDrawingView newView = createDrawingView(newDrawing);
+		MDDrawingView newView = createDrawingView(newDrawing);
 		getDesktop().addToDesktop(newView, Desktop.PRIMARY);
 		toolDone();
 	}
@@ -100,8 +101,8 @@ public class MDI_DrawApplication extends DrawApplication {
 //		return NullDrawingView.getManagedDrawingView(this);
 //	}
 
-	protected MDStandardDrawingView createInitialDrawingView() {
-		return MDDrawingViewFactory.newSubjectRoleDrawingView(this);
+	protected MDDrawingView createInitialDrawingView() {
+		return MDDrawingViewFactory.newNullDrawingView(this);
 	}
 
 	/**
@@ -114,7 +115,7 @@ public class MDI_DrawApplication extends DrawApplication {
 		}
 
 		// create new window with view to an existing drawing
-		newWindow(view().drawing());
+		newWindow(view().getDrawing());
 
 		String copyTitle = getDrawingTitle();
 		if (copyTitle != null) {
@@ -135,7 +136,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	/**
 	 * Returns all the views in the application
 	 */
-	public MDStandardDrawingView[] views() {
+	public MDDrawingView[] views() {
 		return getDesktop().getAllFromDesktop(Desktop.PRIMARY);
 	}
 

@@ -12,12 +12,14 @@
 package CH.ifa.draw.standard;
 
 import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Painter;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
+import javax.swing.*;
 import java.awt.*;
-import java.util.*;
-import javax.swing.JPanel;
+import java.util.Collection;
+import java.util.Hashtable;
 
 /**
  * This DrawingView provides a very basic implementation. It does not perform any
@@ -427,12 +429,12 @@ public class NullDrawingView extends JPanel implements DrawingView {
 //			return newDrawingView;
 //		}
 //	}
-	public synchronized static MDStandardDrawingView getManagedDrawingView(DrawingEditor editor) {
+	public synchronized static MDDrawingView getManagedDrawingView(DrawingEditor editor) {
 		if (drawingViewManager.containsKey(editor)) {
-			return (MDStandardDrawingView)drawingViewManager.get(editor);
+			return (MDDrawingView)drawingViewManager.get(editor);
 		}
 		else {
-			MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(editor);
+			MDDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(editor);
 			drawingViewManager.put(editor, newDrawingView);
 			return newDrawingView;
 		}

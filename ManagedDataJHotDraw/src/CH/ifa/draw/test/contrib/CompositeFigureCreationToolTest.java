@@ -1,10 +1,9 @@
 package CH.ifa.draw.test.contrib;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.contrib.CompositeFigureCreationTool;
-import CH.ifa.draw.test.JHDTestCase;
 import CH.ifa.draw.figures.RectangleFigure;
+import CH.ifa.draw.test.JHDTestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

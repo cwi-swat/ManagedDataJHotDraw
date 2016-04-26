@@ -11,13 +11,16 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.util.*;
 import CH.ifa.draw.framework.*;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.Geom;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.List;
 import java.io.*;
+import java.util.List;
 
 /**
  * AbstractFigure provides default implementations for

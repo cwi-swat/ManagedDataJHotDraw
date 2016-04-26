@@ -4,21 +4,24 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.util.CommandMenu;
-import CH.ifa.draw.util.Command;
-import CH.ifa.draw.standard.AbstractCommand;
 import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.standard.AbstractCommand;
+import CH.ifa.draw.util.Command;
+import CH.ifa.draw.util.CommandMenu;
+
 import javax.swing.*;
-import javax.swing.event.*;
-import java.awt.event.*;
-import java.beans.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyVetoException;
 
 /**
  * Menu component that handles the functionality expected of a standard

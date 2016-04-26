@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.samples.nothing;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.samples.nothing.NothingApp;
 // JUnitDoclet end import
 
 /*

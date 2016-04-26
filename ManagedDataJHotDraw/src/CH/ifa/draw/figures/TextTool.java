@@ -11,17 +11,19 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.FloatingTextField;
-import CH.ifa.draw.util.UndoableAdapter;
 import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
 /**
  * Tool to create new or edit existing text figures.
@@ -57,7 +59,7 @@ public class TextTool extends CreationTool {
 	 */
 	public void mouseDown(MouseEvent e, int x, int y)
 	{
-		setView((MDStandardDrawingView)e.getSource());
+		setView((MDDrawingView)e.getSource());
 
 		if (getTypingTarget() != null) {
 			editor().toolDone();
@@ -243,7 +245,7 @@ public class TextTool extends CreationTool {
 //			setRedoable(true);
 //		}
 
-		public UndoActivity(MDStandardDrawingView newDrawingView, String newOriginalText) {
+		public UndoActivity(MDDrawingView newDrawingView, String newOriginalText) {
 			super(newDrawingView);
 			setOriginalText(newOriginalText);
 			setUndoable(true);

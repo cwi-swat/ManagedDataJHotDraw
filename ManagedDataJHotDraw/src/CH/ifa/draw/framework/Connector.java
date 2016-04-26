@@ -11,11 +11,11 @@
 
 package CH.ifa.draw.framework;
 
+import CH.ifa.draw.util.Storable;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.io.Serializable;
-
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * Connectors know how to locate a connection point on a figure.

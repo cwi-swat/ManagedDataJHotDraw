@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.samples.net;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.samples.net.NodeFigure;
 // JUnitDoclet end import
 
 /*

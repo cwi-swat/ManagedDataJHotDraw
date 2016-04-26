@@ -10,22 +10,11 @@
  */
 package CH.ifa.draw.contrib.html;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.geom.Ellipse2D;
-
 import CH.ifa.draw.figures.EllipseFigure;
-import CH.ifa.draw.framework.Connector;
-import CH.ifa.draw.framework.Figure;
-import CH.ifa.draw.framework.FigureChangeListener;
-import CH.ifa.draw.framework.Locator;
-import CH.ifa.draw.util.StorableInput;
-import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 /**
  * Geometric adapter for the EllipseFigure

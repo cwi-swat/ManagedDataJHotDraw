@@ -1,12 +1,12 @@
 package CH.ifa.draw.test.standard;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.standard.LocatorHandle;
-import CH.ifa.draw.test.JHDTestCase;
-import CH.ifa.draw.standard.RelativeLocator;
 import CH.ifa.draw.figures.RectangleFigure;
-import java.awt.Point;
+import CH.ifa.draw.standard.RelativeLocator;
+import CH.ifa.draw.test.JHDTestCase;
+
+import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

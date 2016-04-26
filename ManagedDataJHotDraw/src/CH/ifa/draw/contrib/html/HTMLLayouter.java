@@ -10,16 +10,14 @@
  */
 package CH.ifa.draw.contrib.html;
 
-import java.awt.Insets;
-import java.awt.Point;
-
-import java.awt.Rectangle;
-import java.io.IOException;
 import CH.ifa.draw.contrib.Layoutable;
 import CH.ifa.draw.contrib.Layouter;
 import CH.ifa.draw.util.StorableInput;
 import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.io.IOException;
 
 /**
  * HTMLLayouter implements the logic for laying out figures based on an

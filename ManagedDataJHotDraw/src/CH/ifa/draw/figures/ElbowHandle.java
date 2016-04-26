@@ -11,8 +11,9 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.DrawingView;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.standard.AbstractHandle;
 import CH.ifa.draw.util.Geom;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 

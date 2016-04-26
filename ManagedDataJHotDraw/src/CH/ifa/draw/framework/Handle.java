@@ -12,7 +12,7 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -60,7 +60,7 @@ public interface Handle {
 	 * @param view the handles container
 	 */
 //	public void invokeStart(int  x, int  y, DrawingView view);
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view);
+	public void invokeStart(int  x, int  y, MDDrawingView view);
 
 	/**
 	 * @deprecated As of version 4.1,
@@ -80,7 +80,7 @@ public interface Handle {
 	 * @param anchorY the y position where the interaction started
 	 */
 //	public void invokeStep (int x, int y, int anchorX, int anchorY, DrawingView view);
-	public void invokeStep (int x, int y, int anchorX, int anchorY, MDStandardDrawingView view);
+	public void invokeStep (int x, int y, int anchorX, int anchorY, MDDrawingView view);
 
 	/**
 	 * Tracks the end of the interaction.
@@ -90,7 +90,7 @@ public interface Handle {
 	 * @param anchorY the y position where the interaction started
 	 */
 //	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view);
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view);
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view);
 
 	/**
 	 * @deprecated As of version 4.1,

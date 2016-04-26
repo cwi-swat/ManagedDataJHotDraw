@@ -11,12 +11,16 @@
 
 package CH.ifa.draw.standard;
 
-import java.awt.*;
-import java.io.IOException;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.Locator;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.io.IOException;
 
 /**
  * A LocatorConnector locates connection points with

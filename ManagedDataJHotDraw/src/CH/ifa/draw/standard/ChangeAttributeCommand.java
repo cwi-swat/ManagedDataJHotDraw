@@ -11,10 +11,13 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureAttributeConstant;
+import CH.ifa.draw.framework.FigureEnumeration;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.Hashtable;
 
@@ -85,7 +88,7 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView, FigureAttributeConstant newUndoAttribute, Object newUndoValue) {
+		public UndoActivity(MDDrawingView newDrawingView, FigureAttributeConstant newUndoAttribute, Object newUndoValue) {
 			super(newDrawingView);
 			myOriginalValues = new Hashtable();
 			setAttribute(newUndoAttribute);

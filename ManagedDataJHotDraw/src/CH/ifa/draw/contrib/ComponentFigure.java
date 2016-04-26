@@ -12,17 +12,15 @@
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.figures.AttributeFigure;
+import CH.ifa.draw.framework.Handle;
+import CH.ifa.draw.framework.HandleEnumeration;
 import CH.ifa.draw.standard.BoxHandleKit;
 import CH.ifa.draw.standard.HandleEnumerator;
-import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.CollectionsFactory;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Component;
-import java.awt.Rectangle;
-import java.awt.Point;
-import java.awt.Graphics;
+import java.awt.*;
 import java.util.List;
 
 /**

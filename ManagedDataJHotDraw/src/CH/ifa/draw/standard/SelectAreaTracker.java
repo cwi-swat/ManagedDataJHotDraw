@@ -11,10 +11,13 @@
 
 package CH.ifa.draw.standard;
 
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * SelectAreaTracker implements a rubberband selection of an area.

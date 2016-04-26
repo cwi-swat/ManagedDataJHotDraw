@@ -11,11 +11,13 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.UndoableAdapter;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.AbstractCommand;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * Command to ungroup the selected figures.
@@ -74,7 +76,7 @@ public  class UngroupCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			setUndoable(true);
 			setRedoable(true);
@@ -90,9 +92,9 @@ public  class UngroupCommand extends AbstractCommand {
 			while (groupFigures.hasNextFigure()) {
 				Figure groupFigure = groupFigures.nextFigure();
 				// orphan individual figures from the group
-				getDrawingView().drawing().orphanAll(groupFigure.figures());
+				getDrawingView().getDrawing().orphanAll(groupFigure.figures());
 
-				Figure figure = getDrawingView().drawing().add(groupFigure);
+				Figure figure = getDrawingView().getDrawing().add(groupFigure);
 				getDrawingView().addToSelection(figure);
 			}
 
@@ -102,7 +104,7 @@ public  class UngroupCommand extends AbstractCommand {
 		public boolean redo() {
 			// do not call execute directly as the selection might has changed
 			if (isRedoable()) {
-				getDrawingView().drawing().orphanAll(getAffectedFigures());
+				getDrawingView().getDrawing().orphanAll(getAffectedFigures());
 				getDrawingView().clearSelection();
 				ungroupFigures();
 				return true;
@@ -114,9 +116,9 @@ public  class UngroupCommand extends AbstractCommand {
 			FigureEnumeration fe = getAffectedFigures();
 			while (fe.hasNextFigure()) {
 				Figure selected = fe.nextFigure();
-				Figure group = getDrawingView().drawing().orphan(selected);
+				Figure group = getDrawingView().getDrawing().orphan(selected);
 
-				getDrawingView().drawing().addAll(group.figures());
+				getDrawingView().getDrawing().addAll(group.figures());
 				getDrawingView().addToSelectionAll(group.figures());
 			}
 		}

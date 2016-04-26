@@ -10,6 +10,22 @@
  */
 package CH.ifa.draw.contrib;
 
+import CH.ifa.draw.figures.AttributeFigure;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureChangeEvent;
+import CH.ifa.draw.framework.FigureChangeListener;
+import CH.ifa.draw.framework.HandleEnumeration;
+import CH.ifa.draw.standard.BoxHandleKit;
+import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.standard.OffsetLocator;
+import CH.ifa.draw.standard.TextHolder;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.ColorMap;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.factories.MDGeometryFactory;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.LineBreakMeasurer;
@@ -20,18 +36,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.text.AttributedCharacterIterator;
 import java.text.AttributedString;
-import java.util.*;
+import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.List;
-
-import CH.ifa.draw.figures.AttributeFigure;
-import CH.ifa.draw.framework.Figure;
-import CH.ifa.draw.framework.FigureChangeEvent;
-import CH.ifa.draw.framework.FigureChangeListener;
-import CH.ifa.draw.framework.HandleEnumeration;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * A TextAreaFigure contains formatted text.<br>

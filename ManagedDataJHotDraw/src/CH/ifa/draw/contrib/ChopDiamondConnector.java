@@ -11,11 +11,13 @@
 
 package CH.ifa.draw.contrib;
 
-import java.awt.*;
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
 import CH.ifa.draw.standard.ChopBoxConnector;
 import CH.ifa.draw.util.Geom;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
 
 /**
  * A ChopDiamondConnector locates connection points by choping the

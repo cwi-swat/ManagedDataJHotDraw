@@ -11,11 +11,16 @@
 
 package CH.ifa.draw.standard;
 
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.Connector;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.util.Geom;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
+import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
 import java.awt.*;
 import java.io.IOException;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 /**
  * AbstractConnector provides default implementation for

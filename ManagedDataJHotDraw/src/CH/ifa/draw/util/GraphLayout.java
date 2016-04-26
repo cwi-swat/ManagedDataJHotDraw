@@ -32,10 +32,14 @@
 
 package CH.ifa.draw.util;
 
-import java.util.*;
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureChangeEvent;
+import CH.ifa.draw.standard.FigureChangeAdapter;
+
 import java.awt.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 /**
  * @version <$CURRENT_VERSION$>

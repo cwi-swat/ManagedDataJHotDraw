@@ -11,14 +11,19 @@
 
 package CH.ifa.draw.samples.javadraw;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.DrawingView;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureAttributeConstant;
+import CH.ifa.draw.standard.AbstractTool;
 import CH.ifa.draw.util.FloatingTextField;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 
 /**
  * A tool to attach URLs to figures.

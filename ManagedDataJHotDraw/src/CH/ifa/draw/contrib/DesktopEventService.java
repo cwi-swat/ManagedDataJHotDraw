@@ -14,14 +14,14 @@ package CH.ifa.draw.contrib;
 import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.standard.NullDrawingView;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import javax.swing.event.EventListenerList;
-import java.util.List;
-import java.awt.event.ContainerAdapter;
-import java.awt.event.ContainerListener;
-import java.awt.event.ContainerEvent;
 import java.awt.*;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
+import java.awt.event.ContainerListener;
+import java.util.List;
 
 /**
  * @author  Wolfram Kaiser <mrfloppy@users.sourceforge.net>
@@ -31,8 +31,7 @@ public class DesktopEventService {
 
 	private final EventListenerList listenerList = new EventListenerList();
 
-//	private DrawingView mySelectedView;
-	private MDStandardDrawingView mySelectedView;
+	private MDDrawingView mySelectedView;
 
 	private Container myContainer;
 	private Desktop myDesktop;
@@ -85,18 +84,7 @@ public class DesktopEventService {
 	    listenerList.remove(DesktopListener.class, dpl);
 	}
 
-//	protected void fireDrawingViewAddedEvent(final DrawingView dv) {
-//		final Object[] listeners = listenerList.getListenerList();
-//		DesktopListener dpl;
-//		DesktopEvent dpe = createDesktopEvent(getActiveDrawingView(), dv);
-//		for (int i = listeners.length-2; i>=0 ; i-=2)	{
-//			if (listeners[i] == DesktopListener.class) {
-//				dpl = (DesktopListener)listeners[i+1];
-//				dpl.drawingViewAdded(dpe);
-//			}
-//		}
-//	}
-	protected void fireDrawingViewAddedEvent(final MDStandardDrawingView dv) {
+	protected void fireDrawingViewAddedEvent(final MDDrawingView dv) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe = createDesktopEvent(getActiveDrawingView(), dv);
@@ -108,18 +96,7 @@ public class DesktopEventService {
 		}
 	}
 
-//	protected void fireDrawingViewRemovedEvent(final DrawingView dv) {
-//		final Object[] listeners = listenerList.getListenerList();
-//		DesktopListener dpl;
-//		DesktopEvent dpe = createDesktopEvent(getActiveDrawingView(), dv);
-//		for (int i = listeners.length-2; i>=0 ; i-=2)	{
-//			if (listeners[i] == DesktopListener.class) {
-//				dpl = (DesktopListener)listeners[i+1];
-//				dpl.drawingViewRemoved(dpe);
-//			}
-//		}
-//	}
-	protected void fireDrawingViewRemovedEvent(final MDStandardDrawingView dv) {
+	protected void fireDrawingViewRemovedEvent(final MDDrawingView dv) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe = createDesktopEvent(getActiveDrawingView(), dv);
@@ -134,18 +111,7 @@ public class DesktopEventService {
 	/**
 	 * This method is only called if the selected drawingView has actually changed
 	 */
-//	protected void fireDrawingViewSelectedEvent(final DrawingView oldView, final DrawingView newView) {
-//		final Object[] listeners = listenerList.getListenerList();
-//		DesktopListener dpl;
-//		DesktopEvent dpe = createDesktopEvent(oldView, newView);
-//		for (int i = listeners.length-2; i>=0 ; i-=2)	{
-//			if (listeners[i] == DesktopListener.class) {
-//				dpl = (DesktopListener)listeners[i+1];
-//				dpl.drawingViewSelected(dpe);
-//			}
-//		}
-//	}
-	protected void fireDrawingViewSelectedEvent(final MDStandardDrawingView oldView, final MDStandardDrawingView newView) {
+	protected void fireDrawingViewSelectedEvent(final MDDrawingView oldView, final MDDrawingView newView) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe = createDesktopEvent(oldView, newView);
@@ -160,49 +126,28 @@ public class DesktopEventService {
 	/**
 	 * @param oldView previous active drawing view (may be null because not all events require this information)
 	 */
-//	protected DesktopEvent createDesktopEvent(DrawingView oldView, DrawingView newView) {
-//		return new DesktopEvent(getDesktop(), newView, oldView);
-//	}
-	protected DesktopEvent createDesktopEvent(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
+	protected DesktopEvent createDesktopEvent(MDDrawingView oldView, MDDrawingView newView) {
 		return new DesktopEvent(getDesktop(), newView, oldView);
 	}
 
-//	public DrawingView[] getDrawingViews(Component[] comps) {
-//		List al = CollectionsFactory.current().createList();
-//		for (int x = 0; x < comps.length; x++) {
-//			DrawingView dv = Helper.getDrawingView(comps[x]);
-//			if (dv != null) {
-//				al.add(dv);
-//			}
-//		}
-//		DrawingView[] dvs = new DrawingView[al.size()];
-//		al.toArray(dvs);
-//		return dvs;
-//	}
-	public MDStandardDrawingView[] getDrawingViews(Component[] comps) {
+	public MDDrawingView[] getDrawingViews(Component[] comps) {
 		List al = CollectionsFactory.current().createList();
 		for (int x = 0; x < comps.length; x++) {
-			MDStandardDrawingView dv = Helper.getDrawingView(comps[x]);
+			MDDrawingView dv = Helper.getDrawingView(comps[x]);
 			if (dv != null) {
 				al.add(dv);
 			}
 		}
-		MDStandardDrawingView[] dvs = new MDStandardDrawingView[al.size()];
+		MDDrawingView[] dvs = new MDDrawingView[al.size()];
 		al.toArray(dvs);
 		return dvs;
 	}
 
-//	public DrawingView getActiveDrawingView() {
-//		return mySelectedView;
-//	}
-	public MDStandardDrawingView getActiveDrawingView() {
+	public MDDrawingView getActiveDrawingView() {
 		return mySelectedView;
 	}
 
-//	protected void setActiveDrawingView(DrawingView newActiveDrawingView) {
-//		mySelectedView = newActiveDrawingView;
-//	}
-	protected void setActiveDrawingView(MDStandardDrawingView newActiveDrawingView) {
+	protected void setActiveDrawingView(MDDrawingView newActiveDrawingView) {
 		mySelectedView = newActiveDrawingView;
 	}
 
@@ -213,19 +158,9 @@ public class DesktopEventService {
 			 * @todo does adding a component always make it the selected view?
 			 *
 			 */
-//            public void componentAdded(ContainerEvent e) {
-//				DrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
-//				DrawingView oldView = getActiveDrawingView();
-//				if (dv != null) {
-//					fireDrawingViewAddedEvent(dv);
-//					setActiveDrawingView(dv);
-//					fireDrawingViewSelectedEvent(oldView, getActiveDrawingView());
-//				}
-//            }
-
 			public void componentAdded(ContainerEvent e) {
-				MDStandardDrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
-				MDStandardDrawingView oldView = getActiveDrawingView();
+				MDDrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
+				MDDrawingView oldView = getActiveDrawingView();
 				if (dv != null) {
 					fireDrawingViewAddedEvent(dv);
 					setActiveDrawingView(dv);
@@ -239,20 +174,11 @@ public class DesktopEventService {
              * @todo  why should we assert? dont see a problem with removing a view thats not a selected view
              * This definitely needs fixing!!! dnoyeb 1/1/2003
 			 */
-//            public void componentRemoved(ContainerEvent e) {
-//				DrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
-//				if (dv != null) {
-//					DrawingView oldView = getActiveDrawingView();
-//					setActiveDrawingView(NullDrawingView.getManagedDrawingView(oldView.editor()));
-//					fireDrawingViewSelectedEvent(oldView, getActiveDrawingView());
-//					fireDrawingViewRemovedEvent(dv);
-//				}
-//            }
             public void componentRemoved(ContainerEvent e) {
-				MDStandardDrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
+				MDDrawingView dv = Helper.getDrawingView((java.awt.Container)e.getChild());
 				if (dv != null) {
-					MDStandardDrawingView oldView = getActiveDrawingView();
-					setActiveDrawingView(NullDrawingView.getManagedDrawingView(oldView.editor()));
+					MDDrawingView oldView = getActiveDrawingView();
+					setActiveDrawingView(NullDrawingView.getManagedDrawingView(oldView.getEditor()));
 					fireDrawingViewSelectedEvent(oldView, getActiveDrawingView());
 					fireDrawingViewRemovedEvent(dv);
 				}

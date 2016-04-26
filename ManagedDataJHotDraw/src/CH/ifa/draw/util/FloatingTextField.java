@@ -15,7 +15,7 @@ import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionListener;
 
 /**
  * A text field overlay that is used to edit a TextFigure.

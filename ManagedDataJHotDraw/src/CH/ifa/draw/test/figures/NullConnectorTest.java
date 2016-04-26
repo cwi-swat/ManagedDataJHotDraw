@@ -1,11 +1,11 @@
 package CH.ifa.draw.test.figures;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.figures.NullConnector;
-import CH.ifa.draw.framework.FigureChangeEvent;
 import CH.ifa.draw.figures.RectangleFigure;
-import java.awt.Point;
+import junit.framework.TestCase;
+
+import java.awt.*;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

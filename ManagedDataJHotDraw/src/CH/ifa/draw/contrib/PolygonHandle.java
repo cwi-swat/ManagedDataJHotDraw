@@ -11,13 +11,15 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
 import CH.ifa.draw.figures.PolyLineHandle;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.Locator;
+import CH.ifa.draw.standard.AbstractHandle;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.Point;
+import java.awt.*;
 
 /**
  * A handle for a node on the polygon.
@@ -48,7 +50,7 @@ public class PolygonHandle extends AbstractHandle {
 //		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 //		((PolygonHandle.UndoActivity)getUndoActivity()).setOldPoint(new Point(x, y));
 //	}
-	public void invokeStart(int  x, int  y, MDStandardDrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setUndoActivity(createUndoActivity(view, fIndex));
 		getUndoActivity().setAffectedFigures(new SingleFigureEnumerator(owner()));
 		((PolygonHandle.UndoActivity)getUndoActivity()).setOldPoint(new Point(x, y));
@@ -58,7 +60,7 @@ public class PolygonHandle extends AbstractHandle {
 //		int index = ((PolyLineHandle.UndoActivity)getUndoActivity()).getPointIndex();
 //		myOwner().setPointAt(new Point(x, y), index);
 //	}
-	public void invokeStep(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		int index = ((PolyLineHandle.UndoActivity)getUndoActivity()).getPointIndex();
 		myOwner().setPointAt(new Point(x, y), index);
 	}
@@ -69,7 +71,7 @@ public class PolygonHandle extends AbstractHandle {
 // 			setUndoActivity(null);
 //		}
 //	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		myOwner().smoothPoints();
 		if ((x == anchorX) && (y == anchorY)) {
  			setUndoActivity(null);
@@ -90,7 +92,7 @@ public class PolygonHandle extends AbstractHandle {
 //	protected Undoable createUndoActivity(DrawingView newView, int newPointIndex) {
 //		return new PolygonHandle.UndoActivity(newView, newPointIndex);
 //	}
-	protected Undoable createUndoActivity(MDStandardDrawingView newView, int newPointIndex) {
+	protected Undoable createUndoActivity(MDDrawingView newView, int newPointIndex) {
 		return new PolygonHandle.UndoActivity(newView, newPointIndex);
 	}
 
@@ -99,7 +101,7 @@ public class PolygonHandle extends AbstractHandle {
 //		public UndoActivity(DrawingView newView, int newPointIndex) {
 //			super(newView, newPointIndex);
 //		}
-		public UndoActivity(MDStandardDrawingView newView, int newPointIndex) {
+		public UndoActivity(MDDrawingView newView, int newPointIndex) {
 			super(newView, newPointIndex);
 		}
 

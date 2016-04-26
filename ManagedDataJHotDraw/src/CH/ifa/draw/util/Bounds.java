@@ -13,7 +13,7 @@ package CH.ifa.draw.util;
 
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.io.Serializable;

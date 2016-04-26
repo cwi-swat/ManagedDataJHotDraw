@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.samples.minimap;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.samples.minimap.MiniMapApplication;
 // JUnitDoclet end import
 
 /*

@@ -1,17 +1,15 @@
 package CH.ifa.draw.test.standard;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.figures.RectangleFigure;
 import CH.ifa.draw.standard.NullHandle;
 import CH.ifa.draw.standard.RelativeLocator;
-import CH.ifa.draw.util.CollectionsFactory;
 import CH.ifa.draw.test.JHDTestCase;
-import CH.ifa.draw.figures.RectangleFigure;
-import CH.ifa.draw.figures.TextFigure;
+import CH.ifa.draw.util.CollectionsFactory;
 
-import java.util.List;
 import java.awt.*;
+import java.util.List;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

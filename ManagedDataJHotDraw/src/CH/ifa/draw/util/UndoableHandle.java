@@ -11,8 +11,10 @@
 
 package CH.ifa.draw.util;
 
-import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.Handle;
+import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -24,14 +26,14 @@ public class UndoableHandle implements Handle {
 
 	private Handle myWrappedHandle;
 	//	private DrawingView myDrawingView;
-	private MDStandardDrawingView myDrawingView;
+	private MDDrawingView myDrawingView;
 
 //	public UndoableHandle(Handle newWrappedHandle, DrawingView newDrawingView) {
 //		setWrappedHandle(newWrappedHandle);
 //		setDrawingView(newDrawingView);
 //		setDrawingView(newDrawingView);
 //	}
-	public UndoableHandle(Handle newWrappedHandle, MDStandardDrawingView newDrawingView) {
+	public UndoableHandle(Handle newWrappedHandle, MDDrawingView newDrawingView) {
 		setWrappedHandle(newWrappedHandle);
 		setDrawingView(newDrawingView);
 	}
@@ -68,7 +70,7 @@ public class UndoableHandle implements Handle {
 //	public void invokeStart(int x, int y, DrawingView view) {
 //		getWrappedHandle().invokeStart(x, y, view);
 //	}
-	public void invokeStart(int x, int y, MDStandardDrawingView view) {
+	public void invokeStart(int x, int y, MDDrawingView view) {
 		getWrappedHandle().invokeStart(x, y, view);
 	}
 
@@ -94,7 +96,7 @@ public class UndoableHandle implements Handle {
 //	public void invokeStep(int x, int y, int anchorX, int anchorY, DrawingView view) {
 //		getWrappedHandle().invokeStep(x, y, anchorX, anchorY, view);
 //	}
-	public void invokeStep(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+	public void invokeStep(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		getWrappedHandle().invokeStep(x, y, anchorX, anchorY, view);
 	}
 
@@ -105,22 +107,14 @@ public class UndoableHandle implements Handle {
 	 * @param anchorX the x position where the interaction started
 	 * @param anchorY the y position where the interaction started
 	 */
-//	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
-//		getWrappedHandle().invokeEnd(x, y, anchorX, anchorY, view);
-//
-//		Undoable undoableActivity = getWrappedHandle().getUndoActivity();
-//		if ((undoableActivity != null) && (undoableActivity.isUndoable())) {
-//			getDrawingView().editor().getUndoManager().pushUndo(undoableActivity);
-//			getDrawingView().editor().getUndoManager().clearRedos();
-//		}
-//	}
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
+
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
 		getWrappedHandle().invokeEnd(x, y, anchorX, anchorY, view);
 
 		Undoable undoableActivity = getWrappedHandle().getUndoActivity();
 		if ((undoableActivity != null) && (undoableActivity.isUndoable())) {
-			getDrawingView().editor().getUndoManager().pushUndo(undoableActivity);
-			getDrawingView().editor().getUndoManager().clearRedos();
+			getDrawingView().getEditor().getUndoManager().pushUndo(undoableActivity);
+			getDrawingView().getEditor().getUndoManager().clearRedos();
 		}
 	}
 
@@ -170,7 +164,7 @@ public class UndoableHandle implements Handle {
 		return myWrappedHandle;
 	}
 
-	public MDStandardDrawingView getDrawingView() {
+	public MDDrawingView getDrawingView() {
 		return myDrawingView;
 	}
 //	public DrawingView getDrawingView() {
@@ -180,7 +174,7 @@ public class UndoableHandle implements Handle {
 //	protected void setDrawingView(DrawingView newDrawingView) {
 //		myDrawingView = newDrawingView;
 //	}
-	protected void setDrawingView(MDStandardDrawingView newDrawingView) {
+	protected void setDrawingView(MDDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 

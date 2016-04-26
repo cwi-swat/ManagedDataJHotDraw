@@ -12,7 +12,7 @@
 package CH.ifa.draw.framework;
 
 import CH.ifa.draw.util.UndoManager;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * DrawingEditor defines the interface for coordinating
@@ -38,10 +38,10 @@ public interface DrawingEditor /* @MDHD extends FigureSelectionListener*/ {
 	/**
 	 * Gets the editor's drawing view.
 	 */
-	public MDStandardDrawingView view();
+	public MDDrawingView view();
 
 	// @MDHD
-	public MDStandardDrawingView[] views();
+	public MDDrawingView[] views();
 
 	/**
 	 * Gets the editor's current tool.

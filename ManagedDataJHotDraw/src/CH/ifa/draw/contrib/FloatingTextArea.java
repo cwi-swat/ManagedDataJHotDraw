@@ -12,16 +12,8 @@ package CH.ifa.draw.contrib;
 
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.awt.Color;
-
-import java.awt.Container;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Rectangle;
-import javax.swing.BorderFactory;
-import javax.swing.JEditorPane;
-import javax.swing.JScrollPane;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A FloatingTextArea overlays an editor on top of an area in a drawing<br>

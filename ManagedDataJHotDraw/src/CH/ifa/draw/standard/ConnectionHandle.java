@@ -4,17 +4,18 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.standard;
 
-import java.awt.*;
-
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.util.Geom;
+import ccconcerns.managed_data.MDDrawingView;
+
+import java.awt.*;
 
 /**
  * A handle to connect figures.
@@ -60,12 +61,12 @@ public  class ConnectionHandle extends LocatorHandle {
 	/**
 	 * Creates the connection
 	 */
-	public void invokeStart(int  x, int  y, DrawingView view) {
+	public void invokeStart(int  x, int  y, MDDrawingView view) {
 		setConnection(createConnection());
 		Point p = locate();
 		getConnection().startPoint(p.x, p.y);
 		getConnection().endPoint(p.x, p.y);
-		view.drawing().add(getConnection());
+		view.getDrawing().add(getConnection());
 	}
 
 	/**
@@ -96,15 +97,15 @@ public  class ConnectionHandle extends LocatorHandle {
 	 * Connects the figures if the mouse is released over another
 	 * figure.
 	 */
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, DrawingView view) {
-		Connector target = findConnectionTarget(x, y, view.drawing());
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
+		Connector target = findConnectionTarget(x, y, view.getDrawing());
 		if (target != null) {
 			getConnection().connectStart(startConnector());
 			getConnection().connectEnd(target);
 			getConnection().updateConnection();
 		}
 		else {
-			view.drawing().remove(getConnection());
+			view.getDrawing().remove(getConnection());
 		}
 		setConnection(null);
 		if (getTargetFigure() != null) {

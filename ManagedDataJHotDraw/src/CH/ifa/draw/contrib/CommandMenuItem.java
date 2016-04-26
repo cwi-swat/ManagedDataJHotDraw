@@ -4,17 +4,17 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.util.Command;
-import javax.swing.JMenuItem;
-import javax.swing.Icon;
-import java.awt.event.ActionListener;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * CommandMenuItem implements a command that can be added to a menu

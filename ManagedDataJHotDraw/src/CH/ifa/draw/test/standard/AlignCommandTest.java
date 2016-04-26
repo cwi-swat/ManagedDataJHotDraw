@@ -1,9 +1,9 @@
 package CH.ifa.draw.test.standard;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
 import CH.ifa.draw.standard.AlignCommand;
 import CH.ifa.draw.test.JHDTestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

@@ -11,10 +11,15 @@
 
 package CH.ifa.draw.figures;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.standard.AbstractCommand;
+import CH.ifa.draw.standard.FigureEnumerator;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.Undoable;
+import CH.ifa.draw.util.UndoableAdapter;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.List;
 
@@ -61,7 +66,7 @@ public  class GroupCommand extends AbstractCommand {
 //			setUndoable(true);
 //			setRedoable(true);
 //		}
-		public UndoActivity(MDStandardDrawingView newDrawingView) {
+		public UndoActivity(MDDrawingView newDrawingView) {
 			super(newDrawingView);
 			setUndoable(true);
 			setRedoable(true);
@@ -75,7 +80,7 @@ public  class GroupCommand extends AbstractCommand {
 			getDrawingView().clearSelection();
 
 			// orphan group figure(s)
-			getDrawingView().drawing().orphanAll(getAffectedFigures());
+			getDrawingView().getDrawing().orphanAll(getAffectedFigures());
 
 			// create a new collection with the grouped figures as elements
 			List affectedFigures = CollectionsFactory.current().createList();
@@ -84,7 +89,7 @@ public  class GroupCommand extends AbstractCommand {
 			while (fe.hasNextFigure()) {
 				Figure currentFigure = fe.nextFigure();
 				// add contained figures
-				getDrawingView().drawing().addAll(currentFigure.figures());
+				getDrawingView().getDrawing().addAll(currentFigure.figures());
 				getDrawingView().addToSelectionAll(currentFigure.figures());
 
 				FigureEnumeration groupedFigures = currentFigure.figures();
@@ -109,14 +114,14 @@ public  class GroupCommand extends AbstractCommand {
 		}
 
 		public void groupFigures() {
-			getDrawingView().drawing().orphanAll(getAffectedFigures());
+			getDrawingView().getDrawing().orphanAll(getAffectedFigures());
 			getDrawingView().clearSelection();
 
 			// add new group figure instead
 			GroupFigure group = new GroupFigure();
 			group.addAll(getAffectedFigures());
 
-			Figure figure = getDrawingView().drawing().add(group);
+			Figure figure = getDrawingView().getDrawing().add(group);
 			getDrawingView().addToSelection(figure);
 
 			// create a new collection with the new group figure as element

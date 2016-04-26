@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.contrib;
 
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.EventObject;
 
@@ -24,20 +24,20 @@ public class DesktopEvent extends EventObject {
 	// MDHD
 //	private DrawingView myDrawingView;
 
-	private MDStandardDrawingView myDrawingView;
+	private MDDrawingView myDrawingView;
 
 	/**
 	 * Some events require the previous DrawingView (e.g. when a new DrawingView
 	 * is selected).
 	 */	
 //	private DrawingView myPreviousDrawingView;
-	private MDStandardDrawingView myPreviousDrawingView;
+	private MDDrawingView myPreviousDrawingView;
 
 //	public DesktopEvent(Desktop source, DrawingView newDrawingView) {
 //		this(source, newDrawingView, null);
 //	}
 
-	public DesktopEvent(Desktop source, MDStandardDrawingView newDrawingView) {
+	public DesktopEvent(Desktop source, MDDrawingView newDrawingView) {
 		this(source, newDrawingView, null);
 	}
 
@@ -47,7 +47,7 @@ public class DesktopEvent extends EventObject {
 //		setPreviousDrawingView(newPreviousDV);
 //	}
 
-	public DesktopEvent(Desktop source, MDStandardDrawingView newDrawingView, MDStandardDrawingView newPreviousDV) {
+	public DesktopEvent(Desktop source, MDDrawingView newDrawingView, MDDrawingView newPreviousDV) {
 		super(source);
 		setDrawingView(newDrawingView);
 		setPreviousDrawingView(newPreviousDV);
@@ -57,7 +57,7 @@ public class DesktopEvent extends EventObject {
 //		myDrawingView = newDrawingView;
 //	}
 
-	private void setDrawingView(MDStandardDrawingView newDrawingView) {
+	private void setDrawingView(MDDrawingView newDrawingView) {
 		myDrawingView = newDrawingView;
 	}
 
@@ -65,7 +65,7 @@ public class DesktopEvent extends EventObject {
 //	    return myDrawingView;
 //	}
 
-	public MDStandardDrawingView getDrawingView() {
+	public MDDrawingView getDrawingView() {
 		return myDrawingView;
 	}
 
@@ -73,7 +73,7 @@ public class DesktopEvent extends EventObject {
 //		myPreviousDrawingView = newPreviousDrawingView;
 //	}
 
-	private void setPreviousDrawingView(MDStandardDrawingView newPreviousDrawingView) {
+	private void setPreviousDrawingView(MDDrawingView newPreviousDrawingView) {
 		myPreviousDrawingView = newPreviousDrawingView;
 	}
 	
@@ -81,7 +81,7 @@ public class DesktopEvent extends EventObject {
 //		return myPreviousDrawingView;
 //	}
 
-	public MDStandardDrawingView getPreviousDrawingView() {
+	public MDDrawingView getPreviousDrawingView() {
 		return myPreviousDrawingView;
 	}
 }

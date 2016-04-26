@@ -10,12 +10,11 @@
  */
 package CH.ifa.draw.contrib.html;
 
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.geom.RoundRectangle2D;
 import CH.ifa.draw.figures.RoundRectangleFigure;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.awt.geom.RoundRectangle2D;
 
 /**
  * Geometric adapter for the RoundRectangleFigure

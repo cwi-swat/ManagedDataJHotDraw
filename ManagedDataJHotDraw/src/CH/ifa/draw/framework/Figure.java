@@ -11,8 +11,8 @@
 
 package CH.ifa.draw.framework;
 
-import CH.ifa.draw.util.*;
 import CH.ifa.draw.standard.TextHolder;
+import CH.ifa.draw.util.Storable;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;

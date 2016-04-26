@@ -1,9 +1,9 @@
 package CH.ifa.draw.test.util;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.util.StorageFormatManager;
 import CH.ifa.draw.util.StandardStorageFormat;
+import junit.framework.TestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

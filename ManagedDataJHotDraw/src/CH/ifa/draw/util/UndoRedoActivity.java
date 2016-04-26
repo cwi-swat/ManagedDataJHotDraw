@@ -11,8 +11,8 @@
 
 package CH.ifa.draw.util;
 
-import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.FigureEnumeration;
+ import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * An UndoRedoActivity can be used to turn a UndoActivity into a RedoActivity.
@@ -96,7 +96,7 @@ public class UndoRedoActivity implements Undoable {
 //	public DrawingView getDrawingView() {
 //		return getReversedActivity().getDrawingView();
 //	}
-	public MDStandardDrawingView getDrawingView() {
+	public MDDrawingView getDrawingView() {
 		return getReversedActivity().getDrawingView();
 	}
 

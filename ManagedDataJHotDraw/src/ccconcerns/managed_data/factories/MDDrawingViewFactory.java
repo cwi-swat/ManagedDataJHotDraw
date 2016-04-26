@@ -1,11 +1,13 @@
 package ccconcerns.managed_data.factories;
 
 import CH.ifa.draw.framework.DrawingEditor;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.standard.SimpleUpdateStrategy;
+import CH.ifa.draw.standard.StandardDrawing;
 import ccconcerns.MyJPanel;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
+import ccconcerns.managed_data.schemas.framework.MDNullDrawingView;
 import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
@@ -17,7 +19,9 @@ import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
 public class MDDrawingViewFactory {
 
@@ -263,6 +267,32 @@ public class MDDrawingViewFactory {
 //
 //            }
 //        });
+        return drawingView;
+    }
+
+    public static MDNullDrawingView newNullDrawingView(DrawingEditor editor) {
+
+        // ================================================
+        final Schema drawingViewSchema = SchemaLoader.load(
+                schemaFactory, schemaSchema,
+                JHotDrawPrimitives.class, MDNullDrawingView.class, MDRectangle.class, MDDimension.class);
+
+        final SubjectRoleDataManager subjectRoleFactory =
+                new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+
+        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
+        // ================================================
+
+        final MDNullDrawingView drawingView = drawingViewSchemaFactory.NullDrawingView();
+
+        // JPanel setup
+        MyJPanel jPanel = new MyJPanel();
+        jPanel.setAutoscrolls(true);
+        drawingView.panel(jPanel);
+
+        // editor
+        drawingView.editor(editor);
+
         return drawingView;
     }
 

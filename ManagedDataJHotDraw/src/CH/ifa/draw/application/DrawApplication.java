@@ -12,23 +12,28 @@
 package CH.ifa.draw.application;
 
 import CH.ifa.draw.contrib.Desktop;
+import CH.ifa.draw.contrib.DesktopEvent;
+import CH.ifa.draw.contrib.DesktopListener;
+import CH.ifa.draw.contrib.JPanelDesktop;
+import CH.ifa.draw.figures.GroupCommand;
+import CH.ifa.draw.figures.PolyLineFigure;
+import CH.ifa.draw.figures.UngroupCommand;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
-import CH.ifa.draw.figures.*;
 import CH.ifa.draw.util.*;
-import CH.ifa.draw.contrib.*;
 import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
+import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * DrawApplication defines a standard presentation for
@@ -54,7 +59,7 @@ public	class DrawApplication
 	private JTextField				fStatusLine;
 
 	// @MDHD
-	private MDStandardDrawingView   fView;
+	private MDDrawingView   fView;
 
 	private ToolButton				fDefaultToolButton;
 	private ToolButton				fSelectedToolButton;
@@ -129,8 +134,8 @@ public	class DrawApplication
 		}
 		DrawApplication window = createApplication();
 		window.open(view());
-		if (view().drawing().getTitle() != null ) {
-			window.setDrawingTitle(view().drawing().getTitle() + " (View)");
+		if (view().getDrawing().getTitle() != null ) {
+			window.setDrawingTitle(view().getDrawing().getTitle() + " (View)");
 		}
 		else {
 			window.setDrawingTitle(getDefaultDrawingTitle() + " (View)");
@@ -164,7 +169,7 @@ public	class DrawApplication
 	/**
 	 * Opens a new window with a drawing view.
 	 */
-	protected void open(final MDStandardDrawingView newDrawingView) {
+	protected void open(final MDDrawingView newDrawingView) {
 		getVersionControlStrategy().assertCompatibleVersion();
 		setUndoManager(new UndoManager());
 		setIconkit(createIconkit());
@@ -580,9 +585,9 @@ public	class DrawApplication
 	 * subclass in your application. By default a standard
 	 * DrawingView is returned.
 	 */
-	protected MDStandardDrawingView createDrawingView() {
-		MDStandardDrawingView createdDrawingView = createDrawingView(createDrawing());
-		createdDrawingView.drawing().setTitle(getDefaultDrawingTitle());
+	protected MDDrawingView createDrawingView() {
+		MDDrawingView createdDrawingView = createDrawingView(createDrawing());
+		createdDrawingView.getDrawing().setTitle(getDefaultDrawingTitle());
 		return createdDrawingView;
 	}
 
@@ -596,7 +601,7 @@ public	class DrawApplication
 	 *
 	 * @return drawing view that is active at application startup time
 	 */
-	protected MDStandardDrawingView createInitialDrawingView() {
+	protected MDDrawingView createInitialDrawingView() {
 		return createDrawingView();
 	}
 
@@ -731,7 +736,7 @@ public	class DrawApplication
 //		return fView;
 //	}
 
-	public MDStandardDrawingView view() {
+	public MDDrawingView view() {
 		return fView;
 	}
 
@@ -742,14 +747,14 @@ public	class DrawApplication
 //		fireViewSelectionChangedEvent(oldView, view());
 //	}
 
-	protected void setView(MDStandardDrawingView newView) {
-		MDStandardDrawingView oldView = fView;
+	protected void setView(MDDrawingView newView) {
+		MDDrawingView oldView = fView;
 		fView = newView;
 		fireViewSelectionChangedEvent(oldView, view());
 	}
 
-	public MDStandardDrawingView[] views() {
-		return new MDStandardDrawingView[] { view() };
+	public MDDrawingView[] views() {
+		return new MDDrawingView[] { view() };
 	}
 
 	/**
@@ -796,7 +801,7 @@ public	class DrawApplication
 //		}
 //	}
 
-	protected void fireViewSelectionChangedEvent(MDStandardDrawingView oldView, MDStandardDrawingView newView) {
+	protected void fireViewSelectionChangedEvent(MDDrawingView oldView, MDDrawingView newView) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -818,7 +823,7 @@ public	class DrawApplication
 //		}
 //	}
 
-	protected void fireViewCreatedEvent(MDStandardDrawingView view) {
+	protected void fireViewCreatedEvent(MDDrawingView view) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -840,7 +845,7 @@ public	class DrawApplication
 //		}
 //	}
 
-	protected void fireViewDestroyingEvent(MDStandardDrawingView view) {
+	protected void fireViewDestroyingEvent(MDDrawingView view) {
 		final Object[] listeners = listenerList.getListenerList();
 		ViewChangeListener vsl = null;
 		for (int i = listeners.length-2; i>=0 ; i-=2) {
@@ -1007,8 +1012,8 @@ public	class DrawApplication
 			return;
 		}
 		try {
-			String name = storeFormat.store(file, view().drawing());
-			view().drawing().setTitle(name);
+			String name = storeFormat.store(file, view().getDrawing());
+			view().getDrawing().setTitle(name);
 			setDrawingTitle(name);
 		}
 		catch (IOException e) {
@@ -1064,7 +1069,7 @@ public	class DrawApplication
 	 * Return the title of the currently selected drawing
 	 */
 	protected String getDrawingTitle() {
-		return view().drawing().getTitle();
+		return view().getDrawing().getTitle();
 	}
 
 	/**
@@ -1124,12 +1129,12 @@ public	class DrawApplication
 	    return new DesktopListener() {
 			public void drawingViewAdded(DesktopEvent dpe) {
 //				DrawingView dv = dpe.getDrawingView();
-				MDStandardDrawingView dv = dpe.getDrawingView();
+				MDDrawingView dv = dpe.getDrawingView();
 				fireViewCreatedEvent(dv);
 			}
 			public void drawingViewRemoved(DesktopEvent dpe) {
 //				DrawingView dv = dpe.getDrawingView();
-				MDStandardDrawingView dv = dpe.getDrawingView();
+				MDDrawingView dv = dpe.getDrawingView();
 
 				getUndoManager().clearUndos(dv);
 				getUndoManager().clearRedos(dv);
@@ -1138,10 +1143,10 @@ public	class DrawApplication
 			}
 			public void drawingViewSelected(DesktopEvent dpe) {
 //				DrawingView dv = dpe.getDrawingView();
-				MDStandardDrawingView dv = dpe.getDrawingView();
+				MDDrawingView dv = dpe.getDrawingView();
 
 				if (dv != null) {
-					if (dv.drawing() != null)
+					if (dv.getDrawing() != null)
 						dv.unfreezeView();
 				}
 				setView(dv);
@@ -1186,11 +1191,11 @@ public	class DrawApplication
 	// ===========================================================================================
 	// ===========================================================================================
 	// ===========================================================================================
-	protected MDStandardDrawingView createDrawingView(Drawing newDrawing) {
+	protected MDDrawingView createDrawingView(Drawing newDrawing) {
 		MDDimension d = getDrawingViewSize();
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		MDStandardDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width(), d.height());
+		MDDrawingView newDrawingView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, d.width(), d.height());
 		newDrawingView.setDrawing(newDrawing);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring

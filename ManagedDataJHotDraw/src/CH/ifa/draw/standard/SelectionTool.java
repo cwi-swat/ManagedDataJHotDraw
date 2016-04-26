@@ -11,11 +11,14 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.UndoableTool;
-import CH.ifa.draw.util.UndoableHandle;
 import CH.ifa.draw.contrib.dnd.DragNDropTool;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.Handle;
+import CH.ifa.draw.framework.Tool;
+import CH.ifa.draw.util.UndoableHandle;
+import CH.ifa.draw.util.UndoableTool;
+import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.event.MouseEvent;
 
@@ -119,7 +122,7 @@ public class SelectionTool extends AbstractTool {
 //	protected Tool createHandleTracker(DrawingView view, Handle handle) {
 //		return new HandleTracker(editor(), new UndoableHandle(handle, view));
 //	}
-	protected Tool createHandleTracker(MDStandardDrawingView view, Handle handle) {
+	protected Tool createHandleTracker(MDDrawingView view, Handle handle) {
 		return new HandleTracker(editor(), new UndoableHandle(handle, view));
 	}
 

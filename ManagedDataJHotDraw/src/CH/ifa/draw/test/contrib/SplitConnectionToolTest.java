@@ -1,11 +1,10 @@
 package CH.ifa.draw.test.contrib;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.contrib.SplitConnectionTool;
-import CH.ifa.draw.test.JHDTestCase;
-import CH.ifa.draw.framework.ConnectionFigure;
 import CH.ifa.draw.figures.LineConnection;
+import CH.ifa.draw.framework.ConnectionFigure;
+import CH.ifa.draw.test.JHDTestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

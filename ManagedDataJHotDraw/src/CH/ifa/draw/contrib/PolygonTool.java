@@ -4,17 +4,20 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.standard.AbstractTool;
+import CH.ifa.draw.standard.PasteCommand;
+import CH.ifa.draw.standard.SingleFigureEnumerator;
 import CH.ifa.draw.util.Undoable;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -49,7 +52,7 @@ public class PolygonTool extends AbstractTool {
 			fPolygon.smoothPoints();
 			if (fPolygon.pointCount() < 3 ||
 					fPolygon.size().width < 4 || fPolygon.size().height < 4) {
-				getActiveView().drawing().remove(fPolygon);
+				getActiveView().getDrawing().remove(fPolygon);
 				// nothing to undo
 				setUndoActivity(null);
 			}

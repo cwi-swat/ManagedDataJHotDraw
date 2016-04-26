@@ -12,7 +12,7 @@
 package CH.ifa.draw.contrib;
 
 import ccconcerns.MyJPanel;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -39,12 +39,12 @@ public class Helper {
 //		return null;
 //	}
 
-	static public MDStandardDrawingView getDrawingView(Container container) {
-		MDStandardDrawingView oldDrawingView = null;
+	static public MDDrawingView getDrawingView(Container container) {
+		MDDrawingView oldDrawingView = null;
 		Component[] components = container.getComponents();
 		for (int i = 0; i < components.length; i++) {
 			if (components[i] instanceof MyJPanel) {
-				return (MDStandardDrawingView)((MyJPanel) components[i]).getDrawingView();
+				return (MDDrawingView)((MyJPanel) components[i]).getDrawingView();
 			}
 			else if (components[i] instanceof Container) {
 				oldDrawingView = getDrawingView((Container)components[i]);
@@ -68,12 +68,12 @@ public class Helper {
 //		}
 //	}
 
-	static public MDStandardDrawingView getDrawingView(Component component) {
+	static public MDDrawingView getDrawingView(Component component) {
 		if (Container.class.isInstance(component)) {
 			return getDrawingView((Container)component);
 		}
 		else if (MyJPanel.class.isInstance(component)) {
-			return (MDStandardDrawingView)((MyJPanel) component).getDrawingView();
+			return (MDDrawingView)((MyJPanel) component).getDrawingView();
 		}
 		else {
 			return null;

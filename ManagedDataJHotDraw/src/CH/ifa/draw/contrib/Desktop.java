@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.contrib;
 
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * @author  C.L.Gilbert <dnoyeb@users.sourceforge.net>
@@ -26,18 +26,18 @@ public interface Desktop {
 	 * For those absent minded components that were not paying attention to the
 	 * listener events.
 	 */
-	public MDStandardDrawingView getActiveDrawingView();
+	public MDDrawingView getActiveDrawingView();
 
 	// @MDHD
 //	public void addToDesktop(DrawingView dv, int location);
-	public void addToDesktop(MDStandardDrawingView dv, int location);
+	public void addToDesktop(MDDrawingView dv, int location);
 
 	// @MDHD
 //	public void removeFromDesktop(DrawingView dv, int location);
-	public void removeFromDesktop(MDStandardDrawingView dv, int location);
+	public void removeFromDesktop(MDDrawingView dv, int location);
 
 	public void removeAllFromDesktop(int location);
-	public MDStandardDrawingView[] getAllFromDesktop(int location);
+	public MDDrawingView[] getAllFromDesktop(int location);
 
 	public void updateTitle(String newDrawingTitle);
 

@@ -14,8 +14,8 @@ package CH.ifa.draw.contrib;
 import CH.ifa.draw.util.Storable;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
-import java.io.Serializable;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * A Layouter encapsulates a algorithm to layout

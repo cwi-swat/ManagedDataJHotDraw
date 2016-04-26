@@ -11,7 +11,7 @@
 
 package CH.ifa.draw.framework;
 
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 import java.io.Serializable;
@@ -39,5 +39,5 @@ public interface Painter extends Serializable {
 	 */
 //	public void draw(Graphics g, DrawingView view);
 
-	public void draw(Graphics g, MDStandardDrawingView view);
+	public void draw(Graphics g, MDDrawingView view);
 }

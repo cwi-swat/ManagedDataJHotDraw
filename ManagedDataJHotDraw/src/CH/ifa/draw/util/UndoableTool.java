@@ -11,12 +11,14 @@
 
 package CH.ifa.draw.util;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.framework.Tool;
+import CH.ifa.draw.framework.ToolListener;
 import CH.ifa.draw.standard.AbstractTool;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
-import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.util.EventObject;
 
 /**
@@ -137,7 +139,7 @@ public class UndoableTool implements Tool, ToolListener {
 //	public DrawingView view() {
 //		return editor().view();
 //	}
-	public MDStandardDrawingView view() {
+	public MDDrawingView view() {
 		return editor().view();
 	}
 
@@ -196,7 +198,7 @@ public class UndoableTool implements Tool, ToolListener {
 //	public DrawingView getActiveView() {
 //		return editor().view();
 //	}
-	public MDStandardDrawingView getActiveView() {
+	public MDDrawingView getActiveView() {
 		return editor().view();
 	}
 }

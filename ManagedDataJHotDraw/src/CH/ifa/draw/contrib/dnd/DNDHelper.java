@@ -4,20 +4,25 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
 
 package CH.ifa.draw.contrib.dnd;
 
-import java.awt.dnd.*;
+import CH.ifa.draw.framework.DrawingView;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureEnumeration;
+
+import javax.swing.*;
 import java.awt.*;
-import java.util.*;
-import CH.ifa.draw.framework.*;
-import java.awt.datatransfer.*;
-import java.io.*;
-import javax.swing.JComponent;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.dnd.*;
+import java.io.File;
+import java.io.InputStream;
 
 /**
  * @author  C.L.Gilbert <dnoyeb@sourceforge.net>

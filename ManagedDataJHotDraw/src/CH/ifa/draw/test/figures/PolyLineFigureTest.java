@@ -1,9 +1,9 @@
 package CH.ifa.draw.test.figures;
 
-import junit.framework.TestCase;
-// JUnitDoclet begin import
-import CH.ifa.draw.figures.PolyLineFigure;
 import CH.ifa.draw.figures.ArrowTip;
+import junit.framework.TestCase;
+
+// JUnitDoclet begin import
 // JUnitDoclet end import
 
 /*

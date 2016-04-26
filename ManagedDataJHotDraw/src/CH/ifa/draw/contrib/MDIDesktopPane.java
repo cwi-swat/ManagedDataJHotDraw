@@ -12,14 +12,14 @@
 package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.application.DrawApplication;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import javax.swing.*;
-import javax.swing.event.InternalFrameListener;
 import javax.swing.event.InternalFrameAdapter;
 import javax.swing.event.InternalFrameEvent;
+import javax.swing.event.InternalFrameListener;
 import java.awt.*;
-import java.beans.*;
+import java.beans.PropertyVetoException;
 
 /**
  * An extension of JDesktopPane that supports often used MDI functionality. This
@@ -44,7 +44,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 	 */
 	//private final EventListenerList listenerList = new EventListenerList();
 //	private DrawingView selectedView;
-	private MDStandardDrawingView selectedView;
+	private MDDrawingView selectedView;
 
 	public MDIDesktopPane(DrawApplication newDrawApplication) {
 		setDrawApplication(newDrawApplication);
@@ -66,7 +66,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //	    }
 
 		public void internalFrameOpened(InternalFrameEvent e) {
-			MDStandardDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
+			MDDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
 			fireDrawingViewAddedEvent(dv);
 	    }
 
@@ -94,7 +94,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 
 		public void internalFrameClosed(InternalFrameEvent e) {
-			MDStandardDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
+			MDDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
 			if (getComponentCount() == 0){
 				setActiveDrawingView(null);
 				fireDrawingViewSelectedEvent(selectedView);
@@ -130,7 +130,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 
 		public void internalFrameActivated(InternalFrameEvent e) {
-			MDStandardDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
+			MDDrawingView dv = Helper.getDrawingView(e.getInternalFrame());
 			setActiveDrawingView(dv);
 			fireDrawingViewSelectedEvent(selectedView);
 		}
@@ -155,7 +155,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 //	}
 
-	private void fireDrawingViewAddedEvent(final MDStandardDrawingView dv) {
+	private void fireDrawingViewAddedEvent(final MDDrawingView dv) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe = null;
@@ -185,7 +185,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 //	}
 
-	private void fireDrawingViewRemovedEvent(final MDStandardDrawingView dv) {
+	private void fireDrawingViewRemovedEvent(final MDDrawingView dv) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe= null;
@@ -215,7 +215,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 //	}
 
-	private void fireDrawingViewSelectedEvent(final MDStandardDrawingView dv) {
+	private void fireDrawingViewSelectedEvent(final MDDrawingView dv) {
 		final Object[] listeners = listenerList.getListenerList();
 		DesktopListener dpl;
 		DesktopEvent dpe = null;
@@ -257,18 +257,18 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		return internalFrame;
 //	}
 
-	protected Component createContents(MDStandardDrawingView dv) {
-		JScrollPane sp = new JScrollPane((Component) dv.panel());
+	protected Component createContents(MDDrawingView dv) {
+		JScrollPane sp = new JScrollPane((Component) dv.getPanel());
 		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		sp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		sp.setAlignmentX(LEFT_ALIGNMENT);
 
 		String applicationTitle;
-		if (dv.drawing().getTitle() == null) {
+		if (dv.getDrawing().getTitle() == null) {
 			applicationTitle = getDrawApplication().getApplicationName() + " - " + getDrawApplication().getDefaultDrawingTitle();
 		}
 		else {
-			applicationTitle = getDrawApplication().getApplicationName() + " - " + dv.drawing().getTitle();
+			applicationTitle = getDrawApplication().getApplicationName() + " - " + dv.getDrawing().getTitle();
 		}
 		JInternalFrame internalFrame = new JInternalFrame(applicationTitle, true, true, true, true);
 		internalFrame.setName(applicationTitle);
@@ -281,7 +281,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		return selectedView;
 //	}
 
-	public MDStandardDrawingView getActiveDrawingView() {
+	public MDDrawingView getActiveDrawingView() {
 		return selectedView;
 	}
 
@@ -289,7 +289,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		selectedView = newSelectedView;
 //	}
 
-	protected void setActiveDrawingView(MDStandardDrawingView newSelectedView) {
+	protected void setActiveDrawingView(MDDrawingView newSelectedView) {
 		selectedView = newSelectedView;
 	}
 
@@ -352,7 +352,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		}
 //	}
 
-	public void addToDesktop(MDStandardDrawingView dv, int location) {
+	public void addToDesktop(MDDrawingView dv, int location) {
 		JInternalFrame frame = (JInternalFrame)createContents(dv);
 		JInternalFrame[] array = getAllFrames();
 		Point p = null;
@@ -404,7 +404,7 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 //		checkDesktopSize();
 //	}
 
-	public void removeFromDesktop(MDStandardDrawingView dv, int location) {
+	public void removeFromDesktop(MDDrawingView dv, int location) {
 		Component[] comps = getComponents();
 		for (int x=0; x<comps.length; x++) {
 			if (dv == Helper.getDrawingView(comps[x])) {
@@ -422,16 +422,16 @@ public class MDIDesktopPane extends JDesktopPane implements Desktop {
 		}
 	}
 
-	public MDStandardDrawingView[] getAllFromDesktop(int location){
+	public MDDrawingView[] getAllFromDesktop(int location){
 		Component[] comps = getComponents();
 		java.util.ArrayList al = new java.util.ArrayList();
 		for (int x=0; x<comps.length; x++) {
-			MDStandardDrawingView dv = Helper.getDrawingView(comps[x]);
+			MDDrawingView dv = Helper.getDrawingView(comps[x]);
 			if (dv != null) {
 				al.add(dv);
 			}
 		}
-		MDStandardDrawingView[] dvs = new MDStandardDrawingView[al.size()];
+		MDDrawingView[] dvs = new MDDrawingView[al.size()];
 		al.toArray(dvs);
 		return dvs;
 	}

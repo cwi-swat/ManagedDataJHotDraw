@@ -11,9 +11,11 @@
 
 package CH.ifa.draw.standard;
 
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Drawing;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.Handle;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+ import ccconcerns.managed_data.MDDrawingView;
 
 import java.awt.*;
 
@@ -59,8 +61,8 @@ public abstract class AbstractHandle implements Handle {
 //	public void invokeStart(int x, int  y, DrawingView view) {
 //		invokeStart(x, y, view.drawing());
 //	}
-	public void invokeStart(int x, int  y, MDStandardDrawingView view) {
-		invokeStart(x, y, view.drawing());
+	public void invokeStart(int x, int  y, MDDrawingView view) {
+		invokeStart(x, y, view.getDrawing());
 	}
 
 	/**
@@ -83,8 +85,8 @@ public abstract class AbstractHandle implements Handle {
 //	public void invokeStep(int x, int y, int anchorX, int anchorY, DrawingView view) {
 //		invokeStep(x-anchorX, y-anchorY, view.drawing());
 //	}
-	public void invokeStep(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
-		invokeStep(x-anchorX, y-anchorY, view.drawing());
+	public void invokeStep(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
+		invokeStep(x-anchorX, y-anchorY, view.getDrawing());
 	}
 
 	/**
@@ -98,8 +100,8 @@ public abstract class AbstractHandle implements Handle {
 //		invokeEnd(x-anchorX, y-anchorY, view.drawing());
 //	}
 
-	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDStandardDrawingView view) {
-		invokeEnd(x-anchorX, y-anchorY, view.drawing());
+	public void invokeEnd(int x, int y, int anchorX, int anchorY, MDDrawingView view) {
+		invokeEnd(x-anchorX, y-anchorY, view.getDrawing());
 	}
 
 	/**

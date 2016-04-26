@@ -11,9 +11,11 @@
 
 package CH.ifa.draw.standard;
 
+import CH.ifa.draw.framework.DrawingView;
+import CH.ifa.draw.framework.Painter;
+ import ccconcerns.managed_data.MDDrawingView;
+
 import java.awt.*;
-import CH.ifa.draw.framework.*;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 
 /**
  * The SimpleUpdateStrategy implements an update
@@ -38,7 +40,7 @@ public  class SimpleUpdateStrategy implements Painter {
 //	public void draw(Graphics g, DrawingView view) {
 //		view.drawAll(g);
 //	}
-	public void draw(Graphics g, MDStandardDrawingView view) {
+	public void draw(Graphics g, MDDrawingView view) {
 		view.drawAll(g);
 	}
 }

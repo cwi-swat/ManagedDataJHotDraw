@@ -11,14 +11,21 @@
 
 package CH.ifa.draw.contrib;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
-import CH.ifa.draw.util.*;
-import CH.ifa.draw.figures.*;
+import CH.ifa.draw.figures.RectangleFigure;
+import CH.ifa.draw.framework.Figure;
+import CH.ifa.draw.framework.FigureAttributeConstant;
+import CH.ifa.draw.framework.FigureChangeEvent;
+import CH.ifa.draw.framework.HandleEnumeration;
+import CH.ifa.draw.standard.BoxHandleKit;
+import CH.ifa.draw.standard.CompositeFigure;
+import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.util.CollectionsFactory;
+import CH.ifa.draw.util.StorableInput;
+import CH.ifa.draw.util.StorableOutput;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.io.*;
+import java.io.IOException;
 import java.util.List;
 
 /**

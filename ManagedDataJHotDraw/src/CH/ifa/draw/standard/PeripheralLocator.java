@@ -11,12 +11,10 @@
 
 package CH.ifa.draw.standard;
 
-import java.awt.Point;
 import CH.ifa.draw.framework.Figure;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.lang.Math;
 
 /**
  * @author  C.L.Gilbert <dnoyeb@users.sourceforge.net>

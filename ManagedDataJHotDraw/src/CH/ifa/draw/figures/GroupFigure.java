@@ -11,14 +11,17 @@
 
 package CH.ifa.draw.figures;
 
-import java.awt.*;
-import java.util.*;
-import java.util.List;
-
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.standard.*;
+import CH.ifa.draw.framework.FigureEnumeration;
+import CH.ifa.draw.framework.HandleEnumeration;
+import CH.ifa.draw.standard.CompositeFigure;
+import CH.ifa.draw.standard.FigureEnumerator;
+import CH.ifa.draw.standard.HandleEnumerator;
+import CH.ifa.draw.standard.RelativeLocator;
 import CH.ifa.draw.util.CollectionsFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
+import java.util.List;
 
 /**
  * A Figure that groups a collection of figures.

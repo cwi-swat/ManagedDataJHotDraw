@@ -11,9 +11,10 @@
 
 package CH.ifa.draw.standard;
 
-import java.awt.*;
-import CH.ifa.draw.framework.*;
+import CH.ifa.draw.framework.Figure;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
+
+import java.awt.*;
 
 /**
  * The interface of a figure that has some editable text contents.

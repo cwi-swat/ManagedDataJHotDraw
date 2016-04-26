@@ -17,9 +17,10 @@ import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDRectangle;
 
 import java.awt.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.Iterator;
 import java.util.List;
-import java.io.*;
 
 /**
  * The standard implementation of the Drawing interface.

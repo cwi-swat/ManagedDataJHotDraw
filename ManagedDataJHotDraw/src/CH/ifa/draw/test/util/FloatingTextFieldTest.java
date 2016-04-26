@@ -1,8 +1,8 @@
 package CH.ifa.draw.test.util;
 
 import junit.framework.TestCase;
+
 // JUnitDoclet begin import
-import CH.ifa.draw.util.FloatingTextField;
 // JUnitDoclet end import
 
 /*

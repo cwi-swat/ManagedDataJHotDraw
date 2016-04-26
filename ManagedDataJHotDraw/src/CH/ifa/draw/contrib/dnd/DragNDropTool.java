@@ -11,16 +11,15 @@
 
 package CH.ifa.draw.contrib.dnd;
 
-import CH.ifa.draw.standard.AbstractTool;
-import java.util.List;
-import java.awt.event.MouseEvent;
-import java.awt.*;
-import java.util.Iterator;
-
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
+import ccconcerns.managed_data.MDDrawingView;
+
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * This is a tool which handles drag and drop between Components in
@@ -76,7 +75,7 @@ public class DragNDropTool extends AbstractTool {
 //			comps.add(dndi);
 //		}
 //	}
-	public void viewCreated(MDStandardDrawingView view) {
+	public void viewCreated(MDDrawingView view) {
 		super.viewCreated(view);
 		if (DNDInterface.class.isInstance(view)) {
 			DNDInterface dndi = (DNDInterface)view;
@@ -98,7 +97,7 @@ public class DragNDropTool extends AbstractTool {
 //		}
 //		super.viewDestroying(view);
 //	}
-	public void viewDestroying(MDStandardDrawingView view) {
+	public void viewDestroying(MDDrawingView view) {
 		if (DNDInterface.class.isInstance(view)) {
 			DNDInterface dndi = (DNDInterface)view;
 			dndi.setDropTargetActive(false);
@@ -184,12 +183,12 @@ public class DragNDropTool extends AbstractTool {
 //			view.setCursor(Cursor.getDefaultCursor());
 //		}
 //	}
-	public static void setCursor(int x, int y, MDStandardDrawingView view) {
+	public static void setCursor(int x, int y, MDDrawingView view) {
 		if (view == null) {   //shouldnt need this
 			return;
 		}
 		Handle handle = view.findHandle(x, y);
-		Figure figure = view.drawing().findFigure(x, y);
+		Figure figure = view.getDrawing().findFigure(x, y);
 
 		if (handle != null) {
 			if (LocatorHandle.class.isInstance(handle)) {
