@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ManagedData4J">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ManagedData4J/target/ManagedData4J.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

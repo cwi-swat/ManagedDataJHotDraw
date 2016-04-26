@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/batik-awt-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/batik-dom-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/batik-svggen.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/jdo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/junit-4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
