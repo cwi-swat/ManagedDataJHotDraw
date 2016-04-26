@@ -128,7 +128,7 @@ public class TextTool extends CreationTool {
 			endEdit();
 		}
 
-		getFloatingTextField().createOverlay((Container)view(), figure.getFont());
+		getFloatingTextField().createOverlay((Container)view().getPanel(), figure.getFont());
 		getFloatingTextField().setBounds(fieldBounds(figure), figure.getText());
 
 		setTypingTarget(figure);

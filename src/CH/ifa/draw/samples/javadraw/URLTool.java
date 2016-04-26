@@ -73,7 +73,7 @@ public  class URLTool extends AbstractTool {
 			endEdit();
 		}
 		if (figure != fURLTarget) {
-			fTextField.createOverlay((Container)view());
+			fTextField.createOverlay((Container)view().getPanel());
 			fTextField.setBounds(fieldBounds(figure), getURL(figure));
 			fURLTarget = figure;
 		}

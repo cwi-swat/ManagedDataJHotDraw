@@ -186,7 +186,7 @@ public class TextAreaTool extends CreationTool {
 			endEdit();
 		}
 
-		fTextField.createOverlay((Container)view(), getFont(figure));
+		fTextField.createOverlay((Container)view().getPanel(), getFont(figure));
 		fTextField.setBounds(fieldBounds(figure), figure.getText());
 
 		setTypingTarget(figure);
