@@ -25,14 +25,8 @@ import java.awt.*;
 public class UndoableHandle implements Handle {
 
 	private Handle myWrappedHandle;
-	//	private DrawingView myDrawingView;
 	private MDDrawingView myDrawingView;
 
-//	public UndoableHandle(Handle newWrappedHandle, DrawingView newDrawingView) {
-//		setWrappedHandle(newWrappedHandle);
-//		setDrawingView(newDrawingView);
-//		setDrawingView(newDrawingView);
-//	}
 	public UndoableHandle(Handle newWrappedHandle, MDDrawingView newDrawingView) {
 		setWrappedHandle(newWrappedHandle);
 		setDrawingView(newDrawingView);

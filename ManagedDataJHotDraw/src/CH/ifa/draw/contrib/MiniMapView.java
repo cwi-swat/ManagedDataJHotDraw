@@ -13,7 +13,7 @@ package CH.ifa.draw.contrib;
 
 import CH.ifa.draw.framework.DrawingChangeEvent;
 import CH.ifa.draw.framework.DrawingChangeListener;
-import CH.ifa.draw.framework.DrawingView;
+import ccconcerns.managed_data.MDDrawingView;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -37,28 +37,28 @@ import java.awt.geom.NoninvertibleTransformException;
 public class MiniMapView extends JComponent {
 // Instance Variables
 	private JScrollPane m_subject;
-	private DrawingView myMappedDrawingView;
+	private MDDrawingView myMappedDrawingView;
 	private SubjectListener m_subjectListener;
 	private DrawingChangeListener myDrawingChangeListener;
 	private Color m_viewBoxColor = Color.red;
 
 // Constructors
-	public MiniMapView(DrawingView newMappedDrawingView, JScrollPane subject) {
+	public MiniMapView(MDDrawingView newMappedDrawingView, JScrollPane subject) {
 		m_subjectListener = new SubjectListener();
 		setSubject(subject);
 		setMappedDrawingView(newMappedDrawingView);
 		myDrawingChangeListener = new MappedDrawingChangeListener();
-		getMappedDrawingView().drawing().addDrawingChangeListener(myDrawingChangeListener);
+		getMappedDrawingView().getDrawing().addDrawingChangeListener(myDrawingChangeListener);
 		MouseListener ml = new MouseListener();
 		addMouseListener(new MouseListener());
 		addMouseMotionListener(ml);
 	}
 
-	protected void setMappedDrawingView(DrawingView newMappedDrawingView) {
+	protected void setMappedDrawingView(MDDrawingView newMappedDrawingView) {
 		myMappedDrawingView = newMappedDrawingView;
 	}
 
-	public DrawingView getMappedDrawingView() {
+	public MDDrawingView getMappedDrawingView() {
 		return myMappedDrawingView;
 	}
 

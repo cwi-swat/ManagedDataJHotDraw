@@ -2,395 +2,187 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c38c312-eb0c-4bf4-99b9-75e19823c5b0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardDrawingView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/ManagedDataJHotDraw.iml" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/ManagedDataJHotDraw.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/application/DrawApplication.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/application/DrawApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CTXCommandMenu.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CTXCommandMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CTXWindowMenu.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CTXWindowMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ChopDiamondConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ChopDiamondConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ChopPolygonConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ChopPolygonConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ClippingUpdateStrategy.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ClippingUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CommandCheckBoxMenuItem.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CommandCheckBoxMenuItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CommandMenuItem.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CommandMenuItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ComponentFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/ComponentFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CustomSelectionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CustomSelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CustomToolBar.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CustomToolBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Desktop.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Desktop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEvent.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopListener.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DiamondFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DiamondFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/FloatingTextArea.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/FloatingTextArea.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/GraphicalCompositeFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/GraphicalCompositeFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Helper.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Helper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Layouter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Layouter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MDIDesktopPane.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MDIDesktopPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MDI_DrawApplication.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/JHDTestCase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXCommandMenuTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXWindowMenuTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopDiamondConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopPolygonConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ClippingUpdateStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandCheckBoxMenuItemTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandMenuItemTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ComponentFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CompositeFigureCreationToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomSelectionToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomToolBarTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DesktopEventServiceTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DiamondFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/FloatingTextAreaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/GraphicalCompositeFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/HelperTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JPanelDesktopTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JScrollPaneDesktopTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDIDesktopPaneTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDI_DrawApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/NestedCreationToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGDrawAppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGStorageFormatTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SimpleLayouterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SplitConnectionToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/StandardLayouterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TriangleFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/WindowMenuTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ArrowTipTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderDecoratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ChopEllipseConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ConnectedTextToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowConnectionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/EllipseFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FigureAttributesTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FiguresSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FontSizeHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ImageFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/InsertImageCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineConnectionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NumberTextFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RectangleFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RoundRectangleFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ScribbleToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ShortestDistanceConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/UngroupCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/DrawingChangeEventTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureAttributeConstantTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureChangeEventTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FrameworkSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/AnimationDecoratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppletTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawViewerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavadrawSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/MySelectionToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/PatternPainterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/URLToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapDesktopTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MinimapSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NetAppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NetSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NodeFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppletTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertAppletTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertDependencyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureCreationToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/AlignCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BoxHandleKitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BringToFrontCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BufferedUpdateStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeAttributeCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionEndHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionStartHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChopBoxConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CopyCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CreationToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CutCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DragTrackerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DuplicateCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureAndEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeAdapterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeEventMulticasterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/GridConstrainerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleAndEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleTrackerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullDrawingViewTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullHandleTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/OffsetLocatorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PasteCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PeripheralLocatorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/RelativeLocatorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ReverseFigureEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAllCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAreaTrackerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectionToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SendToBackCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SimpleUpdateStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SingleFigureEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingViewTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardFigureSelectionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToggleGridCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToolButtonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/BoundsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ClipboardTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ColorMapTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandButtonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandChoiceTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandMenuTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FillerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FloatingTextFieldTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GeomTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GraphLayoutTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/IconkitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/JDOStorageFormatTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteIconTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteLayoutTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/RedoCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ReverseListEnumeratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/SerializationStorageFormatTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardStorageFormatTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardVersionControlStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableInputTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableOutputTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorageFormatManagerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoManagerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoRedoActivityTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableAdapterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableCommandTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableToolTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UtilSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/VersionManagementTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/CollectionsFactoryJDK11Test.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/IteratorWrapperTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/Jdk11Suite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/ListWrapperTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/MapWrapperTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/SetWrapperTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk12/CollectionsFactoryJDK12Test.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk12/Jdk12Suite.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/NestedCreationTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/NestedCreationTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonScaleHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonScaleHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PolygonTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PopupMenuFigureSelection.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/PopupMenuFigureSelection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SVGStorageFormat.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SVGStorageFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SimpleLayouter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SimpleLayouter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SplitConnectionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SplitConnectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SplitPaneDrawApplication.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/SplitPaneDrawApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/StandardLayouter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/StandardLayouter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TextAreaFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TextAreaFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TextAreaTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TextAreaTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TriangleFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TriangleFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TriangleRotationHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/TriangleRotationHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/WindowMenu.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/WindowMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDFigures.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDFigures.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDFiguresTransferable.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDFiguresTransferable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDHelper.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDInterface.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DNDInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DragNDropTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DragNDropTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/AbstractContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/AbstractContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/AttributeFigureContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/AttributeFigureContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ColorContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ColorContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducerContext.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducerRegistry.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ContentProducerRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/DiamondFigureGeometricAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/DiamondFigureGeometricAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/EllipseFigureGeometricAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/EllipseFigureGeometricAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/FigureContentProducerContext.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/FigureContentProducerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/FigureDataContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/FigureDataContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/GeometricFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/GeometricFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLColorContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLColorContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLContentProducerContext.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLContentProducerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLLayouter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLLayouter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLTextAreaFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLTextAreaFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLTextAreaTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/HTMLTextAreaTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/PolygonFigureGeometricAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/PolygonFigureGeometricAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ResourceContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/ResourceContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/RoundRectangleGeometricAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/RoundRectangleGeometricAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/StandardDisposableResourceManager.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/StandardDisposableResourceManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/TextHolderContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/TextHolderContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/TriangleFigureGeometricAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/TriangleFigureGeometricAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/URLContentProducer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/html/URLContentProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/AbstractLineDecoration.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/AbstractLineDecoration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ArrowTip.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ArrowTip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/AttributeFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/AttributeFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/BorderDecorator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/BorderDecorator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/BorderTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/BorderTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ChopEllipseConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ChopEllipseConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ConnectedTextTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ConnectedTextTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ElbowConnection.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ElbowConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ElbowHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ElbowHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/EllipseFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/EllipseFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/FigureAttributes.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/FigureAttributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/FontSizeHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/FontSizeHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/GroupHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ImageFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ImageFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/InsertImageCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/InsertImageCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/LineConnection.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/LineConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/NullConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/NullConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/NullFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/NullFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineLocator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/PolyLineLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RadiusHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RadiusHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RectangleFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RectangleFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RoundRectangleFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/RoundRectangleFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ScribbleTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ScribbleTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ShortestDistanceConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/ShortestDistanceConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/TextFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/TextFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/TextTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/TextTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/UngroupCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/figures/UngroupCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/ConnectionFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/ConnectionFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Connector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Connector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Drawing.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Drawing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingChangeEvent.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingChangeEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingEditor.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingView.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Figure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Figure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureAttributeConstant.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureAttributeConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureChangeEvent.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureChangeEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureSelectionListener.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/FigureSelectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Handle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Handle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Locator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Locator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Painter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Painter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Tool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Tool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/ViewChangeListener.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/ViewChangeListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/AnimationDecorator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/AnimationDecorator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/Animator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/Animator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/FollowURLTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/FollowURLTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/JavaDrawApp.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/JavaDrawApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/JavaDrawViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/MySelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/PatternPainter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/PatternPainter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/URLTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/URLTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/net/NetApp.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/net/NetApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/net/NodeFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/net/NodeFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractLocator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ActionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ActionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AlignCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AlignCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BoxHandleKit.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BoxHandleKit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BringToFrontCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BringToFrontCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BufferedUpdateStrategy.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/BufferedUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionEndHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionEndHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChopBoxConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ChopBoxConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CompositeFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CompositeFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CopyCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CopyCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CreationTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CreationTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CutCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CutCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DecoratorFigure.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DecoratorFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DeleteCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DeleteCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DragTracker.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DragTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DuplicateCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/DuplicateCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureAndEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureAndEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureChangeAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureChangeAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureChangeEventMulticaster.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureChangeEventMulticaster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureTransferCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureTransferCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/GridConstrainer.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/GridConstrainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleAndEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleAndEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleTracker.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/HandleTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/LocatorConnector.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/LocatorConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/LocatorHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/LocatorHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullDrawingView.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullDrawingView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/NullTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/OffsetLocator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/OffsetLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/PasteCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/PasteCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/PeripheralLocator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/PeripheralLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/QuadTree.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/QuadTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/RelativeLocator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/RelativeLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ReverseFigureEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ReverseFigureEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectAllCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectAllCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectAreaTracker.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectAreaTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectionTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SendToBackCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SendToBackCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SimpleUpdateStrategy.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SimpleUpdateStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SingleFigureEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SingleFigureEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardDrawing.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardDrawing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardFigureSelection.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardFigureSelection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/TextHolder.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/TextHolder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ToggleGridCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ToggleGridCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ToolButton.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ToolButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/JHDTestCase.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/JHDTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXCommandMenuTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXCommandMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXWindowMenuTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CTXWindowMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopDiamondConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopDiamondConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopPolygonConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ChopPolygonConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ClippingUpdateStrategyTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ClippingUpdateStrategyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandCheckBoxMenuItemTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandCheckBoxMenuItemTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandMenuItemTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CommandMenuItemTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ComponentFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/ComponentFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CompositeFigureCreationToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CompositeFigureCreationToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomSelectionToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomSelectionToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomToolBarTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/CustomToolBarTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DesktopEventServiceTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DesktopEventServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DiamondFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/DiamondFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/FloatingTextAreaTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/FloatingTextAreaTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/GraphicalCompositeFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/GraphicalCompositeFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/HelperTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/HelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JPanelDesktopTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JPanelDesktopTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JScrollPaneDesktopTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/JScrollPaneDesktopTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDIDesktopPaneTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDIDesktopPaneTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDI_DrawApplicationTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MDI_DrawApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/NestedCreationToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/NestedCreationToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/PolygonToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGDrawAppTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGDrawAppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGStorageFormatTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SVGStorageFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SimpleLayouterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SimpleLayouterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SplitConnectionToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/SplitConnectionToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/StandardLayouterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/StandardLayouterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TextAreaToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TriangleFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/TriangleFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/WindowMenuTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/WindowMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ArrowTipTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ArrowTipTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderDecoratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderDecoratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/BorderToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ChopEllipseConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ChopEllipseConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ConnectedTextToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ConnectedTextToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowConnectionTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowConnectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ElbowHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/EllipseFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/EllipseFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FigureAttributesTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FigureAttributesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FontSizeHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/FontSizeHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/GroupFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ImageFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ImageFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/InsertImageCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/InsertImageCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineConnectionTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineConnectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NullFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NumberTextFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/NumberTextFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RectangleFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RectangleFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RoundRectangleFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/RoundRectangleFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ScribbleToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ScribbleToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ShortestDistanceConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ShortestDistanceConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/TextToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/UngroupCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/UngroupCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/DrawingChangeEventTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/DrawingChangeEventTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureAttributeConstantTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureAttributeConstantTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureChangeEventTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/FigureChangeEventTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/AnimationDecoratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/AnimationDecoratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppletTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawAppletTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawViewerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawViewerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/MySelectionToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/MySelectionToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/PatternPainterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/PatternPainterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/URLToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/URLToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapApplicationTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapDesktopTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/minimap/MiniMapDesktopTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NetAppTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NetAppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NodeFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NodeFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppletTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/nothing/NothingAppletTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertAppletTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertAppletTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertApplicationTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertDependencyTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertDependencyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureCreationToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureCreationToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/pert/PertFigureTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/AlignCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/AlignCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BoxHandleKitTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BoxHandleKitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BringToFrontCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BringToFrontCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BufferedUpdateStrategyTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BufferedUpdateStrategyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeAttributeCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeAttributeCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionEndHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionEndHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionStartHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionStartHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChopBoxConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChopBoxConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CopyCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CopyCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CreationToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CreationToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CutCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/CutCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DragTrackerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DragTrackerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DuplicateCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DuplicateCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureAndEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureAndEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeAdapterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeAdapterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeEventMulticasterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeEventMulticasterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/GridConstrainerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/GridConstrainerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleAndEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleAndEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleTrackerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/HandleTrackerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorConnectorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorConnectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/LocatorHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullDrawingViewTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullDrawingViewTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullHandleTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullHandleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/NullToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/OffsetLocatorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/OffsetLocatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PasteCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PasteCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PeripheralLocatorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/PeripheralLocatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/RelativeLocatorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/RelativeLocatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ReverseFigureEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ReverseFigureEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAllCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAllCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAreaTrackerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectAreaTrackerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectionToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SelectionToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SendToBackCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SendToBackCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SimpleUpdateStrategyTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SimpleUpdateStrategyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SingleFigureEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/SingleFigureEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingViewTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardDrawingViewTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardFigureSelectionTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/StandardFigureSelectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToggleGridCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToggleGridCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToolButtonTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ToolButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/BoundsTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/BoundsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ClipboardTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ClipboardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ColorMapTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ColorMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandButtonTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandChoiceTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandChoiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandMenuTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/CommandMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FillerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FillerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FloatingTextFieldTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/FloatingTextFieldTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GeomTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GeomTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GraphLayoutTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/GraphLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/IconkitTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/IconkitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/JDOStorageFormatTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/JDOStorageFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteIconTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteIconTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteLayoutTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/PaletteLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/RedoCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/RedoCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ReverseListEnumeratorTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/ReverseListEnumeratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/SerializationStorageFormatTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/SerializationStorageFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardStorageFormatTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardStorageFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardVersionControlStrategyTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StandardVersionControlStrategyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableInputTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableInputTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableOutputTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorableOutputTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorageFormatManagerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/StorageFormatManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoManagerTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoRedoActivityTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoRedoActivityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableAdapterTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableAdapterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableCommandTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableToolTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/UndoableToolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/VersionManagementTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/VersionManagementTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/CollectionsFactoryJDK11Test.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/CollectionsFactoryJDK11Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/IteratorWrapperTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/IteratorWrapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/ListWrapperTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/ListWrapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/MapWrapperTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/MapWrapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/SetWrapperTest.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk11/SetWrapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk12/CollectionsFactoryJDK12Test.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/util/collections/jdk12/CollectionsFactoryJDK12Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Bounds.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Bounds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CollectionsFactory.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CollectionsFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/ColorMap.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/ColorMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CommandButton.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CommandButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CommandMenu.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/CommandMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Filler.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Filler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/FloatingTextField.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/FloatingTextField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Geom.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Geom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/GraphLayout.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/GraphLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Iconkit.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Iconkit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/JDOStorageFormat.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/JDOStorageFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/PaletteButton.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/PaletteButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/RedoCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/RedoCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/ReverseListEnumerator.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/ReverseListEnumerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/SerializationStorageFormat.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/SerializationStorageFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StandardStorageFormat.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StandardStorageFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StandardVersionControlStrategy.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StandardVersionControlStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Storable.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Storable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorableInput.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorableInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorableOutput.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorableOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorageFormat.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorageFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorageFormatManager.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/StorageFormatManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoManager.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoRedoActivity.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoRedoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Undoable.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Undoable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableAdapter.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableCommand.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableTool.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/VersionManagement.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/VersionManagement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/CollectionsFactoryJDK11.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/CollectionsFactoryJDK11.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/IteratorWrapper.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/IteratorWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/MapWrapper.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/MapWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/SetWrapper.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/collections/jdk11/SetWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schema_factories/DrawingViewSchemaFactory.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schema_factories/DrawingViewSchemaFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawingView.java" afterPath="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawingView.java" />
     </list>
     <ignored path="ManagedDataJHotDraw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -412,151 +204,7 @@
     <favorites_list name="ManagedDataJHotDraw" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MDStandardDrawingView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawingView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding>
-                <element signature="method#addSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="method#removeSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
-                <element signature="e#4715#4716#0" expanded="true" />
-                <element signature="e#4753#4754#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDDrawingView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/MDDrawingView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1096#1097#0" expanded="true" />
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1425#1426#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1512#1513#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1969#1970#0" expanded="true" />
-                <element signature="e#1996#1997#0" expanded="true" />
-                <element signature="e#2043#2044#0" expanded="true" />
-                <element signature="e#2070#2071#0" expanded="true" />
-                <element signature="e#2103#2104#0" expanded="true" />
-                <element signature="e#2130#2131#0" expanded="true" />
-                <element signature="e#2235#2236#0" expanded="true" />
-                <element signature="e#2262#2263#0" expanded="true" />
-                <element signature="e#2428#2429#0" expanded="true" />
-                <element signature="e#2455#2456#0" expanded="true" />
-                <element signature="e#2493#2494#0" expanded="true" />
-                <element signature="e#2520#2521#0" expanded="true" />
-                <element signature="e#2557#2558#0" expanded="true" />
-                <element signature="e#2584#2585#0" expanded="true" />
-                <element signature="e#3049#3050#0" expanded="true" />
-                <element signature="e#3076#3077#0" expanded="true" />
-                <element signature="e#3250#3251#0" expanded="true" />
-                <element signature="e#3278#3279#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DesktopEventService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UndoableHandle.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3941606">
-              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionHandle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="69" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDDrawingViewFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="282" column="44" selection-start-line="282" selection-start-column="44" selection-end-line="282" selection-end-column="44" />
-              <folding>
-                <element signature="method#newSubjectRoleDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
-                <element signature="class#3305:4440" expanded="false" />
-                <element signature="method#mousePressed#0;class#3305:4440" expanded="false" />
-                <element signature="method#mouseReleased#0;class#3305:4440" expanded="false" />
-                <element signature="class#4486:5323" expanded="false" />
-                <element signature="method#mouseDragged#0;class#4486:5323" expanded="false" />
-                <element signature="method#mouseMoved#0;class#4486:5323" expanded="false" />
-                <element signature="method#newDrawingView#1;class#MDDrawingViewFactory#0" expanded="false" />
-                <element signature="e#6871#6893#0" expanded="false" />
-                <element signature="class#7315:8450" expanded="false" />
-                <element signature="method#mousePressed#0;class#7315:8450" expanded="false" />
-                <element signature="method#mouseReleased#0;class#7315:8450" expanded="false" />
-                <element signature="class#8496:9333" expanded="false" />
-                <element signature="method#mouseDragged#0;class#8496:9333" expanded="false" />
-                <element signature="method#mouseMoved#0;class#8496:9333" expanded="false" />
-                <element signature="e#9337#9388#0" expanded="false" />
-                <element signature="method#handleMouseEventException#0;class#MDDrawingViewFactory#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -611,15 +259,21 @@
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionTool.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/FigureTransferCommand.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/PasteCommand.java" />
-        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java" />
-        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java" />
-        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractHandle.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/MDDrawingView.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java" />
         <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineFigureTest.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/AnimatorTest.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/Animator.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeEventMulticasterTest.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardDrawing.java" />
+        <option value="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/DrawingChangeEventTest.java" />
       </list>
     </option>
   </component>
@@ -665,8 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -737,7 +389,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ManagedDataJHotDraw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ManagedDataJHotDraw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CH" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ifa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="draw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -756,141 +442,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managed_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managed_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schemas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managed_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schemas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managed_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schema_factories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagedDataJHotDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccconcerns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managed_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -908,6 +466,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ccconcerns.managed_data.schemas.framework" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw" />
     </key>
   </component>
   <component name="RunManager" selected="Application.JavaDrawApp">
@@ -929,6 +490,110 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="ManagedDataJHotDraw" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CH.ifa.draw.test in ManagedDataJHotDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="CH.ifa.draw.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ManagedDataJHotDraw" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="CH.ifa.draw.test" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CH.ifa.draw.test.figures in ManagedDataJHotDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="CH.ifa.draw.test.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ManagedDataJHotDraw" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="CH.ifa.draw.test.figures" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CH.ifa.draw.test.util in ManagedDataJHotDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="CH.ifa.draw.test.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ManagedDataJHotDraw" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="CH.ifa.draw.test.util" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CH.ifa.draw.test.standard in ManagedDataJHotDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="CH.ifa.draw.test.standard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ManagedDataJHotDraw" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="CH.ifa.draw.test.standard" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1440,6 +1105,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1469,12 +1139,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.JavaDrawApp" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test in ManagedDataJHotDraw" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.figures in ManagedDataJHotDraw" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.util in ManagedDataJHotDraw" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.standard in ManagedDataJHotDraw" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.JavaDrawApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.standard in ManagedDataJHotDraw" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.util in ManagedDataJHotDraw" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test in ManagedDataJHotDraw" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CH.ifa.draw.test.figures in ManagedDataJHotDraw" />
       </list>
     </recent_temporary>
   </component>
@@ -1493,33 +1171,47 @@
       <created>1461657347321</created>
       <option name="number" value="Default" />
       <updated>1461657347321</updated>
-      <workItem from="1461657348638" duration="4024000" />
+      <workItem from="1461657348638" duration="4141000" />
+      <workItem from="1461661691760" duration="587000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CH_ifa_draw_test_in_ManagedDataJHotDraw - 2016.04.26 at 11h 04m 54s.xml">
+      <configuration name="CH.ifa.draw.test in ManagedDataJHotDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CH_ifa_draw_test_in_ManagedDataJHotDraw - 2016.04.26 at 11h 12m 57s.xml">
+      <configuration name="CH.ifa.draw.test in ManagedDataJHotDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CH_ifa_draw_test_standard_in_ManagedDataJHotDraw - 2016.04.26 at 11h 16m 31s.xml">
+      <configuration name="CH.ifa.draw.test.standard in ManagedDataJHotDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CH_ifa_draw_test_util_in_ManagedDataJHotDraw - 2016.04.26 at 11h 14m 33s.xml">
+      <configuration name="CH.ifa.draw.test.util in ManagedDataJHotDraw" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4024000" />
+    <option name="totallyTimeSpent" value="4728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54347825" sideWeight="0.52288985" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3201389" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30294532" sideWeight="0.47711015" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30209792" sideWeight="0.47711015" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20314735" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25894135" sideWeight="0.49509117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.49713877" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51332396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1536,6 +1228,7 @@
       <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51332396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1560,194 +1253,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schema_factories/DrawingViewSchemaFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/MyJPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41577825">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#475#476#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#2195#0" expanded="false" />
-            <element signature="e#1933#1934#0" expanded="false" />
-            <element signature="e#1978#1979#0" expanded="false" />
-            <element signature="e#2026#2027#0" expanded="false" />
-            <element signature="e#2057#2058#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32846716">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/Desktop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4160584">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82481754">
-          <caret line="316" column="35" selection-start-line="46" selection-start-column="4" selection-end-line="316" selection-end-column="35" />
-          <folding>
-            <element signature="docComment;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#tool#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#drawing#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#setDrawing#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#editor#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#add#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#remove#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#addAll#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getSize#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getMinimumSize#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getPreferredSize#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#setDisplayUpdate#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getDisplayUpdate#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#selection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#selectionZOrdered#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#selectionCount#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#isFigureSelected#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#addToSelection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#addToSelectionAll#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#addToSelectionAll#1;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#removeFromSelection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#toggleSelection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#clearSelection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getFigureSelection#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#findHandle#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#lastClick#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#setConstrainer#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getConstrainer#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#checkDamage#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#repairDamage#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#paint#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#createImage#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getGraphics#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getBackground#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#setBackground#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#drawAll#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#draw#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#drawHandles#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#drawDrawing#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#drawBackground#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#setCursor#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#freezeView#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#unfreezeView#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#addFigureSelectionListener#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#removeFigureSelectionListener#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#getConnectionFigures#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#insertFigures#0;class#DrawingView#0" expanded="false" />
-            <element signature="docComment;method#isInteractive#0;class#DrawingView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10948905">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/CustomSelectionTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/dnd/DragNDropTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4890511">
-          <caret line="77" column="37" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/SelectionTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="57" selection-start-line="125" selection-start-column="57" selection-end-line="125" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/Handle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5328467">
-          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/Undoable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/CreationTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1760,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1800,7 +1304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.185185">
           <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1816,10 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="192" column="41" selection-start-line="192" selection-start-column="41" selection-end-line="192" selection-end-column="41" />
-          <folding>
-            <element signature="e#4877#4878#0" expanded="true" />
-            <element signature="e#4910#4911#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1859,7 +1358,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1868,7 +1367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18978103">
           <caret line="204" column="7" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1876,7 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40875912">
           <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1892,10 +1389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8">
           <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1919,7 +1412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32222223">
           <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1927,31 +1419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0333333">
           <caret line="105" column="109" selection-start-line="105" selection-start-column="109" selection-end-line="105" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9111111">
-          <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54">
-          <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93333334">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1963,64 +1430,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java">
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="69" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="282" column="44" selection-start-line="282" selection-start-column="44" selection-end-line="282" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.48175183">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding>
-            <element signature="method#newSubjectRoleDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
-            <element signature="class#3305:4440" expanded="false" />
-            <element signature="method#mousePressed#0;class#3305:4440" expanded="false" />
-            <element signature="method#mouseReleased#0;class#3305:4440" expanded="false" />
-            <element signature="class#4486:5323" expanded="false" />
-            <element signature="method#mouseDragged#0;class#4486:5323" expanded="false" />
-            <element signature="method#mouseMoved#0;class#4486:5323" expanded="false" />
-            <element signature="method#newDrawingView#1;class#MDDrawingViewFactory#0" expanded="false" />
-            <element signature="e#6871#6893#0" expanded="false" />
-            <element signature="class#7315:8450" expanded="false" />
-            <element signature="method#mousePressed#0;class#7315:8450" expanded="false" />
-            <element signature="method#mouseReleased#0;class#7315:8450" expanded="false" />
-            <element signature="class#8496:9333" expanded="false" />
-            <element signature="method#mouseDragged#0;class#8496:9333" expanded="false" />
-            <element signature="method#mouseMoved#0;class#8496:9333" expanded="false" />
-            <element signature="e#9337#9388#0" expanded="false" />
-            <element signature="method#handleMouseEventException#0;class#MDDrawingViewFactory#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawingView.java">
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="method#addSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="method#removeSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
-            <element signature="e#4715#4716#0" expanded="true" />
-            <element signature="e#4753#4754#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-2.0875912">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/MDDrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.6569343">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2074,21 +1504,252 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/DesktopEventService.java">
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/ConnectionHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9051095">
+          <caret line="100" column="69" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/AbstractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.919708">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/factories/MDDrawingViewFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5547445">
+          <caret line="274" column="16" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
+          <folding>
+            <element signature="method#newSubjectRoleDrawingView#0;class#MDDrawingViewFactory#0" expanded="false" />
+            <element signature="class#3305:4440" expanded="false" />
+            <element signature="method#mousePressed#0;class#3305:4440" expanded="false" />
+            <element signature="method#mouseReleased#0;class#3305:4440" expanded="false" />
+            <element signature="class#4486:5323" expanded="false" />
+            <element signature="method#mouseDragged#0;class#4486:5323" expanded="false" />
+            <element signature="method#mouseMoved#0;class#4486:5323" expanded="false" />
+            <element signature="method#newDrawingView#1;class#MDDrawingViewFactory#0" expanded="false" />
+            <element signature="e#6871#6893#0" expanded="false" />
+            <element signature="class#7315:8450" expanded="false" />
+            <element signature="method#mousePressed#0;class#7315:8450" expanded="false" />
+            <element signature="method#mouseReleased#0;class#7315:8450" expanded="false" />
+            <element signature="class#8496:9333" expanded="false" />
+            <element signature="method#mouseDragged#0;class#8496:9333" expanded="false" />
+            <element signature="method#mouseMoved#0;class#8496:9333" expanded="false" />
+            <element signature="e#9337#9388#0" expanded="false" />
+            <element signature="method#handleMouseEventException#0;class#MDDrawingViewFactory#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/ccconcerns/managed_data/schemas/framework/MDStandardDrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.19708">
+          <caret line="369" column="10" selection-start-line="369" selection-start-column="10" selection-end-line="369" selection-end-column="10" />
+          <folding>
+            <element signature="method#addSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="method#removeSelectionHandle#0;class#MDStandardDrawingView#0" expanded="false" />
+            <element signature="e#4715#4716#0" expanded="false" />
+            <element signature="e#4753#4754#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/ManagedDataJHotDraw/libs/junit-4.12.jar!/org/junit/internal/builders/SuiteMethodBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54298645">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/BufferedUpdateStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/util/UndoableHandle.java">
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/BouncingDrawingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3941606">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/LineConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/JavaDrawViewerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ConnectionToolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/ShortestDistanceConnectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/EllipseFigureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/ChangeConnectionEndHandleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/net/NetSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/figures/PolyLineFigureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2838428">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/InsertIntoDrawingVisitorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31847134">
+          <caret line="49" column="99" selection-start-line="49" selection-start-column="99" selection-end-line="49" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/FigureChangeEventMulticasterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31847134">
+          <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/standard/StandardDrawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41401273">
+          <caret line="61" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#6058#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2050#2051#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#5966#5967#0" expanded="true" />
+            <element signature="e#5987#5988#0" expanded="true" />
+            <element signature="e#6029#6030#0" expanded="true" />
+            <element signature="e#6054#6055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/framework/DrawingChangeEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3318584">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/AlignCommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29936305">
+          <caret line="109" column="18" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/framework/DrawingChangeEventTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06369427">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/standard/DeleteFromDrawingVisitorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6560509">
+          <caret line="49" column="99" selection-start-line="49" selection-start-column="99" selection-end-line="49" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/contrib/MiniMapView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54140127">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/contrib/MiniMapViewTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31847134">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/test/samples/javadraw/AnimatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9299363">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagedDataJHotDraw/src/CH/ifa/draw/samples/javadraw/Animator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.1910828">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

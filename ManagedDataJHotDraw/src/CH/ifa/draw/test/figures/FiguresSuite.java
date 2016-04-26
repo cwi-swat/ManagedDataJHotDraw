@@ -16,6 +16,7 @@ import junit.framework.TestSuite;
 
 
 // JUnitDoclet begin javadoc_class
+
 /**
 * TestSuite FiguresSuite
 */

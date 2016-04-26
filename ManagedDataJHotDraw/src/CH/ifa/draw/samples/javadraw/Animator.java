@@ -13,19 +13,20 @@ package CH.ifa.draw.samples.javadraw;
 
 import CH.ifa.draw.framework.DrawingView;
 import CH.ifa.draw.util.Animatable;
+import ccconcerns.managed_data.MDDrawingView;
 
 /**
  * @version <$CURRENT_VERSION$>
  */
 public  class Animator extends Thread {
 
-	private DrawingView     fView;
+	private MDDrawingView     fView;
 	private Animatable      fAnimatable;
 
 	private volatile boolean             fIsRunning;
 	private static final int    DELAY = 1000 / 16;
 
-	public Animator(Animatable animatable, DrawingView view) {
+	public Animator(Animatable animatable, MDDrawingView view) {
 		super("Animator");
 		fView = view;
 		fAnimatable = animatable;
