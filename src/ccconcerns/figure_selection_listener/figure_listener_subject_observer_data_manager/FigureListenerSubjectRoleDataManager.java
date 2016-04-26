@@ -1,4 +1,4 @@
-package ccconcerns.figure_selection_listener.figure_listener_subject_observer;
+package ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager;
 
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.managed_object.MObject;

@@ -1,7 +1,6 @@
-package ccconcerns.figure_selection_listener.figure_listener_subject_observer;
+package ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager;
 
 import CH.ifa.draw.framework.Figure;
-import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
 import nl.cwi.managed_data_4j.language.managed_object.MObject;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Klass;
