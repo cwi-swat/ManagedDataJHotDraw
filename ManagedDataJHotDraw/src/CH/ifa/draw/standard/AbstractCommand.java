@@ -19,7 +19,7 @@ import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
 import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
-import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer.SubjectRole;
  import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.EventObject;
@@ -214,7 +214,7 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		if (view() != null) {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) view()).remove(this);
+			((SubjectRole) view()).removeListener(this);
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 //			view().removeFigureSelectionListener(this);
@@ -228,7 +228,8 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 //			oldView.removeFigureSelectionListener(this);
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) oldView).remove(this);
+			if (oldView instanceof SubjectRole)
+				((SubjectRole) oldView).removeListener(this);
 		}
 		if (newView != null) {
 
@@ -236,7 +237,7 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 //			newView.addFigureSelectionListener(this);
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) newView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+			((SubjectRole) newView).addListener(this, this::figureSelectionChanged);
 
 		}
 		if (isViewRequired()) {

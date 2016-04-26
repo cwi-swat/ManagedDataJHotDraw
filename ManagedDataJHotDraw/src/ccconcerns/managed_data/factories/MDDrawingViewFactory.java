@@ -4,7 +4,7 @@ import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.standard.SimpleUpdateStrategy;
 import CH.ifa.draw.standard.StandardDrawing;
 import ccconcerns.MyJPanel;
-import ccconcerns.managed_data.data_managers.subject_observer.SubjectRoleDataManager;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer.FigureListenerSubjectRoleDataManager;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
 import ccconcerns.managed_data.schemas.framework.MDNullDrawingView;
@@ -39,8 +39,8 @@ public class MDDrawingViewFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDStandardDrawingView.class, MDRectangle.class, MDDimension.class);
 
-        final SubjectRoleDataManager subjectRoleFactory =
-                new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+        final FigureListenerSubjectRoleDataManager subjectRoleFactory =
+                new FigureListenerSubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
 
         final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
         // ================================================
@@ -277,8 +277,8 @@ public class MDDrawingViewFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDNullDrawingView.class, MDRectangle.class, MDDimension.class);
 
-        final SubjectRoleDataManager subjectRoleFactory =
-                new SubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+        final BasicDataManager subjectRoleFactory =
+                new BasicDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
 
         final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
         // ================================================

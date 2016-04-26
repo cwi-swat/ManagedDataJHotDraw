@@ -14,7 +14,7 @@ package CH.ifa.draw.util;
 import CH.ifa.draw.framework.DrawingEditor;
 import CH.ifa.draw.standard.AbstractCommand;
 import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
-import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer.SubjectRole;
  import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.EventObject;
@@ -120,7 +120,7 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 //		view().addFigureSelectionListener(this);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		((SubjectRole) view()).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+		((SubjectRole) view()).addListener(this, this::figureSelectionChanged);
 
 		getWrappedCommand().execute();
 
@@ -143,7 +143,7 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 //		view().removeFigureSelectionListener(this);
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
-		((SubjectRole) view()).remove(this);
+		((SubjectRole) view()).removeListener(this);
 	}
 
 	// @MDHD: FigureSelectionListener (FSL) Refactoring

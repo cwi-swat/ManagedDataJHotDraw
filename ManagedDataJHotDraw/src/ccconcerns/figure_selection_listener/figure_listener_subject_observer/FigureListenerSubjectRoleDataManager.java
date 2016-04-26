@@ -1,13 +1,13 @@
-package ccconcerns.managed_data.data_managers.subject_observer;
+package ccconcerns.figure_selection_listener.figure_listener_subject_observer;
 
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.managed_object.MObject;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Klass;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
-public class SubjectRoleDataManager extends BasicDataManager {
+public class FigureListenerSubjectRoleDataManager extends BasicDataManager {
 
-    public SubjectRoleDataManager(Class<?> moSchemaFactoryClass, Schema schema) {
+    public FigureListenerSubjectRoleDataManager(Class<?> moSchemaFactoryClass, Schema schema) {
 
         // Add the observable class in order to use it in the managed object.
         super(moSchemaFactoryClass, schema, SubjectRole.class);
@@ -15,6 +15,6 @@ public class SubjectRoleDataManager extends BasicDataManager {
 
     @Override
     protected MObject createManagedObject(Klass klass, Object... _inits) {
-        return new SubjectRoleMObject(klass, _inits);
+        return new FigureListenerSubjectRoleMObject(klass, _inits);
     }
 }

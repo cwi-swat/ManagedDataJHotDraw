@@ -21,9 +21,8 @@ import CH.ifa.draw.figures.UngroupCommand;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.util.*;
-import ccconcerns.figure_selection_listener.FigureSelectionConcerns;
 import ccconcerns.managed_data.MDDrawingView;
-import ccconcerns.managed_data.data_managers.subject_observer.SubjectRole;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer.SubjectRole;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
 import ccconcerns.managed_data.factories.MDGeometryFactory;
 import ccconcerns.managed_data.schemas.geometry.MDDimension;
@@ -1201,7 +1200,7 @@ public	class DrawApplication
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 //		newDrawingView.addFigureSelectionListener(this);
 
-		((SubjectRole) newDrawingView).add(this, FigureSelectionConcerns::consistentBehaviorPredicate, this::figureSelectionChanged);
+		((SubjectRole) newDrawingView).addListener(this, this::figureSelectionChanged);
 
 		return newDrawingView;
 	}
