@@ -46,7 +46,7 @@ public class StandardSuite
     suite.addTestSuite(CH.ifa.draw.test.standard.FastBufferedUpdateStrategyTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.ToolButtonTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.ToggleGridCommandTest.class);
-//    suite.addTestSuite(CH.ifa.draw.test.standard.StandardDrawingViewTest.class);
+    suite.addTestSuite(CH.ifa.draw.test.standard.StandardDrawingViewTest.class);
 //    suite.addTestSuite(CH.ifa.draw.test.standard.NullDrawingViewTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.StandardDrawingTest.class);
     suite.addTestSuite(CH.ifa.draw.test.standard.SimpleUpdateStrategyTest.class);
