@@ -157,4 +157,8 @@ public interface MDDrawingView extends ImageObserver, DrawingChangeListener {
     default boolean isInteractive() {
         return false;
     }
+
+    default void moveSelection(int dx, int dy) {
+
+    }
 }

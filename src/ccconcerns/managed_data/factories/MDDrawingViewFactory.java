@@ -1,8 +1,11 @@
 package ccconcerns.managed_data.factories;
 
 import CH.ifa.draw.framework.DrawingEditor;
+import CH.ifa.draw.standard.DeleteCommand;
 import CH.ifa.draw.standard.SimpleUpdateStrategy;
 import CH.ifa.draw.standard.StandardDrawing;
+import CH.ifa.draw.util.Command;
+import CH.ifa.draw.util.UndoableCommand;
 import ccconcerns.MyJPanel;
 import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.FigureListenerSubjectRoleDataManager;
 import ccconcerns.managed_data.MDDrawingView;
@@ -18,9 +21,7 @@ import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
 public class MDDrawingViewFactory {
 
@@ -135,6 +136,9 @@ public class MDDrawingViewFactory {
                 }
             }
         });
+
+        jPanel.addKeyListener(new DrawingViewKeyListener(drawingView));
+
         return drawingView;
     }
 
@@ -250,22 +254,8 @@ public class MDDrawingViewFactory {
             }
         });
 
-//        jPanel.addKeyListener(new KeyListener() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//
-//            }
-//
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//
-//            }
-//
-//            @Override
-//            public void keyReleased(KeyEvent e) {
-//
-//            }
-//        });
+        jPanel.addKeyListener(new DrawingViewKeyListener(drawingView));
+
         return drawingView;
     }
 
@@ -300,5 +290,78 @@ public class MDDrawingViewFactory {
                 t.getClass().getName() + " - " + t.getMessage(),
                 "Error", JOptionPane.ERROR_MESSAGE);
         t.printStackTrace();
+    }
+
+    public static class DrawingViewKeyListener implements KeyListener {
+        private Command deleteCmd;
+        private MDDrawingView drawingView;
+
+        public DrawingViewKeyListener(MDDrawingView drawingView) {
+            this.drawingView = drawingView;
+            deleteCmd = createDeleteCommand();
+        }
+
+        /**
+         * Handles key down events. Cursor keys are handled
+         * by the view the other key events are delegated to the
+         * currently active tool.
+         */
+        public void keyPressed(KeyEvent e) {
+            int code = e.getKeyCode();
+            if ((code == KeyEvent.VK_BACK_SPACE) || (code == KeyEvent.VK_DELETE)) {
+                if (deleteCmd.isExecutable()) {
+                    deleteCmd.execute();
+//					deleteCmd.viewSelectionChanged(this);
+                }
+            } else if ((code == KeyEvent.VK_DOWN) || (code == KeyEvent.VK_UP)
+                    || (code == KeyEvent.VK_RIGHT) || (code == KeyEvent.VK_LEFT)) {
+                handleCursorKey(code);
+            } else {
+                drawingView.tool().keyDown(e, code);
+            }
+            drawingView.checkDamage();
+        }
+
+        /**
+         * Handles cursor keys by moving all the selected figures
+         * one grid point in the cursor direction.
+         */
+        protected void handleCursorKey(int key) {
+            int dx = 0, dy = 0;
+            int stepX = 1, stepY = 1;
+            // should consider Null Object.
+            if (drawingView.getConstrainer() != null) {
+                stepX = drawingView.getConstrainer().getStepX();
+                stepY = drawingView.getConstrainer().getStepY();
+            }
+
+            switch (key) {
+                case KeyEvent.VK_DOWN:
+                    dy = stepY;
+                    break;
+                case KeyEvent.VK_UP:
+                    dy = -stepY;
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    dx = stepX;
+                    break;
+                case KeyEvent.VK_LEFT:
+                    dx = -stepX;
+                    break;
+            }
+            drawingView.moveSelection(dx, dy);
+        }
+
+        public void keyTyped(KeyEvent event) {
+            // do nothing
+        }
+
+        public void keyReleased(KeyEvent event) {
+            // do nothing
+        }
+
+        protected Command createDeleteCommand() {
+            return new UndoableCommand(new DeleteCommand("Delete", drawingView.getEditor()));
+        }
     }
 }
