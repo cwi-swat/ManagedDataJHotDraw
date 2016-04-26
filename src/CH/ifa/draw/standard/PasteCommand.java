@@ -37,7 +37,7 @@ public class PasteCommand extends FigureTransferCommand {
 
 	public void execute() {
 		super.execute();
-		Point lastClick = view().lastClick();
+		Point lastClick = view().getLastClick();
 		FigureSelection selection = (FigureSelection)Clipboard.getClipboard().getContents();
 		if (selection != null) {
 			setUndoActivity(createUndoActivity());

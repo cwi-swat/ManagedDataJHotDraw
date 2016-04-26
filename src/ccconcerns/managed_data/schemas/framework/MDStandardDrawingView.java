@@ -373,10 +373,6 @@ public interface MDStandardDrawingView extends M, MDDrawingView {
         return null;
     }
 
-    default Point lastClick() {
-        return null;
-    }
-
     default void checkDamage() {
         Iterator each = drawing().drawingChangeListeners();
         while (each.hasNext()) {

@@ -84,7 +84,7 @@ public class InsertImageCommand extends AbstractCommand {
 				Image image = Iconkit.instance().registerAndLoadImage(
 					(Component)getDrawingView().getPanel(), myAffectedImageName);
 				setImageFigure(new ImageFigure(
-					image, myAffectedImageName, getDrawingView().lastClick()));
+					image, myAffectedImageName, getDrawingView().getLastClick()));
 			}
 	
 			return (ImageFigure)myAffectedImageFigure.get();

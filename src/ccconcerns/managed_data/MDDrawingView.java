@@ -100,8 +100,11 @@ public interface MDDrawingView extends ImageObserver, DrawingChangeListener {
         return null;
     }
 
-    default Point lastClick() {
+    default Point getLastClick() {
         return null;
+    }
+
+    default void setLastClick(Point lc) {
     }
 
     default void setConstrainer(PointConstrainer p) {}
