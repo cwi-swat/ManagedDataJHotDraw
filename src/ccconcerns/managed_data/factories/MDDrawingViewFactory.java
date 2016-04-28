@@ -7,7 +7,7 @@ import CH.ifa.draw.standard.StandardDrawing;
 import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.UndoableCommand;
 import ccconcerns.MyJPanel;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.FigureListenerSubjectRoleDataManager;
+import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.FigureSelectionListenerSubjectRoleDataManager;
 import ccconcerns.managed_data.MDDrawingView;
 import ccconcerns.managed_data.schema_factories.DrawingViewSchemaFactory;
 import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
@@ -39,8 +39,8 @@ public class MDDrawingViewFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDStandardDrawingView.class);
 
-        final FigureListenerSubjectRoleDataManager subjectRoleFactory =
-                new FigureListenerSubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+        final FigureSelectionListenerSubjectRoleDataManager subjectRoleFactory =
+                new FigureSelectionListenerSubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
 
         final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
         // ================================================

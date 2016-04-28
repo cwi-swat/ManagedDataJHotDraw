@@ -1,26 +1,21 @@
 package ccconcerns.managed_data.schemas;
 
-import CH.ifa.draw.framework.*;
-import CH.ifa.draw.framework.Painter;
 import nl.cwi.managed_data_4j.language.primitives.Primitives;
 
-import javax.swing.*;
-import java.awt.*;
-
 public interface JHotDrawPrimitives extends Primitives {
-    JPanel JPanel();
+    javax.swing.JPanel JPanel();
 
-    DrawingEditor DrawingEditor();
-    Drawing Drawing();
-    Painter Painter();
-    PointConstrainer PointConstrainer();
+    java.awt.Color Color();
+    java.awt.Cursor Cursor();
+    java.awt.Point Point();
+    java.awt.Dimension Dimension();
+    java.awt.Rectangle Rectangle();
 
-    Color Color();
-    Cursor Cursor();
-    Point Point();
-    Handle Handle();
-    Figure Figure();
+    CH.ifa.draw.framework.DrawingEditor DrawingEditor();
+    CH.ifa.draw.framework.Drawing Drawing();
+    CH.ifa.draw.framework.Painter Painter();
+    CH.ifa.draw.framework.PointConstrainer PointConstrainer();
 
-    Dimension Dimension();
-    Rectangle Rectangle();
+    CH.ifa.draw.framework.Handle Handle();
+    CH.ifa.draw.framework.Figure Figure();
 }

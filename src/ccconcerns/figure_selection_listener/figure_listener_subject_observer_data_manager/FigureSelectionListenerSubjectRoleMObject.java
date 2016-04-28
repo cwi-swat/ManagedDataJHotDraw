@@ -9,11 +9,11 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FigureListenerSubjectRoleMObject extends MObject implements FigureSelectionPointcut, SubjectRole {
+public class FigureSelectionListenerSubjectRoleMObject extends MObject implements FigureSelectionPointcut, SubjectRole {
 
     private Map<Object, Action> listeners;
 
-    public FigureListenerSubjectRoleMObject(Klass schemaKlass, Object... initializers) {
+    public FigureSelectionListenerSubjectRoleMObject(Klass schemaKlass, Object... initializers) {
         super(schemaKlass, initializers);
         listeners = new HashMap<>();
     }
