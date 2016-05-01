@@ -29,6 +29,8 @@ import java.util.*;
 public abstract class AbstractCommand implements Command, /* @MDHD FigureSelectionListener, */ ViewChangeListener {
 
 	private String  myName;
+
+	// @MDHD Undo Refactoring TODO: Remove
 	private Undoable myUndoableActivity;
 	private boolean myIsViewRequired;
 	private AbstractCommand.EventDispatcher myEventDispatcher;
@@ -147,10 +149,12 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		return true;
 	}
 
+	// @MDHD Undo Refactoring TODO: Remove
 	public Undoable getUndoActivity() {
 		return myUndoableActivity;
 	}
 
+	// @MDHD Undo Refactoring TODO: Remove
 	public void setUndoActivity(Undoable newUndoableActivity) {
 		myUndoableActivity = newUndoableActivity;
 	}
