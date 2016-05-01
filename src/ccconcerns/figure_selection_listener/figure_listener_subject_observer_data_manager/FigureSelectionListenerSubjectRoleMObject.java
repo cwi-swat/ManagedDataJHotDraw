@@ -19,32 +19,27 @@ public class FigureSelectionListenerSubjectRoleMObject extends MObject implement
     }
 
     private void executeListenerActions() {
-        System.out.println(" > Execute Actions");
         listeners.values().forEach(Action::execute);
     }
 
     @Override
     public void addToSelection(Figure figure) {
-        System.out.println("addToSelection");
         executeListenerActions();
     }
 
     @Override
     public void removeFromSelection(Figure figure) {
-        System.out.println("removeFromSelection");
         executeListenerActions();
     }
 
     @Override
     public void toggleSelection(Figure figure) {
-        System.out.println("toggleSelection");
         executeListenerActions();
     }
 
     @Override
     public void clearSelection() {
         if (((MDStandardDrawingView) this.getProxy()).selectionCount() > 0) {
-            System.out.println("clearSelection");
             executeListenerActions();
         }
     }
