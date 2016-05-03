@@ -1,4 +1,4 @@
-package ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager;
+package ccconcerns.managed_data.data_managers.SubjectRole;
 
 public interface SubjectRole {
     void addListener(Object listener, Action action);
