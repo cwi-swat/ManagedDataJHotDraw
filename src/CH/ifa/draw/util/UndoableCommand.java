@@ -53,8 +53,8 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 	/**
 	 * Gets the command name.
 	 */
-	public String name() {
-		return getWrappedCommand().name();
+	public String getName() {
+		return getWrappedCommand().getName();
 	}
 
 	public DrawingEditor getDrawingEditor() {

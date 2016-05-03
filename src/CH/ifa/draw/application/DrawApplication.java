@@ -19,6 +19,7 @@ import CH.ifa.draw.contrib.*;
 import CH.ifa.draw.contrib.Desktop;
 import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.SubjectRole;
 import ccconcerns.managed_data.MDDrawingView;
+import ccconcerns.managed_data.factories.MDCommandFactory;
 import ccconcerns.managed_data.factories.MDDrawingViewFactory;
 
 import javax.swing.*;
@@ -409,7 +410,8 @@ public	class DrawApplication
 		for (int i=0; i<ColorMap.size(); i++)
 			menu.add(
 				new UndoableCommand(
-					new ChangeAttributeCommand(
+					MDCommandFactory.newChangeAttrCommand(
+//					new ChangeAttributeCommand(
 						ColorMap.name(i),
 						attribute,
 						ColorMap.color(i),

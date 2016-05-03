@@ -18,4 +18,8 @@ public interface JHotDrawPrimitives extends Primitives {
 
     CH.ifa.draw.framework.Handle Handle();
     CH.ifa.draw.framework.Figure Figure();
+
+    CH.ifa.draw.framework.FigureAttributeConstant FigureAttributeConstant();
+    CH.ifa.draw.standard.AbstractCommand.EventDispatcher EventDispatcher();
+    CH.ifa.draw.util.Undoable Undoable();
 }

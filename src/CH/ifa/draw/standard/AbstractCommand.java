@@ -98,7 +98,7 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 	/**
 	 * Gets the command name.
 	 */
-	public String name() {
+	public String getName() {
 		return myName;
 	}
 

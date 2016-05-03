@@ -1,8 +1,6 @@
 package CH.ifa.draw.test.util;
 
-import junit.framework.TestCase;
 // JUnitDoclet begin import
-import CH.ifa.draw.util.UndoableCommand;
 import CH.ifa.draw.standard.DeleteCommand;
 import CH.ifa.draw.test.JHDTestCase;
 // JUnitDoclet end import
@@ -102,7 +100,7 @@ extends JHDTestCase
   // JUnitDoclet begin javadoc_method name()
   /**
   * Method testName is testing name
-  * @see CH.ifa.draw.util.UndoableCommand#name()
+  * @see CH.ifa.draw.util.UndoableCommand#getName()
   */
   // JUnitDoclet end javadoc_method name()
   public void testName() throws Exception {

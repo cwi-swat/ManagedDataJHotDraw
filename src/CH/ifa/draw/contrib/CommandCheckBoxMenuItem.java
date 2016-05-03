@@ -4,7 +4,7 @@
  *  Project:		JHotdraw - a GUI framework for technical drawings
  *  http://www.jhotdraw.org
  *  http://jhotdraw.sourceforge.net
- *  Copyright:	© by the original author(s) and all contributors
+ *  Copyright:	ï¿½ by the original author(s) and all contributors
  *  License:		Lesser GNU Public License (LGPL)
  *  http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -32,7 +32,7 @@ public class CommandCheckBoxMenuItem extends JCheckBoxMenuItem
 	 * with the specified command
 	 */
 	public CommandCheckBoxMenuItem(Command command) {
-		super(command.name());
+		super(command.getName());
 		setCommand(command);
 	}
 
@@ -43,7 +43,7 @@ public class CommandCheckBoxMenuItem extends JCheckBoxMenuItem
 	 * @param icon the icon of the CheckBoxMenuItem.
 	 */
 	public CommandCheckBoxMenuItem(Command command, Icon icon) {
-		super(command.name(), icon);
+		super(command.getName(), icon);
 		setCommand(command);
 	}
 
@@ -54,7 +54,7 @@ public class CommandCheckBoxMenuItem extends JCheckBoxMenuItem
 	 * @param b the selected state of the check box menu item
 	 */
 	public CommandCheckBoxMenuItem(Command command, boolean b) {
-		super(command.name(), b);
+		super(command.getName(), b);
 		setCommand(command);
 	}
 
@@ -66,7 +66,7 @@ public class CommandCheckBoxMenuItem extends JCheckBoxMenuItem
 	 * @param b the selected state of the check box menu item
 	 */
 	public CommandCheckBoxMenuItem(Command command, Icon icon, boolean b) {
-		super(command.name(), icon, b);
+		super(command.getName(), icon, b);
 		setCommand(command);
 	}
 

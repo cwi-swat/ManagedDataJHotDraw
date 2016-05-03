@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -32,7 +32,7 @@ public  class CommandButton
 	 * The command's name is used as the label.
 	 */
 	public CommandButton(Command command) {
-		super(command.name());
+		super(command.getName());
 		fCommand = command;
 		addActionListener(this);
 	}
@@ -44,8 +44,8 @@ public  class CommandButton
 	 */
 	public void actionPerformed(ActionEvent e) {
 		fCommand.execute();
-		if (!getLabel().equals(fCommand.name()) ) {
-			setLabel(fCommand.name());
+		if (!getLabel().equals(fCommand.getName()) ) {
+			setLabel(fCommand.getName());
 		}
 	}
 }

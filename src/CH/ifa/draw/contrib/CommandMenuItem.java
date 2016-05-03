@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -32,7 +32,7 @@ public class CommandMenuItem extends JMenuItem implements CommandHolder, ActionL
 	 * Creates a menuItem with no set text or icon.
 	 */
 	public CommandMenuItem(Command command) {
-		super(command.name());
+		super(command.getName());
 		setCommand(command);
 		addActionListener(this);
 	}
@@ -43,7 +43,7 @@ public class CommandMenuItem extends JMenuItem implements CommandHolder, ActionL
 	 * @param icon the icon of the MenuItem.
 	 */
 	public CommandMenuItem(Command command, Icon icon) {
-		super(command.name(), icon);
+		super(command.getName(), icon);
 		setCommand(command);
 		addActionListener(this);
 	}
@@ -56,7 +56,7 @@ public class CommandMenuItem extends JMenuItem implements CommandHolder, ActionL
 	 * @param mnemonic the keyboard mnemonic for the MenuItem
 	 */
 	public CommandMenuItem(Command command, int mnemonic) {
-		super(command.name(), mnemonic);
+		super(command.getName(), mnemonic);
 		setCommand(command);
 	}
 

@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -40,7 +40,7 @@ public  class CommandMenu extends JMenu implements ActionListener, CommandListen
 	 * the command's name.
 	 */
 	public synchronized void add(Command command) {
-		addMenuItem(command, new JMenuItem(command.name()));
+		addMenuItem(command, new JMenuItem(command.getName()));
 	}
 
 	/**
@@ -48,7 +48,7 @@ public  class CommandMenu extends JMenu implements ActionListener, CommandListen
 	 * the command's name.
 	 */
 	public synchronized void add(Command command, MenuShortcut shortcut) {
-		addMenuItem(command, new JMenuItem(command.name(), shortcut.getKey()));
+		addMenuItem(command, new JMenuItem(command.getName(), shortcut.getKey()));
 	}
 
 	/**
@@ -56,11 +56,11 @@ public  class CommandMenu extends JMenu implements ActionListener, CommandListen
 	 * the command's name.
 	 */
 	public synchronized void addCheckItem(Command command) {
-		addMenuItem(command, new JCheckBoxMenuItem(command.name()));
+		addMenuItem(command, new JCheckBoxMenuItem(command.getName()));
 	}
 
 	protected void addMenuItem(Command command, JMenuItem m) {
-		m.setName(command.name());
+		m.setName(command.getName());
 		m.addActionListener(this);
 		add(m);
 		command.addCommandListener(this);

@@ -46,7 +46,7 @@ public interface Command {
 	/**
 	 * Gets the command name.
 	 */
-	public String name();
+	public String getName();
 	
 	public DrawingEditor getDrawingEditor();
 
