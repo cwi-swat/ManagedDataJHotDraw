@@ -16,7 +16,7 @@ import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.CollectionsFactory;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.SubjectRole;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 import ccconcerns.managed_data.MDDrawingView;
 
 import java.util.*;

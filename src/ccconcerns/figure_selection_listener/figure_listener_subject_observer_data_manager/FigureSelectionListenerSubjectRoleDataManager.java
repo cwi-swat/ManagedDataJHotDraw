@@ -1,16 +1,14 @@
 package ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager;
 
-import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRoleDataManager;
 import nl.cwi.managed_data_4j.language.managed_object.MObject;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Klass;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 
-public class FigureSelectionListenerSubjectRoleDataManager extends BasicDataManager {
+public class FigureSelectionListenerSubjectRoleDataManager extends SubjectRoleDataManager {
 
     public FigureSelectionListenerSubjectRoleDataManager(Class<?> moSchemaFactoryClass, Schema schema) {
-
-        // Add the observable class in order to use it in the managed object.
-        super(moSchemaFactoryClass, schema, SubjectRole.class);
+        super(moSchemaFactoryClass, schema);
     }
 
     @Override

@@ -1,25 +1,14 @@
 package ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager;
 
 import CH.ifa.draw.framework.Figure;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRoleMObject;
 import ccconcerns.managed_data.schemas.framework.MDStandardDrawingView;
-import nl.cwi.managed_data_4j.language.managed_object.MObject;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Klass;
 
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-
-public class FigureSelectionListenerSubjectRoleMObject extends MObject implements FigureSelectionPointcut, SubjectRole {
-
-    private Map<Object, Action> listeners;
+public class FigureSelectionListenerSubjectRoleMObject extends SubjectRoleMObject implements FigureSelectionPointcut {
 
     public FigureSelectionListenerSubjectRoleMObject(Klass schemaKlass, Object... initializers) {
         super(schemaKlass, initializers);
-        listeners = new HashMap<>();
-    }
-
-    private void executeListenerActions() {
-        listeners.values().forEach(Action::execute);
     }
 
     @Override
@@ -42,28 +31,5 @@ public class FigureSelectionListenerSubjectRoleMObject extends MObject implement
         if (((MDStandardDrawingView) this.getProxy()).selectionCount() > 0) {
             executeListenerActions();
         }
-    }
-
-    @Override
-    public void addListener(Object listener, Action action) {
-        listeners.put(listener, action);
-    }
-
-    @Override
-    public void removeListener(Object listener) {
-        listeners.remove(listener);
-    }
-
-    @Override
-    protected Object _invokeDefaultMethod(Object proxy, Method method, Object[] args) throws Throwable {
-        for (Method objMethod : this.getClass().getMethods()) {
-            if (method.getName().equals(objMethod.getName()) &&
-                method.getReturnType().equals(objMethod.getReturnType()))
-            {
-                System.out.println("Going to call: " + method.getName());
-                objMethod.invoke(this, args);
-            }
-        }
-        return super._invokeDefaultMethod(proxy, method, args);
     }
 }
