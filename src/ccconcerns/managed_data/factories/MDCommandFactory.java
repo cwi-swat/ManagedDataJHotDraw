@@ -6,6 +6,7 @@ import CH.ifa.draw.standard.AbstractCommand;
 import ccconcerns.managed_data.MDChangeAttrCmd;
 import ccconcerns.managed_data.schema_factories.CommandSchemaFactory;
 import ccconcerns.managed_data.schemas.JHotDrawPrimitives;
+import ccconcerns.undo.UndoableChangeAttrCmdDataManager;
 import nl.cwi.managed_data_4j.framework.SchemaFactoryProvider;
 import nl.cwi.managed_data_4j.language.data_manager.BasicDataManager;
 import nl.cwi.managed_data_4j.language.schema.boot.SchemaFactory;
@@ -26,6 +27,31 @@ public class MDCommandFactory {
 
         final BasicDataManager cmdDataMgr =
                 new BasicDataManager(CommandSchemaFactory.class, cmdSchema);
+
+        final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.make();
+        // ================================================
+
+        final MDChangeAttrCmd changeAttrCmd = cmdSchemaFactory.ChangeAttrCmd();
+        changeAttrCmd.name(name);
+        changeAttrCmd.attribute(attribute);
+        changeAttrCmd.value(value);
+        changeAttrCmd.drawingEditor(newDrawingEditor);
+        changeAttrCmd.setEventDispatcher(new AbstractCommand.EventDispatcher(changeAttrCmd));
+        changeAttrCmd.getDrawingEditor().addViewChangeListener(changeAttrCmd);
+
+        return changeAttrCmd;
+    }
+
+    public static MDChangeAttrCmd newUndoableChangeAttrCommand(
+            String name, FigureAttributeConstant attribute, Object value, DrawingEditor newDrawingEditor)
+    {
+        // ================================================
+        final Schema cmdSchema = SchemaLoader.load(
+                schemaFactory, schemaSchema,
+                JHotDrawPrimitives.class, MDChangeAttrCmd.class);
+
+        final UndoableChangeAttrCmdDataManager cmdDataMgr =
+                new UndoableChangeAttrCmdDataManager(CommandSchemaFactory.class, cmdSchema);
 
         final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.make();
         // ================================================

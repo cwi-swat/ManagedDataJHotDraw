@@ -9,24 +9,11 @@ import CH.ifa.draw.standard.ChangeAttributeCommand;
 import CH.ifa.draw.util.Command;
 import CH.ifa.draw.util.CommandListener;
 import CH.ifa.draw.util.Undoable;
-import ccconcerns.figure_selection_listener.figure_listener_subject_observer_data_manager.SubjectRole;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 import nl.cwi.managed_data_4j.M;
 import nl.cwi.managed_data_4j.language.schema.models.definition.annotations.Key;
 
 public interface MDChangeAttrCmd extends M, Command, ViewChangeListener {
-
-    // @MDHD Undo Refactoring: should not be used
-    Undoable undoableActivity(Undoable... undoable);
-
-    // @MDHD Undo Refactoring: should not be used
-    default Undoable getUndoActivity() {
-        return undoableActivity();
-    }
-
-    // @MDHD Undo Refactoring: should not be used
-    default void setUndoActivity(Undoable newUndoableActivity) {
-        undoableActivity(newUndoableActivity);
-    }
 
     FigureAttributeConstant attribute(FigureAttributeConstant... fAttribute);
     Object value(Object... value);
@@ -67,25 +54,12 @@ public interface MDChangeAttrCmd extends M, Command, ViewChangeListener {
     }
 
     default void execute() {
-        // @MDHD Undo Refactoring TODO:
-//		FigureEnumeration fe = view().selection();
-//		while (fe.hasNextFigure()) {
-//			fe.nextFigure().setAttribute(fAttribute, fValue);
-//		}
-//		view().checkDamage();
-
-        setUndoActivity(createUndoActivity());
-        getUndoActivity().setAffectedFigures(view().selection());
-        FigureEnumeration fe = getUndoActivity().getAffectedFigures();
-        while (fe.hasNextFigure()) {
-            fe.nextFigure().setAttribute(attribute(), value());
-        }
-        view().checkDamage();
-    }
-
-    // TODO: Remove
-    default Undoable createUndoActivity() {
-        return new ChangeAttributeCommand.UndoActivity(view(), attribute(), value());
+        // @MDHD ChangeAttributeCommand Undo Refactoring
+		FigureEnumeration fe = view().selection();
+		while (fe.hasNextFigure()) {
+			fe.nextFigure().setAttribute(attribute(), value());
+		}
+		view().checkDamage();
     }
 
     default boolean isViewRequired() {
@@ -113,7 +87,7 @@ public interface MDChangeAttrCmd extends M, Command, ViewChangeListener {
         getEventDispatcher().removeCommandListener(oldCommandListener);
     }
 
-    default public void dispose() {
+    default void dispose() {
         if (view() != null) {
 
             // @MDHD: FigureSelectionListener (FSL) Refactoring

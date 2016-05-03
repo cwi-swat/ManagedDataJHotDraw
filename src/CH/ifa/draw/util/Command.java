@@ -50,11 +50,11 @@ public interface Command {
 	
 	public DrawingEditor getDrawingEditor();
 
-	// @MDHD Undo Refactoring TODO: Remove
-	public Undoable getUndoActivity();
-
-	// @MDHD Undo Refactoring TODO: Remove
-	public void setUndoActivity(Undoable newUndoableActivity);
+	// @MDHD ChangeAttributeCommand Undo Refactoring
+//	public Undoable getUndoActivity();
+//
+	// @MDHD ChangeAttributeCommand Undo Refactoring
+//	public void setUndoActivity(Undoable newUndoableActivity);
 	
 	public void addCommandListener(CommandListener newCommandListener);
 	public void removeCommandListener(CommandListener oldCommandListener);

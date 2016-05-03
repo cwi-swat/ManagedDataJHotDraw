@@ -410,8 +410,9 @@ public	class DrawApplication
 		for (int i=0; i<ColorMap.size(); i++)
 			menu.add(
 				new UndoableCommand(
-					MDCommandFactory.newChangeAttrCommand(
+				// @MDHD ChangeAttributeCommand Undo Refactoring
 //					new ChangeAttributeCommand(
+					MDCommandFactory.newUndoableChangeAttrCommand(
 						ColorMap.name(i),
 						attribute,
 						ColorMap.color(i),
@@ -428,14 +429,18 @@ public	class DrawApplication
 	protected JMenu createArrowMenu() {
 		FigureAttributeConstant arrowMode = FigureAttributeConstant.ARROW_MODE;
 		CommandMenu menu = new CommandMenu("Arrow");
+		// @MDHD ChangeAttributeCommand Undo Refactoring
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("none", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_NONE), this)));
+			MDCommandFactory.newUndoableChangeAttrCommand("none", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_NONE), this)));
+		// @MDHD ChangeAttributeCommand Undo Refactoring
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("at Start", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_START), this)));
+			MDCommandFactory.newUndoableChangeAttrCommand("at Start", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_START), this)));
+		// @MDHD ChangeAttributeCommand Undo Refactoring
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("at End", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_END), this)));
+			MDCommandFactory.newUndoableChangeAttrCommand("at End", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_END), this)));
+		// @MDHD ChangeAttributeCommand Undo Refactoring
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("at Both", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_BOTH), this)));
+			MDCommandFactory.newUndoableChangeAttrCommand("at Both", arrowMode, new Integer(PolyLineFigure.ARROW_TIP_BOTH), this)));
 		return menu;
 	}
 
@@ -448,7 +453,8 @@ public	class DrawApplication
 		String fonts[] = Toolkit.getDefaultToolkit().getFontList();
 		for (int i = 0; i < fonts.length; i++) {
 			menu.add(new UndoableCommand(
-				new ChangeAttributeCommand(fonts[i], FigureAttributeConstant.FONT_NAME, fonts[i],  this)));
+				// @MDHD ChangeAttributeCommand Undo Refactoring
+				MDCommandFactory.newUndoableChangeAttrCommand(fonts[i], FigureAttributeConstant.FONT_NAME, fonts[i],  this)));
 		}
 		return menu;
 	}
@@ -460,11 +466,14 @@ public	class DrawApplication
 		FigureAttributeConstant fontStyle = FigureAttributeConstant.FONT_STYLE;
 		CommandMenu menu = new CommandMenu("Font Style");
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("Plain", fontStyle, new Integer(Font.PLAIN), this)));
+				// @MDHD ChangeAttributeCommand Undo Refactoring
+				MDCommandFactory.newUndoableChangeAttrCommand("Plain", fontStyle, new Integer(Font.PLAIN), this)));
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("Italic", fontStyle, new Integer(Font.ITALIC), this)));
+				// @MDHD ChangeAttributeCommand Undo Refactoring
+				MDCommandFactory.newUndoableChangeAttrCommand("Italic", fontStyle, new Integer(Font.ITALIC), this)));
 		menu.add(new UndoableCommand(
-			new ChangeAttributeCommand("Bold", fontStyle, new Integer(Font.BOLD), this)));
+				// @MDHD ChangeAttributeCommand Undo Refactoring
+				MDCommandFactory.newUndoableChangeAttrCommand("Bold", fontStyle, new Integer(Font.BOLD), this)));
 		return menu;
 	}
 
@@ -477,7 +486,9 @@ public	class DrawApplication
 		for (int i = 0; i < sizes.length; i++) {
 		   menu.add(
 				new UndoableCommand(
-					new ChangeAttributeCommand(
+					// @MDHD ChangeAttributeCommand Undo Refactoring
+//					new ChangeAttributeCommand(
+					MDCommandFactory.newUndoableChangeAttrCommand(
 						Integer.toString(sizes[i]),
 						FigureAttributeConstant.FONT_SIZE,
 						new Integer(sizes[i]),

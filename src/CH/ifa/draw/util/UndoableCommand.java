@@ -13,8 +13,10 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractCommand;
+import ccconcerns.managed_data.MDChangeAttrCmd;
 import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 import ccconcerns.managed_data.MDDrawingView;
+import ccconcerns.undo.UndoableRole;
 
 import java.util.EventObject;
 
@@ -128,7 +130,15 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 
 		getWrappedCommand().execute();
 
-		Undoable undoableCommand = getWrappedCommand().getUndoActivity();
+		// @MDHD ChangeAttributeCommand Undo Refactoring (TODO: hack)
+//		Undoable undoableCommand = getWrappedCommand().getUndoActivity();
+		Undoable undoableCommand;
+		if (getWrappedCommand() instanceof MDChangeAttrCmd) {
+			undoableCommand = ((UndoableRole) getWrappedCommand()).getUndoActivity();
+		} else {
+			undoableCommand = ((AbstractCommand)getWrappedCommand()).getUndoActivity();
+		}
+
 		if ((undoableCommand != null) && (undoableCommand.isUndoable())) {
 			getDrawingEditor().getUndoManager().pushUndo(undoableCommand);
 			getDrawingEditor().getUndoManager().clearRedos();

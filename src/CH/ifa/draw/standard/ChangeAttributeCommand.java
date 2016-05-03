@@ -43,13 +43,6 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 	}
 
 	public void execute() {
-		// @MDHD Undo Refactoring TODO:
-//		FigureEnumeration fe = view().selection();
-//		while (fe.hasNextFigure()) {
-//			fe.nextFigure().setAttribute(fAttribute, fValue);
-//		}
-//		view().checkDamage();
-
 		super.execute();
 		setUndoActivity(createUndoActivity());
 		getUndoActivity().setAffectedFigures(view().selection());
@@ -72,7 +65,6 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 		return new ChangeAttributeCommand.UndoActivity(view(), fAttribute, fValue);
 	}
 
-	// @MDHD Undo Refactoring TODO: Remove
 	public static class UndoActivity extends UndoableAdapter {
 		private FigureAttributeConstant myUndoAttribute;
 		private Hashtable	            myOriginalValues;
