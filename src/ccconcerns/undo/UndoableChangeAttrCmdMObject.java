@@ -20,13 +20,13 @@ public class UndoableChangeAttrCmdMObject extends UndoableMObject implements Exe
 
     @Override
     public Undoable createUndoActivity() {
-        final MDChangeAttrCmd thisObj = (MDChangeAttrCmd) this.getProxy();
+        final MDChangeAttrCmd thisObj = ((MDChangeAttrCmd) thisObject);
         return new UndoActivity(thisObj.view(), thisObj.attribute(), thisObj.value());
     }
 
     @Override
     public void execute() {
-        final MDChangeAttrCmd thisObj = (MDChangeAttrCmd) this.getProxy();
+        final MDChangeAttrCmd thisObj = ((MDChangeAttrCmd) thisObject);
         setUndoActivity(createUndoActivity());
         getUndoActivity().setAffectedFigures(thisObj.view().selection());
         System.out.println(" !!! execute: Undoable Change Attribute Command Data Manager !!!");
