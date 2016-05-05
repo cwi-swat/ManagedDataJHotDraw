@@ -10,3 +10,4 @@ Aspects inventory:
   - Observer
     - FigureSelectionListener
 - Undo Concern
+  - ChangeAttributeCommand
