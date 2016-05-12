@@ -18,14 +18,6 @@ public interface MDNullDrawingView extends M, MDDrawingView {
 
     Dimension size(Dimension... size);
 
-    default Rectangle getDamage() {
-        return damage();
-    }
-
-    default void setDamage(Rectangle r) {
-        damage(r);
-    }
-
     // Composition over inheritance,
     // the original inherits the JPanel
     JPanel panel(JPanel... panel);
@@ -107,9 +99,6 @@ public interface MDNullDrawingView extends M, MDDrawingView {
         return figure;
     }
 
-    default void addAll(Collection figures) {
-    }
-
     default FigureEnumeration insertFigures(FigureEnumeration fe, int dx, int dy, Boolean bCheck) {
         return FigureEnumerator.getEmptyEnumeration();
     }
@@ -138,12 +127,6 @@ public interface MDNullDrawingView extends M, MDDrawingView {
         return false;
     }
 
-    default void addToSelectionAll(Collection figures) {
-    }
-
-    default void addToSelectionAll(FigureEnumeration fe) {
-    }
-
     default FigureSelection getFigureSelection() {
         return new StandardFigureSelection(selection(), 0);
     }
@@ -154,12 +137,6 @@ public interface MDNullDrawingView extends M, MDDrawingView {
 
     default Point lastClick() {
         return new Point();
-    }
-
-    default void checkDamage() {
-    }
-
-    default void repairDamage() {
     }
 
     default void drawingInvalidated(DrawingChangeEvent e) {
@@ -178,9 +155,6 @@ public interface MDNullDrawingView extends M, MDDrawingView {
         return false;
     }
 
-    default void paintComponent(Graphics g) {
-    }
-
     default Image createImage(int width, int height) {
         return null;
     }
@@ -189,47 +163,11 @@ public interface MDNullDrawingView extends M, MDDrawingView {
         return null;
     }
 
-    default void drawAll(Graphics g) {
-    }
-
-    default void drawPainters(Graphics g, List v) {
-    }
-
-    default void draw(Graphics g, FigureEnumeration fe) {
-    }
-
-    default void drawHandles(Graphics g) {
-    }
-
-    default void drawDrawing(Graphics g) {
-    }
-
-    default void drawBackground(Graphics g) {
-    }
-
-    default void freezeView() {
-    }
-
-    default void unfreezeView() {
-    }
-
     default FigureEnumeration getConnectionFigures(Figure inFigure) {
         return FigureEnumerator.getEmptyEnumeration();
     }
 
     default boolean isFocusTraversable() {
         return true;
-    }
-
-    default void addToSelection(Figure figure) {
-    }
-
-    default void removeFromSelection(Figure figure) {
-    }
-
-    default void toggleSelection(Figure figure) {
-    }
-
-    default void clearSelection() {
     }
 }
