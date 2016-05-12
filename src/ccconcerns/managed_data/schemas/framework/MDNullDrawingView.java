@@ -14,8 +14,6 @@ import java.util.List;
 
 public interface MDNullDrawingView extends M, MDDrawingView {
 
-    Rectangle damage(Rectangle... damage);
-
     Dimension size(Dimension... size);
 
     // Composition over inheritance,
