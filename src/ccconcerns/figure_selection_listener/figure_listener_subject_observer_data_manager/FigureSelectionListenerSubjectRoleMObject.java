@@ -28,6 +28,7 @@ public class FigureSelectionListenerSubjectRoleMObject extends SubjectRoleMObjec
 
     @Override
     public void clearSelection() {
+        System.out.println("CLEAR SELECTION");
         if (((MDStandardDrawingView) thisObject).selectionCount() > 0) {
             executeListenerActions();
         }

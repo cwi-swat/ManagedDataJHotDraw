@@ -23,6 +23,9 @@ import java.util.Hashtable;
  *
  * @version <$CURRENT_VERSION$>
  */
+// @MDHD Undo Refactoring
+// Not used
+@Deprecated
 public  class ChangeAttributeCommand extends AbstractCommand {
 
 	private FigureAttributeConstant fAttribute;
@@ -57,7 +60,6 @@ public  class ChangeAttributeCommand extends AbstractCommand {
 		return view().selectionCount() > 0;
 	}
 
-	// @MDHD Undo Refactoring TODO: Remove
 	/**
 	 * Factory method for undo activity
 	 */

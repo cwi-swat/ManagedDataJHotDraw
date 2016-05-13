@@ -225,35 +225,15 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 	 * Releases resources associated with this command
 	 */
 	public void dispose() {
-		if (view() != null) {
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) view()).removeListener(this);
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-//			view().removeFigureSelectionListener(this);
-		}
+		// @MDHD: FigureSelectionListener (FSL) Refactoring
+//		if (view() != null) {
+//
+//			// view().removeFigureSelectionListener(this);
+////			((SubjectRole) view()).removeListener(this);
+//		}
 	}
 
 	public void viewSelectionChanged(MDDrawingView oldView, MDDrawingView newView) {
-		if (oldView != null) {
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-//			oldView.removeFigureSelectionListener(this);
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			if (oldView instanceof SubjectRole)
-				((SubjectRole) oldView).removeListener(this);
-		}
-		if (newView != null) {
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-//			newView.addFigureSelectionListener(this);
-
-			// @MDHD: FigureSelectionListener (FSL) Refactoring
-			((SubjectRole) newView).addListener(this, this::figureSelectionChanged);
-
-		}
 		if (isViewRequired()) {
 			boolean isOldViewInteractive = (oldView != null) && oldView.isInteractive();
 			boolean isNewViewInteractive = (newView != null) && newView.isInteractive();
@@ -270,8 +250,5 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 	}
 
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
-//	public void figureSelectionChanged(MDStandardDrawingView view) {
-//	}
-	public void figureSelectionChanged() {
-	}
+//	public void figureSelectionChanged(MDStandardDrawingView view) {}
 }
