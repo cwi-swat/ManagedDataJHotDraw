@@ -7,7 +7,6 @@ import CH.ifa.draw.util.Undoable;
 import CH.ifa.draw.util.UndoableAdapter;
 import ccconcerns.managed_data.MDChangeAttrCmd;
 import ccconcerns.managed_data.MDDrawingView;
-import nl.cwi.managed_data_4j.language.managed_object.MObject;
 import nl.cwi.managed_data_4j.language.schema.models.definition.Klass;
 
 import java.util.Hashtable;

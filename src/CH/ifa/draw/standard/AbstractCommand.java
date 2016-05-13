@@ -30,6 +30,8 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 
 	private String  myName;
 
+	// @MDHD ChangeAttributeCommand Undo Refactoring
+	// Not removed: Because not everything is refactored yet
 	private Undoable myUndoableActivity;
 	private boolean myIsViewRequired;
 	private AbstractCommand.EventDispatcher myEventDispatcher;
@@ -105,15 +107,6 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		myName = newName;
 	}
 
-//	/**
-//	 * Releases resources associated with this command
-//	 */
-//	public void dispose() {
-//		if (view() != null) {
-//			view().removeFigureSelectionListener(this);
-//		}
-//	}
-
 	/**
 	 * Executes the command.
 	 */
@@ -148,10 +141,14 @@ public abstract class AbstractCommand implements Command, /* @MDHD FigureSelecti
 		return true;
 	}
 
+	// @MDHD ChangeAttributeCommand Undo Refactoring
+	// Not removed: Because not everything is refactored yet
 	public Undoable getUndoActivity() {
 		return myUndoableActivity;
 	}
 
+	// @MDHD ChangeAttributeCommand Undo Refactoring
+	// Not removed: Because not everything is refactored yet
 	public void setUndoActivity(Undoable newUndoableActivity) {
 		myUndoableActivity = newUndoableActivity;
 	}

@@ -126,7 +126,8 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 
 		getWrappedCommand().execute();
 
-		// @MDHD ChangeAttributeCommand Undo Refactoring (TODO: hack)
+		// @MDHD ChangeAttributeCommand Undo Refactoring
+		// Because not everything is refactored yet
 //		Undoable undoableCommand = getWrappedCommand().getUndoActivity();
 		Undoable undoableCommand;
 		if (getWrappedCommand() instanceof MDChangeAttrCmd) {
