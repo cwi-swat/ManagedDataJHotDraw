@@ -14,6 +14,7 @@ package CH.ifa.draw.util;
 import CH.ifa.draw.framework.*;
 import CH.ifa.draw.standard.AbstractTool;
 import ccconcerns.managed_data.MDDrawingView;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
@@ -59,7 +60,9 @@ public class UndoableTool implements Tool, ToolListener {
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 //			editor().figureSelectionChanged(getActiveView());
-			editor().figureSelectionChanged();
+			if (editor() instanceof SubjectRole) {
+				((SubjectRole) editor()).executeListenerActions();
+			}
 		}
 	}
 

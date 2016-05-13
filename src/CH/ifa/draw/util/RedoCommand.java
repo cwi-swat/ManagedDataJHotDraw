@@ -13,6 +13,7 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 
 /**
  * Command to redo the latest undone change in the drawing.
@@ -49,7 +50,9 @@ public class RedoCommand extends AbstractCommand {
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 //		getDrawingEditor().figureSelectionChanged(lastRedoable.getDrawingView());
-		getDrawingEditor().figureSelectionChanged();
+		if (getDrawingEditor() instanceof SubjectRole) {
+			((SubjectRole) getDrawingEditor()).executeListenerActions();
+		}
 	}
   
 	/**

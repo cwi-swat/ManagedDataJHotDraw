@@ -150,7 +150,9 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 
 			// @MDHD: FigureSelectionListener (FSL) Refactoring
 //			getDrawingEditor().figureSelectionChanged(view());
-			getDrawingEditor().figureSelectionChanged();
+			if (getDrawingEditor() instanceof SubjectRole) {
+				((SubjectRole) getDrawingEditor()).executeListenerActions();
+			}
 		}
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring

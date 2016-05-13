@@ -13,6 +13,7 @@ package CH.ifa.draw.util;
 
 import CH.ifa.draw.standard.*;
 import CH.ifa.draw.framework.*;
+import ccconcerns.managed_data.data_managers.SubjectRole.SubjectRole;
 
 /**
  * Command to undo the latest change in the drawing.
@@ -56,7 +57,9 @@ public class UndoCommand extends AbstractCommand {
 
 		// @MDHD: FigureSelectionListener (FSL) Refactoring
 //		getDrawingEditor().figureSelectionChanged(lastUndoable.getDrawingView());
-		getDrawingEditor().figureSelectionChanged();
+		if (getDrawingEditor() instanceof SubjectRole) {
+			((SubjectRole) getDrawingEditor()).executeListenerActions();
+		}
 	}
   
 	/**

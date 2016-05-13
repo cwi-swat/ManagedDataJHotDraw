@@ -15,7 +15,8 @@ public class SubjectRoleMObject extends MObject implements SubjectRole {
         listeners = new HashMap<>();
     }
 
-    protected void executeListenerActions() {
+    @Override
+    public void executeListenerActions() {
         listeners.values().forEach(Action::execute);
     }
 
