@@ -62,7 +62,6 @@ public interface DrawingEditor /* @MDHD extends FigureSelectionListener*/ {
 	 */
 	// @MDHD: FigureSelectionListener (FSL) Refactoring
 //	public void figureSelectionChanged(MDStandardDrawingView view);
-//	public void figureSelectionChanged();
 
 	public void addViewChangeListener(ViewChangeListener vsl);
 	public void removeViewChangeListener(ViewChangeListener vsl);

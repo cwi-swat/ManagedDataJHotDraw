@@ -36,7 +36,7 @@ public  class JavaDrawViewer extends JApplet implements DrawingEditor {
 	public void init() {
 		setUndoManager(new UndoManager());
 		getContentPane().setLayout(new BorderLayout());
-		fView = MDDrawingViewFactory.newDrawingView(this, 400, 370);
+		fView = MDDrawingViewFactory.newSubjectRoleDrawingView(this, 400, 370);
 
 		getContentPane().add("Center", fView.getPanel());
 		setTool(new FollowURLTool(this, this));

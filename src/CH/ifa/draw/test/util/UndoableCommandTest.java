@@ -141,26 +141,6 @@ extends JHDTestCase
     // JUnitDoclet end method figureSelectionChanged
   }
   
-  // JUnitDoclet begin javadoc_method setUndoActivity()
-  /**
-  * Method testSetGetUndoActivity is testing setUndoActivity
-  * and getUndoActivity together by setting some value
-  * and verifying it by reading.
-  * @see CH.ifa.draw.util.UndoableCommand#setUndoActivity(CH.ifa.draw.util.Undoable)
-  * @see CH.ifa.draw.util.UndoableCommand#getUndoActivity()
-  */
-  // JUnitDoclet end javadoc_method setUndoActivity()
-  public void testSetGetUndoActivity() throws Exception {
-    // JUnitDoclet begin method setUndoActivity getUndoActivity
-    CH.ifa.draw.util.Undoable[] tests = {new DeleteCommand.UndoActivity(new DeleteCommand("Delete", getDrawingEditor())), null};
-    
-    for (int i = 0; i < tests.length; i++) {
-      undoablecommand.setUndoActivity(tests[i]);
-      assertEquals(tests[i], undoablecommand.getUndoActivity());
-    }
-    // JUnitDoclet end method setUndoActivity getUndoActivity
-  }
-  
   // JUnitDoclet begin javadoc_method addCommandListener()
   /**
   * Method testAddCommandListener is testing addCommandListener

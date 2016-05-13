@@ -75,10 +75,6 @@ public class UndoableCommand implements Command, /* @MDHD FigureSelectionListene
 		return new UndoableAdapter(view());
 	}
 
-	public void setUndoActivity(Undoable newUndoableActivity) {
-		// do nothing: always return default UndoableAdapter
-	}
-
 	public void addCommandListener(CommandListener newCommandListener) {
 		getEventDispatcher().addCommandListener(newCommandListener);
 	}
