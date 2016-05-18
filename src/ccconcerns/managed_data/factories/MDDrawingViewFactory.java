@@ -36,8 +36,7 @@ public class MDDrawingViewFactory {
 
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
-                schemaFactory, schemaSchema,
-                JHotDrawPrimitives.class, MDStandardDrawingView.class);
+                schemaFactory, JHotDrawPrimitives.class, MDStandardDrawingView.class);
 
         final FigureSelectionListenerSubjectRoleDataManager subjectRoleFactory =
                 new FigureSelectionListenerSubjectRoleDataManager();
@@ -146,7 +145,7 @@ public class MDDrawingViewFactory {
 
         // ================================================
         final Schema drawingViewSchema = SchemaLoader.load(
-                schemaFactory, schemaSchema,
+                schemaFactory,
                 JHotDrawPrimitives.class, MDNullDrawingView.class);
 
         final BasicDataManager subjectRoleFactory = new BasicDataManager();

@@ -22,7 +22,7 @@ public class MDCommandFactory {
     {
         // ================================================
         final Schema cmdSchema = SchemaLoader.load(
-                schemaFactory, schemaSchema,
+                schemaFactory,
                 JHotDrawPrimitives.class, MDChangeAttrCmd.class);
 
         final BasicDataManager cmdDataMgr = new BasicDataManager();
@@ -46,8 +46,7 @@ public class MDCommandFactory {
     {
         // ================================================
         final Schema cmdSchema = SchemaLoader.load(
-                schemaFactory, schemaSchema,
-                JHotDrawPrimitives.class, MDChangeAttrCmd.class);
+                schemaFactory, JHotDrawPrimitives.class, MDChangeAttrCmd.class);
 
         final UndoableChangeAttrCmdDataManager cmdDataMgr = new UndoableChangeAttrCmdDataManager();
 
