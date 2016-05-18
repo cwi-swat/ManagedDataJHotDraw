@@ -40,9 +40,9 @@ public class MDDrawingViewFactory {
                 JHotDrawPrimitives.class, MDStandardDrawingView.class);
 
         final FigureSelectionListenerSubjectRoleDataManager subjectRoleFactory =
-                new FigureSelectionListenerSubjectRoleDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
+                new FigureSelectionListenerSubjectRoleDataManager();
 
-        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
+        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.factory(DrawingViewSchemaFactory.class, drawingViewSchema);
         // ================================================
 
         final MDStandardDrawingView drawingView = drawingViewSchemaFactory.DrawingView();
@@ -149,10 +149,8 @@ public class MDDrawingViewFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDNullDrawingView.class);
 
-        final BasicDataManager subjectRoleFactory =
-                new BasicDataManager(DrawingViewSchemaFactory.class, drawingViewSchema);
-
-        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.make();
+        final BasicDataManager subjectRoleFactory = new BasicDataManager();
+        final DrawingViewSchemaFactory drawingViewSchemaFactory = subjectRoleFactory.factory(DrawingViewSchemaFactory.class, drawingViewSchema);
         // ================================================
 
         final MDNullDrawingView drawingView = drawingViewSchemaFactory.NullDrawingView();

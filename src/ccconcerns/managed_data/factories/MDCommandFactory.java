@@ -25,10 +25,9 @@ public class MDCommandFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDChangeAttrCmd.class);
 
-        final BasicDataManager cmdDataMgr =
-                new BasicDataManager(CommandSchemaFactory.class, cmdSchema);
+        final BasicDataManager cmdDataMgr = new BasicDataManager();
 
-        final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.make();
+        final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.factory(CommandSchemaFactory.class, cmdSchema);
         // ================================================
 
         final MDChangeAttrCmd changeAttrCmd = cmdSchemaFactory.ChangeAttrCmd();
@@ -50,10 +49,9 @@ public class MDCommandFactory {
                 schemaFactory, schemaSchema,
                 JHotDrawPrimitives.class, MDChangeAttrCmd.class);
 
-        final UndoableChangeAttrCmdDataManager cmdDataMgr =
-                new UndoableChangeAttrCmdDataManager(CommandSchemaFactory.class, cmdSchema);
+        final UndoableChangeAttrCmdDataManager cmdDataMgr = new UndoableChangeAttrCmdDataManager();
 
-        final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.make();
+        final CommandSchemaFactory cmdSchemaFactory = cmdDataMgr.factory(CommandSchemaFactory.class, cmdSchema);
         // ================================================
 
         final MDChangeAttrCmd changeAttrCmd = cmdSchemaFactory.ChangeAttrCmd();
