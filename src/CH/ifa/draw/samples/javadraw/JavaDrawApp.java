@@ -37,7 +37,7 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 	private static String       fgSampleImagesResourcePath = fgSampleImagesPath + "/";
 
 	JavaDrawApp() {
-		super("JHotDraw");
+		this("ManagedData JHotDraw");
 	}
 
 	/**

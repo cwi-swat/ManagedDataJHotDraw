@@ -92,7 +92,7 @@ public	class DrawApplication
 	 * Constructs a drawing window with a default title.
 	 */
 	public DrawApplication() {
-		this("JHotDraw");
+		this("ManagedData JHotDraw");
 	}
 
 	/**
