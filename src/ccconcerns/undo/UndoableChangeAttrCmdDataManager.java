@@ -9,8 +9,8 @@ import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 public class UndoableChangeAttrCmdDataManager extends BasicDataManager {
 
     @Override
-    public <T extends IFactory> T factory(Class<T> moSchemaFactoryClass, Schema schema, Class<?>... proxiedInterfaces) {
-        return super.factory(moSchemaFactoryClass, schema, UndoableRole.class);
+    public <T extends IFactory> T factory(Class<T> moSchemaFactoryClass, Schema schema, Class<?>... additionalInterfaces) {
+        return super.factory(moSchemaFactoryClass, schema, pushKlassToProxyInterfaces(UndoableRole.class, additionalInterfaces));
     }
 
     @Override

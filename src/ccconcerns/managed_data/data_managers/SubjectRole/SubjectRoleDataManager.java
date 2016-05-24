@@ -9,8 +9,8 @@ import nl.cwi.managed_data_4j.language.schema.models.definition.Schema;
 public class SubjectRoleDataManager extends BasicDataManager {
 
     @Override
-    public <T extends IFactory> T factory(Class<T> moSchemaFactoryClass, Schema schema, Class<?>... proxiedInterfaces) {
-        return super.factory(moSchemaFactoryClass, schema, SubjectRole.class);
+    public <T extends IFactory> T factory(Class<T> moSchemaFactoryClass, Schema schema, Class<?>... additionalInterfaces) {
+        return super.factory(moSchemaFactoryClass, schema, pushKlassToProxyInterfaces(SubjectRole.class, additionalInterfaces));
     }
 
     @Override

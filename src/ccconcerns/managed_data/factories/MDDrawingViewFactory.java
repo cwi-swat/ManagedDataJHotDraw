@@ -25,7 +25,6 @@ import java.awt.event.*;
 
 public class MDDrawingViewFactory {
 
-    private static final Schema schemaSchema = SchemaFactoryProvider.getSchemaSchema();
     private static final SchemaFactory schemaFactory = SchemaFactoryProvider.getSchemaFactory();
 
     public static MDDrawingView newSubjectRoleDrawingView(DrawingEditor editor) {
@@ -35,8 +34,7 @@ public class MDDrawingViewFactory {
     public static MDDrawingView newSubjectRoleDrawingView(DrawingEditor editor, int width, int height) {
 
         // ================================================
-        final Schema drawingViewSchema = SchemaLoader.load(
-                schemaFactory, JHotDrawPrimitives.class, MDStandardDrawingView.class);
+        final Schema drawingViewSchema = SchemaLoader.load(schemaFactory, JHotDrawPrimitives.class, MDStandardDrawingView.class);
 
         final FigureSelectionListenerSubjectRoleDataManager subjectRoleFactory =
                 new FigureSelectionListenerSubjectRoleDataManager();
